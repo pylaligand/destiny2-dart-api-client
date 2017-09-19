@@ -7706,8 +7706,10 @@
         "4",
         "8",
         "16",
+        "31",
         "32",
-        "64"
+        "64",
+        "96"
       ],
       "type": "integer",
       "x-enum-values": [
@@ -7745,7 +7747,7 @@
         }
       ]
     },
-    "BungieMembershipType[]": {
+    "BungieMembershipTypeList": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/BungieMembershipType"
@@ -23246,13 +23248,13 @@
         }
       ]
     },
-    "Destiny.HistoricalStats.Definitions.PeriodType[]": {
+    "Destiny.HistoricalStats.Definitions.PeriodTypeList": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/Destiny.HistoricalStats.Definitions.PeriodType"
       }
     },
-    "Destiny.HistoricalStats.Definitions.DestinyActivityModeType[]": {
+    "Destiny.HistoricalStats.Definitions.DestinyActivityModeTypeList": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/Destiny.HistoricalStats.Definitions.DestinyActivityModeType"
