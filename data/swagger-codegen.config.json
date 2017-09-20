@@ -1,0 +1,6 @@
+{
+  "pubName": "destiny2_api",
+  "pubVersion": "0.1.0",
+  "pubDescription": "Destiny2 API client",
+  "browserClient": false
+}

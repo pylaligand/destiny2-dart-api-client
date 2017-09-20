@@ -1,0 +1,17 @@
+# destiny2_api.model.DestinyDefinitionsDestinyItemPreviewBlockDefinition
+
+## Load the model package
+```dart
+import 'package:destiny2_api/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**previewVendorHash** | **int** | If the preview data is derived from a fake \&quot;Preview\&quot; Vendor, this will be the hash identifier for the DestinyVendorDefinition of that fake vendor. | [optional] [default to null]
+**previewActionString** | **String** | If the preview has an associated action (like \&quot;Open\&quot;), this will be the localized string for that action. | [optional] [default to null]
+**derivedItemCategories** | [**List&lt;DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition&gt;**](DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition.md) | This is a list of the items being previewed, categorized in the same way as they are in the preview UI. | [optional] [default to []]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
