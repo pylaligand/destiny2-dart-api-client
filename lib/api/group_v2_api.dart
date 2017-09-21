@@ -1180,12 +1180,13 @@ class GroupV2Api {
     }
 
     // create path and map variables
-    String path = "/GroupV2/{groupId}/Members/".replaceAll("{format}","json").replaceAll("{" + "currentpage" + "}", currentpage.toString()).replaceAll("{" + "groupId" + "}", groupId.toString());
+    String path = "/GroupV2/{groupId}/Members/".replaceAll("{format}","json").replaceAll("{" + "groupId" + "}", groupId.toString());
 
     // query params
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
+      queryParams.addAll(_convertParametersForCollectionFormat("", "currentpage", currentpage));
     if(memberType != null) {
       queryParams.addAll(_convertParametersForCollectionFormat("", "memberType", memberType));
     }
