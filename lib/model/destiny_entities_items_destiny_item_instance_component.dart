@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyEntitiesItemsDestinyItemInstanceComponent {
   /* If the item has a damage type, this is the item's current damage type. */
   @Property(name: 'damageType')
-  Object damageType = null;
+  DestinyDamageType damageType = null;
   
 /* The current damage type's hash, so you can look up localized info and icons for it. */
   @Property(name: 'damageTypeHash')
@@ -12,7 +12,7 @@ class DestinyEntitiesItemsDestinyItemInstanceComponent {
   
 /* The item stat that we consider to be \"primary\" for the item. For instance, this would be \"Attack\" for Weapons or \"Defense\" for armor. */
   @Property(name: 'primaryStat')
-  Object primaryStat = null;
+  DestinyDestinyStat primaryStat = null;
   
 /* The Item's \"Level\" has the most significant bearing on its stats, such as Light and Power. */
   @Property(name: 'itemLevel')
@@ -40,7 +40,7 @@ class DestinyEntitiesItemsDestinyItemInstanceComponent {
   
 /* If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn't equip the item. You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel. */
   @Property(name: 'cannotEquipReason')
-  Object cannotEquipReason = null;
+  DestinyEquipFailureReason cannotEquipReason = null;
   
   DestinyEntitiesItemsDestinyItemInstanceComponent();
 

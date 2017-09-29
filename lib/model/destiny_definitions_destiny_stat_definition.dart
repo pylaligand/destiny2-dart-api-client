@@ -8,7 +8,7 @@ class DestinyDefinitionsDestinyStatDefinition {
   
 /* Stats can exist on a character or an item, and they may potentially be aggregated in different ways. The DestinyStatAggregationType enum value indicates the way that this stat is being aggregated. */
   @Property(name: 'aggregationType')
-  Object aggregationType = null;
+  DestinyDestinyStatAggregationType aggregationType = null;
   
 /* True if the stat is computed rather than being delivered as a raw value on items.  For instance, the Light stat in Destiny 1 was a computed stat. */
   @Property(name: 'hasComputedBlock')

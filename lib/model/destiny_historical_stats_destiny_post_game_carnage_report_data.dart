@@ -8,7 +8,7 @@ class DestinyHistoricalStatsDestinyPostGameCarnageReportData {
   
 /* Details about the activity. */
   @Property(name: 'activityDetails')
-  Object activityDetails = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsActivity activityDetails = null;
   
 /* Collection of players and their data for this activity. */
   @Property(name: 'entries')

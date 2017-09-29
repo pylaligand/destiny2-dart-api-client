@@ -40,71 +40,71 @@ class DestinyDefinitionsDestinyInventoryItemDefinition {
   
 /* If the item can be \"used\", this block will be non-null, and will have data related to the action performed when using the item. (Guess what? 99% of the time, this action is \"dismantle\". Shocker) */
   @Property(name: 'action')
-  Object action = null;
+  DestinyDefinitionsDestinyItemActionBlockDefinition action = null;
   
 /* If this item can exist in an inventory, this block will be non-null. In practice, every item that currently exists has one of these blocks. But note that it is not necessarily guaranteed. */
   @Property(name: 'inventory')
-  Object inventory = null;
+  DestinyDefinitionsDestinyItemInventoryBlockDefinition inventory = null;
   
 /* If this item is a quest, this block will be non-null. In practice, I wish I had called this the Quest block, but at the time it wasn't clear to me whether it would end up being used for purposes other than quests. It will contain data about the steps in the quest, and mechanics we can use for displaying and tracking the quest. */
   @Property(name: 'setData')
-  Object setData = null;
+  DestinyDefinitionsDestinyItemSetBlockDefinition setData = null;
   
 /* If this item can have stats (such as a weapon, armor, or vehicle), this block will be non-null and populated with the stats found on the item. */
   @Property(name: 'stats')
-  Object stats = null;
+  DestinyDefinitionsDestinyItemStatBlockDefinition stats = null;
   
 /* If this item can be equipped, this block will be non-null and will be populated with the conditions under which it can be equipped. */
   @Property(name: 'equippingBlock')
-  Object equippingBlock = null;
+  DestinyDefinitionsDestinyEquippingBlockDefinition equippingBlock = null;
   
 /* If this item can be rendered, this block will be non-null and will be populated with rendering information. */
   @Property(name: 'translationBlock')
-  Object translationBlock = null;
+  DestinyDefinitionsDestinyItemTranslationBlockDefinition translationBlock = null;
   
 /* If this item can be Used or Acquired to gain other items (for instance, how Eververse Boxes can be consumed to get items from the box), this block will be non-null and will give summary information for the items that can be acquired. */
   @Property(name: 'preview')
-  Object preview = null;
+  DestinyDefinitionsDestinyItemPreviewBlockDefinition preview = null;
   
 /* If this item can have a level or stats, this block will be non-null and will be populated with default quality (item level, \"quality\", and infusion) data. See the block for more details, there's often less upfront information in D2 so you'll want to be aware of how you use quality and item level on the definition level now. */
   @Property(name: 'quality')
-  Object quality = null;
+  DestinyDefinitionsDestinyItemQualityBlockDefinition quality = null;
   
 /* The conceptual \"Value\" of an item, if any was defined. See the DestinyItemValueBlockDefinition for more details. */
   @Property(name: 'value')
-  Object value = null;
+  DestinyDefinitionsDestinyItemValueBlockDefinition value = null;
   
 /* If this item has a known source, this block will be non-null and populated with source information. Unfortunately, at this time we are not generating sources: that is some aggressively manual work which we didn't have time for, and I'm hoping to get back to at some point in the future. */
   @Property(name: 'sourceData')
-  Object sourceData = null;
+  DestinyDefinitionsDestinyItemSourceBlockDefinition sourceData = null;
   
 /* If this item has Objectives (extra tasks that can be accomplished related to the item... most frequently when the item is a Quest Step and the Objectives need to be completed to move on to the next Quest Step), this block will be non-null and the objectives defined herein. */
   @Property(name: 'objectives')
-  Object objectives = null;
+  DestinyDefinitionsDestinyItemObjectiveBlockDefinition objectives = null;
   
 /* If this item *is* a Plug, this will be non-null and the info defined herein. See DestinyItemPlugDefinition for more information. */
   @Property(name: 'plug')
-  Object plug = null;
+  DestinyDefinitionsItemsDestinyItemPlugDefinition plug = null;
   
 /* If this item has related items in a \"Gear Set\", this will be non-null and the relationships defined herein. */
   @Property(name: 'gearset')
-  Object gearset = null;
+  DestinyDefinitionsDestinyItemGearsetBlockDefinition gearset = null;
   
 /* If this item is a \"reward sack\" that can be opened to provide other items, this will be non-null and the properties of the sack contained herein. */
   @Property(name: 'sack')
-  Object sack = null;
+  DestinyDefinitionsDestinyItemSackBlockDefinition sack = null;
   
 /* If this item has any Sockets, this will be non-null and the individual sockets on the item will be defined herein. */
   @Property(name: 'sockets')
-  Object sockets = null;
+  DestinyDefinitionsDestinyItemSocketBlockDefinition sockets = null;
   
 /* Summary data about the item. */
   @Property(name: 'summary')
-  Object summary = null;
+  DestinyDefinitionsDestinyItemSummaryBlockDefinition summary = null;
   
 /* If the item has a Talent Grid, this will be non-null and the properties of the grid defined herein. Note that, while many items still have talent grids, the only ones with meaningful Nodes still on them will be Subclass/\"Build\" items. */
   @Property(name: 'talentGrid')
-  Object talentGrid = null;
+  DestinyDefinitionsDestinyItemTalentGridBlockDefinition talentGrid = null;
   
 /* If the item has stats, this block will be defined. It has the \"raw\" investment stats for the item. These investment stats don't take into account the ways that the items can spawn, nor do they take into account any Stat Group transformations. I have retained them for debugging purposes, but I do not know how useful people will find them. */
   @Property(name: 'investmentStats')
@@ -144,19 +144,19 @@ class DestinyDefinitionsDestinyInventoryItemDefinition {
   
 /* In Destiny 1, we identified some items as having particular categories that we'd like to know about for various internal logic purposes. These are defined in SpecialItemType, and while these days the itemCategoryHashes are the preferred way of identifying types, we have retained this enum for its convenience. */
   @Property(name: 'specialItemType')
-  Object specialItemType = null;
+  DestinySpecialItemType specialItemType = null;
   
 /* A value indicating the \"base\" the of the item. This enum is a useful but dramatic oversimplification of what it means for an item to have a \"Type\". Still, it's handy in many situations.  itemCategoryHashes are the preferred way of identifying types, we have retained this enum for its convenience. */
   @Property(name: 'itemType')
-  Object itemType = null;
+  DestinyDestinyItemType itemType = null;
   
 /* A value indicating the \"sub-type\" of the item. For instance, where an item might have an itemType value \"Weapon\", this will be something more specific like \"Auto Rifle\".  itemCategoryHashes are the preferred way of identifying types, we have retained this enum for its convenience. */
   @Property(name: 'itemSubType')
-  Object itemSubType = null;
+  DestinyDestinyItemSubType itemSubType = null;
   
 /* We run a similarly weak-sauce algorithm to try and determine whether an item is restricted to a specific class. If we find it to be restricted in such a way, we set this classType property to match the class' enumeration value so that users can easily identify class restricted items.  If you see a mis-classed item, please inform the developers in the Bungie API forum. */
   @Property(name: 'classType')
-  Object classType = null;
+  DestinyDestinyClass classType = null;
   
 /* If true, then you will be allowed to equip the item if you pass its other requirements.  This being false means that you cannot equip the item under any circumstances. */
   @Property(name: 'equippable')
@@ -172,7 +172,7 @@ class DestinyDefinitionsDestinyInventoryItemDefinition {
   
 /* If the item has a damage type that could be considered to be default, it will be populated here.  For various upsetting reasons, it's surprisingly cumbersome to figure this out. I hope you're happy. */
   @Property(name: 'defaultDamageType')
-  Object defaultDamageType = null;
+  DestinyDamageType defaultDamageType = null;
   
 /* Similar to defaultDamageType, but represented as the hash identifier for a DestinyDamageTypeDefinition.  I will likely regret leaving in the enumeration versions of these properties, but for now they're very convenient. */
   @Property(name: 'defaultDamageTypeHash')

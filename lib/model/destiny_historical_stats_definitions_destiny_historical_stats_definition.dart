@@ -8,7 +8,7 @@ class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
   
 /* Statistic group */
   @Property(name: 'group')
-  Object group = null;
+  DestinyHistoricalStatsDefinitionsDestinyStatsGroupType group = null;
   
 /* Time periods the statistic covers */
   @Property(name: 'periodTypes')
@@ -20,7 +20,7 @@ class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
   
 /* Category for the stat. */
   @Property(name: 'category')
-  Object category = null;
+  DestinyHistoricalStatsDefinitionsDestinyStatsCategoryType category = null;
   
 /* Display name */
   @Property(name: 'statName')
@@ -32,7 +32,7 @@ class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
   
 /* Unit, if any, for the statistic */
   @Property(name: 'unitType')
-  Object unitType = null;
+  DestinyHistoricalStatsDefinitionsUnitType unitType = null;
   
 /* Optional URI to an icon for the statistic */
   @Property(name: 'iconImage')

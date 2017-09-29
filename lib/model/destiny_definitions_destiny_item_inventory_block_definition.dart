@@ -32,7 +32,7 @@ class DestinyDefinitionsDestinyItemInventoryBlockDefinition {
   
 /* The enumeration matching the tier type of the item to known values, again for convenience sake. */
   @Property(name: 'tierType')
-  Object tierType = null;
+  DestinyTierType tierType = null;
   
   DestinyDefinitionsDestinyItemInventoryBlockDefinition();
 

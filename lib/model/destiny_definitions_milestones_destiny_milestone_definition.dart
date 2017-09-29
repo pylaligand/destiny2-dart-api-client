@@ -12,7 +12,7 @@ class DestinyDefinitionsMilestonesDestinyMilestoneDefinition {
   
 /* An enumeration listing one of the possible types of milestones. Check out the DestinyMilestoneType enum for more info! */
   @Property(name: 'milestoneType')
-  Object milestoneType = null;
+  DestinyDefinitionsMilestonesDestinyMilestoneType milestoneType = null;
   
 /* If True, then the Milestone has been integrated with BNet's recruiting feature. */
   @Property(name: 'recruitable')

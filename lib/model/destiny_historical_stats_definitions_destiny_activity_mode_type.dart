@@ -1,123 +1,90 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyHistoricalStatsDefinitionsDestinyActivityModeType {
-  _0,
-  _2,
-  _3,
-  _4,
-  _5,
-  _6,
-  _7,
-  _9,
-  _10,
-  _11,
-  _12,
-  _13,
-  _15,
-  _16,
-  _17,
-  _18,
-  _19,
-  _20,
-  _21,
-  _22,
-  _24,
-  _25,
-  _26,
-  _27,
-  _28,
-  _29,
-  _30,
-  _31,
-  _32,
-  _37,
-  _38,
-  _39,
-  _40
-  
+class DestinyHistoricalStatsDefinitionsDestinyActivityModeType {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(this.value);
+
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType none = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(0);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType story = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(2);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType strike = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(3);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType raid = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(4);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType allPvP = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(5);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType patrol = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(6);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType allPvE = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(7);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved9 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(9);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType control = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(10);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved11 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(11);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType clash = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(12);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved13 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(13);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved15 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(15);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType nightfall = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(16);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType heroicNightfall = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(17);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType allStrikes = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(18);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType ironBanner = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(19);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved20 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(20);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved21 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(21);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved22 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(22);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved24 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(24);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved25 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(25);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved26 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(26);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved27 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(27);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved28 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(28);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved29 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(29);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved30 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(30);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType supremacy = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(31);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType reserved32 = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(32);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType survival = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(37);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType countdown = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(38);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType trialsOfTheNine = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(39);
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType social = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(40);
 }
 
 class DestinyHistoricalStatsDefinitionsDestinyActivityModeTypeTypeTransformer extends TypeTransformer<DestinyHistoricalStatsDefinitionsDestinyActivityModeType> {
 
   @override
   dynamic encode(DestinyHistoricalStatsDefinitionsDestinyActivityModeType data) {
-    switch(data) {
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._0: return 0;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._2: return 2;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._3: return 3;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._4: return 4;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._5: return 5;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._6: return 6;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._7: return 7;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._9: return 9;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._10: return 10;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._11: return 11;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._12: return 12;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._13: return 13;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._15: return 15;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._16: return 16;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._17: return 17;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._18: return 18;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._19: return 19;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._20: return 20;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._21: return 21;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._22: return 22;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._24: return 24;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._25: return 25;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._26: return 26;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._27: return 27;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._28: return 28;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._29: return 29;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._30: return 30;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._31: return 31;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._32: return 32;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._37: return 37;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._38: return 38;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._39: return 39;
-      case DestinyHistoricalStatsDefinitionsDestinyActivityModeType._40: return 40;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyHistoricalStatsDefinitionsDestinyActivityModeType decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._0;
-      case 2: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._2;
-      case 3: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._3;
-      case 4: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._4;
-      case 5: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._5;
-      case 6: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._6;
-      case 7: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._7;
-      case 9: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._9;
-      case 10: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._10;
-      case 11: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._11;
-      case 12: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._12;
-      case 13: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._13;
-      case 15: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._15;
-      case 16: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._16;
-      case 17: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._17;
-      case 18: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._18;
-      case 19: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._19;
-      case 20: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._20;
-      case 21: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._21;
-      case 22: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._22;
-      case 24: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._24;
-      case 25: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._25;
-      case 26: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._26;
-      case 27: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._27;
-      case 28: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._28;
-      case 29: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._29;
-      case 30: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._30;
-      case 31: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._31;
-      case 32: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._32;
-      case 37: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._37;
-      case 38: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._38;
-      case 39: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._39;
-      case 40: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType._40;
-      
+      case 0: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.none;
+      case 2: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.story;
+      case 3: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.strike;
+      case 4: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.raid;
+      case 5: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.allPvP;
+      case 6: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.patrol;
+      case 7: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.allPvE;
+      case 9: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved9;
+      case 10: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.control;
+      case 11: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved11;
+      case 12: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.clash;
+      case 13: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved13;
+      case 15: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved15;
+      case 16: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.nightfall;
+      case 17: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.heroicNightfall;
+      case 18: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.allStrikes;
+      case 19: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.ironBanner;
+      case 20: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved20;
+      case 21: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved21;
+      case 22: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved22;
+      case 24: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved24;
+      case 25: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved25;
+      case 26: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved26;
+      case 27: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved27;
+      case 28: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved28;
+      case 29: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved29;
+      case 30: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved30;
+      case 31: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.supremacy;
+      case 32: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.reserved32;
+      case 37: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.survival;
+      case 38: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.countdown;
+      case 39: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.trialsOfTheNine;
+      case 40: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.social;
       default: throw('Unknown enum value to decode: $data');
     }
   }

@@ -40,7 +40,7 @@ class DestinyDefinitionsDestinyVendorInteractionDefinition {
   
 /* The header for the interaction dialog. */
   @Property(name: 'headerDisplayProperties')
-  Object headerDisplayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition headerDisplayProperties = null;
   
 /* The localized text telling the player what to do when they see this dialog. */
   @Property(name: 'instructions')

@@ -1,30 +1,28 @@
 part of destiny2_api.api;
 
 @Entity()
-enum GroupsV2ChatSecuritySetting {
-  _0,
-  _1
-  
+class GroupsV2ChatSecuritySetting {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const GroupsV2ChatSecuritySetting._internal(this.value);
+
+  static const GroupsV2ChatSecuritySetting group = const GroupsV2ChatSecuritySetting._internal(0);
+  static const GroupsV2ChatSecuritySetting admins = const GroupsV2ChatSecuritySetting._internal(1);
 }
 
 class GroupsV2ChatSecuritySettingTypeTransformer extends TypeTransformer<GroupsV2ChatSecuritySetting> {
 
   @override
   dynamic encode(GroupsV2ChatSecuritySetting data) {
-    switch(data) {
-      case GroupsV2ChatSecuritySetting._0: return 0;
-      case GroupsV2ChatSecuritySetting._1: return 1;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   GroupsV2ChatSecuritySetting decode(dynamic data) {
     switch (data) {
-      case 0: return GroupsV2ChatSecuritySetting._0;
-      case 1: return GroupsV2ChatSecuritySetting._1;
-      
+      case 0: return GroupsV2ChatSecuritySetting.group;
+      case 1: return GroupsV2ChatSecuritySetting.admins;
       default: throw('Unknown enum value to decode: $data');
     }
   }

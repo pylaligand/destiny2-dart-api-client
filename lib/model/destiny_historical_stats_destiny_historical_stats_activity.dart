@@ -16,7 +16,7 @@ class DestinyHistoricalStatsDestinyHistoricalStatsActivity {
   
 /* Indicates the game mode of the activity. */
   @Property(name: 'mode')
-  Object mode = null;
+  DestinyHistoricalStatsDefinitionsDestinyActivityModeType mode = null;
   
 
   @Property(name: 'modes')

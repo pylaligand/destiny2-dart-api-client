@@ -1,45 +1,45 @@
 part of destiny2_api.api;
 
 @Entity()
-enum BungieMembershipType {
-  _0,
-  _1,
-  _2,
-  _4,
-  _10,
-  _254,
-  __1
-  
+class BungieMembershipType {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const BungieMembershipType._internal(this.value);
+
+  /// The types of membership the Accounts system supports. This is the external facing enum used in place of the internal-only Bungie.SharedDefinitions.MembershipType.
+  static const BungieMembershipType none = const BungieMembershipType._internal(0);
+  /// The types of membership the Accounts system supports. This is the external facing enum used in place of the internal-only Bungie.SharedDefinitions.MembershipType.
+  static const BungieMembershipType tigerXbox = const BungieMembershipType._internal(1);
+  /// The types of membership the Accounts system supports. This is the external facing enum used in place of the internal-only Bungie.SharedDefinitions.MembershipType.
+  static const BungieMembershipType tigerPsn = const BungieMembershipType._internal(2);
+  /// The types of membership the Accounts system supports. This is the external facing enum used in place of the internal-only Bungie.SharedDefinitions.MembershipType.
+  static const BungieMembershipType tigerBlizzard = const BungieMembershipType._internal(4);
+  /// The types of membership the Accounts system supports. This is the external facing enum used in place of the internal-only Bungie.SharedDefinitions.MembershipType.
+  static const BungieMembershipType tigerDemon = const BungieMembershipType._internal(10);
+  /// The types of membership the Accounts system supports. This is the external facing enum used in place of the internal-only Bungie.SharedDefinitions.MembershipType.
+  static const BungieMembershipType bungieNext = const BungieMembershipType._internal(254);
+  /// The types of membership the Accounts system supports. This is the external facing enum used in place of the internal-only Bungie.SharedDefinitions.MembershipType.
+  static const BungieMembershipType all = const BungieMembershipType._internal(-1);
 }
 
 class BungieMembershipTypeTypeTransformer extends TypeTransformer<BungieMembershipType> {
 
   @override
   dynamic encode(BungieMembershipType data) {
-    switch(data) {
-      case BungieMembershipType._0: return 0;
-      case BungieMembershipType._1: return 1;
-      case BungieMembershipType._2: return 2;
-      case BungieMembershipType._4: return 4;
-      case BungieMembershipType._10: return 10;
-      case BungieMembershipType._254: return 254;
-      case BungieMembershipType.__1: return -1;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   BungieMembershipType decode(dynamic data) {
     switch (data) {
-      case 0: return BungieMembershipType._0;
-      case 1: return BungieMembershipType._1;
-      case 2: return BungieMembershipType._2;
-      case 4: return BungieMembershipType._4;
-      case 10: return BungieMembershipType._10;
-      case 254: return BungieMembershipType._254;
-      case -1: return BungieMembershipType.__1;
-      
+      case 0: return BungieMembershipType.none;
+      case 1: return BungieMembershipType.tigerXbox;
+      case 2: return BungieMembershipType.tigerPsn;
+      case 4: return BungieMembershipType.tigerBlizzard;
+      case 10: return BungieMembershipType.tigerDemon;
+      case 254: return BungieMembershipType.bungieNext;
+      case -1: return BungieMembershipType.all;
       default: throw('Unknown enum value to decode: $data');
     }
   }

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **buyStringOverride** | **String** | The localized string for making purchases from this category, if it is different from the vendor&#39;s string for purchasing. | [optional] [default to null]
 **disabledDescription** | **String** | If the category is disabled, this is the localized description to show. | [optional] [default to null]
 **displayTitle** | **String** | The localized title of the category. | [optional] [default to null]
-**overlay** | [**Object**](Object.md) | If this category has an overlay prompt that should appear, this contains the details of that prompt. | [optional] [default to null]
+**overlay** | [**DestinyDefinitionsDestinyVendorCategoryOverlayDefinition**](DestinyDefinitionsDestinyVendorCategoryOverlayDefinition.md) | If this category has an overlay prompt that should appear, this contains the details of that prompt. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

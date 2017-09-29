@@ -1,69 +1,54 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances {
-  _0,
-  _1,
-  _2,
-  _4,
-  _8,
-  _16,
-  _32,
-  _64,
-  _128,
-  _256,
-  _512,
-  _1024,
-  _2048,
-  _4096,
-  _8191
-  
+class DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(this.value);
+
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances none = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(0);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances rateOfFire = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(1);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances damage = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(2);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances accuracy = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(4);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances range = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(8);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances zoom = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(16);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances recoil = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(32);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances ready = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(64);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances reload = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(128);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances hairTrigger = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(256);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances ammoAndMagazine = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(512);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances trackingAndDetonation = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(1024);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances shotgunSpread = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(2048);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances chargeTime = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(4096);
+  static const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances all = const DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._internal(8191);
 }
 
 class DestinyDefinitionsDestinyTalentNodeStepWeaponPerformancesTypeTransformer extends TypeTransformer<DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances> {
 
   @override
   dynamic encode(DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances data) {
-    switch(data) {
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._0: return 0;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._1: return 1;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._2: return 2;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._4: return 4;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._8: return 8;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._16: return 16;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._32: return 32;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._64: return 64;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._128: return 128;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._256: return 256;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._512: return 512;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._1024: return 1024;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._2048: return 2048;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._4096: return 4096;
-      case DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._8191: return 8191;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._0;
-      case 1: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._1;
-      case 2: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._2;
-      case 4: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._4;
-      case 8: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._8;
-      case 16: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._16;
-      case 32: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._32;
-      case 64: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._64;
-      case 128: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._128;
-      case 256: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._256;
-      case 512: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._512;
-      case 1024: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._1024;
-      case 2048: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._2048;
-      case 4096: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._4096;
-      case 8191: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances._8191;
-      
+      case 0: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.none;
+      case 1: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.rateOfFire;
+      case 2: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.damage;
+      case 4: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.accuracy;
+      case 8: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.range;
+      case 16: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.zoom;
+      case 32: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.recoil;
+      case 64: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.ready;
+      case 128: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.reload;
+      case 256: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.hairTrigger;
+      case 512: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.ammoAndMagazine;
+      case 1024: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.trackingAndDetonation;
+      case 2048: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.shotgunSpread;
+      case 4096: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.chargeTime;
+      case 8191: return DestinyDefinitionsDestinyTalentNodeStepWeaponPerformances.all;
       default: throw('Unknown enum value to decode: $data');
     }
   }

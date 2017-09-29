@@ -8,7 +8,7 @@ class DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition {
   
 /* The title and other common properties of the flyout. */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* A list of inventory buckets and other metadata to show on the screen. */
   @Property(name: 'buckets')

@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class GroupsV2GroupAction {
   /* Type of group, either Bungie.net hosted group, or a game services hosted clan. */
   @Property(name: 'groupType')
-  Object groupType = null;
+  GroupsV2GroupType groupType = null;
   
 
   @Property(name: 'name')
@@ -72,7 +72,7 @@ class GroupsV2GroupAction {
   
 /* When operation needs a platform specific account ID for the present user, use this property. In particular, groupType of Clan requires this value to be set. */
   @Property(name: 'platformMembershipType')
-  Object platformMembershipType = null;
+  BungieMembershipType platformMembershipType = null;
   
   GroupsV2GroupAction();
 

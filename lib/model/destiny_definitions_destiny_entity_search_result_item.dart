@@ -12,7 +12,7 @@ class DestinyDefinitionsDestinyEntitySearchResultItem {
   
 /* Basic display properties on the entity, so you don't have to look up the definition to show basic results for the item. */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* The ranking value for sorting that we calculated using our relevance formula. This will hopefully get better with time and iteration. */
   @Property(name: 'weight')

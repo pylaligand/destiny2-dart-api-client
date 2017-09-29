@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyEntitiesProfilesDestinyProfileComponent {
   /* If you need to render the Profile (their platform name, icon, etc...) somewhere, this property contains that information. */
   @Property(name: 'userInfo')
-  Object userInfo = null;
+  UserUserInfoCard userInfo = null;
   
 /* The last time the user played with any character on this Profile. */
   @Property(name: 'dateLastPlayed')
@@ -12,7 +12,7 @@ class DestinyEntitiesProfilesDestinyProfileComponent {
   
 /* If you want to know what expansions they own, this will contain that data. */
   @Property(name: 'versionsOwned')
-  Object versionsOwned = null;
+  DestinyDestinyGameVersions versionsOwned = null;
   
 /* A list of the character IDs, for further querying on your part. */
   @Property(name: 'characterIds')

@@ -1,36 +1,32 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDestinyRace {
-  _0,
-  _1,
-  _2,
-  _3
-  
+class DestinyDestinyRace {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDestinyRace._internal(this.value);
+
+  static const DestinyDestinyRace human = const DestinyDestinyRace._internal(0);
+  static const DestinyDestinyRace awoken = const DestinyDestinyRace._internal(1);
+  static const DestinyDestinyRace exo = const DestinyDestinyRace._internal(2);
+  static const DestinyDestinyRace unknown = const DestinyDestinyRace._internal(3);
 }
 
 class DestinyDestinyRaceTypeTransformer extends TypeTransformer<DestinyDestinyRace> {
 
   @override
   dynamic encode(DestinyDestinyRace data) {
-    switch(data) {
-      case DestinyDestinyRace._0: return 0;
-      case DestinyDestinyRace._1: return 1;
-      case DestinyDestinyRace._2: return 2;
-      case DestinyDestinyRace._3: return 3;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDestinyRace decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDestinyRace._0;
-      case 1: return DestinyDestinyRace._1;
-      case 2: return DestinyDestinyRace._2;
-      case 3: return DestinyDestinyRace._3;
-      
+      case 0: return DestinyDestinyRace.human;
+      case 1: return DestinyDestinyRace.awoken;
+      case 2: return DestinyDestinyRace.exo;
+      case 3: return DestinyDestinyRace.unknown;
       default: throw('Unknown enum value to decode: $data');
     }
   }

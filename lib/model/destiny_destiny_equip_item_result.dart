@@ -8,7 +8,7 @@ class DestinyDestinyEquipItemResult {
   
 /* A PlatformErrorCodes enum indicating whether it succeeded, and if it failed why. */
   @Property(name: 'equipStatus')
-  Object equipStatus = null;
+  ExceptionsPlatformErrorCodes equipStatus = null;
   
   DestinyDestinyEquipItemResult();
 

@@ -24,7 +24,7 @@ class DestinyDefinitionsDestinyVendorItemDefinition {
   
 /* If this item can be refunded, this is the policy for what will be refundd, how, and in what time period. */
   @Property(name: 'refundPolicy')
-  Object refundPolicy = null;
+  DestinyDestinyVendorItemRefundPolicy refundPolicy = null;
   
 /* The amount of time before refundability of the newly purchased item will expire. */
   @Property(name: 'refundTimeLimit')
@@ -56,7 +56,7 @@ class DestinyDefinitionsDestinyVendorItemDefinition {
   
 /* The action to be performed when purchasing the item, if it's not just \"buy\". */
   @Property(name: 'action')
-  Object action = null;
+  DestinyDefinitionsDestinyVendorSaleItemActionBlockDefinition action = null;
   
 /* The string identifier for the category selling this item. */
   @Property(name: 'displayCategory')
@@ -68,11 +68,11 @@ class DestinyDefinitionsDestinyVendorItemDefinition {
   
 /* The most restrictive scope that determines whether the item is available in the Vendor's inventory. See DestinyGatingScope's documentation for more information.  This can be determined by Unlock gating, or by whether or not the item has purchase level requirements (minimumLevel and maximumLevel properties). */
   @Property(name: 'visibilityScope')
-  Object visibilityScope = null;
+  DestinyDestinyGatingScope visibilityScope = null;
   
 /* Similar to visibilityScope, it represents the most restrictive scope that determines whether the item can be purchased. It will at least be as restrictive as visibilityScope, but could be more restrictive if the item has additional purchase requirements beyond whether it is merely visible or not.  See DestinyGatingScope's documentation for more information. */
   @Property(name: 'purchasableScope')
-  Object purchasableScope = null;
+  DestinyDestinyGatingScope purchasableScope = null;
   
   DestinyDefinitionsDestinyVendorItemDefinition();
 

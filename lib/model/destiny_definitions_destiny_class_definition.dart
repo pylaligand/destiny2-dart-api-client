@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyDefinitionsDestinyClassDefinition {
   /* In Destiny 1, we added a convenience Enumeration for referring to classes. We've kept it, though mostly for posterity. This is the enum value for this definition's class. */
   @Property(name: 'classType')
-  Object classType = null;
+  DestinyDestinyClass classType = null;
   
 
   @Property(name: 'displayProperties')

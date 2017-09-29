@@ -1,54 +1,40 @@
 part of destiny2_api.api;
 
 @Entity()
-enum GroupsV2Capabilities {
-  _0,
-  _1,
-  _2,
-  _4,
-  _8,
-  _16,
-  _31,
-  _32,
-  _64,
-  _96
-  
+class GroupsV2Capabilities {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const GroupsV2Capabilities._internal(this.value);
+
+  static const GroupsV2Capabilities none = const GroupsV2Capabilities._internal(0);
+  static const GroupsV2Capabilities leaderboards = const GroupsV2Capabilities._internal(1);
+  static const GroupsV2Capabilities callsign = const GroupsV2Capabilities._internal(2);
+  static const GroupsV2Capabilities optionalConversations = const GroupsV2Capabilities._internal(4);
+  static const GroupsV2Capabilities clanBanner = const GroupsV2Capabilities._internal(8);
+  static const GroupsV2Capabilities d2InvestmentData = const GroupsV2Capabilities._internal(16);
+  static const GroupsV2Capabilities tags = const GroupsV2Capabilities._internal(32);
+  static const GroupsV2Capabilities alliances = const GroupsV2Capabilities._internal(64);
 }
 
 class GroupsV2CapabilitiesTypeTransformer extends TypeTransformer<GroupsV2Capabilities> {
 
   @override
   dynamic encode(GroupsV2Capabilities data) {
-    switch(data) {
-      case GroupsV2Capabilities._0: return 0;
-      case GroupsV2Capabilities._1: return 1;
-      case GroupsV2Capabilities._2: return 2;
-      case GroupsV2Capabilities._4: return 4;
-      case GroupsV2Capabilities._8: return 8;
-      case GroupsV2Capabilities._16: return 16;
-      case GroupsV2Capabilities._31: return 31;
-      case GroupsV2Capabilities._32: return 32;
-      case GroupsV2Capabilities._64: return 64;
-      case GroupsV2Capabilities._96: return 96;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   GroupsV2Capabilities decode(dynamic data) {
     switch (data) {
-      case 0: return GroupsV2Capabilities._0;
-      case 1: return GroupsV2Capabilities._1;
-      case 2: return GroupsV2Capabilities._2;
-      case 4: return GroupsV2Capabilities._4;
-      case 8: return GroupsV2Capabilities._8;
-      case 16: return GroupsV2Capabilities._16;
-      case 31: return GroupsV2Capabilities._31;
-      case 32: return GroupsV2Capabilities._32;
-      case 64: return GroupsV2Capabilities._64;
-      case 96: return GroupsV2Capabilities._96;
-      
+      case 0: return GroupsV2Capabilities.none;
+      case 1: return GroupsV2Capabilities.leaderboards;
+      case 2: return GroupsV2Capabilities.callsign;
+      case 4: return GroupsV2Capabilities.optionalConversations;
+      case 8: return GroupsV2Capabilities.clanBanner;
+      case 16: return GroupsV2Capabilities.d2InvestmentData;
+      case 32: return GroupsV2Capabilities.tags;
+      case 64: return GroupsV2Capabilities.alliances;
       default: throw('Unknown enum value to decode: $data');
     }
   }

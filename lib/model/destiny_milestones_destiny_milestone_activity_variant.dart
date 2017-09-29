@@ -8,7 +8,7 @@ class DestinyMilestonesDestinyMilestoneActivityVariant {
   
 /* An OPTIONAL component: if it makes sense to talk about this activity variant in terms of whether or not it has been completed or what progress you have made in it, this will be returned. Otherwise, this will be NULL. */
   @Property(name: 'completionStatus')
-  Object completionStatus = null;
+  DestinyMilestonesDestinyMilestoneActivityCompletionStatus completionStatus = null;
   
   DestinyMilestonesDestinyMilestoneActivityVariant();
 

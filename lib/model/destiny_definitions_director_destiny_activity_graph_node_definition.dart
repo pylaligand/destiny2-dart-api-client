@@ -8,11 +8,11 @@ class DestinyDefinitionsDirectorDestinyActivityGraphNodeDefinition {
   
 /* The node *may* have display properties that override the active Activity's display properties. */
   @Property(name: 'overrideDisplay')
-  Object overrideDisplay = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition overrideDisplay = null;
   
 /* The position on the map for this node. */
   @Property(name: 'position')
-  Object position = null;
+  DestinyDefinitionsCommonDestinyPositionDefinition position = null;
   
 /* The node may have various visual accents placed on it, or styles applied. These are the list of possible styles that the Node can have. The game iterates through each, looking for the first one that passes a check of the required game/character/account state in order to show that style, and then renders the node in that style. */
   @Property(name: 'featuringStates')

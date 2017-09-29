@@ -8,11 +8,11 @@ class DestinyHistoricalStatsDestinyPostGameCarnageReportEntry {
   
 /* Score of the player if available */
   @Property(name: 'score')
-  Object score = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsValue score = null;
   
 /* Identity details of the player */
   @Property(name: 'player')
-  Object player = null;
+  DestinyHistoricalStatsDestinyPlayer player = null;
   
 /* ID of the player's character used in the activity. */
   @Property(name: 'characterId')
@@ -24,7 +24,7 @@ class DestinyHistoricalStatsDestinyPostGameCarnageReportEntry {
   
 /* Extended data extracted from the activity blob. */
   @Property(name: 'extended')
-  Object extended = null;
+  DestinyHistoricalStatsDestinyPostGameCarnageReportExtendedData extended = null;
   
   DestinyHistoricalStatsDestinyPostGameCarnageReportEntry();
 

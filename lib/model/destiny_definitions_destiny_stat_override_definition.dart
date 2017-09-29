@@ -8,7 +8,7 @@ class DestinyDefinitionsDestinyStatOverrideDefinition {
   
 /* The display properties to show instead of the base DestinyStatDefinition display properties. */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
   DestinyDefinitionsDestinyStatOverrideDefinition();
 

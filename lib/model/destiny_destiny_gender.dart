@@ -1,33 +1,30 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDestinyGender {
-  _0,
-  _1,
-  _2
-  
+class DestinyDestinyGender {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDestinyGender._internal(this.value);
+
+  static const DestinyDestinyGender male = const DestinyDestinyGender._internal(0);
+  static const DestinyDestinyGender female = const DestinyDestinyGender._internal(1);
+  static const DestinyDestinyGender unknown = const DestinyDestinyGender._internal(2);
 }
 
 class DestinyDestinyGenderTypeTransformer extends TypeTransformer<DestinyDestinyGender> {
 
   @override
   dynamic encode(DestinyDestinyGender data) {
-    switch(data) {
-      case DestinyDestinyGender._0: return 0;
-      case DestinyDestinyGender._1: return 1;
-      case DestinyDestinyGender._2: return 2;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDestinyGender decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDestinyGender._0;
-      case 1: return DestinyDestinyGender._1;
-      case 2: return DestinyDestinyGender._2;
-      
+      case 0: return DestinyDestinyGender.male;
+      case 1: return DestinyDestinyGender.female;
+      case 2: return DestinyDestinyGender.unknown;
       default: throw('Unknown enum value to decode: $data');
     }
   }

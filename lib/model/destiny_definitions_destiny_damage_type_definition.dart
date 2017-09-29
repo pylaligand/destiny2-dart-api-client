@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyDefinitionsDestinyDamageTypeDefinition {
   /* The description of the damage type, icon etc... */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* A variant of the icon that is transparent and colorless. */
   @Property(name: 'transparentIconPath')
@@ -16,7 +16,7 @@ class DestinyDefinitionsDestinyDamageTypeDefinition {
   
 /* We have an enumeration for damage types for quick reference. This is the current definition's damage type enum value. */
   @Property(name: 'enumValue')
-  Object enumValue = null;
+  DestinyDamageType enumValue = null;
   
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')

@@ -8,11 +8,11 @@ class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry {
   
 /* Team's standing relative to other teams. */
   @Property(name: 'standing')
-  Object standing = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsValue standing = null;
   
 /* Score earned by the team */
   @Property(name: 'score')
-  Object score = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsValue score = null;
   
 /* Alpha or Bravo */
   @Property(name: 'teamName')

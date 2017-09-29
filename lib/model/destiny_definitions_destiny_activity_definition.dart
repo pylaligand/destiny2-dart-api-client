@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyDefinitionsDestinyActivityDefinition {
   /* The title, subtitle, and icon for the activity. */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* If the activity has an icon associated with a specific release (such as a DLC), this is the path to that release's icon. */
   @Property(name: 'releaseIcon')
@@ -72,11 +72,11 @@ class DestinyDefinitionsDestinyActivityDefinition {
   
 /* This block of data provides information about the Activity's matchmaking attributes: how many people can join and such. */
   @Property(name: 'matchmaking')
-  Object matchmaking = null;
+  DestinyDefinitionsDestinyActivityMatchmakingBlockDefinition matchmaking = null;
   
 /* This block of data, if it exists, provides information about the guided game experience and restrictions for this activity. If it doesn't exist, the game is not able to be played as a guided game. */
   @Property(name: 'guidedGame')
-  Object guidedGame = null;
+  DestinyDefinitionsDestinyActivityGuidedBlockDefinition guidedGame = null;
   
 
   @Property(name: 'directActivityModeHash')

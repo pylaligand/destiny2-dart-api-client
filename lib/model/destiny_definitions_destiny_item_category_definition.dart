@@ -28,15 +28,15 @@ class DestinyDefinitionsDestinyItemCategoryDefinition {
   
 /* If an item belongs to this category, it will also receive this item type. This is now how DestinyItemType is populated for items: it used to be an even jankier process, but that's a story that requires more alcohol. */
   @Property(name: 'grantDestinyItemType')
-  Object grantDestinyItemType = null;
+  DestinyDestinyItemType grantDestinyItemType = null;
   
 /* If an item belongs to this category, it will also receive this subtype enum value.  I know what you're thinking - what if it belongs to multiple categories that provide sub-types?  The last one processed wins, as is the case with all of these \"grant\" enums. Now you can see one reason why we moved away from these enums... but they're so convenient when they work, aren't they? */
   @Property(name: 'grantDestinySubType')
-  Object grantDestinySubType = null;
+  DestinyDestinyItemSubType grantDestinySubType = null;
   
 /* If an item belongs to this category, it will also get this class restriction enum value.  See the other \"grant\"-prefixed properties on this definition for my color commentary. */
   @Property(name: 'grantDestinyClass')
-  Object grantDestinyClass = null;
+  DestinyDestinyClass grantDestinyClass = null;
   
 /* If this category is a \"parent\" category of other categories, those children will have their hashes listed in rendering order here, and can be looked up using these hashes against DestinyItemCategoryDefinition.  In this way, you can build up a visual hierarchy of item categories. That's what we did, and you can do it too. I believe in you. Yes, you, Carl.  (I hope someone named Carl reads this someday) */
   @Property(name: 'groupedCategoryHashes')

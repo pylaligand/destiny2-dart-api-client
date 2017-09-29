@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **tierTypeHash** | **int** | The hash identifier for the Tier Type of the item, use to look up its DestinyItemTierTypeDefinition if you need to show localized data for the item&#39;s tier. | [optional] [default to null]
 **isInstanceItem** | **bool** | If TRUE, this item is instanced. Otherwise, it is a generic item that merely has a quantity in a stack (like Glimmer). | [optional] [default to null]
 **tierTypeName** | **String** | The localized name of the tier type, which is a useful shortcut so you don&#39;t have to look up the definition every time. However, it&#39;s mostly a holdover from days before we had a DestinyItemTierTypeDefinition to refer to. | [optional] [default to null]
-**tierType** | [**Object**](Object.md) | The enumeration matching the tier type of the item to known values, again for convenience sake. | [optional] [default to null]
+**tierType** | [**DestinyTierType**](DestinyTierType.md) | The enumeration matching the tier type of the item to known values, again for convenience sake. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

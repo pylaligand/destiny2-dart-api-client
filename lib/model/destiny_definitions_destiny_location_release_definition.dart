@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyDefinitionsDestinyLocationReleaseDefinition {
   /* Sadly, these don't appear to be populated anymore (ever?) */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* If we had map information, this spawnPoint would be interesting. But sadly, we don't have that info. */
   @Property(name: 'spawnPoint')
@@ -40,7 +40,7 @@ class DestinyDefinitionsDestinyLocationReleaseDefinition {
   
 /* The type of Nav Point that this represents. See the enumeration for more info. */
   @Property(name: 'navPointType')
-  Object navPointType = null;
+  DestinyDestinyActivityNavPointType navPointType = null;
   
 /* Looks like it should be the position on the map, but sadly it does not look populated... yet? */
   @Property(name: 'worldPosition')

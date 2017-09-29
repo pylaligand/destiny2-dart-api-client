@@ -12,7 +12,7 @@ class DestinyDestinyTalentNode {
   
 /* An DestinyTalentNodeState enum value indicating the node's state: whether it can be activated or swapped, and why not if neither can be performed. */
   @Property(name: 'state')
-  Object state = null;
+  DestinyDestinyTalentNodeState state = null;
   
 /* If true, the node is activated: it's current step then provides its benefits. */
   @Property(name: 'isActivated')
@@ -40,7 +40,7 @@ class DestinyDestinyTalentNode {
   
 /* This property has some history. A talent grid can provide stats on both the item it's related to and the character equipping the item. This returns data about those stat bonuses. */
   @Property(name: 'nodeStatsBlock')
-  Object nodeStatsBlock = null;
+  DestinyDestinyTalentNodeStatBlock nodeStatsBlock = null;
   
   DestinyDestinyTalentNode();
 

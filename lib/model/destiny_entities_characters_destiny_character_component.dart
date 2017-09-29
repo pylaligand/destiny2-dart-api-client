@@ -8,7 +8,7 @@ class DestinyEntitiesCharactersDestinyCharacterComponent {
   
 /* membershipType tells you the platform on which the character plays. Examine the BungieMembershipType enumeration for possible values. */
   @Property(name: 'membershipType')
-  Object membershipType = null;
+  BungieMembershipType membershipType = null;
   
 /* The unique identifier for the character. */
   @Property(name: 'characterId')
@@ -48,15 +48,15 @@ class DestinyEntitiesCharactersDestinyCharacterComponent {
   
 /* Mostly for historical purposes at this point, this is an enumeration for the character's race.  It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. */
   @Property(name: 'raceType')
-  Object raceType = null;
+  DestinyDestinyRace raceType = null;
   
 /* Mostly for historical purposes at this point, this is an enumeration for the character's class.  It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. */
   @Property(name: 'classType')
-  Object classType = null;
+  DestinyDestinyClass classType = null;
   
 /* Mostly for historical purposes at this point, this is an enumeration for the character's Gender.  It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. And yeah, it's an enumeration and not a boolean. Fight me. */
   @Property(name: 'genderType')
-  Object genderType = null;
+  DestinyDestinyGender genderType = null;
   
 /* A shortcut path to the user's currently equipped emblem image. If you're just showing summary info for a user, this is more convenient than examining their equipped emblem and looking up the definition. */
   @Property(name: 'emblemPath')
@@ -72,7 +72,7 @@ class DestinyEntitiesCharactersDestinyCharacterComponent {
   
 /* The progression that indicates your character's level. Not their light level, but their character level: you know, the thing you max out a couple hours in and then ignore for the sake of light level. */
   @Property(name: 'levelProgression')
-  Object levelProgression = null;
+  DestinyDestinyProgression levelProgression = null;
   
 /* The \"base\" level of your character, not accounting for any light level. */
   @Property(name: 'baseCharacterLevel')

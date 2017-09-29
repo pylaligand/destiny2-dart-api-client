@@ -12,7 +12,7 @@ class DestinyDefinitionsDestinyItemSourceBlockDefinition {
   
 /* If we found that this item is exclusive to a specific platform, this will be set to the BungieMembershipType enumeration that matches that platform. */
   @Property(name: 'exclusive')
-  Object exclusive = null;
+  BungieMembershipType exclusive = null;
   
   DestinyDefinitionsDestinyItemSourceBlockDefinition();
 

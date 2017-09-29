@@ -8,7 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**classType** | [**Object**](Object.md) | In Destiny 1, we added a convenience Enumeration for referring to classes. We&#39;ve kept it, though mostly for posterity. This is the enum value for this definition&#39;s class. | [optional] [default to null]
+**classType** | [**DestinyDestinyClass**](DestinyDestinyClass.md) | In Destiny 1, we added a convenience Enumeration for referring to classes. We&#39;ve kept it, though mostly for posterity. This is the enum value for this definition&#39;s class. | [optional] [default to null]
 **displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) |  | [optional] [default to null]
 **genderedClassNames** | **Map&lt;String, String&gt;** | A localized string referring to the singular form of the Class&#39;s name when referred to in gendered form. Keyed by the DestinyGender. | [optional] [default to {}]
 **mentorVendorHash** | **int** | If the Class has a Mentor (all classes *should*), this will be the hash identifier for that Vendor if you care. | [optional] [default to null]

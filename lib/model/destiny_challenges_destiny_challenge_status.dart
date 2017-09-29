@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyChallengesDestinyChallengeStatus {
   /* The progress - including completion status - of the active challenge. */
   @Property(name: 'objective')
-  Object objective = null;
+  DestinyQuestsDestinyObjectiveProgress objective = null;
   
   DestinyChallengesDestinyChallengeStatus();
 

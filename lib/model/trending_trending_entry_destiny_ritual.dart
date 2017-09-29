@@ -28,11 +28,11 @@ class TrendingTrendingEntryDestinyRitual {
   
 /* A destiny event does not necessarily have a related Milestone, but if it does the details will be returned here. */
   @Property(name: 'milestoneDetails')
-  Object milestoneDetails = null;
+  DestinyMilestonesDestinyPublicMilestone milestoneDetails = null;
   
 /* A destiny event will not necessarily have milestone \"custom content\", but if it does the details will be here. */
   @Property(name: 'eventContent')
-  Object eventContent = null;
+  DestinyMilestonesDestinyMilestoneContent eventContent = null;
   
   TrendingTrendingEntryDestinyRitual();
 

@@ -8,15 +8,15 @@ class DestinyHistoricalStatsDestinyHistoricalStatsValue {
   
 /* Basic stat value. */
   @Property(name: 'basic')
-  Object basic = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsValuePair basic = null;
   
 /* Per game average for the statistic, if applicable */
   @Property(name: 'pga')
-  Object pga = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsValuePair pga = null;
   
 /* Weighted value of the stat if a weight greater than 1 has been assigned. */
   @Property(name: 'weighted')
-  Object weighted = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsValuePair weighted = null;
   
   DestinyHistoricalStatsDestinyHistoricalStatsValue();
 

@@ -1,51 +1,42 @@
 part of destiny2_api.api;
 
 @Entity()
-enum ForumForumTopicsCategoryFiltersEnum {
-  _0,
-  _1,
-  _2,
-  _4,
-  _8,
-  _16,
-  _32,
-  _64,
-  _128
-  
+class ForumForumTopicsCategoryFiltersEnum {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const ForumForumTopicsCategoryFiltersEnum._internal(this.value);
+
+  static const ForumForumTopicsCategoryFiltersEnum none = const ForumForumTopicsCategoryFiltersEnum._internal(0);
+  static const ForumForumTopicsCategoryFiltersEnum links = const ForumForumTopicsCategoryFiltersEnum._internal(1);
+  static const ForumForumTopicsCategoryFiltersEnum questions = const ForumForumTopicsCategoryFiltersEnum._internal(2);
+  static const ForumForumTopicsCategoryFiltersEnum answeredQuestions = const ForumForumTopicsCategoryFiltersEnum._internal(4);
+  static const ForumForumTopicsCategoryFiltersEnum media = const ForumForumTopicsCategoryFiltersEnum._internal(8);
+  static const ForumForumTopicsCategoryFiltersEnum textOnly = const ForumForumTopicsCategoryFiltersEnum._internal(16);
+  static const ForumForumTopicsCategoryFiltersEnum announcement = const ForumForumTopicsCategoryFiltersEnum._internal(32);
+  static const ForumForumTopicsCategoryFiltersEnum bungieOfficial = const ForumForumTopicsCategoryFiltersEnum._internal(64);
+  static const ForumForumTopicsCategoryFiltersEnum polls = const ForumForumTopicsCategoryFiltersEnum._internal(128);
 }
 
 class ForumForumTopicsCategoryFiltersEnumTypeTransformer extends TypeTransformer<ForumForumTopicsCategoryFiltersEnum> {
 
   @override
   dynamic encode(ForumForumTopicsCategoryFiltersEnum data) {
-    switch(data) {
-      case ForumForumTopicsCategoryFiltersEnum._0: return 0;
-      case ForumForumTopicsCategoryFiltersEnum._1: return 1;
-      case ForumForumTopicsCategoryFiltersEnum._2: return 2;
-      case ForumForumTopicsCategoryFiltersEnum._4: return 4;
-      case ForumForumTopicsCategoryFiltersEnum._8: return 8;
-      case ForumForumTopicsCategoryFiltersEnum._16: return 16;
-      case ForumForumTopicsCategoryFiltersEnum._32: return 32;
-      case ForumForumTopicsCategoryFiltersEnum._64: return 64;
-      case ForumForumTopicsCategoryFiltersEnum._128: return 128;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   ForumForumTopicsCategoryFiltersEnum decode(dynamic data) {
     switch (data) {
-      case 0: return ForumForumTopicsCategoryFiltersEnum._0;
-      case 1: return ForumForumTopicsCategoryFiltersEnum._1;
-      case 2: return ForumForumTopicsCategoryFiltersEnum._2;
-      case 4: return ForumForumTopicsCategoryFiltersEnum._4;
-      case 8: return ForumForumTopicsCategoryFiltersEnum._8;
-      case 16: return ForumForumTopicsCategoryFiltersEnum._16;
-      case 32: return ForumForumTopicsCategoryFiltersEnum._32;
-      case 64: return ForumForumTopicsCategoryFiltersEnum._64;
-      case 128: return ForumForumTopicsCategoryFiltersEnum._128;
-      
+      case 0: return ForumForumTopicsCategoryFiltersEnum.none;
+      case 1: return ForumForumTopicsCategoryFiltersEnum.links;
+      case 2: return ForumForumTopicsCategoryFiltersEnum.questions;
+      case 4: return ForumForumTopicsCategoryFiltersEnum.answeredQuestions;
+      case 8: return ForumForumTopicsCategoryFiltersEnum.media;
+      case 16: return ForumForumTopicsCategoryFiltersEnum.textOnly;
+      case 32: return ForumForumTopicsCategoryFiltersEnum.announcement;
+      case 64: return ForumForumTopicsCategoryFiltersEnum.bungieOfficial;
+      case 128: return ForumForumTopicsCategoryFiltersEnum.polls;
       default: throw('Unknown enum value to decode: $data');
     }
   }

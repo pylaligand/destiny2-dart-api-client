@@ -8,7 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**displayProperties** | [**Object**](Object.md) | The title, subtitle, and icon for the activity. | [optional] [default to null]
+**displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) | The title, subtitle, and icon for the activity. | [optional] [default to null]
 **releaseIcon** | **String** | If the activity has an icon associated with a specific release (such as a DLC), this is the path to that release&#39;s icon. | [optional] [default to null]
 **releaseTime** | **int** | If the activity will not be visible until a specific and known time, this will be the seconds since the Epoch when it will become visible. | [optional] [default to null]
 **activityLevel** | **int** | The difficulty level of the activity. | [optional] [default to null]
@@ -25,8 +25,8 @@ Name | Type | Description | Notes
 **optionalUnlockStrings** | [**List&lt;DestinyDefinitionsDestinyActivityUnlockStringDefinition&gt;**](DestinyDefinitionsDestinyActivityUnlockStringDefinition.md) | If there are status strings related to the activity and based on internal state of the game, account, or character, then this will be the definition of those strings and the states needed in order for the strings to be shown. | [optional] [default to []]
 **playlistItems** | [**List&lt;DestinyDefinitionsDestinyActivityPlaylistItemDefinition&gt;**](DestinyDefinitionsDestinyActivityPlaylistItemDefinition.md) | Represents all of the possible activities that could be played in the Playlist, along with information that we can use to determine if they are active at the present time. | [optional] [default to []]
 **activityGraphList** | [**List&lt;DestinyDefinitionsDestinyActivityGraphListEntryDefinition&gt;**](DestinyDefinitionsDestinyActivityGraphListEntryDefinition.md) | Unfortunately, in practice this is almost never populated. In theory, this is supposed to tell which Activity Graph to show if you bring up the director while in this activity. | [optional] [default to []]
-**matchmaking** | [**Object**](Object.md) | This block of data provides information about the Activity&#39;s matchmaking attributes: how many people can join and such. | [optional] [default to null]
-**guidedGame** | [**Object**](Object.md) | This block of data, if it exists, provides information about the guided game experience and restrictions for this activity. If it doesn&#39;t exist, the game is not able to be played as a guided game. | [optional] [default to null]
+**matchmaking** | [**DestinyDefinitionsDestinyActivityMatchmakingBlockDefinition**](DestinyDefinitionsDestinyActivityMatchmakingBlockDefinition.md) | This block of data provides information about the Activity&#39;s matchmaking attributes: how many people can join and such. | [optional] [default to null]
+**guidedGame** | [**DestinyDefinitionsDestinyActivityGuidedBlockDefinition**](DestinyDefinitionsDestinyActivityGuidedBlockDefinition.md) | This block of data, if it exists, provides information about the guided game experience and restrictions for this activity. If it doesn&#39;t exist, the game is not able to be played as a guided game. | [optional] [default to null]
 **directActivityModeHash** | **int** |  | [optional] [default to null]
 **directActivityModeType** | **int** |  | [optional] [default to null]
 **activityModeHashes** | **List&lt;int&gt;** |  | [optional] [default to []]

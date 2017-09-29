@@ -1,33 +1,30 @@
 part of destiny2_api.api;
 
 @Entity()
-enum ForumForumRecruitmentToneLabel {
-  _0,
-  _1,
-  _2
-  
+class ForumForumRecruitmentToneLabel {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const ForumForumRecruitmentToneLabel._internal(this.value);
+
+  static const ForumForumRecruitmentToneLabel none = const ForumForumRecruitmentToneLabel._internal(0);
+  static const ForumForumRecruitmentToneLabel familyFriendly = const ForumForumRecruitmentToneLabel._internal(1);
+  static const ForumForumRecruitmentToneLabel rowdy = const ForumForumRecruitmentToneLabel._internal(2);
 }
 
 class ForumForumRecruitmentToneLabelTypeTransformer extends TypeTransformer<ForumForumRecruitmentToneLabel> {
 
   @override
   dynamic encode(ForumForumRecruitmentToneLabel data) {
-    switch(data) {
-      case ForumForumRecruitmentToneLabel._0: return 0;
-      case ForumForumRecruitmentToneLabel._1: return 1;
-      case ForumForumRecruitmentToneLabel._2: return 2;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   ForumForumRecruitmentToneLabel decode(dynamic data) {
     switch (data) {
-      case 0: return ForumForumRecruitmentToneLabel._0;
-      case 1: return ForumForumRecruitmentToneLabel._1;
-      case 2: return ForumForumRecruitmentToneLabel._2;
-      
+      case 0: return ForumForumRecruitmentToneLabel.none;
+      case 1: return ForumForumRecruitmentToneLabel.familyFriendly;
+      case 2: return ForumForumRecruitmentToneLabel.rowdy;
       default: throw('Unknown enum value to decode: $data');
     }
   }

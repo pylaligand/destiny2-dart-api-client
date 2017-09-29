@@ -8,11 +8,11 @@ class DestinyDefinitionsDestinyInventoryBucketDefinition {
   
 /* Where the bucket is found. 0 = Character, 1 = Account */
   @Property(name: 'scope')
-  Object scope = null;
+  DestinyBucketScope scope = null;
   
 /* An enum value for what items can be found in the bucket. See the BucketCategory enum for more details. */
   @Property(name: 'category')
-  Object category = null;
+  DestinyBucketCategory category = null;
   
 /* Use this property to provide a quick-and-dirty recommended ordering for buckets in the UI. Most UIs will likely want to forsake this for something more custom and manual. */
   @Property(name: 'bucketOrder')
@@ -24,7 +24,7 @@ class DestinyDefinitionsDestinyInventoryBucketDefinition {
   
 /* Sometimes, inventory buckets represent conceptual \"locations\" in the game that might not be expected. This value indicates the conceptual location of the bucket, regardless of where it is actually contained on the character/account.   See ItemLocation for details.   Note that location includes the Vault and the Postmaster (both of whom being just inventory buckets with additional actions that can be performed on them through a Vendor) */
   @Property(name: 'location')
-  Object location = null;
+  DestinyItemLocation location = null;
   
 /* If TRUE, there is at least one Vendor that can transfer items to/from this bucket. See the DestinyVendorDefinition's acceptedItems property for more information on how transferring works. */
   @Property(name: 'hasTransferDestination')

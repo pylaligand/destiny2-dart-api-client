@@ -1,33 +1,33 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDestinyVendorInteractionRewardSelection {
-  _0,
-  _1,
-  _2
-  
+class DestinyDestinyVendorInteractionRewardSelection {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDestinyVendorInteractionRewardSelection._internal(this.value);
+
+  /// When a Vendor Interaction provides rewards, they'll either let you choose one or let you have all of them. This determines which it will be.
+  static const DestinyDestinyVendorInteractionRewardSelection none = const DestinyDestinyVendorInteractionRewardSelection._internal(0);
+  /// When a Vendor Interaction provides rewards, they'll either let you choose one or let you have all of them. This determines which it will be.
+  static const DestinyDestinyVendorInteractionRewardSelection one = const DestinyDestinyVendorInteractionRewardSelection._internal(1);
+  /// When a Vendor Interaction provides rewards, they'll either let you choose one or let you have all of them. This determines which it will be.
+  static const DestinyDestinyVendorInteractionRewardSelection all = const DestinyDestinyVendorInteractionRewardSelection._internal(2);
 }
 
 class DestinyDestinyVendorInteractionRewardSelectionTypeTransformer extends TypeTransformer<DestinyDestinyVendorInteractionRewardSelection> {
 
   @override
   dynamic encode(DestinyDestinyVendorInteractionRewardSelection data) {
-    switch(data) {
-      case DestinyDestinyVendorInteractionRewardSelection._0: return 0;
-      case DestinyDestinyVendorInteractionRewardSelection._1: return 1;
-      case DestinyDestinyVendorInteractionRewardSelection._2: return 2;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDestinyVendorInteractionRewardSelection decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDestinyVendorInteractionRewardSelection._0;
-      case 1: return DestinyDestinyVendorInteractionRewardSelection._1;
-      case 2: return DestinyDestinyVendorInteractionRewardSelection._2;
-      
+      case 0: return DestinyDestinyVendorInteractionRewardSelection.none;
+      case 1: return DestinyDestinyVendorInteractionRewardSelection.one;
+      case 2: return DestinyDestinyVendorInteractionRewardSelection.all;
       default: throw('Unknown enum value to decode: $data');
     }
   }

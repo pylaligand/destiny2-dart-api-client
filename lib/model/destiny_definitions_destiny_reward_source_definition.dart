@@ -8,7 +8,7 @@ class DestinyDefinitionsDestinyRewardSourceDefinition {
   
 /* Sources are grouped into categories: common ways that items are provided. I hope to see this expand in Destiny 2 once we have time to generate accurate reward source data. */
   @Property(name: 'category')
-  Object category = null;
+  DestinyDefinitionsDestinyRewardSourceCategory category = null;
   
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')

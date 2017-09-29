@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyDefinitionsDestinyNodeStepDefinition {
   /* These are the display properties actually used to render the Talent Node. The currently active step's displayProperties are shown. */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* The index of this step in the list of Steps on the Talent Node.  Unfortunately, this is the closest thing we have to an identifier for the Step: steps are not provided a content version agnostic identifier. This means that, when you are dealing with talent nodes, you will need to first ensure that you have the latest version of content. */
   @Property(name: 'stepIndex')
@@ -20,7 +20,7 @@ class DestinyDefinitionsDestinyNodeStepDefinition {
   
 /* An enum representing a damage type granted by activating this step, if any. */
   @Property(name: 'damageType')
-  Object damageType = null;
+  DestinyDamageType damageType = null;
   
 /* If the step provides a damage type, this will be the hash identifier used to look up the damage type's DestinyDamageTypeDefinition. */
   @Property(name: 'damageTypeHash')
@@ -28,7 +28,7 @@ class DestinyDefinitionsDestinyNodeStepDefinition {
   
 /* If the step has requirements for activation (they almost always do, if nothing else than for the Talent Grid's Progression to have reached a certain level), they will be defined here. */
   @Property(name: 'activationRequirement')
-  Object activationRequirement = null;
+  DestinyDefinitionsDestinyNodeActivationRequirement activationRequirement = null;
   
 /* There was a time when talent nodes could be activated multiple times, and the effects of subsequent Steps would be compounded on each other, essentially \"upgrading\" the node. We have moved away from this, but theoretically the capability still exists.  I continue to return this in case it is used in the future: if true and this step is the current step in the node, you are allowed to activate the node a second time to receive the benefits of the next step in the node, which will then become the active step. */
   @Property(name: 'canActivateNextStep')
@@ -60,7 +60,7 @@ class DestinyDefinitionsDestinyNodeStepDefinition {
   
 /* In Destiny 1, the Armory's Perk Filtering was driven by a concept of TalentNodeStepGroups: categorizations of talent nodes based on their functionality. While the Armory isn't a BNet-facing thing for now, and the new Armory will need to account for Sockets rather than Talent Nodes, this categorization capability feels useful enough to still keep around. */
   @Property(name: 'stepGroups')
-  Object stepGroups = null;
+  DestinyDefinitionsDestinyTalentNodeStepGroups stepGroups = null;
   
 /* If true, this step can affect the level of the item. See DestinyInventoryItemDefintion for more information about item levels and their effect on stats. */
   @Property(name: 'affectsLevel')

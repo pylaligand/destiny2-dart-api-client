@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyDefinitionsDestinyObjectiveDefinition {
   /* Ideally, this should tell you what your task is. I'm not going to lie to you though. Sometimes this doesn't have useful information at all. Which sucks, but there's nothing either of us can do about it. */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* The value that the unlock value defined in unlockValueHash must reach in order for the objective to be considered Completed. Used in calculating progress and completion status. */
   @Property(name: 'completionValue')
@@ -28,7 +28,7 @@ class DestinyDefinitionsDestinyObjectiveDefinition {
   
 /* The UI style applied to the objective. It's an enum, take a look at DestinyUnlockValueUIStyle for details of the possible styles. Use this info as you wish to customize your UI. */
   @Property(name: 'valueStyle')
-  Object valueStyle = null;
+  DestinyDestinyUnlockValueUIStyle valueStyle = null;
   
 /* Text to describe the progress bar. */
   @Property(name: 'progressDescription')
@@ -36,11 +36,11 @@ class DestinyDefinitionsDestinyObjectiveDefinition {
   
 /* If this objective enables Perks intrinsically, the conditions for that enabling are defined here. */
   @Property(name: 'perks')
-  Object perks = null;
+  DestinyDefinitionsDestinyObjectivePerkEntryDefinition perks = null;
   
 /* If this objective enables modifications on a player's stats intrinsically, the conditions are defined here. */
   @Property(name: 'stats')
-  Object stats = null;
+  DestinyDefinitionsDestinyObjectiveStatEntryDefinition stats = null;
   
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')

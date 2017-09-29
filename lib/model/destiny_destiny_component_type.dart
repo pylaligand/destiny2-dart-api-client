@@ -1,96 +1,92 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDestinyComponentType {
-  _0,
-  _100,
-  _101,
-  _102,
-  _103,
-  _200,
-  _201,
-  _202,
-  _203,
-  _204,
-  _205,
-  _300,
-  _301,
-  _302,
-  _303,
-  _304,
-  _305,
-  _306,
-  _307,
-  _308,
-  _400,
-  _401,
-  _402,
-  _500
-  
+class DestinyDestinyComponentType {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDestinyComponentType._internal(this.value);
+
+  static const DestinyDestinyComponentType none = const DestinyDestinyComponentType._internal(0);
+  /// Profiles is the most basic component, only relevant when calling GetProfile. This returns basic information about the profile, which is almost nothing: a list of characterIds, some information about the last time you logged in, and that most sobering statistic: how long you've played.
+  static const DestinyDestinyComponentType profiles = const DestinyDestinyComponentType._internal(100);
+  /// Only applicable for GetProfile, this will return information about receipts for refundable vendor items.
+  static const DestinyDestinyComponentType vendorReceipts = const DestinyDestinyComponentType._internal(101);
+  /// Asking for this will get you the profile-level inventories, such as your Vault buckets (yeah, the Vault is really inventory buckets located on your Profile)
+  static const DestinyDestinyComponentType profileInventories = const DestinyDestinyComponentType._internal(102);
+  /// This will get you a summary of items on your Profile that we consider to be "currencies", such as Glimmer. I mean, if there's Glimmer in Destiny 2. I didn't say there was Glimmer.
+  static const DestinyDestinyComponentType profileCurrencies = const DestinyDestinyComponentType._internal(103);
+  /// This will get you summary info about each of the characters in the profile.
+  static const DestinyDestinyComponentType characters = const DestinyDestinyComponentType._internal(200);
+  /// This will get you information about any non-equipped items on the character or character(s) in question, if you're allowed to see it. You have to either be authenticated as that user, or that user must allow anonymous viewing of their non-equipped items in Bungie.Net settings to actually get results.
+  static const DestinyDestinyComponentType characterInventories = const DestinyDestinyComponentType._internal(201);
+  /// This will get you information about the progression (faction, experience, etc... "levels") relevant to each character, if you are the currently authenticated user or the user has elected to allow anonymous viewing of its progression info.
+  static const DestinyDestinyComponentType characterProgressions = const DestinyDestinyComponentType._internal(202);
+  /// This will get you just enough information to be able to render the character in 3D if you have written a 3D rendering library for Destiny Characters, or "borrowed" ours. It's okay, I won't tell anyone if you're using it. I'm no snitch. (actually, we don't care if you use it - go to town)
+  static const DestinyDestinyComponentType characterRenderData = const DestinyDestinyComponentType._internal(203);
+  /// This will return info about activities that a user can see and gating on it, if you are the currently authenticated user or the user has elected to allow anonymous viewing of its progression info. Note that the data returned by this can be unfortunately problematic and relatively unreliable in some cases. We'll eventually work on making it more consistently reliable.
+  static const DestinyDestinyComponentType characterActivities = const DestinyDestinyComponentType._internal(204);
+  /// This will return info about the equipped items on the character(s). Everyone can see this.
+  static const DestinyDestinyComponentType characterEquipment = const DestinyDestinyComponentType._internal(205);
+  /// This will return basic info about instanced items - whether they can be equipped, their tracked status, and some info commonly needed in many places (current damage type, primary stat value, etc)
+  static const DestinyDestinyComponentType itemInstances = const DestinyDestinyComponentType._internal(300);
+  /// Items can have Objectives (DestinyObjectiveDefinition) bound to them. If they do, this will return info for items that have such bound objectives.
+  static const DestinyDestinyComponentType itemObjectives = const DestinyDestinyComponentType._internal(301);
+  /// Items can have perks (DestinyPerkDefinition). If they do, this will return info for what perks are active on items.
+  static const DestinyDestinyComponentType itemPerks = const DestinyDestinyComponentType._internal(302);
+  /// If you just want to render the weapon, this is just enough info to do that rendering.
+  static const DestinyDestinyComponentType itemRenderData = const DestinyDestinyComponentType._internal(303);
+  /// Items can have stats, like rate of fire. Asking for this component will return requested item's stats if they have stats.
+  static const DestinyDestinyComponentType itemStats = const DestinyDestinyComponentType._internal(304);
+  /// Items can have sockets, where plugs can be inserted. Asking for this component will return all info relevant to the sockets on items that have them.
+  static const DestinyDestinyComponentType itemSockets = const DestinyDestinyComponentType._internal(305);
+  /// Items can have talent grids, though that matters a lot less frequently than it used to. Asking for this component will return all relevant info about activated Nodes and Steps on this talent grid, like the good ol' days.
+  static const DestinyDestinyComponentType itemTalentGrids = const DestinyDestinyComponentType._internal(306);
+  /// Items that *aren't* instanced still have important information you need to know: how much of it you have, the itemHash so you can look up their DestinyInventoryItemDefinition, whether they're locked, etc... Both instanced and non-instanced items will have these properties.
+  static const DestinyDestinyComponentType itemCommonData = const DestinyDestinyComponentType._internal(307);
+  /// Items that are "Plugs" can be inserted into sockets. This returns statuses about those plugs and why they can/can't be inserted. I hear you giggling, there's nothing funny about inserting plugs. Get your head out of the gutter and pay attention!
+  static const DestinyDestinyComponentType itemPlugStates = const DestinyDestinyComponentType._internal(308);
+  static const DestinyDestinyComponentType vendors = const DestinyDestinyComponentType._internal(400);
+  static const DestinyDestinyComponentType vendorCategories = const DestinyDestinyComponentType._internal(401);
+  static const DestinyDestinyComponentType vendorSales = const DestinyDestinyComponentType._internal(402);
+  /// Asking for this component will return you the account's Kiosk statuses: that is, what items have been filled out/acquired. But only if you are the currently authenticated user or the user has elected to allow anonymous viewing of its progression info.
+  static const DestinyDestinyComponentType kiosks = const DestinyDestinyComponentType._internal(500);
 }
 
 class DestinyDestinyComponentTypeTypeTransformer extends TypeTransformer<DestinyDestinyComponentType> {
 
   @override
   dynamic encode(DestinyDestinyComponentType data) {
-    switch(data) {
-      case DestinyDestinyComponentType._0: return 0;
-      case DestinyDestinyComponentType._100: return 100;
-      case DestinyDestinyComponentType._101: return 101;
-      case DestinyDestinyComponentType._102: return 102;
-      case DestinyDestinyComponentType._103: return 103;
-      case DestinyDestinyComponentType._200: return 200;
-      case DestinyDestinyComponentType._201: return 201;
-      case DestinyDestinyComponentType._202: return 202;
-      case DestinyDestinyComponentType._203: return 203;
-      case DestinyDestinyComponentType._204: return 204;
-      case DestinyDestinyComponentType._205: return 205;
-      case DestinyDestinyComponentType._300: return 300;
-      case DestinyDestinyComponentType._301: return 301;
-      case DestinyDestinyComponentType._302: return 302;
-      case DestinyDestinyComponentType._303: return 303;
-      case DestinyDestinyComponentType._304: return 304;
-      case DestinyDestinyComponentType._305: return 305;
-      case DestinyDestinyComponentType._306: return 306;
-      case DestinyDestinyComponentType._307: return 307;
-      case DestinyDestinyComponentType._308: return 308;
-      case DestinyDestinyComponentType._400: return 400;
-      case DestinyDestinyComponentType._401: return 401;
-      case DestinyDestinyComponentType._402: return 402;
-      case DestinyDestinyComponentType._500: return 500;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDestinyComponentType decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDestinyComponentType._0;
-      case 100: return DestinyDestinyComponentType._100;
-      case 101: return DestinyDestinyComponentType._101;
-      case 102: return DestinyDestinyComponentType._102;
-      case 103: return DestinyDestinyComponentType._103;
-      case 200: return DestinyDestinyComponentType._200;
-      case 201: return DestinyDestinyComponentType._201;
-      case 202: return DestinyDestinyComponentType._202;
-      case 203: return DestinyDestinyComponentType._203;
-      case 204: return DestinyDestinyComponentType._204;
-      case 205: return DestinyDestinyComponentType._205;
-      case 300: return DestinyDestinyComponentType._300;
-      case 301: return DestinyDestinyComponentType._301;
-      case 302: return DestinyDestinyComponentType._302;
-      case 303: return DestinyDestinyComponentType._303;
-      case 304: return DestinyDestinyComponentType._304;
-      case 305: return DestinyDestinyComponentType._305;
-      case 306: return DestinyDestinyComponentType._306;
-      case 307: return DestinyDestinyComponentType._307;
-      case 308: return DestinyDestinyComponentType._308;
-      case 400: return DestinyDestinyComponentType._400;
-      case 401: return DestinyDestinyComponentType._401;
-      case 402: return DestinyDestinyComponentType._402;
-      case 500: return DestinyDestinyComponentType._500;
-      
+      case 0: return DestinyDestinyComponentType.none;
+      case 100: return DestinyDestinyComponentType.profiles;
+      case 101: return DestinyDestinyComponentType.vendorReceipts;
+      case 102: return DestinyDestinyComponentType.profileInventories;
+      case 103: return DestinyDestinyComponentType.profileCurrencies;
+      case 200: return DestinyDestinyComponentType.characters;
+      case 201: return DestinyDestinyComponentType.characterInventories;
+      case 202: return DestinyDestinyComponentType.characterProgressions;
+      case 203: return DestinyDestinyComponentType.characterRenderData;
+      case 204: return DestinyDestinyComponentType.characterActivities;
+      case 205: return DestinyDestinyComponentType.characterEquipment;
+      case 300: return DestinyDestinyComponentType.itemInstances;
+      case 301: return DestinyDestinyComponentType.itemObjectives;
+      case 302: return DestinyDestinyComponentType.itemPerks;
+      case 303: return DestinyDestinyComponentType.itemRenderData;
+      case 304: return DestinyDestinyComponentType.itemStats;
+      case 305: return DestinyDestinyComponentType.itemSockets;
+      case 306: return DestinyDestinyComponentType.itemTalentGrids;
+      case 307: return DestinyDestinyComponentType.itemCommonData;
+      case 308: return DestinyDestinyComponentType.itemPlugStates;
+      case 400: return DestinyDestinyComponentType.vendors;
+      case 401: return DestinyDestinyComponentType.vendorCategories;
+      case 402: return DestinyDestinyComponentType.vendorSales;
+      case 500: return DestinyDestinyComponentType.kiosks;
       default: throw('Unknown enum value to decode: $data');
     }
   }

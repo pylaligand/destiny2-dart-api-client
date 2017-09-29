@@ -8,7 +8,7 @@ class DestinyVendorsDestinyVendorReceipt {
   
 /* The item that was received, and its quantity. */
   @Property(name: 'itemReceived')
-  Object itemReceived = null;
+  DestinyDestinyItemQuantity itemReceived = null;
   
 /* The unlock flag used to determine whether you still have the purchased item. */
   @Property(name: 'licenseUnlockHash')
@@ -20,7 +20,7 @@ class DestinyVendorsDestinyVendorReceipt {
   
 /* Whether you can get a refund, and what happens in order for the refund to be received. See the DestinyVendorItemRefundPolicy enum for details. */
   @Property(name: 'refundPolicy')
-  Object refundPolicy = null;
+  DestinyDestinyVendorItemRefundPolicy refundPolicy = null;
   
 /* The identifier of this receipt. */
   @Property(name: 'sequenceNumber')
