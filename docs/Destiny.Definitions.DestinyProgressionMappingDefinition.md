@@ -8,7 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**displayProperties** | [**Object**](Object.md) | Infrequently defined in practice. Defer to the individual progressions&#39; display properties. | [optional] [default to null]
+**displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) | Infrequently defined in practice. Defer to the individual progressions&#39; display properties. | [optional] [default to null]
 **displayUnits** | **String** | The localized unit of measurement for progression across the progressions defined in this mapping. Unfortunately, this is very infrequently defined. Defer to the individual progressions&#39; display units. | [optional] [default to null]
 **hash** | **int** | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. | [optional] [default to null]
 **index** | **int** | The index of the entity as it was found in the investment tables. | [optional] [default to null]

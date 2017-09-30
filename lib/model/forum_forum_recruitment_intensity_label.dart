@@ -1,33 +1,30 @@
 part of destiny2_api.api;
 
 @Entity()
-enum ForumForumRecruitmentIntensityLabel {
-  _0,
-  _1,
-  _2
-  
+class ForumForumRecruitmentIntensityLabel {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const ForumForumRecruitmentIntensityLabel._internal(this.value);
+
+  static const ForumForumRecruitmentIntensityLabel none = const ForumForumRecruitmentIntensityLabel._internal(0);
+  static const ForumForumRecruitmentIntensityLabel casual = const ForumForumRecruitmentIntensityLabel._internal(1);
+  static const ForumForumRecruitmentIntensityLabel professional = const ForumForumRecruitmentIntensityLabel._internal(2);
 }
 
 class ForumForumRecruitmentIntensityLabelTypeTransformer extends TypeTransformer<ForumForumRecruitmentIntensityLabel> {
 
   @override
   dynamic encode(ForumForumRecruitmentIntensityLabel data) {
-    switch(data) {
-      case ForumForumRecruitmentIntensityLabel._0: return 0;
-      case ForumForumRecruitmentIntensityLabel._1: return 1;
-      case ForumForumRecruitmentIntensityLabel._2: return 2;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   ForumForumRecruitmentIntensityLabel decode(dynamic data) {
     switch (data) {
-      case 0: return ForumForumRecruitmentIntensityLabel._0;
-      case 1: return ForumForumRecruitmentIntensityLabel._1;
-      case 2: return ForumForumRecruitmentIntensityLabel._2;
-      
+      case 0: return ForumForumRecruitmentIntensityLabel.none;
+      case 1: return ForumForumRecruitmentIntensityLabel.casual;
+      case 2: return ForumForumRecruitmentIntensityLabel.professional;
       default: throw('Unknown enum value to decode: $data');
     }
   }

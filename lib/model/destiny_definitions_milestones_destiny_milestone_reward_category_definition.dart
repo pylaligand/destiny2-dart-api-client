@@ -12,7 +12,7 @@ class DestinyDefinitionsMilestonesDestinyMilestoneRewardCategoryDefinition {
   
 /* Hopefully this is obvious by now. */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* If this milestone can provide rewards, this will define the sets of rewards that can be earned, the conditions under which they can be acquired, internal data that we'll use at runtime to determine whether you've already earned or redeemed this set of rewards, and the category that this reward should be placed under. */
   @Property(name: 'rewardEntries')

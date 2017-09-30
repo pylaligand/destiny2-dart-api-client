@@ -1,57 +1,57 @@
 part of destiny2_api.api;
 
 @Entity()
-enum ApplicationsApplicationScopes {
-  _1,
-  _2,
-  _4,
-  _8,
-  _16,
-  _32,
-  _64,
-  _128,
-  _256,
-  _512,
-  _1024
-  
+class ApplicationsApplicationScopes {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const ApplicationsApplicationScopes._internal(this.value);
+
+  /// Read basic user profile information such as the user's handle, avatar icon, etc.
+  static const ApplicationsApplicationScopes readBasicUserProfile = const ApplicationsApplicationScopes._internal(1);
+  /// Read Group/Clan Forums, Wall, and Members for groups and clans that the user has joined.
+  static const ApplicationsApplicationScopes readGroups = const ApplicationsApplicationScopes._internal(2);
+  /// Write Group/Clan Forums, Wall, and Members for groups and clans that the user has joined.
+  static const ApplicationsApplicationScopes writeGroups = const ApplicationsApplicationScopes._internal(4);
+  /// Administer Group/Clan Forums, Wall, and Members for groups and clans that the user is a founder or an administrator.
+  static const ApplicationsApplicationScopes adminGroups = const ApplicationsApplicationScopes._internal(8);
+  /// Create new groups, clans, and forum posts.
+  static const ApplicationsApplicationScopes bnetWrite = const ApplicationsApplicationScopes._internal(16);
+  /// Move or equip Destiny items
+  static const ApplicationsApplicationScopes moveEquipDestinyItems = const ApplicationsApplicationScopes._internal(32);
+  /// Read Destiny Inventory and Vault contents.
+  static const ApplicationsApplicationScopes readDestinyInventoryAndVault = const ApplicationsApplicationScopes._internal(64);
+  /// Read user data such as who they are web notifications, clan/group memberships, recent activity, muted users.
+  static const ApplicationsApplicationScopes readUserData = const ApplicationsApplicationScopes._internal(128);
+  /// Edit user data such as preferred language, status, motto, avatar selection and theme.
+  static const ApplicationsApplicationScopes editUserData = const ApplicationsApplicationScopes._internal(256);
+  /// Access vendor and advisor data specific to a user.
+  static const ApplicationsApplicationScopes readDestinyVendorsAndAdvisors = const ApplicationsApplicationScopes._internal(512);
+  /// Read offer history and claim and apply tokens for the user.
+  static const ApplicationsApplicationScopes readAndApplyTokens = const ApplicationsApplicationScopes._internal(1024);
 }
 
 class ApplicationsApplicationScopesTypeTransformer extends TypeTransformer<ApplicationsApplicationScopes> {
 
   @override
   dynamic encode(ApplicationsApplicationScopes data) {
-    switch(data) {
-      case ApplicationsApplicationScopes._1: return 1;
-      case ApplicationsApplicationScopes._2: return 2;
-      case ApplicationsApplicationScopes._4: return 4;
-      case ApplicationsApplicationScopes._8: return 8;
-      case ApplicationsApplicationScopes._16: return 16;
-      case ApplicationsApplicationScopes._32: return 32;
-      case ApplicationsApplicationScopes._64: return 64;
-      case ApplicationsApplicationScopes._128: return 128;
-      case ApplicationsApplicationScopes._256: return 256;
-      case ApplicationsApplicationScopes._512: return 512;
-      case ApplicationsApplicationScopes._1024: return 1024;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   ApplicationsApplicationScopes decode(dynamic data) {
     switch (data) {
-      case 1: return ApplicationsApplicationScopes._1;
-      case 2: return ApplicationsApplicationScopes._2;
-      case 4: return ApplicationsApplicationScopes._4;
-      case 8: return ApplicationsApplicationScopes._8;
-      case 16: return ApplicationsApplicationScopes._16;
-      case 32: return ApplicationsApplicationScopes._32;
-      case 64: return ApplicationsApplicationScopes._64;
-      case 128: return ApplicationsApplicationScopes._128;
-      case 256: return ApplicationsApplicationScopes._256;
-      case 512: return ApplicationsApplicationScopes._512;
-      case 1024: return ApplicationsApplicationScopes._1024;
-      
+      case 1: return ApplicationsApplicationScopes.readBasicUserProfile;
+      case 2: return ApplicationsApplicationScopes.readGroups;
+      case 4: return ApplicationsApplicationScopes.writeGroups;
+      case 8: return ApplicationsApplicationScopes.adminGroups;
+      case 16: return ApplicationsApplicationScopes.bnetWrite;
+      case 32: return ApplicationsApplicationScopes.moveEquipDestinyItems;
+      case 64: return ApplicationsApplicationScopes.readDestinyInventoryAndVault;
+      case 128: return ApplicationsApplicationScopes.readUserData;
+      case 256: return ApplicationsApplicationScopes.editUserData;
+      case 512: return ApplicationsApplicationScopes.readDestinyVendorsAndAdvisors;
+      case 1024: return ApplicationsApplicationScopes.readAndApplyTokens;
       default: throw('Unknown enum value to decode: $data');
     }
   }

@@ -8,7 +8,7 @@ class DestinyDefinitionsDestinyObjectivePerkEntryDefinition {
   
 /* An enumeration indicating whether it will be applied as long as the Objective is active, when it's completed, or until it's completed. */
   @Property(name: 'style')
-  Object style = null;
+  DestinyDestinyObjectiveGrantStyle style = null;
   
   DestinyDefinitionsDestinyObjectivePerkEntryDefinition();
 

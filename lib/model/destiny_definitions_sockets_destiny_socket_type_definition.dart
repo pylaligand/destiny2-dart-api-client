@@ -4,11 +4,11 @@ part of destiny2_api.api;
 class DestinyDefinitionsSocketsDestinySocketTypeDefinition {
   /* There are fields for this display data, but they appear to be unpopulated as of now. I am not sure where in the UI these would show if they even were populated, but I will continue to return this data in case it becomes useful. */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* Defines what happens when a plug is inserted into sockets of this type. */
   @Property(name: 'insertAction')
-  Object insertAction = null;
+  DestinyDefinitionsSocketsDestinyInsertPlugActionDefinition insertAction = null;
   
 /* A list of Plug \"Categories\" that are allowed to be plugged into sockets of this type.  These should be compared against a given plug item's DestinyInventoryItemDefinition.plug.plugCategoryHash, which indicates the plug item's category.  If the plug's category matches any whitelisted plug, or if the whitelist is empty, it is allowed to be inserted. */
   @Property(name: 'plugWhitelist')

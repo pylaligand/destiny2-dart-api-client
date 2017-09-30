@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **isVisible** | **bool** | If true, the user should be able to see this activity. | [optional] [default to null]
 **displayLevel** | **int** | The difficulty level of the activity, if applicable. | [optional] [default to null]
 **recommendedLight** | **int** | The recommended light level for the activity, if applicable. | [optional] [default to null]
-**difficultyTier** | [**Object**](Object.md) | A DestinyActivityDifficultyTier enum value indicating the difficulty of the activity. | [optional] [default to null]
+**difficultyTier** | [**DestinyDestinyActivityDifficultyTier**](DestinyDestinyActivityDifficultyTier.md) | A DestinyActivityDifficultyTier enum value indicating the difficulty of the activity. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

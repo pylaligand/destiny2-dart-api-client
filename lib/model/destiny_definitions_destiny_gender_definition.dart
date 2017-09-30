@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyDefinitionsDestinyGenderDefinition {
   /* This is a quick reference enumeration for all of the currently defined Genders. We use the enumeration for quicker lookups in related data, like DestinyClassDefinition.genderedClassNames. */
   @Property(name: 'genderType')
-  Object genderType = null;
+  DestinyDestinyGender genderType = null;
   
 
   @Property(name: 'displayProperties')

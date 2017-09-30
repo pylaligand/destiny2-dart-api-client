@@ -8,7 +8,7 @@ class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup {
   
 /* If the period group is for a specific activity, this property will be set. */
   @Property(name: 'activityDetails')
-  Object activityDetails = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsActivity activityDetails = null;
   
 /* Collection of stats for the period. */
   @Property(name: 'values')

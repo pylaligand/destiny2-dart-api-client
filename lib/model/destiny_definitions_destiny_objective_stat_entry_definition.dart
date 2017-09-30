@@ -4,11 +4,11 @@ part of destiny2_api.api;
 class DestinyDefinitionsDestinyObjectiveStatEntryDefinition {
   /* The stat being modified, and the value used. */
   @Property(name: 'stat')
-  Object stat = null;
+  DestinyDefinitionsDestinyItemInvestmentStatDefinition stat = null;
   
 /* Whether it will be applied as long as the objective is active, when it's completed, or until it's completed. */
   @Property(name: 'style')
-  Object style = null;
+  DestinyDestinyObjectiveGrantStyle style = null;
   
   DestinyDefinitionsDestinyObjectiveStatEntryDefinition();
 

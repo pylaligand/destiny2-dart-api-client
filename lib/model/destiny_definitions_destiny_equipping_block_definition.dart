@@ -20,7 +20,7 @@ class DestinyDefinitionsDestinyEquippingBlockDefinition {
   
 /* These are custom attributes on the equippability of the item.  For now, this can only be \"equip on acquire\", which would mean that the item will be automatically equipped as soon as you pick it up. */
   @Property(name: 'attributes')
-  Object attributes = null;
+  DestinyEquippingItemBlockAttributes attributes = null;
   
 /* These are strings that represent the possible Game/Account/Character state failure conditions that can occur when trying to equip the item. They match up one-to-one with requiredUnlockExpressions. */
   @Property(name: 'displayStrings')

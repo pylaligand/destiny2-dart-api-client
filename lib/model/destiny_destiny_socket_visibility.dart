@@ -1,33 +1,30 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDestinySocketVisibility {
-  _0,
-  _1,
-  _2
-  
+class DestinyDestinySocketVisibility {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDestinySocketVisibility._internal(this.value);
+
+  static const DestinyDestinySocketVisibility visible = const DestinyDestinySocketVisibility._internal(0);
+  static const DestinyDestinySocketVisibility hidden = const DestinyDestinySocketVisibility._internal(1);
+  static const DestinyDestinySocketVisibility hiddenWhenEmpty = const DestinyDestinySocketVisibility._internal(2);
 }
 
 class DestinyDestinySocketVisibilityTypeTransformer extends TypeTransformer<DestinyDestinySocketVisibility> {
 
   @override
   dynamic encode(DestinyDestinySocketVisibility data) {
-    switch(data) {
-      case DestinyDestinySocketVisibility._0: return 0;
-      case DestinyDestinySocketVisibility._1: return 1;
-      case DestinyDestinySocketVisibility._2: return 2;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDestinySocketVisibility decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDestinySocketVisibility._0;
-      case 1: return DestinyDestinySocketVisibility._1;
-      case 2: return DestinyDestinySocketVisibility._2;
-      
+      case 0: return DestinyDestinySocketVisibility.visible;
+      case 1: return DestinyDestinySocketVisibility.hidden;
+      case 2: return DestinyDestinySocketVisibility.hiddenWhenEmpty;
       default: throw('Unknown enum value to decode: $data');
     }
   }

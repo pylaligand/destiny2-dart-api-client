@@ -1,36 +1,32 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyItemBindStatus {
-  _0,
-  _1,
-  _2,
-  _3
-  
+class DestinyItemBindStatus {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyItemBindStatus._internal(this.value);
+
+  static const DestinyItemBindStatus notBound = const DestinyItemBindStatus._internal(0);
+  static const DestinyItemBindStatus boundToCharacter = const DestinyItemBindStatus._internal(1);
+  static const DestinyItemBindStatus boundToAccount = const DestinyItemBindStatus._internal(2);
+  static const DestinyItemBindStatus boundToGuild = const DestinyItemBindStatus._internal(3);
 }
 
 class DestinyItemBindStatusTypeTransformer extends TypeTransformer<DestinyItemBindStatus> {
 
   @override
   dynamic encode(DestinyItemBindStatus data) {
-    switch(data) {
-      case DestinyItemBindStatus._0: return 0;
-      case DestinyItemBindStatus._1: return 1;
-      case DestinyItemBindStatus._2: return 2;
-      case DestinyItemBindStatus._3: return 3;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyItemBindStatus decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyItemBindStatus._0;
-      case 1: return DestinyItemBindStatus._1;
-      case 2: return DestinyItemBindStatus._2;
-      case 3: return DestinyItemBindStatus._3;
-      
+      case 0: return DestinyItemBindStatus.notBound;
+      case 1: return DestinyItemBindStatus.boundToCharacter;
+      case 2: return DestinyItemBindStatus.boundToAccount;
+      case 3: return DestinyItemBindStatus.boundToGuild;
       default: throw('Unknown enum value to decode: $data');
     }
   }

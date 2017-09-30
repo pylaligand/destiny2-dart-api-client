@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyDefinitionsDestinyProgressionMappingDefinition {
   /* Infrequently defined in practice. Defer to the individual progressions' display properties. */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* The localized unit of measurement for progression across the progressions defined in this mapping. Unfortunately, this is very infrequently defined. Defer to the individual progressions' display units. */
   @Property(name: 'displayUnits')

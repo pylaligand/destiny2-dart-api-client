@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **rewardVendorCategoryIndex** | **int** | If the vendor&#39;s reward list is sourced from one of his categories, this is the index into the category array of items to show. | [optional] [default to null]
 **flavorLineOne** | **String** | If the vendor interaction has flavor text, this is some of it. | [optional] [default to null]
 **flavorLineTwo** | **String** | If the vendor interaction has flavor text, this is the rest of it. | [optional] [default to null]
-**headerDisplayProperties** | [**Object**](Object.md) | The header for the interaction dialog. | [optional] [default to null]
+**headerDisplayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) | The header for the interaction dialog. | [optional] [default to null]
 **instructions** | **String** | The localized text telling the player what to do when they see this dialog. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

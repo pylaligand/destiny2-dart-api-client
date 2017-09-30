@@ -12,7 +12,7 @@ class DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition {
   
 /* The methodology to use for sorting items from the flyout. */
   @Property(name: 'sortItemsBy')
-  Object sortItemsBy = null;
+  DestinyDestinyItemSortType sortItemsBy = null;
   
   DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition();
 

@@ -12,7 +12,7 @@ class UserUserInfoCard {
   
 /* Type of the membership. */
   @Property(name: 'membershipType')
-  Object membershipType = null;
+  BungieMembershipType membershipType = null;
   
 /* Membership ID as they user is known in the Accounts service */
   @Property(name: 'membershipId')

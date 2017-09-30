@@ -1,75 +1,75 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDestinyItemType {
-  _0,
-  _1,
-  _2,
-  _3,
-  _7,
-  _8,
-  _9,
-  _10,
-  _11,
-  _12,
-  _13,
-  _14,
-  _15,
-  _16,
-  _17,
-  _18,
-  _19
-  
+class DestinyDestinyItemType {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDestinyItemType._internal(this.value);
+
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType none = const DestinyDestinyItemType._internal(0);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType currency = const DestinyDestinyItemType._internal(1);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType armor = const DestinyDestinyItemType._internal(2);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType weapon = const DestinyDestinyItemType._internal(3);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType message = const DestinyDestinyItemType._internal(7);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType engram = const DestinyDestinyItemType._internal(8);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType consumable = const DestinyDestinyItemType._internal(9);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType exchangeMaterial = const DestinyDestinyItemType._internal(10);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType missionReward = const DestinyDestinyItemType._internal(11);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType questStep = const DestinyDestinyItemType._internal(12);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType questStepComplete = const DestinyDestinyItemType._internal(13);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType emblem = const DestinyDestinyItemType._internal(14);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType quest = const DestinyDestinyItemType._internal(15);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType subclass = const DestinyDestinyItemType._internal(16);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType clanBanner = const DestinyDestinyItemType._internal(17);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType aura = const DestinyDestinyItemType._internal(18);
+  /// An enumeration that indicates the high-level \"type\" of the item, attempting to iron out the context specific differences for specific instances of an entity. For instance, though a weapon may be of various wepaon \"Types\", in DestinyItemType they are all classified as \"Weapon\". This allows for better filtering on a higher level of abstraction for the concept of types.   This enum is provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.   NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemType mod = const DestinyDestinyItemType._internal(19);
 }
 
 class DestinyDestinyItemTypeTypeTransformer extends TypeTransformer<DestinyDestinyItemType> {
 
   @override
   dynamic encode(DestinyDestinyItemType data) {
-    switch(data) {
-      case DestinyDestinyItemType._0: return 0;
-      case DestinyDestinyItemType._1: return 1;
-      case DestinyDestinyItemType._2: return 2;
-      case DestinyDestinyItemType._3: return 3;
-      case DestinyDestinyItemType._7: return 7;
-      case DestinyDestinyItemType._8: return 8;
-      case DestinyDestinyItemType._9: return 9;
-      case DestinyDestinyItemType._10: return 10;
-      case DestinyDestinyItemType._11: return 11;
-      case DestinyDestinyItemType._12: return 12;
-      case DestinyDestinyItemType._13: return 13;
-      case DestinyDestinyItemType._14: return 14;
-      case DestinyDestinyItemType._15: return 15;
-      case DestinyDestinyItemType._16: return 16;
-      case DestinyDestinyItemType._17: return 17;
-      case DestinyDestinyItemType._18: return 18;
-      case DestinyDestinyItemType._19: return 19;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDestinyItemType decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDestinyItemType._0;
-      case 1: return DestinyDestinyItemType._1;
-      case 2: return DestinyDestinyItemType._2;
-      case 3: return DestinyDestinyItemType._3;
-      case 7: return DestinyDestinyItemType._7;
-      case 8: return DestinyDestinyItemType._8;
-      case 9: return DestinyDestinyItemType._9;
-      case 10: return DestinyDestinyItemType._10;
-      case 11: return DestinyDestinyItemType._11;
-      case 12: return DestinyDestinyItemType._12;
-      case 13: return DestinyDestinyItemType._13;
-      case 14: return DestinyDestinyItemType._14;
-      case 15: return DestinyDestinyItemType._15;
-      case 16: return DestinyDestinyItemType._16;
-      case 17: return DestinyDestinyItemType._17;
-      case 18: return DestinyDestinyItemType._18;
-      case 19: return DestinyDestinyItemType._19;
-      
+      case 0: return DestinyDestinyItemType.none;
+      case 1: return DestinyDestinyItemType.currency;
+      case 2: return DestinyDestinyItemType.armor;
+      case 3: return DestinyDestinyItemType.weapon;
+      case 7: return DestinyDestinyItemType.message;
+      case 8: return DestinyDestinyItemType.engram;
+      case 9: return DestinyDestinyItemType.consumable;
+      case 10: return DestinyDestinyItemType.exchangeMaterial;
+      case 11: return DestinyDestinyItemType.missionReward;
+      case 12: return DestinyDestinyItemType.questStep;
+      case 13: return DestinyDestinyItemType.questStepComplete;
+      case 14: return DestinyDestinyItemType.emblem;
+      case 15: return DestinyDestinyItemType.quest;
+      case 16: return DestinyDestinyItemType.subclass;
+      case 17: return DestinyDestinyItemType.clanBanner;
+      case 18: return DestinyDestinyItemType.aura;
+      case 19: return DestinyDestinyItemType.mod;
       default: throw('Unknown enum value to decode: $data');
     }
   }

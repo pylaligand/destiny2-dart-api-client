@@ -44,7 +44,7 @@ class DestinyDefinitionsDestinyVendorCategoryEntryDefinition {
   
 /* If this category has an overlay prompt that should appear, this contains the details of that prompt. */
   @Property(name: 'overlay')
-  Object overlay = null;
+  DestinyDefinitionsDestinyVendorCategoryOverlayDefinition overlay = null;
   
   DestinyDefinitionsDestinyVendorCategoryEntryDefinition();
 

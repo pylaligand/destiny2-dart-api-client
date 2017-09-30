@@ -1,36 +1,32 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDestinyClass {
-  _0,
-  _1,
-  _2,
-  _3
-  
+class DestinyDestinyClass {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDestinyClass._internal(this.value);
+
+  static const DestinyDestinyClass titan = const DestinyDestinyClass._internal(0);
+  static const DestinyDestinyClass hunter = const DestinyDestinyClass._internal(1);
+  static const DestinyDestinyClass warlock = const DestinyDestinyClass._internal(2);
+  static const DestinyDestinyClass unknown = const DestinyDestinyClass._internal(3);
 }
 
 class DestinyDestinyClassTypeTransformer extends TypeTransformer<DestinyDestinyClass> {
 
   @override
   dynamic encode(DestinyDestinyClass data) {
-    switch(data) {
-      case DestinyDestinyClass._0: return 0;
-      case DestinyDestinyClass._1: return 1;
-      case DestinyDestinyClass._2: return 2;
-      case DestinyDestinyClass._3: return 3;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDestinyClass decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDestinyClass._0;
-      case 1: return DestinyDestinyClass._1;
-      case 2: return DestinyDestinyClass._2;
-      case 3: return DestinyDestinyClass._3;
-      
+      case 0: return DestinyDestinyClass.titan;
+      case 1: return DestinyDestinyClass.hunter;
+      case 2: return DestinyDestinyClass.warlock;
+      case 3: return DestinyDestinyClass.unknown;
       default: throw('Unknown enum value to decode: $data');
     }
   }

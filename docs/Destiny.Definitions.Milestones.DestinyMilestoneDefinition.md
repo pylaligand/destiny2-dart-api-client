@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) |  | [optional] [default to null]
 **image** | **String** | A custom image someone made just for the milestone. Isn&#39;t that special? | [optional] [default to null]
-**milestoneType** | [**Object**](Object.md) | An enumeration listing one of the possible types of milestones. Check out the DestinyMilestoneType enum for more info! | [optional] [default to null]
+**milestoneType** | [**DestinyDefinitionsMilestonesDestinyMilestoneType**](DestinyDefinitionsMilestonesDestinyMilestoneType.md) | An enumeration listing one of the possible types of milestones. Check out the DestinyMilestoneType enum for more info! | [optional] [default to null]
 **recruitable** | **bool** | If True, then the Milestone has been integrated with BNet&#39;s recruiting feature. | [optional] [default to null]
 **friendlyName** | **String** | If the milestone has a friendly identifier for association with other features - such as Recruiting - that identifier can be found here. This is \&quot;friendly\&quot; in that it looks better in a URL than whatever the identifier for the Milestone actually is. | [optional] [default to null]
 **showInExplorer** | **bool** | If TRUE, this entry should be returned in the list of milestones for the \&quot;Explore Destiny\&quot; (i.e. new BNet homepage) features of Bungie.net (as long as the underlying event is active) | [optional] [default to null]

@@ -1,33 +1,33 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDestinyStatAggregationType {
-  _0,
-  _1,
-  _2
-  
+class DestinyDestinyStatAggregationType {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDestinyStatAggregationType._internal(this.value);
+
+  /// When a Stat (DestinyStatDefinition) is aggregated, this is the rules used for determining the level and formula used for aggregation.  * CharacterAverage = apply a weighted average using the related DestinyStatGroupDefinition on the DestinyInventoryItemDefinition across the character's equipped items. See both of those definitions for details. * Character = don't aggregate: the stat should be located and used directly on the character. * Item = don't aggregate: the stat should be located and used directly on the item.
+  static const DestinyDestinyStatAggregationType characterAverage = const DestinyDestinyStatAggregationType._internal(0);
+  /// When a Stat (DestinyStatDefinition) is aggregated, this is the rules used for determining the level and formula used for aggregation.  * CharacterAverage = apply a weighted average using the related DestinyStatGroupDefinition on the DestinyInventoryItemDefinition across the character's equipped items. See both of those definitions for details. * Character = don't aggregate: the stat should be located and used directly on the character. * Item = don't aggregate: the stat should be located and used directly on the item.
+  static const DestinyDestinyStatAggregationType character = const DestinyDestinyStatAggregationType._internal(1);
+  /// When a Stat (DestinyStatDefinition) is aggregated, this is the rules used for determining the level and formula used for aggregation.  * CharacterAverage = apply a weighted average using the related DestinyStatGroupDefinition on the DestinyInventoryItemDefinition across the character's equipped items. See both of those definitions for details. * Character = don't aggregate: the stat should be located and used directly on the character. * Item = don't aggregate: the stat should be located and used directly on the item.
+  static const DestinyDestinyStatAggregationType item = const DestinyDestinyStatAggregationType._internal(2);
 }
 
 class DestinyDestinyStatAggregationTypeTypeTransformer extends TypeTransformer<DestinyDestinyStatAggregationType> {
 
   @override
   dynamic encode(DestinyDestinyStatAggregationType data) {
-    switch(data) {
-      case DestinyDestinyStatAggregationType._0: return 0;
-      case DestinyDestinyStatAggregationType._1: return 1;
-      case DestinyDestinyStatAggregationType._2: return 2;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDestinyStatAggregationType decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDestinyStatAggregationType._0;
-      case 1: return DestinyDestinyStatAggregationType._1;
-      case 2: return DestinyDestinyStatAggregationType._2;
-      
+      case 0: return DestinyDestinyStatAggregationType.characterAverage;
+      case 1: return DestinyDestinyStatAggregationType.character;
+      case 2: return DestinyDestinyStatAggregationType.item;
       default: throw('Unknown enum value to decode: $data');
     }
   }

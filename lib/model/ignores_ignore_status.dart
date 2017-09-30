@@ -1,45 +1,38 @@
 part of destiny2_api.api;
 
 @Entity()
-enum IgnoresIgnoreStatus {
-  _0,
-  _1,
-  _2,
-  _4,
-  _8,
-  _16,
-  _32
-  
+class IgnoresIgnoreStatus {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const IgnoresIgnoreStatus._internal(this.value);
+
+  static const IgnoresIgnoreStatus notIgnored = const IgnoresIgnoreStatus._internal(0);
+  static const IgnoresIgnoreStatus ignoredUser = const IgnoresIgnoreStatus._internal(1);
+  static const IgnoresIgnoreStatus ignoredGroup = const IgnoresIgnoreStatus._internal(2);
+  static const IgnoresIgnoreStatus ignoredByGroup = const IgnoresIgnoreStatus._internal(4);
+  static const IgnoresIgnoreStatus ignoredPost = const IgnoresIgnoreStatus._internal(8);
+  static const IgnoresIgnoreStatus ignoredTag = const IgnoresIgnoreStatus._internal(16);
+  static const IgnoresIgnoreStatus ignoredGlobal = const IgnoresIgnoreStatus._internal(32);
 }
 
 class IgnoresIgnoreStatusTypeTransformer extends TypeTransformer<IgnoresIgnoreStatus> {
 
   @override
   dynamic encode(IgnoresIgnoreStatus data) {
-    switch(data) {
-      case IgnoresIgnoreStatus._0: return 0;
-      case IgnoresIgnoreStatus._1: return 1;
-      case IgnoresIgnoreStatus._2: return 2;
-      case IgnoresIgnoreStatus._4: return 4;
-      case IgnoresIgnoreStatus._8: return 8;
-      case IgnoresIgnoreStatus._16: return 16;
-      case IgnoresIgnoreStatus._32: return 32;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   IgnoresIgnoreStatus decode(dynamic data) {
     switch (data) {
-      case 0: return IgnoresIgnoreStatus._0;
-      case 1: return IgnoresIgnoreStatus._1;
-      case 2: return IgnoresIgnoreStatus._2;
-      case 4: return IgnoresIgnoreStatus._4;
-      case 8: return IgnoresIgnoreStatus._8;
-      case 16: return IgnoresIgnoreStatus._16;
-      case 32: return IgnoresIgnoreStatus._32;
-      
+      case 0: return IgnoresIgnoreStatus.notIgnored;
+      case 1: return IgnoresIgnoreStatus.ignoredUser;
+      case 2: return IgnoresIgnoreStatus.ignoredGroup;
+      case 4: return IgnoresIgnoreStatus.ignoredByGroup;
+      case 8: return IgnoresIgnoreStatus.ignoredPost;
+      case 16: return IgnoresIgnoreStatus.ignoredTag;
+      case 32: return IgnoresIgnoreStatus.ignoredGlobal;
       default: throw('Unknown enum value to decode: $data');
     }
   }

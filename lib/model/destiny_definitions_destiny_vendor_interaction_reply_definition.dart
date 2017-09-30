@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyDefinitionsDestinyVendorInteractionReplyDefinition {
   /* The rewards granted upon responding to the vendor. */
   @Property(name: 'itemRewardsSelection')
-  Object itemRewardsSelection = null;
+  DestinyDestinyVendorInteractionRewardSelection itemRewardsSelection = null;
   
 /* The localized text for the reply. */
   @Property(name: 'reply')
@@ -12,7 +12,7 @@ class DestinyDefinitionsDestinyVendorInteractionReplyDefinition {
   
 /* An enum indicating the type of reply being made. */
   @Property(name: 'replyType')
-  Object replyType = null;
+  DestinyDestinyVendorReplyType replyType = null;
   
   DestinyDefinitionsDestinyVendorInteractionReplyDefinition();
 

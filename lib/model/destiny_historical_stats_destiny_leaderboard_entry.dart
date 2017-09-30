@@ -8,7 +8,7 @@ class DestinyHistoricalStatsDestinyLeaderboardEntry {
   
 /* Identity details of the player */
   @Property(name: 'player')
-  Object player = null;
+  DestinyHistoricalStatsDestinyPlayer player = null;
   
 /* ID of the player's best character for the reported stat. */
   @Property(name: 'characterId')
@@ -16,7 +16,7 @@ class DestinyHistoricalStatsDestinyLeaderboardEntry {
   
 /* Value of the stat for this player */
   @Property(name: 'value')
-  Object value = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsValue value = null;
   
   DestinyHistoricalStatsDestinyLeaderboardEntry();
 

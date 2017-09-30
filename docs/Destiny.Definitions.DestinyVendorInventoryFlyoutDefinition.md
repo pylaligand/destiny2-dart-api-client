@@ -9,7 +9,7 @@ import 'package:destiny2_api/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lockedDescription** | **String** | If the flyout is locked, this is the reason why. | [optional] [default to null]
-**displayProperties** | [**Object**](Object.md) | The title and other common properties of the flyout. | [optional] [default to null]
+**displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) | The title and other common properties of the flyout. | [optional] [default to null]
 **buckets** | [**List&lt;DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition&gt;**](DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition.md) | A list of inventory buckets and other metadata to show on the screen. | [optional] [default to []]
 **flyoutId** | **int** | An identifier for the flyout, in case anything else needs to refer to them. | [optional] [default to null]
 **suppressNewness** | **bool** | If this is true, don&#39;t show any of the glistening \&quot;this is a new item\&quot; UI elements, like we show on the inventory items themselves in in-game UI. | [optional] [default to null]

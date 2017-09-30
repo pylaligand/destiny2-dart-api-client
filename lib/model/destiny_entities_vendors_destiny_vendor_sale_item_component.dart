@@ -12,7 +12,7 @@ class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
   
 /* A flag indicating whether the requesting character can buy the item, and if not the reasons why the character can't buy it. */
   @Property(name: 'saleStatus')
-  Object saleStatus = null;
+  DestinyVendorItemStatus saleStatus = null;
   
 /* A summary of the current costs of the item. */
   @Property(name: 'costs')

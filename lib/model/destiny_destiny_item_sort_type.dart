@@ -1,33 +1,33 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDestinyItemSortType {
-  _0,
-  _1,
-  _2
-  
+class DestinyDestinyItemSortType {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDestinyItemSortType._internal(this.value);
+
+  /// Determines how items are sorted in an inventory bucket.
+  static const DestinyDestinyItemSortType itemId = const DestinyDestinyItemSortType._internal(0);
+  /// Determines how items are sorted in an inventory bucket.
+  static const DestinyDestinyItemSortType timestamp = const DestinyDestinyItemSortType._internal(1);
+  /// Determines how items are sorted in an inventory bucket.
+  static const DestinyDestinyItemSortType stackSize = const DestinyDestinyItemSortType._internal(2);
 }
 
 class DestinyDestinyItemSortTypeTypeTransformer extends TypeTransformer<DestinyDestinyItemSortType> {
 
   @override
   dynamic encode(DestinyDestinyItemSortType data) {
-    switch(data) {
-      case DestinyDestinyItemSortType._0: return 0;
-      case DestinyDestinyItemSortType._1: return 1;
-      case DestinyDestinyItemSortType._2: return 2;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDestinyItemSortType decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDestinyItemSortType._0;
-      case 1: return DestinyDestinyItemSortType._1;
-      case 2: return DestinyDestinyItemSortType._2;
-      
+      case 0: return DestinyDestinyItemSortType.itemId;
+      case 1: return DestinyDestinyItemSortType.timestamp;
+      case 2: return DestinyDestinyItemSortType.stackSize;
       default: throw('Unknown enum value to decode: $data');
     }
   }

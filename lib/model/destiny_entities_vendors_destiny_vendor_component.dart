@@ -8,7 +8,7 @@ class DestinyEntitiesVendorsDestinyVendorComponent {
   
 /* Long ago, we thought it would be a good idea to have special UI that showed whether or not you've seen a Vendor's inventory after cycling.   For now, we don't have that UI anymore. This property still exists for historical purposes. Don't worry about it. */
   @Property(name: 'ackState')
-  Object ackState = null;
+  UserAckState ackState = null;
   
 /* The date when this vendor's inventory will next rotate/refresh. */
   @Property(name: 'nextRefreshDate')
@@ -24,7 +24,7 @@ class DestinyEntitiesVendorsDestinyVendorComponent {
   
 /* If the Vendor has a related Reputation, this is the Progression data that represents the character's Reputation level with this Vendor. */
   @Property(name: 'progression')
-  Object progression = null;
+  DestinyDestinyProgression progression = null;
   
   DestinyEntitiesVendorsDestinyVendorComponent();
 

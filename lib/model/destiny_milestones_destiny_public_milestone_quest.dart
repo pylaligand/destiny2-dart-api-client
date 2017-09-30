@@ -8,7 +8,7 @@ class DestinyMilestonesDestinyPublicMilestoneQuest {
   
 /* A milestone need not have an active activity, but if there is one it will be returned here, along with any variant and additional information. */
   @Property(name: 'activity')
-  Object activity = null;
+  DestinyMilestonesDestinyPublicMilestoneActivity activity = null;
   
 /* For the given quest there could be 0-to-Many challenges: mini quests that you can perform in the course of doing this quest, that may grant you rewards and benefits. */
   @Property(name: 'challenges')

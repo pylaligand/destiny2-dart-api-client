@@ -36,7 +36,7 @@ class DestinyDestinyActivity {
   
 /* A DestinyActivityDifficultyTier enum value indicating the difficulty of the activity. */
   @Property(name: 'difficultyTier')
-  Object difficultyTier = null;
+  DestinyDestinyActivityDifficultyTier difficultyTier = null;
   
   DestinyDestinyActivity();
 

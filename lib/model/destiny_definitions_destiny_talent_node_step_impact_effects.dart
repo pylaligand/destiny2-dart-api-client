@@ -1,48 +1,40 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyDefinitionsDestinyTalentNodeStepImpactEffects {
-  _0,
-  _1,
-  _2,
-  _4,
-  _8,
-  _16,
-  _32,
-  _63
-  
+class DestinyDefinitionsDestinyTalentNodeStepImpactEffects {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyDefinitionsDestinyTalentNodeStepImpactEffects._internal(this.value);
+
+  static const DestinyDefinitionsDestinyTalentNodeStepImpactEffects none = const DestinyDefinitionsDestinyTalentNodeStepImpactEffects._internal(0);
+  static const DestinyDefinitionsDestinyTalentNodeStepImpactEffects armorPiercing = const DestinyDefinitionsDestinyTalentNodeStepImpactEffects._internal(1);
+  static const DestinyDefinitionsDestinyTalentNodeStepImpactEffects ricochet = const DestinyDefinitionsDestinyTalentNodeStepImpactEffects._internal(2);
+  static const DestinyDefinitionsDestinyTalentNodeStepImpactEffects flinch = const DestinyDefinitionsDestinyTalentNodeStepImpactEffects._internal(4);
+  static const DestinyDefinitionsDestinyTalentNodeStepImpactEffects collateralDamage = const DestinyDefinitionsDestinyTalentNodeStepImpactEffects._internal(8);
+  static const DestinyDefinitionsDestinyTalentNodeStepImpactEffects disorient = const DestinyDefinitionsDestinyTalentNodeStepImpactEffects._internal(16);
+  static const DestinyDefinitionsDestinyTalentNodeStepImpactEffects highlightTarget = const DestinyDefinitionsDestinyTalentNodeStepImpactEffects._internal(32);
+  static const DestinyDefinitionsDestinyTalentNodeStepImpactEffects all = const DestinyDefinitionsDestinyTalentNodeStepImpactEffects._internal(63);
 }
 
 class DestinyDefinitionsDestinyTalentNodeStepImpactEffectsTypeTransformer extends TypeTransformer<DestinyDefinitionsDestinyTalentNodeStepImpactEffects> {
 
   @override
   dynamic encode(DestinyDefinitionsDestinyTalentNodeStepImpactEffects data) {
-    switch(data) {
-      case DestinyDefinitionsDestinyTalentNodeStepImpactEffects._0: return 0;
-      case DestinyDefinitionsDestinyTalentNodeStepImpactEffects._1: return 1;
-      case DestinyDefinitionsDestinyTalentNodeStepImpactEffects._2: return 2;
-      case DestinyDefinitionsDestinyTalentNodeStepImpactEffects._4: return 4;
-      case DestinyDefinitionsDestinyTalentNodeStepImpactEffects._8: return 8;
-      case DestinyDefinitionsDestinyTalentNodeStepImpactEffects._16: return 16;
-      case DestinyDefinitionsDestinyTalentNodeStepImpactEffects._32: return 32;
-      case DestinyDefinitionsDestinyTalentNodeStepImpactEffects._63: return 63;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyDefinitionsDestinyTalentNodeStepImpactEffects decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects._0;
-      case 1: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects._1;
-      case 2: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects._2;
-      case 4: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects._4;
-      case 8: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects._8;
-      case 16: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects._16;
-      case 32: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects._32;
-      case 63: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects._63;
-      
+      case 0: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects.none;
+      case 1: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects.armorPiercing;
+      case 2: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects.ricochet;
+      case 4: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects.flinch;
+      case 8: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects.collateralDamage;
+      case 16: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects.disorient;
+      case 32: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects.highlightTarget;
+      case 63: return DestinyDefinitionsDestinyTalentNodeStepImpactEffects.all;
       default: throw('Unknown enum value to decode: $data');
     }
   }

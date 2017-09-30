@@ -1,51 +1,42 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyHistoricalStatsDefinitionsDestinyStatsGroupType {
-  _0,
-  _1,
-  _2,
-  _3,
-  _100,
-  _101,
-  _102,
-  _103,
-  _104
-  
+class DestinyHistoricalStatsDefinitionsDestinyStatsGroupType {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(this.value);
+
+  static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType none = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(0);
+  static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType general = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(1);
+  static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType weapons = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(2);
+  static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType medals = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(3);
+  static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType reservedGroups = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(100);
+  static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType leaderboard = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(101);
+  static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType activity = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(102);
+  static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType uniqueWeapon = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(103);
+  static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType internal = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(104);
 }
 
 class DestinyHistoricalStatsDefinitionsDestinyStatsGroupTypeTypeTransformer extends TypeTransformer<DestinyHistoricalStatsDefinitionsDestinyStatsGroupType> {
 
   @override
   dynamic encode(DestinyHistoricalStatsDefinitionsDestinyStatsGroupType data) {
-    switch(data) {
-      case DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._0: return 0;
-      case DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._1: return 1;
-      case DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._2: return 2;
-      case DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._3: return 3;
-      case DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._100: return 100;
-      case DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._101: return 101;
-      case DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._102: return 102;
-      case DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._103: return 103;
-      case DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._104: return 104;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyHistoricalStatsDefinitionsDestinyStatsGroupType decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._0;
-      case 1: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._1;
-      case 2: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._2;
-      case 3: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._3;
-      case 100: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._100;
-      case 101: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._101;
-      case 102: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._102;
-      case 103: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._103;
-      case 104: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._104;
-      
+      case 0: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.none;
+      case 1: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.general;
+      case 2: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.weapons;
+      case 3: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.medals;
+      case 100: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.reservedGroups;
+      case 101: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.leaderboard;
+      case 102: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.activity;
+      case 103: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.uniqueWeapon;
+      case 104: return DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.internal;
       default: throw('Unknown enum value to decode: $data');
     }
   }

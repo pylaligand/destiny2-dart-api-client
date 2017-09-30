@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyHistoricalStatsDestinyPlayer {
   /* Details about the player as they are known in game (platform display name, Destiny emblem) */
   @Property(name: 'destinyUserInfo')
-  Object destinyUserInfo = null;
+  UserUserInfoCard destinyUserInfo = null;
   
 /* Class of the character if applicable and available. */
   @Property(name: 'characterClass')
@@ -20,7 +20,7 @@ class DestinyHistoricalStatsDestinyPlayer {
   
 /* Details about the player as they are known on BungieNet. This will be undefined if the player has marked their credential private, or does not have a BungieNet account. */
   @Property(name: 'bungieNetUserInfo')
-  Object bungieNetUserInfo = null;
+  UserUserInfoCard bungieNetUserInfo = null;
   
 /* Current clan name for the player. This value may be null or an empty string if the user does not have a clan. */
   @Property(name: 'clanName')

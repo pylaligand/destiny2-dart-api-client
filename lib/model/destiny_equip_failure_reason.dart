@@ -1,42 +1,42 @@
 part of destiny2_api.api;
 
 @Entity()
-enum DestinyEquipFailureReason {
-  _0,
-  _1,
-  _2,
-  _4,
-  _8,
-  _16
-  
+class DestinyEquipFailureReason {
+  /// The underlying value of this enum member.
+  final int value;
+
+  const DestinyEquipFailureReason._internal(this.value);
+
+  /// The item is/was able to be equipped.
+  static const DestinyEquipFailureReason none = const DestinyEquipFailureReason._internal(0);
+  /// This is not the kind of item that can be equipped. Did you try equipping Glimmer or something?
+  static const DestinyEquipFailureReason itemUnequippable = const DestinyEquipFailureReason._internal(1);
+  /// This item is part of a "unique set", and you can't have more than one item of that same set type equipped at once. For instance, if you already have an Exotic Weapon equipped, you can't equip a second one in another weapon slot.
+  static const DestinyEquipFailureReason itemUniqueEquipRestricted = const DestinyEquipFailureReason._internal(2);
+  /// This item has state-based gating that prevents it from being equipped in certain circumstances. For instance, an item might be for Warlocks only and you're a Titan, or it might require you to have beaten some special quest that you haven't beaten yet. Use the additional failure data passed on the item itself to get more information about what the specific failure case was (See DestinyInventoryItemDefinition and DestinyItemInstanceComponent)
+  static const DestinyEquipFailureReason itemFailedUnlockCheck = const DestinyEquipFailureReason._internal(4);
+  /// This item requires you to have reached a specific character level in order to equip it, and you haven't reached that level yet.
+  static const DestinyEquipFailureReason itemFailedLevelCheck = const DestinyEquipFailureReason._internal(8);
+  /// This item can't be equipped on the character requested, because it must be in that character's inventory first. Transfer the item to the character you want to equip it before you attempt to equip it.
+  static const DestinyEquipFailureReason itemNotOnCharacter = const DestinyEquipFailureReason._internal(16);
 }
 
 class DestinyEquipFailureReasonTypeTransformer extends TypeTransformer<DestinyEquipFailureReason> {
 
   @override
   dynamic encode(DestinyEquipFailureReason data) {
-    switch(data) {
-      case DestinyEquipFailureReason._0: return 0;
-      case DestinyEquipFailureReason._1: return 1;
-      case DestinyEquipFailureReason._2: return 2;
-      case DestinyEquipFailureReason._4: return 4;
-      case DestinyEquipFailureReason._8: return 8;
-      case DestinyEquipFailureReason._16: return 16;
-      
-      default: throw('Unknown enum value to encode: $data');
-    }
+    return data.value;
   }
 
   @override
   DestinyEquipFailureReason decode(dynamic data) {
     switch (data) {
-      case 0: return DestinyEquipFailureReason._0;
-      case 1: return DestinyEquipFailureReason._1;
-      case 2: return DestinyEquipFailureReason._2;
-      case 4: return DestinyEquipFailureReason._4;
-      case 8: return DestinyEquipFailureReason._8;
-      case 16: return DestinyEquipFailureReason._16;
-      
+      case 0: return DestinyEquipFailureReason.none;
+      case 1: return DestinyEquipFailureReason.itemUnequippable;
+      case 2: return DestinyEquipFailureReason.itemUniqueEquipRestricted;
+      case 4: return DestinyEquipFailureReason.itemFailedUnlockCheck;
+      case 8: return DestinyEquipFailureReason.itemFailedLevelCheck;
+      case 16: return DestinyEquipFailureReason.itemNotOnCharacter;
       default: throw('Unknown enum value to decode: $data');
     }
   }

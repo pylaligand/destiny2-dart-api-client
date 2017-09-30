@@ -28,7 +28,7 @@ class GroupsV2GroupFeatures {
   
 /* Minimum Member Level allowed to host guided games  Always Allowed: Founder, Acting Founder, Admin  Allowed Overrides: None, Member, Beginner  Default is Member for clans, None for groups, although this means nothing for groups. */
   @Property(name: 'hostGuidedGamePermissionOverride')
-  Object hostGuidedGamePermissionOverride = null;
+  GroupsV2HostGuidedGamesPermissionLevel hostGuidedGamePermissionOverride = null;
   
 /* Minimum Member Level allowed to update banner  Always Allowed: Founder, Acting Founder  True means admins have this power, false means they don't  Default is false for clans, true for groups. */
   @Property(name: 'updateBannerPermissionOverride')
@@ -36,7 +36,7 @@ class GroupsV2GroupFeatures {
   
 /* Level to join a member at when accepting an invite, application, or joining an open clan  Default is Beginner. */
   @Property(name: 'joinLevel')
-  Object joinLevel = null;
+  GroupsV2RuntimeGroupMemberType joinLevel = null;
   
   GroupsV2GroupFeatures();
 

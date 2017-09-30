@@ -16,11 +16,11 @@ class DestinyEntitiesItemsDestinyItemComponent {
   
 /* If the item is bound to a location, it will be specified in this enum. */
   @Property(name: 'bindStatus')
-  Object bindStatus = null;
+  DestinyItemBindStatus bindStatus = null;
   
 /* An easy reference for where the item is located. Redundant if you got the item from an Inventory, but useful when making detail calls on specific items. */
   @Property(name: 'location')
-  Object location = null;
+  DestinyItemLocation location = null;
   
 /* The hash identifier for the specific inventory bucket in which the item is located. */
   @Property(name: 'bucketHash')
@@ -28,7 +28,7 @@ class DestinyEntitiesItemsDestinyItemComponent {
   
 /* If there is a known error state that would cause this item to not be transferable, this Flags enum will indicate all of those error states. Otherwise, it will be 0 (CanTransfer). */
   @Property(name: 'transferStatus')
-  Object transferStatus = null;
+  DestinyTransferStatuses transferStatus = null;
   
 /* If the item can be locked, this will indicate that state. */
   @Property(name: 'lockable')
@@ -36,7 +36,7 @@ class DestinyEntitiesItemsDestinyItemComponent {
   
 /* A flags enumeration indicating the states of the item: whether it's tracked or locked for example. */
   @Property(name: 'state')
-  Object state = null;
+  DestinyItemState state = null;
   
   DestinyEntitiesItemsDestinyItemComponent();
 

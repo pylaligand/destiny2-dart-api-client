@@ -16,7 +16,7 @@ class DestinyEntitiesItemsDestinyItemTalentGridComponent {
   
 /* If the item has a progression, it will be detailed here. A progression means that the item can gain experience. Thresholds of experience are what determines whether and when a talent node can be activated. */
   @Property(name: 'gridProgression')
-  Object gridProgression = null;
+  DestinyDestinyProgression gridProgression = null;
   
   DestinyEntitiesItemsDestinyItemTalentGridComponent();
 

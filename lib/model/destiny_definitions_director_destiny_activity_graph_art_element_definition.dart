@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class DestinyDefinitionsDirectorDestinyActivityGraphArtElementDefinition {
   /* The position on the map of the art element. */
   @Property(name: 'position')
-  Object position = null;
+  DestinyDefinitionsCommonDestinyPositionDefinition position = null;
   
   DestinyDefinitionsDirectorDestinyActivityGraphArtElementDefinition();
 

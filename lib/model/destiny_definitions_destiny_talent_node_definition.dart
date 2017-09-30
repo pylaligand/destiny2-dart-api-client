@@ -40,7 +40,7 @@ class DestinyDefinitionsDestinyTalentNodeDefinition {
   
 /* At one point, you were going to be able to repurchase talent nodes that had random steps, to \"re-roll\" the current step of the node (and thus change the properties of your item). This was to be the activation requirement for performing that re-roll.  The system still exists to do this, as far as I know, so it may yet come back around! */
   @Property(name: 'randomActivationRequirement')
-  Object randomActivationRequirement = null;
+  DestinyDefinitionsDestinyNodeActivationRequirement randomActivationRequirement = null;
   
 /* If this is true, the node can be \"re-rolled\" to acquire a different random current step. This is not used, but still exists for a theoretical future of talent grids. */
   @Property(name: 'isRandomRepurchasable')

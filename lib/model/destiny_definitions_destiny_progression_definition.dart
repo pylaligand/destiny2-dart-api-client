@@ -8,7 +8,7 @@ class DestinyDefinitionsDestinyProgressionDefinition {
   
 /* The \"Scope\" of the progression indicates the source of the progression's live data.  See the DestinyProgressionScope enum for more info: but essentially, a Progression can either be backed by a stored value, or it can be a calculated derivative of other values. */
   @Property(name: 'scope')
-  Object scope = null;
+  DestinyDestinyProgressionScope scope = null;
   
 /* If this is True, then the progression doesn't have a maximum level. */
   @Property(name: 'repeatLastStep')

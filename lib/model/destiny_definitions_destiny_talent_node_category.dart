@@ -12,7 +12,7 @@ class DestinyDefinitionsDestinyTalentNodeCategory {
   
 /* Will contain at least the \"name\", which will be the title of the category. We will likely not have description and an icon yet, but I'm going to keep my options open. */
   @Property(name: 'displayProperties')
-  Object displayProperties = null;
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
 /* The set of all hash identifiers for Talent Nodes (DestinyTalentNodeDefinition) in this Talent Grid that are part of this Category. */
   @Property(name: 'nodeHashes')
