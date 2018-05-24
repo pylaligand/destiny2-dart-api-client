@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20047 {
   
   @Property(name: 'Response')
-  DestinyHistoricalStatsDestinyAggregateActivityResults response = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsAccountResult response = null;
   
 
   @Property(name: 'ErrorCode')

@@ -8,7 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**List&lt;UserModelsUserAlias&gt;**](UserModelsUserAlias.md) |  | [optional] [default to []]
+**response** | [**List&lt;ApplicationsApplication&gt;**](ApplicationsApplication.md) |  | [optional] [default to []]
 **errorCode** | [**ExceptionsPlatformErrorCodes**](ExceptionsPlatformErrorCodes.md) |  | [optional] [default to null]
 **throttleSeconds** | **int** |  | [optional] [default to null]
 **errorStatus** | **String** |  | [optional] [default to null]

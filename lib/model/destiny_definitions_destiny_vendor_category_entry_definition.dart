@@ -10,7 +10,11 @@ class DestinyDefinitionsDestinyVendorCategoryEntryDefinition {
   @Property(name: 'categoryId')
   String categoryId = null;
   
-/* The hashed identifier for the category. (note that this is NOT pointing to a DestinyVendorCategoryDefinition, it's confusing but this is a sale item category in a vendor, not a categorization of vendors themselves) */
+/* Used in sorting items in vendors... but there's a lot more to it. Just go with the order provided in the itemIndexes property on the DestinyVendorCategoryComponent instead, it should be more reliable than trying to recalculate it yourself. */
+  @Property(name: 'sortValue')
+  int sortValue = null;
+  
+/* The hashed identifier for the category. */
   @Property(name: 'categoryHash')
   int categoryHash = null;
   
@@ -46,11 +50,23 @@ class DestinyDefinitionsDestinyVendorCategoryEntryDefinition {
   @Property(name: 'overlay')
   DestinyDefinitionsDestinyVendorCategoryOverlayDefinition overlay = null;
   
+/* A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime. */
+  @Property(name: 'vendorItemIndexes')
+  List<int> vendorItemIndexes = [];
+  
+/* Sometimes a category isn't actually used to sell items, but rather to preview them. This implies different UI (and manual placement of the category in the UI) in the game, and special treatment. */
+  @Property(name: 'isPreview')
+  bool isPreview = null;
+  
+/* If true, this category only displays items: you can't purchase anything in them. */
+  @Property(name: 'isDisplayOnly')
+  bool isDisplayOnly = null;
+  
   DestinyDefinitionsDestinyVendorCategoryEntryDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyVendorCategoryEntryDefinition[categoryIndex=$categoryIndex, categoryId=$categoryId, categoryHash=$categoryHash, quantityAvailable=$quantityAvailable, showUnavailableItems=$showUnavailableItems, hideIfNoCurrency=$hideIfNoCurrency, hideFromRegularPurchase=$hideFromRegularPurchase, buyStringOverride=$buyStringOverride, disabledDescription=$disabledDescription, displayTitle=$displayTitle, overlay=$overlay, ]';
+    return 'DestinyDefinitionsDestinyVendorCategoryEntryDefinition[categoryIndex=$categoryIndex, categoryId=$categoryId, sortValue=$sortValue, categoryHash=$categoryHash, quantityAvailable=$quantityAvailable, showUnavailableItems=$showUnavailableItems, hideIfNoCurrency=$hideIfNoCurrency, hideFromRegularPurchase=$hideFromRegularPurchase, buyStringOverride=$buyStringOverride, disabledDescription=$disabledDescription, displayTitle=$displayTitle, overlay=$overlay, vendorItemIndexes=$vendorItemIndexes, isPreview=$isPreview, isDisplayOnly=$isDisplayOnly, ]';
   }
 }
 

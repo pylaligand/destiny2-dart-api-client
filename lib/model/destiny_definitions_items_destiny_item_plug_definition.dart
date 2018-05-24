@@ -34,11 +34,39 @@ class DestinyDefinitionsItemsDestinyItemPlugDefinition {
   @Property(name: 'enabledRules')
   List<DestinyDefinitionsItemsDestinyPlugRuleDefinition> enabledRules = [];
   
+/* Plugs can have arbitrary, UI-defined identifiers that the UI designers use to determine the style applied to plugs. Unfortunately, we have neither a definitive list of these labels nor advance warning of when new labels might be applied or how that relates to how they get rendered. If you want to, you can refer to known labels to change your own styles: but know that new ones can be created arbitrarily, and we have no way of associating the labels with any specific UI style guidance... you'll have to piece that together on your end. Or do what we do, and just show plugs more generically, without specialized styles. */
+  @Property(name: 'uiPlugLabel')
+  String uiPlugLabel = null;
+  
+
+  @Property(name: 'plugStyle')
+  DestinyPlugUiStyles plugStyle = null;
+  
+/* If TRUE, the plug doesn't actually convey any benefit: it only exists to show information in the UI. */
+  @Property(name: 'isPseudoPlug')
+  bool isPseudoPlug = null;
+  
+/* Indicates the rules about when this plug can be used. See the PlugAvailabilityMode enumeration for more information! */
+  @Property(name: 'plugAvailability')
+  DestinyPlugAvailabilityMode plugAvailability = null;
+  
+/* If the plug meets certain state requirements, it may have an alternative label applied to it. This is the alternative label that will be applied in such a situation. */
+  @Property(name: 'alternateUiPlugLabel')
+  String alternateUiPlugLabel = null;
+  
+/* The alternate plug of the plug: only applies when the item is in states that only the server can know about and control, unfortunately. See AlternateUiPlugLabel for the related label info. */
+  @Property(name: 'alternatePlugStyle')
+  DestinyPlugUiStyles alternatePlugStyle = null;
+  
+/* If TRUE, this plug is used for UI display purposes only, and doesn't have any interesting effects of its own. */
+  @Property(name: 'isDummyPlug')
+  bool isDummyPlug = null;
+  
   DestinyDefinitionsItemsDestinyItemPlugDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsItemsDestinyItemPlugDefinition[insertionRules=$insertionRules, plugCategoryIdentifier=$plugCategoryIdentifier, plugCategoryHash=$plugCategoryHash, onActionRecreateSelf=$onActionRecreateSelf, insertionMaterialRequirementHash=$insertionMaterialRequirementHash, previewItemOverrideHash=$previewItemOverrideHash, enabledMaterialRequirementHash=$enabledMaterialRequirementHash, enabledRules=$enabledRules, ]';
+    return 'DestinyDefinitionsItemsDestinyItemPlugDefinition[insertionRules=$insertionRules, plugCategoryIdentifier=$plugCategoryIdentifier, plugCategoryHash=$plugCategoryHash, onActionRecreateSelf=$onActionRecreateSelf, insertionMaterialRequirementHash=$insertionMaterialRequirementHash, previewItemOverrideHash=$previewItemOverrideHash, enabledMaterialRequirementHash=$enabledMaterialRequirementHash, enabledRules=$enabledRules, uiPlugLabel=$uiPlugLabel, plugStyle=$plugStyle, isPseudoPlug=$isPseudoPlug, plugAvailability=$plugAvailability, alternateUiPlugLabel=$alternateUiPlugLabel, alternatePlugStyle=$alternatePlugStyle, isDummyPlug=$isDummyPlug, ]';
   }
 }
 

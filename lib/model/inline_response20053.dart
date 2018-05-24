@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20053 {
   
   @Property(name: 'Response')
-  SearchResultOfTrendingEntry response = null;
+  DestinyAdvancedAwaInitializeResponse response = null;
   
 
   @Property(name: 'ErrorCode')

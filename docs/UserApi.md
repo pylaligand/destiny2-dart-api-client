@@ -14,12 +14,11 @@ Method | HTTP request | Description
 [**userGetMembershipDataById**](UserApi.md#userGetMembershipDataById) | **GET** /User/GetMembershipsById/{membershipId}/{membershipType}/ | 
 [**userGetMembershipDataForCurrentUser**](UserApi.md#userGetMembershipDataForCurrentUser) | **GET** /User/GetMembershipsForCurrentUser/ | 
 [**userGetPartnerships**](UserApi.md#userGetPartnerships) | **GET** /User/{membershipId}/Partnerships/ | 
-[**userGetUserAliases**](UserApi.md#userGetUserAliases) | **GET** /User/GetUserAliases/{id}/ | 
 [**userSearchUsers**](UserApi.md#userSearchUsers) | **GET** /User/SearchUsers/ | 
 
 
 # **userGetAvailableThemes**
-> InlineResponse2003 userGetAvailableThemes()
+> InlineResponse2004 userGetAvailableThemes()
 
 
 
@@ -44,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -58,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userGetBungieNetUserById**
-> InlineResponse200 userGetBungieNetUserById(id)
+> InlineResponse2002 userGetBungieNetUserById(id)
 
 
 
@@ -87,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -101,7 +100,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userGetMembershipDataById**
-> InlineResponse2004 userGetMembershipDataById(membershipId, membershipType)
+> InlineResponse2005 userGetMembershipDataById(membershipId, membershipType)
 
 
 
@@ -132,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -146,7 +145,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userGetMembershipDataForCurrentUser**
-> InlineResponse2004 userGetMembershipDataForCurrentUser()
+> InlineResponse2005 userGetMembershipDataForCurrentUser()
 
 
 
@@ -173,7 +172,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -187,7 +186,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userGetPartnerships**
-> InlineResponse2005 userGetPartnerships(membershipId)
+> InlineResponse2006 userGetPartnerships(membershipId)
 
 
 
@@ -216,50 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **userGetUserAliases**
-> InlineResponse2001 userGetUserAliases(id)
-
-
-
-Loads aliases of a bungienet membership id.
-
-### Example 
-```dart
-import 'package:destiny2_api/api.dart';
-
-var api_instance = new UserApi();
-var id = 789; // int | The requested Bungie.net membership id.
-
-try { 
-    var result = api_instance.userGetUserAliases(id);
-    print(result);
-} catch (e) {
-    print("Exception when calling UserApi->userGetUserAliases: $e\n");
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| The requested Bungie.net membership id. | 
-
-### Return type
-
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -273,7 +229,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userSearchUsers**
-> InlineResponse2002 userSearchUsers(q)
+> InlineResponse2003 userSearchUsers(q)
 
 
 
@@ -302,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 

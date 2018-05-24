@@ -10,7 +10,7 @@ class UserApi {
   /// 
   ///
   /// Returns a list of all available user themes.
-  Future<InlineResponse2003> userGetAvailableThemes() async {
+  Future<InlineResponse2004> userGetAvailableThemes() async {
     Object postBody = null;
 
     // verify required params are set
@@ -50,7 +50,7 @@ class UserApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2003') as InlineResponse2003 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2004') as InlineResponse2004 ;
     } else {
       return null;
     }
@@ -58,7 +58,7 @@ class UserApi {
   /// 
   ///
   /// Loads a bungienet user by membership id.
-  Future<InlineResponse200> userGetBungieNetUserById(int id) async {
+  Future<InlineResponse2002> userGetBungieNetUserById(int id) async {
     Object postBody = null;
 
     // verify required params are set
@@ -101,7 +101,7 @@ class UserApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse200') as InlineResponse200 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2002') as InlineResponse2002 ;
     } else {
       return null;
     }
@@ -109,7 +109,7 @@ class UserApi {
   /// 
   ///
   /// Returns a list of accounts associated with the supplied membership ID and membership type. This will include all linked accounts (even when hidden) if supplied credentials permit it.
-  Future<InlineResponse2004> userGetMembershipDataById(int membershipId, int membershipType) async {
+  Future<InlineResponse2005> userGetMembershipDataById(int membershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -155,7 +155,7 @@ class UserApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2004') as InlineResponse2004 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2005') as InlineResponse2005 ;
     } else {
       return null;
     }
@@ -163,7 +163,7 @@ class UserApi {
   /// 
   ///
   /// Returns a list of accounts associated with signed in user. This is useful for OAuth implementations that do not give you access to the token response.
-  Future<InlineResponse2004> userGetMembershipDataForCurrentUser() async {
+  Future<InlineResponse2005> userGetMembershipDataForCurrentUser() async {
     Object postBody = null;
 
     // verify required params are set
@@ -203,7 +203,7 @@ class UserApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2004') as InlineResponse2004 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2005') as InlineResponse2005 ;
     } else {
       return null;
     }
@@ -211,7 +211,7 @@ class UserApi {
   /// 
   ///
   /// Returns a user&#39;s linked Partnerships.
-  Future<InlineResponse2005> userGetPartnerships(int membershipId) async {
+  Future<InlineResponse2006> userGetPartnerships(int membershipId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -254,58 +254,7 @@ class UserApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2005') as InlineResponse2005 ;
-    } else {
-      return null;
-    }
-  }
-  /// 
-  ///
-  /// Loads aliases of a bungienet membership id.
-  Future<InlineResponse2001> userGetUserAliases(int id) async {
-    Object postBody = null;
-
-    // verify required params are set
-    if(id == null) {
-     throw new ApiException(400, "Missing required param: id");
-    }
-
-    // create path and map variables
-    String path = "/User/GetUserAliases/{id}/".replaceAll("{format}","json").replaceAll("{" + "id" + "}", id.toString());
-
-    // query params
-    List<QueryParam> queryParams = [];
-    Map<String, String> headerParams = {};
-    Map<String, String> formParams = {};
-    
-    List<String> contentTypes = [];
-
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-    List<String> authNames = [];
-
-    if(contentType.startsWith("multipart/form-data")) {
-      bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
-      
-      if(hasFields)
-        postBody = mp;
-    }
-    else {
-          }
-
-    var response = await apiClient.invokeAPI(path,
-                                             'GET',
-                                             queryParams,
-                                             postBody,
-                                             headerParams,
-                                             formParams,
-                                             contentType,
-                                             authNames);
-
-    if(response.statusCode >= 400) {
-      throw new ApiException(response.statusCode, response.body);
-    } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2001') as InlineResponse2001 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2006') as InlineResponse2006 ;
     } else {
       return null;
     }
@@ -313,7 +262,7 @@ class UserApi {
   /// 
   ///
   /// Returns a list of possible users based on the search string
-  Future<InlineResponse2002> userSearchUsers({ String q }) async {
+  Future<InlineResponse2003> userSearchUsers({ String q }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -356,7 +305,7 @@ class UserApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2002') as InlineResponse2002 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2003') as InlineResponse2003 ;
     } else {
       return null;
     }

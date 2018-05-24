@@ -19,7 +19,7 @@ class BungieMembershipType {
   static const BungieMembershipType tigerDemon = const BungieMembershipType._internal(10);
   /// The types of membership the Accounts system supports. This is the external facing enum used in place of the internal-only Bungie.SharedDefinitions.MembershipType.
   static const BungieMembershipType bungieNext = const BungieMembershipType._internal(254);
-  /// The types of membership the Accounts system supports. This is the external facing enum used in place of the internal-only Bungie.SharedDefinitions.MembershipType.
+  /// "All" is only valid for searching capabilities: you need to pass the actual matching BungieMembershipType for any query where you pass a known membershipId.
   static const BungieMembershipType all = const BungieMembershipType._internal(-1);
 }
 

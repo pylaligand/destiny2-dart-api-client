@@ -26,6 +26,10 @@ class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
   @Property(name: 'statName')
   String statName = null;
   
+/* Display name abbreviated */
+  @Property(name: 'statNameAbbr')
+  String statNameAbbr = null;
+  
 /* Description of a stat if applicable. */
   @Property(name: 'statDescription')
   String statDescription = null;
@@ -58,7 +62,7 @@ class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
 
   @override
   String toString()  {
-    return 'DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition[statId=$statId, group=$group, periodTypes=$periodTypes, modes=$modes, category=$category, statName=$statName, statDescription=$statDescription, unitType=$unitType, iconImage=$iconImage, mergeMethod=$mergeMethod, unitLabel=$unitLabel, weight=$weight, medalTierHash=$medalTierHash, ]';
+    return 'DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition[statId=$statId, group=$group, periodTypes=$periodTypes, modes=$modes, category=$category, statName=$statName, statNameAbbr=$statNameAbbr, statDescription=$statDescription, unitType=$unitType, iconImage=$iconImage, mergeMethod=$mergeMethod, unitLabel=$unitLabel, weight=$weight, medalTierHash=$medalTierHash, ]';
   }
 }
 

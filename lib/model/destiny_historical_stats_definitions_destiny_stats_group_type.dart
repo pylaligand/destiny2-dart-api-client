@@ -7,14 +7,23 @@ class DestinyHistoricalStatsDefinitionsDestinyStatsGroupType {
 
   const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(this.value);
 
+  /// If the enum value is > 100, it is a \"special\" group that cannot be queried for directly (special cases apply to when they are returned, and are not relevant in general cases)
   static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType none = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(0);
+  /// If the enum value is > 100, it is a \"special\" group that cannot be queried for directly (special cases apply to when they are returned, and are not relevant in general cases)
   static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType general = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(1);
+  /// If the enum value is > 100, it is a \"special\" group that cannot be queried for directly (special cases apply to when they are returned, and are not relevant in general cases)
   static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType weapons = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(2);
+  /// If the enum value is > 100, it is a \"special\" group that cannot be queried for directly (special cases apply to when they are returned, and are not relevant in general cases)
   static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType medals = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(3);
+  /// This is purely to serve as the dividing line between filterable and un-filterable groups. Below this number is a group you can pass as a filter. Above it are groups used in very specific circumstances and not relevant for filtering.
   static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType reservedGroups = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(100);
+  /// Only applicable while generating leaderboards.
   static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType leaderboard = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(101);
+  /// These will *only* be consumed by GetAggregateStatsByActivity
   static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType activity = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(102);
+  /// These are only consumed and returned by GetUniqueWeaponHistory
   static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType uniqueWeapon = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(103);
+  /// If the enum value is > 100, it is a \"special\" group that cannot be queried for directly (special cases apply to when they are returned, and are not relevant in general cases)
   static const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType internal = const DestinyHistoricalStatsDefinitionsDestinyStatsGroupType._internal(104);
 }
 

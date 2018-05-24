@@ -8,7 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**GroupsV2GroupPotentialMembershipSearchResponse**](GroupsV2GroupPotentialMembershipSearchResponse.md) |  | [optional] [default to null]
+**response** | [**List&lt;EntitiesEntityActionResult&gt;**](EntitiesEntityActionResult.md) |  | [optional] [default to []]
 **errorCode** | [**ExceptionsPlatformErrorCodes**](ExceptionsPlatformErrorCodes.md) |  | [optional] [default to null]
 **throttleSeconds** | **int** |  | [optional] [default to null]
 **errorStatus** | **String** |  | [optional] [default to null]

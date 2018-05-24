@@ -22,6 +22,30 @@ class DestinyDefinitionsSocketsDestinySocketTypeDefinition {
   @Property(name: 'visibility')
   DestinyDestinySocketVisibility visibility = null;
   
+
+  @Property(name: 'alwaysRandomizeSockets')
+  bool alwaysRandomizeSockets = null;
+  
+
+  @Property(name: 'isPreviewEnabled')
+  bool isPreviewEnabled = null;
+  
+
+  @Property(name: 'hideDuplicateReusablePlugs')
+  bool hideDuplicateReusablePlugs = null;
+  
+/* This property indicates if the socket type determines whether Emblem icons and nameplates should be overridden by the inserted plug item's icon and nameplate. */
+  @Property(name: 'overridesUiAppearance')
+  bool overridesUiAppearance = null;
+  
+
+  @Property(name: 'avoidDuplicatesOnInitialization')
+  bool avoidDuplicatesOnInitialization = null;
+  
+
+  @Property(name: 'currencyScalars')
+  List<DestinyDefinitionsSocketsDestinySocketTypeScalarMaterialRequirementEntry> currencyScalars = [];
+  
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
   int hash = null;
@@ -38,7 +62,7 @@ class DestinyDefinitionsSocketsDestinySocketTypeDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsSocketsDestinySocketTypeDefinition[displayProperties=$displayProperties, insertAction=$insertAction, plugWhitelist=$plugWhitelist, socketCategoryHash=$socketCategoryHash, visibility=$visibility, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsSocketsDestinySocketTypeDefinition[displayProperties=$displayProperties, insertAction=$insertAction, plugWhitelist=$plugWhitelist, socketCategoryHash=$socketCategoryHash, visibility=$visibility, alwaysRandomizeSockets=$alwaysRandomizeSockets, isPreviewEnabled=$isPreviewEnabled, hideDuplicateReusablePlugs=$hideDuplicateReusablePlugs, overridesUiAppearance=$overridesUiAppearance, avoidDuplicatesOnInitialization=$avoidDuplicatesOnInitialization, currencyScalars=$currencyScalars, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

@@ -40,6 +40,12 @@ String _parameterToString(dynamic value) {
     return value.toUtc().toIso8601String();
   } else if (value is ApplicationsApplicationScopes) {
     return new ApplicationsApplicationScopesTypeTransformer().encode(value).toString();
+  } else if (value is ApplicationsApplicationStatus) {
+    return new ApplicationsApplicationStatusTypeTransformer().encode(value).toString();
+  } else if (value is ApplicationsDeveloperRole) {
+    return new ApplicationsDeveloperRoleTypeTransformer().encode(value).toString();
+  } else if (value is ApplicationsOAuthApplicationType) {
+    return new ApplicationsOAuthApplicationTypeTypeTransformer().encode(value).toString();
   } else if (value is BungieMembershipType) {
     return new BungieMembershipTypeTypeTransformer().encode(value).toString();
   } else if (value is CommunityCommunityStatusSort) {
@@ -48,6 +54,12 @@ String _parameterToString(dynamic value) {
     return new ComponentsComponentPrivacySettingTypeTransformer().encode(value).toString();
   } else if (value is DestinyActivityGraphNodeHighlightType) {
     return new DestinyActivityGraphNodeHighlightTypeTypeTransformer().encode(value).toString();
+  } else if (value is DestinyAdvancedAwaResponseReason) {
+    return new DestinyAdvancedAwaResponseReasonTypeTransformer().encode(value).toString();
+  } else if (value is DestinyAdvancedAwaType) {
+    return new DestinyAdvancedAwaTypeTypeTransformer().encode(value).toString();
+  } else if (value is DestinyAdvancedAwaUserSelection) {
+    return new DestinyAdvancedAwaUserSelectionTypeTransformer().encode(value).toString();
   } else if (value is DestinyBucketCategory) {
     return new DestinyBucketCategoryTypeTransformer().encode(value).toString();
   } else if (value is DestinyBucketScope) {
@@ -98,10 +110,14 @@ String _parameterToString(dynamic value) {
     return new DestinyDestinyProgressionStepDisplayEffectTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyRace) {
     return new DestinyDestinyRaceTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinySocketCategoryStyle) {
+    return new DestinyDestinySocketCategoryStyleTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinySocketVisibility) {
     return new DestinyDestinySocketVisibilityTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyStatAggregationType) {
     return new DestinyDestinyStatAggregationTypeTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyStatCategory) {
+    return new DestinyDestinyStatCategoryTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyTalentNodeState) {
     return new DestinyDestinyTalentNodeStateTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyUnlockValueUIStyle) {
@@ -110,6 +126,8 @@ String _parameterToString(dynamic value) {
     return new DestinyDestinyVendorInteractionRewardSelectionTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyVendorItemRefundPolicy) {
     return new DestinyDestinyVendorItemRefundPolicyTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyVendorItemState) {
+    return new DestinyDestinyVendorItemStateTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyVendorReplyType) {
     return new DestinyDestinyVendorReplyTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyEquipFailureReason) {
@@ -132,18 +150,46 @@ String _parameterToString(dynamic value) {
     return new DestinyItemBindStatusTypeTransformer().encode(value).toString();
   } else if (value is DestinyItemLocation) {
     return new DestinyItemLocationTypeTransformer().encode(value).toString();
+  } else if (value is DestinyItemPerkVisibility) {
+    return new DestinyItemPerkVisibilityTypeTransformer().encode(value).toString();
   } else if (value is DestinyItemState) {
     return new DestinyItemStateTypeTransformer().encode(value).toString();
+  } else if (value is DestinyPlugAvailabilityMode) {
+    return new DestinyPlugAvailabilityModeTypeTransformer().encode(value).toString();
+  } else if (value is DestinyPlugUiStyles) {
+    return new DestinyPlugUiStylesTypeTransformer().encode(value).toString();
+  } else if (value is DestinyRequestsActionsDestinySocketArrayType) {
+    return new DestinyRequestsActionsDestinySocketArrayTypeTypeTransformer().encode(value).toString();
+  } else if (value is DestinySocketPlugSources) {
+    return new DestinySocketPlugSourcesTypeTransformer().encode(value).toString();
+  } else if (value is DestinySocketTypeActionType) {
+    return new DestinySocketTypeActionTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinySpecialItemType) {
     return new DestinySpecialItemTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyTierType) {
     return new DestinyTierTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyTransferStatuses) {
     return new DestinyTransferStatusesTypeTransformer().encode(value).toString();
+  } else if (value is DestinyVendorDisplayCategorySortOrder) {
+    return new DestinyVendorDisplayCategorySortOrderTypeTransformer().encode(value).toString();
+  } else if (value is DestinyVendorInteractionType) {
+    return new DestinyVendorInteractionTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyVendorItemStatus) {
     return new DestinyVendorItemStatusTypeTransformer().encode(value).toString();
   } else if (value is ExceptionsPlatformErrorCodes) {
     return new ExceptionsPlatformErrorCodesTypeTransformer().encode(value).toString();
+  } else if (value is FireteamFireteamActivityType) {
+    return new FireteamFireteamActivityTypeTypeTransformer().encode(value).toString();
+  } else if (value is FireteamFireteamDateRange) {
+    return new FireteamFireteamDateRangeTypeTransformer().encode(value).toString();
+  } else if (value is FireteamFireteamPlatform) {
+    return new FireteamFireteamPlatformTypeTransformer().encode(value).toString();
+  } else if (value is FireteamFireteamPlatformInviteResult) {
+    return new FireteamFireteamPlatformInviteResultTypeTransformer().encode(value).toString();
+  } else if (value is FireteamFireteamPublicSearchOption) {
+    return new FireteamFireteamPublicSearchOptionTypeTransformer().encode(value).toString();
+  } else if (value is FireteamFireteamSlotSearch) {
+    return new FireteamFireteamSlotSearchTypeTransformer().encode(value).toString();
   } else if (value is ForumCommunityContentSortMode) {
     return new ForumCommunityContentSortModeTypeTransformer().encode(value).toString();
   } else if (value is ForumForumFlagsEnum) {

@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20015 {
   
   @Property(name: 'Response')
-  int response = null;
+  bool response = null;
   
 
   @Property(name: 'ErrorCode')

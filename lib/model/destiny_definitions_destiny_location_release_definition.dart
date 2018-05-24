@@ -6,6 +6,18 @@ class DestinyDefinitionsDestinyLocationReleaseDefinition {
   @Property(name: 'displayProperties')
   DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
+
+  @Property(name: 'smallTransparentIcon')
+  String smallTransparentIcon = null;
+  
+
+  @Property(name: 'mapIcon')
+  String mapIcon = null;
+  
+
+  @Property(name: 'largeTransparentIcon')
+  String largeTransparentIcon = null;
+  
 /* If we had map information, this spawnPoint would be interesting. But sadly, we don't have that info. */
   @Property(name: 'spawnPoint')
   int spawnPoint = null;
@@ -50,7 +62,7 @@ class DestinyDefinitionsDestinyLocationReleaseDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyLocationReleaseDefinition[displayProperties=$displayProperties, spawnPoint=$spawnPoint, destinationHash=$destinationHash, activityHash=$activityHash, activityGraphHash=$activityGraphHash, activityGraphNodeHash=$activityGraphNodeHash, activityBubbleName=$activityBubbleName, activityPathBundle=$activityPathBundle, activityPathDestination=$activityPathDestination, navPointType=$navPointType, worldPosition=$worldPosition, ]';
+    return 'DestinyDefinitionsDestinyLocationReleaseDefinition[displayProperties=$displayProperties, smallTransparentIcon=$smallTransparentIcon, mapIcon=$mapIcon, largeTransparentIcon=$largeTransparentIcon, spawnPoint=$spawnPoint, destinationHash=$destinationHash, activityHash=$activityHash, activityGraphHash=$activityGraphHash, activityGraphNodeHash=$activityGraphNodeHash, activityBubbleName=$activityBubbleName, activityPathBundle=$activityPathBundle, activityPathDestination=$activityPathDestination, navPointType=$navPointType, worldPosition=$worldPosition, ]';
   }
 }
 

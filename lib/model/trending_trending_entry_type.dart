@@ -27,6 +27,10 @@ class TrendingTrendingEntryType {
   static const TrendingTrendingEntryType link = const TrendingTrendingEntryType._internal(8);
   /// The known entity types that you can have returned from Trending.
   static const TrendingTrendingEntryType forumTag = const TrendingTrendingEntryType._internal(9);
+  /// The known entity types that you can have returned from Trending.
+  static const TrendingTrendingEntryType container = const TrendingTrendingEntryType._internal(10);
+  /// The known entity types that you can have returned from Trending.
+  static const TrendingTrendingEntryType release = const TrendingTrendingEntryType._internal(11);
 }
 
 class TrendingTrendingEntryTypeTypeTransformer extends TypeTransformer<TrendingTrendingEntryType> {
@@ -49,6 +53,8 @@ class TrendingTrendingEntryTypeTypeTransformer extends TypeTransformer<TrendingT
       case 7: return TrendingTrendingEntryType.update;
       case 8: return TrendingTrendingEntryType.link;
       case 9: return TrendingTrendingEntryType.forumTag;
+      case 10: return TrendingTrendingEntryType.container;
+      case 11: return TrendingTrendingEntryType.release;
       default: throw('Unknown enum value to decode: $data');
     }
   }

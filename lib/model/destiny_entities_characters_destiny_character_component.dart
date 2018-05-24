@@ -70,6 +70,10 @@ class DestinyEntitiesCharactersDestinyCharacterComponent {
   @Property(name: 'emblemHash')
   int emblemHash = null;
   
+/* A shortcut for getting the background color of the user's currently equipped emblem without having to do a DestinyInventoryItemDefinition lookup. */
+  @Property(name: 'emblemColor')
+  DestinyMiscDestinyColor emblemColor = null;
+  
 /* The progression that indicates your character's level. Not their light level, but their character level: you know, the thing you max out a couple hours in and then ignore for the sake of light level. */
   @Property(name: 'levelProgression')
   DestinyDestinyProgression levelProgression = null;
@@ -86,7 +90,7 @@ class DestinyEntitiesCharactersDestinyCharacterComponent {
 
   @override
   String toString()  {
-    return 'DestinyEntitiesCharactersDestinyCharacterComponent[membershipId=$membershipId, membershipType=$membershipType, characterId=$characterId, dateLastPlayed=$dateLastPlayed, minutesPlayedThisSession=$minutesPlayedThisSession, minutesPlayedTotal=$minutesPlayedTotal, light=$light, stats=$stats, raceHash=$raceHash, genderHash=$genderHash, classHash=$classHash, raceType=$raceType, classType=$classType, genderType=$genderType, emblemPath=$emblemPath, emblemBackgroundPath=$emblemBackgroundPath, emblemHash=$emblemHash, levelProgression=$levelProgression, baseCharacterLevel=$baseCharacterLevel, percentToNextLevel=$percentToNextLevel, ]';
+    return 'DestinyEntitiesCharactersDestinyCharacterComponent[membershipId=$membershipId, membershipType=$membershipType, characterId=$characterId, dateLastPlayed=$dateLastPlayed, minutesPlayedThisSession=$minutesPlayedThisSession, minutesPlayedTotal=$minutesPlayedTotal, light=$light, stats=$stats, raceHash=$raceHash, genderHash=$genderHash, classHash=$classHash, raceType=$raceType, classType=$classType, genderType=$genderType, emblemPath=$emblemPath, emblemBackgroundPath=$emblemBackgroundPath, emblemHash=$emblemHash, emblemColor=$emblemColor, levelProgression=$levelProgression, baseCharacterLevel=$baseCharacterLevel, percentToNextLevel=$percentToNextLevel, ]';
   }
 }
 

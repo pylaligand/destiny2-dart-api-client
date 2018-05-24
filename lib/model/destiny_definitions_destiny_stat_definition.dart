@@ -14,6 +14,10 @@ class DestinyDefinitionsDestinyStatDefinition {
   @Property(name: 'hasComputedBlock')
   bool hasComputedBlock = null;
   
+/* The category of the stat, according to the game. */
+  @Property(name: 'statCategory')
+  DestinyDestinyStatCategory statCategory = null;
+  
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
   int hash = null;
@@ -30,7 +34,7 @@ class DestinyDefinitionsDestinyStatDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyStatDefinition[displayProperties=$displayProperties, aggregationType=$aggregationType, hasComputedBlock=$hasComputedBlock, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyStatDefinition[displayProperties=$displayProperties, aggregationType=$aggregationType, hasComputedBlock=$hasComputedBlock, statCategory=$statCategory, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

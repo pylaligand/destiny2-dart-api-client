@@ -10,9 +10,13 @@ class DestinyMilestonesDestinyPublicMilestone {
   @Property(name: 'availableQuests')
   List<DestinyMilestonesDestinyPublicMilestoneQuest> availableQuests = [];
   
-/* Sometimes milestones - or activities active in milestones - will have relevant vendors. These are the vendors that are currently relevant. */
+/* Sometimes milestones - or activities active in milestones - will have relevant vendors. These are the vendors that are currently relevant.  Deprecated, already, for the sake of the new \"vendors\" property that has more data. What was I thinking. */
   @Property(name: 'vendorHashes')
   List<int> vendorHashes = [];
+  
+/* This is why we can't have nice things. This is the ordered list of vendors to be shown that relate to this milestone, potentially along with other interesting data. */
+  @Property(name: 'vendors')
+  List<DestinyMilestonesDestinyPublicMilestoneVendor> vendors = [];
   
 /* If known, this is the date when the Milestone started/became active. */
   @Property(name: 'startDate')
@@ -26,7 +30,7 @@ class DestinyMilestonesDestinyPublicMilestone {
 
   @override
   String toString()  {
-    return 'DestinyMilestonesDestinyPublicMilestone[milestoneHash=$milestoneHash, availableQuests=$availableQuests, vendorHashes=$vendorHashes, startDate=$startDate, endDate=$endDate, ]';
+    return 'DestinyMilestonesDestinyPublicMilestone[milestoneHash=$milestoneHash, availableQuests=$availableQuests, vendorHashes=$vendorHashes, vendors=$vendors, startDate=$startDate, endDate=$endDate, ]';
   }
 }
 

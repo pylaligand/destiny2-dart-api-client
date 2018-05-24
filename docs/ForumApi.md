@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 
 # **forumApproveFireteamThread**
-> InlineResponse20010 forumApproveFireteamThread(topicId)
+> InlineResponse20011 forumApproveFireteamThread(topicId)
 
 
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumGetCoreTopicsPaged**
-> InlineResponse2006 forumGetCoreTopicsPaged(categoryFilter, page, quickDate, sort, locales)
+> InlineResponse2007 forumGetCoreTopicsPaged(categoryFilter, page, quickDate, sort, locales)
 
 
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumGetForumTagSuggestions**
-> InlineResponse2008 forumGetForumTagSuggestions(partialtag)
+> InlineResponse2009 forumGetForumTagSuggestions(partialtag)
 
 
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumGetPoll**
-> InlineResponse2006 forumGetPoll(topicId)
+> InlineResponse2007 forumGetPoll(topicId)
 
 
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumGetPostAndParent**
-> InlineResponse2006 forumGetPostAndParent(childPostId, showbanned)
+> InlineResponse2007 forumGetPostAndParent(childPostId, showbanned)
 
 
 
@@ -219,7 +219,7 @@ Returns the post specified and its immediate parent.
 import 'package:destiny2_api/api.dart';
 
 var api_instance = new ForumApi();
-var childPostId = 56; // int | 
+var childPostId = 789; // int | 
 var showbanned = showbanned_example; // String | If this value is not null or empty, banned posts are requested to be returned
 
 try { 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumGetPostAndParentAwaitingApproval**
-> InlineResponse2006 forumGetPostAndParentAwaitingApproval(childPostId, showbanned)
+> InlineResponse2007 forumGetPostAndParentAwaitingApproval(childPostId, showbanned)
 
 
 
@@ -264,7 +264,7 @@ Returns the post specified and its immediate parent of posts that are awaiting a
 import 'package:destiny2_api/api.dart';
 
 var api_instance = new ForumApi();
-var childPostId = 56; // int | 
+var childPostId = 789; // int | 
 var showbanned = showbanned_example; // String | If this value is not null or empty, banned posts are requested to be returned
 
 try { 
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumGetPostsThreadedPaged**
-> InlineResponse2006 forumGetPostsThreadedPaged(getParentPost, page, pageSize, parentPostId, replySize, rootThreadMode, sortMode, showbanned)
+> InlineResponse2007 forumGetPostsThreadedPaged(getParentPost, page, pageSize, parentPostId, replySize, rootThreadMode, sortMode, showbanned)
 
 
 
@@ -312,7 +312,7 @@ var api_instance = new ForumApi();
 var getParentPost = true; // bool | 
 var page = 56; // int | 
 var pageSize = 56; // int | 
-var parentPostId = 56; // int | 
+var parentPostId = 789; // int | 
 var replySize = 56; // int | 
 var rootThreadMode = true; // bool | 
 var sortMode = 56; // int | 
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -355,7 +355,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumGetPostsThreadedPagedFromChild**
-> InlineResponse2006 forumGetPostsThreadedPagedFromChild(childPostId, page, pageSize, replySize, rootThreadMode, sortMode, showbanned)
+> InlineResponse2007 forumGetPostsThreadedPagedFromChild(childPostId, page, pageSize, replySize, rootThreadMode, sortMode, showbanned)
 
 
 
@@ -366,7 +366,7 @@ Returns a thread of posts starting at the topicId of the input childPostId, opti
 import 'package:destiny2_api/api.dart';
 
 var api_instance = new ForumApi();
-var childPostId = 56; // int | 
+var childPostId = 789; // int | 
 var page = 56; // int | 
 var pageSize = 56; // int | 
 var replySize = 56; // int | 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -410,7 +410,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumGetRecruitmentThreadSummaries**
-> InlineResponse20011 forumGetRecruitmentThreadSummaries()
+> InlineResponse20012 forumGetRecruitmentThreadSummaries()
 
 
 
@@ -435,7 +435,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -449,7 +449,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumGetTopicForContent**
-> InlineResponse2007 forumGetTopicForContent(contentId)
+> InlineResponse2008 forumGetTopicForContent(contentId)
 
 
 
@@ -478,7 +478,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -492,7 +492,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumGetTopicsPaged**
-> InlineResponse2006 forumGetTopicsPaged(categoryFilter, group, page, pageSize, quickDate, sort, locales, tagstring)
+> InlineResponse2007 forumGetTopicsPaged(categoryFilter, group, page, pageSize, quickDate, sort, locales, tagstring)
 
 
 
@@ -535,7 +535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -549,7 +549,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumJoinFireteamThread**
-> InlineResponse2009 forumJoinFireteamThread(topicId)
+> InlineResponse20010 forumJoinFireteamThread(topicId)
 
 
 
@@ -580,7 +580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumKickBanFireteamApplicant**
-> InlineResponse2009 forumKickBanFireteamApplicant(targetMembershipId, topicId)
+> InlineResponse20010 forumKickBanFireteamApplicant(targetMembershipId, topicId)
 
 
 
@@ -627,7 +627,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forumLeaveFireteamThread**
-> InlineResponse2009 forumLeaveFireteamThread(topicId)
+> InlineResponse20010 forumLeaveFireteamThread(topicId)
 
 
 
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 

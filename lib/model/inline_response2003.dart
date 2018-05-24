@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse2003 {
   
   @Property(name: 'Response')
-  List<ConfigUserTheme> response = [];
+  List<UserGeneralUser> response = [];
   
 
   @Property(name: 'ErrorCode')

@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse2009 {
   
   @Property(name: 'Response')
-  ForumForumRecruitmentDetail response = null;
+  List<TagsModelsContractsTagResponse> response = [];
   
 
   @Property(name: 'ErrorCode')

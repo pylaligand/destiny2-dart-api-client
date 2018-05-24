@@ -10,7 +10,7 @@ class ForumApi {
   /// 
   ///
   /// Allows the owner of a fireteam thread to approve all joined members and start a private message conversation with them.
-  Future<InlineResponse20010> forumApproveFireteamThread(int topicId) async {
+  Future<InlineResponse20011> forumApproveFireteamThread(int topicId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -53,7 +53,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20010') as InlineResponse20010 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20011') as InlineResponse20011 ;
     } else {
       return null;
     }
@@ -61,7 +61,7 @@ class ForumApi {
   /// 
   ///
   /// Gets a listing of all topics marked as part of the core group.
-  Future<InlineResponse2006> forumGetCoreTopicsPaged(int categoryFilter, int page, int quickDate, int sort, { String locales }) async {
+  Future<InlineResponse2007> forumGetCoreTopicsPaged(int categoryFilter, int page, int quickDate, int sort, { String locales }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -116,7 +116,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2006') as InlineResponse2006 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2007') as InlineResponse2007 ;
     } else {
       return null;
     }
@@ -124,7 +124,7 @@ class ForumApi {
   /// 
   ///
   /// Gets tag suggestions based on partial text entry, matching them with other tags previously used in the forums.
-  Future<InlineResponse2008> forumGetForumTagSuggestions({ String partialtag }) async {
+  Future<InlineResponse2009> forumGetForumTagSuggestions({ String partialtag }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -167,7 +167,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2008') as InlineResponse2008 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2009') as InlineResponse2009 ;
     } else {
       return null;
     }
@@ -175,7 +175,7 @@ class ForumApi {
   /// 
   ///
   /// Gets the specified forum poll.
-  Future<InlineResponse2006> forumGetPoll(int topicId) async {
+  Future<InlineResponse2007> forumGetPoll(int topicId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -218,7 +218,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2006') as InlineResponse2006 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2007') as InlineResponse2007 ;
     } else {
       return null;
     }
@@ -226,7 +226,7 @@ class ForumApi {
   /// 
   ///
   /// Returns the post specified and its immediate parent.
-  Future<InlineResponse2006> forumGetPostAndParent(int childPostId, { String showbanned }) async {
+  Future<InlineResponse2007> forumGetPostAndParent(int childPostId, { String showbanned }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -272,7 +272,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2006') as InlineResponse2006 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2007') as InlineResponse2007 ;
     } else {
       return null;
     }
@@ -280,7 +280,7 @@ class ForumApi {
   /// 
   ///
   /// Returns the post specified and its immediate parent of posts that are awaiting approval.
-  Future<InlineResponse2006> forumGetPostAndParentAwaitingApproval(int childPostId, { String showbanned }) async {
+  Future<InlineResponse2007> forumGetPostAndParentAwaitingApproval(int childPostId, { String showbanned }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -326,7 +326,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2006') as InlineResponse2006 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2007') as InlineResponse2007 ;
     } else {
       return null;
     }
@@ -334,7 +334,7 @@ class ForumApi {
   /// 
   ///
   /// Returns a thread of posts at the given parent, optionally returning replies to those posts as well as the original parent.
-  Future<InlineResponse2006> forumGetPostsThreadedPaged(bool getParentPost, int page, int pageSize, int parentPostId, int replySize, bool rootThreadMode, int sortMode, { String showbanned }) async {
+  Future<InlineResponse2007> forumGetPostsThreadedPaged(bool getParentPost, int page, int pageSize, int parentPostId, int replySize, bool rootThreadMode, int sortMode, { String showbanned }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -398,7 +398,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2006') as InlineResponse2006 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2007') as InlineResponse2007 ;
     } else {
       return null;
     }
@@ -406,7 +406,7 @@ class ForumApi {
   /// 
   ///
   /// Returns a thread of posts starting at the topicId of the input childPostId, optionally returning replies to those posts as well as the original parent.
-  Future<InlineResponse2006> forumGetPostsThreadedPagedFromChild(int childPostId, int page, int pageSize, int replySize, bool rootThreadMode, int sortMode, { String showbanned }) async {
+  Future<InlineResponse2007> forumGetPostsThreadedPagedFromChild(int childPostId, int page, int pageSize, int replySize, bool rootThreadMode, int sortMode, { String showbanned }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -467,7 +467,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2006') as InlineResponse2006 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2007') as InlineResponse2007 ;
     } else {
       return null;
     }
@@ -475,7 +475,7 @@ class ForumApi {
   /// 
   ///
   /// Allows the caller to get a list of to 25 recruitment thread summary information objects.
-  Future<InlineResponse20011> forumGetRecruitmentThreadSummaries() async {
+  Future<InlineResponse20012> forumGetRecruitmentThreadSummaries() async {
     Object postBody = null;
 
     // verify required params are set
@@ -515,7 +515,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20011') as InlineResponse20011 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20012') as InlineResponse20012 ;
     } else {
       return null;
     }
@@ -523,7 +523,7 @@ class ForumApi {
   /// 
   ///
   /// Gets the post Id for the given content item&#39;s comments, if it exists.
-  Future<InlineResponse2007> forumGetTopicForContent(int contentId) async {
+  Future<InlineResponse2008> forumGetTopicForContent(int contentId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -566,7 +566,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2007') as InlineResponse2007 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2008') as InlineResponse2008 ;
     } else {
       return null;
     }
@@ -574,7 +574,7 @@ class ForumApi {
   /// 
   ///
   /// Get topics from any forum.
-  Future<InlineResponse2006> forumGetTopicsPaged(int categoryFilter, int group, int page, int pageSize, int quickDate, int sort, { String locales, String tagstring }) async {
+  Future<InlineResponse2007> forumGetTopicsPaged(int categoryFilter, int group, int page, int pageSize, int quickDate, int sort, { String locales, String tagstring }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -638,7 +638,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2006') as InlineResponse2006 ;
+      return apiClient.deserialize(response.body, 'InlineResponse2007') as InlineResponse2007 ;
     } else {
       return null;
     }
@@ -646,7 +646,7 @@ class ForumApi {
   /// 
   ///
   /// Allows a user to slot themselves into a recruitment thread fireteam slot. Returns the new state of the fireteam.
-  Future<InlineResponse2009> forumJoinFireteamThread(int topicId) async {
+  Future<InlineResponse20010> forumJoinFireteamThread(int topicId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -689,7 +689,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2009') as InlineResponse2009 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20010') as InlineResponse20010 ;
     } else {
       return null;
     }
@@ -697,7 +697,7 @@ class ForumApi {
   /// 
   ///
   /// Allows a recruitment thread owner to kick a join user from the fireteam. Returns the new state of the fireteam.
-  Future<InlineResponse2009> forumKickBanFireteamApplicant(int targetMembershipId, int topicId) async {
+  Future<InlineResponse20010> forumKickBanFireteamApplicant(int targetMembershipId, int topicId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -743,7 +743,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2009') as InlineResponse2009 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20010') as InlineResponse20010 ;
     } else {
       return null;
     }
@@ -751,7 +751,7 @@ class ForumApi {
   /// 
   ///
   /// Allows a user to remove themselves from a recruitment thread fireteam slot. Returns the new state of the fireteam.
-  Future<InlineResponse2009> forumLeaveFireteamThread(int topicId) async {
+  Future<InlineResponse20010> forumLeaveFireteamThread(int topicId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -794,7 +794,7 @@ class ForumApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2009') as InlineResponse2009 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20010') as InlineResponse20010 ;
     } else {
       return null;
     }

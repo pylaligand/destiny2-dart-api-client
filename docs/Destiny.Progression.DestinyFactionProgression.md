@@ -9,6 +9,7 @@ import 'package:destiny2_api/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **factionHash** | **int** | The hash identifier of the Faction related to this progression. Use it to look up the DestinyFactionDefinition for more rendering info. | [optional] [default to null]
+**factionVendorIndex** | **int** | The index of the Faction vendor that is currently available. Will be set to -1 if no vendors are available. | [optional] [default to null]
 **progressionHash** | **int** | The hash identifier of the Progression in question. Use it to look up the DestinyProgressionDefinition in static data. | [optional] [default to null]
 **dailyProgress** | **int** | The amount of progress earned today for this progression. | [optional] [default to null]
 **dailyLimit** | **int** | If this progression has a daily limit, this is that limit. | [optional] [default to null]

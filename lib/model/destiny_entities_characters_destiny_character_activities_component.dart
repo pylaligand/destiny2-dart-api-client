@@ -18,19 +18,19 @@ class DestinyEntitiesCharactersDestinyCharacterActivitiesComponent {
   @Property(name: 'currentActivityModeHash')
   int currentActivityModeHash = null;
   
-
+/* And the current activity's most specific mode type, if it can be found. */
   @Property(name: 'currentActivityModeType')
   int currentActivityModeType = null;
-  //enum currentActivityModeTypeEnum {  0,  2,  3,  4,  5,  6,  7,  9,  10,  11,  12,  13,  15,  16,  17,  18,  19,  20,  21,  22,  24,  25,  26,  27,  28,  29,  30,  31,  32,  37,  38,  39,  40,  };
-
+  //enum currentActivityModeTypeEnum {  0,  2,  3,  4,  5,  6,  7,  9,  10,  11,  12,  13,  15,  16,  17,  18,  19,  20,  21,  22,  24,  25,  26,  27,  28,  29,  30,  31,  32,  37,  38,  39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,  52,  53,  54,  55,  56,  57,  58,  };
+/* If the user is in an activity, this will be the hashes of the DestinyActivityModeDefinition being played. Combine with currentActivityHash to give a person a full picture of what they're doing right now. */
   @Property(name: 'currentActivityModeHashes')
   List<int> currentActivityModeHashes = [];
   
-
+/* All Activity Modes that apply to the current activity being played, in enum form. */
   @Property(name: 'currentActivityModeTypes')
   List<DestinyHistoricalStatsDefinitionsDestinyActivityModeType> currentActivityModeTypes = [];
   
-
+/* If the user is in a playlist, this is the hash identifier for the playlist that they chose. */
   @Property(name: 'currentPlaylistActivityHash')
   int currentPlaylistActivityHash = null;
   

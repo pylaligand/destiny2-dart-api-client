@@ -47,10 +47,6 @@ class GroupsV2GroupV2 {
   bool isPublicTopicAdminOnly = null;
   
 
-  @Property(name: 'primaryAlliedGroupId')
-  int primaryAlliedGroupId = null;
-  
-
   @Property(name: 'motto')
   String motto = null;
   
@@ -99,10 +95,6 @@ class GroupsV2GroupV2 {
   String avatarPath = null;
   
 
-  @Property(name: 'isAllianceOwner')
-  bool isAllianceOwner = null;
-  
-
   @Property(name: 'conversationId')
   int conversationId = null;
   
@@ -126,7 +118,7 @@ class GroupsV2GroupV2 {
 
   @override
   String toString()  {
-    return 'GroupsV2GroupV2[groupId=$groupId, name=$name, groupType=$groupType, membershipIdCreated=$membershipIdCreated, creationDate=$creationDate, modificationDate=$modificationDate, about=$about, tags=$tags, memberCount=$memberCount, isPublic=$isPublic, isPublicTopicAdminOnly=$isPublicTopicAdminOnly, primaryAlliedGroupId=$primaryAlliedGroupId, motto=$motto, allowChat=$allowChat, isDefaultPostPublic=$isDefaultPostPublic, chatSecurity=$chatSecurity, locale=$locale, avatarImageIndex=$avatarImageIndex, homepage=$homepage, membershipOption=$membershipOption, defaultPublicity=$defaultPublicity, theme=$theme, bannerPath=$bannerPath, avatarPath=$avatarPath, isAllianceOwner=$isAllianceOwner, conversationId=$conversationId, enableInvitationMessagingForAdmins=$enableInvitationMessagingForAdmins, banExpireDate=$banExpireDate, features=$features, clanInfo=$clanInfo, ]';
+    return 'GroupsV2GroupV2[groupId=$groupId, name=$name, groupType=$groupType, membershipIdCreated=$membershipIdCreated, creationDate=$creationDate, modificationDate=$modificationDate, about=$about, tags=$tags, memberCount=$memberCount, isPublic=$isPublic, isPublicTopicAdminOnly=$isPublicTopicAdminOnly, motto=$motto, allowChat=$allowChat, isDefaultPostPublic=$isDefaultPostPublic, chatSecurity=$chatSecurity, locale=$locale, avatarImageIndex=$avatarImageIndex, homepage=$homepage, membershipOption=$membershipOption, defaultPublicity=$defaultPublicity, theme=$theme, bannerPath=$bannerPath, avatarPath=$avatarPath, conversationId=$conversationId, enableInvitationMessagingForAdmins=$enableInvitationMessagingForAdmins, banExpireDate=$banExpireDate, features=$features, clanInfo=$clanInfo, ]';
   }
 }
 

@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse2001 {
   
   @Property(name: 'Response')
-  List<UserModelsUserAlias> response = [];
+  List<ApplicationsApplication> response = [];
   
 
   @Property(name: 'ErrorCode')

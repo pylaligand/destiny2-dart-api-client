@@ -18,11 +18,15 @@ class DestinyDefinitionsDestinyProgressionStepDefinition {
   @Property(name: 'rewardItems')
   List<DestinyDestinyItemQuantity> rewardItems = [];
   
+/* If this progression step has a specific icon related to it, this is the icon to show. */
+  @Property(name: 'icon')
+  String icon = null;
+  
   DestinyDefinitionsDestinyProgressionStepDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyProgressionStepDefinition[stepName=$stepName, displayEffectType=$displayEffectType, progressTotal=$progressTotal, rewardItems=$rewardItems, ]';
+    return 'DestinyDefinitionsDestinyProgressionStepDefinition[stepName=$stepName, displayEffectType=$displayEffectType, progressTotal=$progressTotal, rewardItems=$rewardItems, icon=$icon, ]';
   }
 }
 

@@ -22,11 +22,15 @@ class DestinyQuestsDestinyObjectiveProgress {
   @Property(name: 'complete')
   bool complete = null;
   
+/* If this is true, the objective is visible in-game. Otherwise, it's not yet visible to the player. Up to you if you want to honor this property. */
+  @Property(name: 'visible')
+  bool visible = null;
+  
   DestinyQuestsDestinyObjectiveProgress();
 
   @override
   String toString()  {
-    return 'DestinyQuestsDestinyObjectiveProgress[objectiveHash=$objectiveHash, destinationHash=$destinationHash, activityHash=$activityHash, progress=$progress, complete=$complete, ]';
+    return 'DestinyQuestsDestinyObjectiveProgress[objectiveHash=$objectiveHash, destinationHash=$destinationHash, activityHash=$activityHash, progress=$progress, complete=$complete, visible=$visible, ]';
   }
 }
 

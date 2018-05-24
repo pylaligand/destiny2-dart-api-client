@@ -6,11 +6,19 @@ class DestinyEntitiesItemsDestinyItemObjectivesComponent {
   @Property(name: 'objectives')
   List<DestinyQuestsDestinyObjectiveProgress> objectives = [];
   
+/* I may regret naming it this way - but this represents when an item has an objective that doesn't serve a beneficial purpose, but rather is used for \"flavor\" or additional information. For instance, when Emblems track specific stats, those stats are represented as Objectives on the item. */
+  @Property(name: 'flavorObjective')
+  DestinyQuestsDestinyObjectiveProgress flavorObjective = null;
+  
+/* If we have any information on when these objectives were completed, this will be the date of that completion. This won't be on many items, but could be interesting for some items that do store this information. */
+  @Property(name: 'dateCompleted')
+  DateTime dateCompleted = null;
+  
   DestinyEntitiesItemsDestinyItemObjectivesComponent();
 
   @override
   String toString()  {
-    return 'DestinyEntitiesItemsDestinyItemObjectivesComponent[objectives=$objectives, ]';
+    return 'DestinyEntitiesItemsDestinyItemObjectivesComponent[objectives=$objectives, flavorObjective=$flavorObjective, dateCompleted=$dateCompleted, ]';
   }
 }
 

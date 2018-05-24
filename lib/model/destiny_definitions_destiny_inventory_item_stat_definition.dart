@@ -14,7 +14,7 @@ class DestinyDefinitionsDestinyInventoryItemStatDefinition {
   @Property(name: 'minimum')
   int minimum = null;
   
-/* The maximum possible value for this stat that we think the item can roll. */
+/* The maximum possible value for this stat that we think the item can roll.  WARNING: In Destiny 1, this field was calculated using the potential stat rolls on the item's talent grid. In Destiny 2, items no longer have meaningful talent grids and instead have sockets: but the calculation of this field was never altered to adapt to this change. As such, this field should be considered deprecated until we can address this oversight. */
   @Property(name: 'maximum')
   int maximum = null;
   

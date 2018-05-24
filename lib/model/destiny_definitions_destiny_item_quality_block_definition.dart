@@ -10,13 +10,17 @@ class DestinyDefinitionsDestinyItemQualityBlockDefinition {
   @Property(name: 'qualityLevel')
   int qualityLevel = null;
   
-/* The string identifier for this item's \"infusability\", if any.   Items that match the same infusionCategoryName are allowed to infuse with each other. */
+/* The string identifier for this item's \"infusability\", if any.   Items that match the same infusionCategoryName are allowed to infuse with each other.  DEPRECATED: Items can now have multiple infusion categories. Please use infusionCategoryHashes instead. */
   @Property(name: 'infusionCategoryName')
   String infusionCategoryName = null;
   
-/* The hash identifier for the infusion. It does not map to a Definition entity. */
+/* The hash identifier for the infusion. It does not map to a Definition entity.  DEPRECATED: Items can now have multiple infusion categories. Please use infusionCategoryHashes instead. */
   @Property(name: 'infusionCategoryHash')
   int infusionCategoryHash = null;
+  
+/* If any one of these hashes matches any value in another item's infusionCategoryHashes, the two can infuse with each other. */
+  @Property(name: 'infusionCategoryHashes')
+  List<int> infusionCategoryHashes = [];
   
 /* An item can refer to pre-set level requirements. They are defined in DestinyProgressionLevelRequirementDefinition, and you can use this hash to find the appropriate definition. */
   @Property(name: 'progressionLevelRequirementHash')
@@ -26,7 +30,7 @@ class DestinyDefinitionsDestinyItemQualityBlockDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyItemQualityBlockDefinition[itemLevels=$itemLevels, qualityLevel=$qualityLevel, infusionCategoryName=$infusionCategoryName, infusionCategoryHash=$infusionCategoryHash, progressionLevelRequirementHash=$progressionLevelRequirementHash, ]';
+    return 'DestinyDefinitionsDestinyItemQualityBlockDefinition[itemLevels=$itemLevels, qualityLevel=$qualityLevel, infusionCategoryName=$infusionCategoryName, infusionCategoryHash=$infusionCategoryHash, infusionCategoryHashes=$infusionCategoryHashes, progressionLevelRequirementHash=$progressionLevelRequirementHash, ]';
   }
 }
 

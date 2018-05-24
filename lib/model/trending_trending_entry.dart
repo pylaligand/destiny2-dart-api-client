@@ -54,11 +54,19 @@ class TrendingTrendingEntry {
   @Property(name: 'featureImage')
   String featureImage = null;
   
+/* If the item is of entityType TrendingEntryType.Container, it may have items - also Trending Entries - contained within it. This is the ordered list of those to display under the Container's header. */
+  @Property(name: 'items')
+  List<TrendingTrendingEntry> items = [];
+  
+/* If the entry has a date at which it was created, this is that date. */
+  @Property(name: 'creationDate')
+  DateTime creationDate = null;
+  
   TrendingTrendingEntry();
 
   @override
   String toString()  {
-    return 'TrendingTrendingEntry[weight=$weight, isFeatured=$isFeatured, identifier=$identifier, entityType=$entityType, displayName=$displayName, tagline=$tagline, image=$image, startDate=$startDate, endDate=$endDate, link=$link, webmVideo=$webmVideo, mp4Video=$mp4Video, featureImage=$featureImage, ]';
+    return 'TrendingTrendingEntry[weight=$weight, isFeatured=$isFeatured, identifier=$identifier, entityType=$entityType, displayName=$displayName, tagline=$tagline, image=$image, startDate=$startDate, endDate=$endDate, link=$link, webmVideo=$webmVideo, mp4Video=$mp4Video, featureImage=$featureImage, items=$items, creationDate=$creationDate, ]';
   }
 }
 

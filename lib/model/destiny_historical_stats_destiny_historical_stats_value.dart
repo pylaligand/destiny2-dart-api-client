@@ -18,11 +18,15 @@ class DestinyHistoricalStatsDestinyHistoricalStatsValue {
   @Property(name: 'weighted')
   DestinyHistoricalStatsDestinyHistoricalStatsValuePair weighted = null;
   
+/* When a stat represents the best, most, longest, fastest or some other personal best, the actual activity ID where that personal best was established is available on this property. */
+  @Property(name: 'activityId')
+  int activityId = null;
+  
   DestinyHistoricalStatsDestinyHistoricalStatsValue();
 
   @override
   String toString()  {
-    return 'DestinyHistoricalStatsDestinyHistoricalStatsValue[statId=$statId, basic=$basic, pga=$pga, weighted=$weighted, ]';
+    return 'DestinyHistoricalStatsDestinyHistoricalStatsValue[statId=$statId, basic=$basic, pga=$pga, weighted=$weighted, activityId=$activityId, ]';
   }
 }
 

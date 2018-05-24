@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20041 {
   
   @Property(name: 'Response')
-  List<DestinyHistoricalStatsDestinyClanAggregateStat> response = [];
+  DestinyHistoricalStatsDestinyPostGameCarnageReportData response = null;
   
 
   @Property(name: 'ErrorCode')

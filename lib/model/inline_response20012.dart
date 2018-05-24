@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20012 {
   
   @Property(name: 'Response')
-  Map<String, String> response = {};
+  List<ForumForumRecruitmentDetail> response = [];
   
 
   @Property(name: 'ErrorCode')

@@ -22,9 +22,13 @@ class DestinyDefinitionsMilestonesDestinyMilestoneDefinition {
   @Property(name: 'friendlyName')
   String friendlyName = null;
   
-/* If TRUE, this entry should be returned in the list of milestones for the \"Explore Destiny\" (i.e. new BNet homepage) features of Bungie.net (as long as the underlying event is active) */
+/* If TRUE, this entry should be returned in the list of milestones for the \"Explore Destiny\" (i.e. new BNet homepage) features of Bungie.net (as long as the underlying event is active) Note that this is a property specifically used by BNet and the companion app for the \"Live Events\" feature of the front page/welcome view: it's not a reflection of what you see in-game. */
   @Property(name: 'showInExplorer')
   bool showInExplorer = null;
+  
+/* If TRUE, \"Explore Destiny\" (the front page of BNet and the companion app) prioritize using the activity image over any overriding Quest or Milestone image provided. This unfortunate hack is brought to you by Trials of The Nine. */
+  @Property(name: 'explorePrioritizesActivityImage')
+  bool explorePrioritizesActivityImage = null;
   
 /* A shortcut for clients - and the server - to understand whether we can predict the start and end dates for this event. In practice, there are multiple ways that an event could have predictable date ranges, but not all events will be able to be predicted via any mechanism (for instance, events that are manually triggered on and off) */
   @Property(name: 'hasPredictableDates')
@@ -37,6 +41,10 @@ class DestinyDefinitionsMilestonesDestinyMilestoneDefinition {
 /* If this milestone can provide rewards, this will define the categories into which the individual reward entries are placed. */
   @Property(name: 'rewards')
   Map<String, DestinyDefinitionsMilestonesDestinyMilestoneRewardCategoryDefinition> rewards = {};
+  
+/* If you're going to show Vendors for the Milestone, you can use this as a localized \"header\" for the section where you show that vendor data. It'll provide a more context-relevant clue about what the vendor's role is in the Milestone. */
+  @Property(name: 'vendorsDisplayTitle')
+  String vendorsDisplayTitle = null;
   
 /* Sometimes, milestones will have rewards provided by Vendors. This definition gives the information needed to understand which vendors are relevant, the order in which they should be returned if order matters, and the conditions under which the Vendor is relevant to the user. */
   @Property(name: 'vendors')
@@ -66,7 +74,7 @@ class DestinyDefinitionsMilestonesDestinyMilestoneDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsMilestonesDestinyMilestoneDefinition[displayProperties=$displayProperties, image=$image, milestoneType=$milestoneType, recruitable=$recruitable, friendlyName=$friendlyName, showInExplorer=$showInExplorer, hasPredictableDates=$hasPredictableDates, quests=$quests, rewards=$rewards, vendors=$vendors, values=$values, isInGameMilestone=$isInGameMilestone, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsMilestonesDestinyMilestoneDefinition[displayProperties=$displayProperties, image=$image, milestoneType=$milestoneType, recruitable=$recruitable, friendlyName=$friendlyName, showInExplorer=$showInExplorer, explorePrioritizesActivityImage=$explorePrioritizesActivityImage, hasPredictableDates=$hasPredictableDates, quests=$quests, rewards=$rewards, vendorsDisplayTitle=$vendorsDisplayTitle, vendors=$vendors, values=$values, isInGameMilestone=$isInGameMilestone, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

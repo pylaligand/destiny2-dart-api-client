@@ -61,6 +61,7 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes validationMaximumSequentialCarriageReturns = const ExceptionsPlatformErrorCodes._internal(50);
   static const ExceptionsPlatformErrorCodes perEndpointRequestThrottleExceeded = const ExceptionsPlatformErrorCodes._internal(51);
   static const ExceptionsPlatformErrorCodes authContextCacheAssertion = const ExceptionsPlatformErrorCodes._internal(52);
+  static const ExceptionsPlatformErrorCodes exPlatformStringValidationError = const ExceptionsPlatformErrorCodes._internal(53);
   static const ExceptionsPlatformErrorCodes obsoleteCredentialType = const ExceptionsPlatformErrorCodes._internal(89);
   static const ExceptionsPlatformErrorCodes unableToUnPairMobileApp = const ExceptionsPlatformErrorCodes._internal(90);
   static const ExceptionsPlatformErrorCodes unableToPairMobileApp = const ExceptionsPlatformErrorCodes._internal(91);
@@ -188,6 +189,7 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes messagingMustIncludeSelfInPrivateMessage = const ExceptionsPlatformErrorCodes._internal(310);
   static const ExceptionsPlatformErrorCodes messagingSenderIsBanned = const ExceptionsPlatformErrorCodes._internal(311);
   static const ExceptionsPlatformErrorCodes messagingGroupOptionalChatExceededMaximum = const ExceptionsPlatformErrorCodes._internal(312);
+  static const ExceptionsPlatformErrorCodes privateMessagingRequiresDestinyMembership = const ExceptionsPlatformErrorCodes._internal(313);
   static const ExceptionsPlatformErrorCodes addSurveyAnswersUnknownSqlException = const ExceptionsPlatformErrorCodes._internal(400);
   static const ExceptionsPlatformErrorCodes forumBodyCannotBeEmpty = const ExceptionsPlatformErrorCodes._internal(500);
   static const ExceptionsPlatformErrorCodes forumSubjectCannotBeEmptyOnTopicPost = const ExceptionsPlatformErrorCodes._internal(501);
@@ -274,6 +276,7 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes forumRecruitmentGlobalBan = const ExceptionsPlatformErrorCodes._internal(592);
   static const ExceptionsPlatformErrorCodes forumUserBannedFromThisTopic = const ExceptionsPlatformErrorCodes._internal(593);
   static const ExceptionsPlatformErrorCodes forumRecruitmentFireteamMembersOnly = const ExceptionsPlatformErrorCodes._internal(594);
+  static const ExceptionsPlatformErrorCodes forumRequiresDestiny2Progress = const ExceptionsPlatformErrorCodes._internal(595);
   static const ExceptionsPlatformErrorCodes groupMembershipApplicationAlreadyResolved = const ExceptionsPlatformErrorCodes._internal(601);
   static const ExceptionsPlatformErrorCodes groupMembershipAlreadyApplied = const ExceptionsPlatformErrorCodes._internal(602);
   static const ExceptionsPlatformErrorCodes groupMembershipInsufficientPrivileges = const ExceptionsPlatformErrorCodes._internal(603);
@@ -378,6 +381,7 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes activityPermissionDenied = const ExceptionsPlatformErrorCodes._internal(705);
   static const ExceptionsPlatformErrorCodes shareAlreadyShared = const ExceptionsPlatformErrorCodes._internal(706);
   static const ExceptionsPlatformErrorCodes activityLoggingDisabled = const ExceptionsPlatformErrorCodes._internal(707);
+  static const ExceptionsPlatformErrorCodes clanRequiresExistingDestinyAccount = const ExceptionsPlatformErrorCodes._internal(750);
   static const ExceptionsPlatformErrorCodes itemAlreadyFollowed = const ExceptionsPlatformErrorCodes._internal(801);
   static const ExceptionsPlatformErrorCodes itemNotFollowed = const ExceptionsPlatformErrorCodes._internal(802);
   static const ExceptionsPlatformErrorCodes cannotFollowSelf = const ExceptionsPlatformErrorCodes._internal(803);
@@ -423,6 +427,8 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes psnApiProfilePrivacyRestriction = const ExceptionsPlatformErrorCodes._internal(1235);
   static const ExceptionsPlatformErrorCodes psnApiProfileUnderMaintenance = const ExceptionsPlatformErrorCodes._internal(1236);
   static const ExceptionsPlatformErrorCodes psnApiAccountAttributeMissing = const ExceptionsPlatformErrorCodes._internal(1237);
+  static const ExceptionsPlatformErrorCodes psnApiNoPermission = const ExceptionsPlatformErrorCodes._internal(1238);
+  static const ExceptionsPlatformErrorCodes psnApiTargetUserBlocked = const ExceptionsPlatformErrorCodes._internal(1239);
   static const ExceptionsPlatformErrorCodes xblExSystemDisabled = const ExceptionsPlatformErrorCodes._internal(1300);
   static const ExceptionsPlatformErrorCodes xblExUnknownError = const ExceptionsPlatformErrorCodes._internal(1301);
   static const ExceptionsPlatformErrorCodes xblApiErrorWebException = const ExceptionsPlatformErrorCodes._internal(1302);
@@ -525,6 +531,14 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes destinyLegacyPlatformInaccessible = const ExceptionsPlatformErrorCodes._internal(1670);
   static const ExceptionsPlatformErrorCodes destinyCannotPerformActionAtThisLocation = const ExceptionsPlatformErrorCodes._internal(1671);
   static const ExceptionsPlatformErrorCodes destinyThrottledByGameServer = const ExceptionsPlatformErrorCodes._internal(1672);
+  static const ExceptionsPlatformErrorCodes destinyItemNotTransferrableHasSideEffects = const ExceptionsPlatformErrorCodes._internal(1673);
+  static const ExceptionsPlatformErrorCodes destinyItemLocked = const ExceptionsPlatformErrorCodes._internal(1674);
+  static const ExceptionsPlatformErrorCodes destinyCannotAffordMaterialRequirements = const ExceptionsPlatformErrorCodes._internal(1675);
+  static const ExceptionsPlatformErrorCodes destinyFailedPlugInsertionRules = const ExceptionsPlatformErrorCodes._internal(1676);
+  static const ExceptionsPlatformErrorCodes destinySocketNotFound = const ExceptionsPlatformErrorCodes._internal(1677);
+  static const ExceptionsPlatformErrorCodes destinySocketActionNotAllowed = const ExceptionsPlatformErrorCodes._internal(1678);
+  static const ExceptionsPlatformErrorCodes destinySocketAlreadyHasPlug = const ExceptionsPlatformErrorCodes._internal(1679);
+  static const ExceptionsPlatformErrorCodes destinyPlugItemNotAvailable = const ExceptionsPlatformErrorCodes._internal(1680);
   static const ExceptionsPlatformErrorCodes fbInvalidRequest = const ExceptionsPlatformErrorCodes._internal(1800);
   static const ExceptionsPlatformErrorCodes fbRedirectMismatch = const ExceptionsPlatformErrorCodes._internal(1801);
   static const ExceptionsPlatformErrorCodes fbAccessDenied = const ExceptionsPlatformErrorCodes._internal(1802);
@@ -623,6 +637,38 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes twitchCouldNotLoadDestinyInfo = const ExceptionsPlatformErrorCodes._internal(2502);
   static const ExceptionsPlatformErrorCodes trendingCategoryNotFound = const ExceptionsPlatformErrorCodes._internal(2600);
   static const ExceptionsPlatformErrorCodes trendingEntryTypeNotSupported = const ExceptionsPlatformErrorCodes._internal(2601);
+  static const ExceptionsPlatformErrorCodes reportOffenderNotInPgcr = const ExceptionsPlatformErrorCodes._internal(2700);
+  static const ExceptionsPlatformErrorCodes reportRequestorNotInPgcr = const ExceptionsPlatformErrorCodes._internal(2701);
+  static const ExceptionsPlatformErrorCodes reportSubmissionFailed = const ExceptionsPlatformErrorCodes._internal(2702);
+  static const ExceptionsPlatformErrorCodes reportCannotReportSelf = const ExceptionsPlatformErrorCodes._internal(2703);
+  static const ExceptionsPlatformErrorCodes awaTypeDisabled = const ExceptionsPlatformErrorCodes._internal(2800);
+  static const ExceptionsPlatformErrorCodes awaTooManyPendingRequests = const ExceptionsPlatformErrorCodes._internal(2801);
+  static const ExceptionsPlatformErrorCodes awaTheFeatureRequiresARegisteredDevice = const ExceptionsPlatformErrorCodes._internal(2802);
+  static const ExceptionsPlatformErrorCodes awaRequestWasUnansweredForTooLong = const ExceptionsPlatformErrorCodes._internal(2803);
+  static const ExceptionsPlatformErrorCodes awaWriteRequestMissingOrInvalidToken = const ExceptionsPlatformErrorCodes._internal(2804);
+  static const ExceptionsPlatformErrorCodes awaWriteRequestTokenExpired = const ExceptionsPlatformErrorCodes._internal(2805);
+  static const ExceptionsPlatformErrorCodes awaWriteRequestTokenUsageLimitReached = const ExceptionsPlatformErrorCodes._internal(2806);
+  static const ExceptionsPlatformErrorCodes clanFireteamNotFound = const ExceptionsPlatformErrorCodes._internal(3000);
+  static const ExceptionsPlatformErrorCodes clanFireteamAddNoAlternatesForImmediate = const ExceptionsPlatformErrorCodes._internal(3001);
+  static const ExceptionsPlatformErrorCodes clanFireteamFull = const ExceptionsPlatformErrorCodes._internal(3002);
+  static const ExceptionsPlatformErrorCodes clanFireteamAltFull = const ExceptionsPlatformErrorCodes._internal(3003);
+  static const ExceptionsPlatformErrorCodes clanFireteamBlocked = const ExceptionsPlatformErrorCodes._internal(3004);
+  static const ExceptionsPlatformErrorCodes clanFireteamPlayerEntryNotFound = const ExceptionsPlatformErrorCodes._internal(3005);
+  static const ExceptionsPlatformErrorCodes clanFireteamPermissions = const ExceptionsPlatformErrorCodes._internal(3006);
+  static const ExceptionsPlatformErrorCodes clanFireteamInvalidPlatform = const ExceptionsPlatformErrorCodes._internal(3007);
+  static const ExceptionsPlatformErrorCodes clanFireteamCannotAdjustSlotCount = const ExceptionsPlatformErrorCodes._internal(3008);
+  static const ExceptionsPlatformErrorCodes clanFireteamInvalidPlayerPlatform = const ExceptionsPlatformErrorCodes._internal(3009);
+  static const ExceptionsPlatformErrorCodes clanFireteamNotReadyForInvitesNotEnoughPlayers = const ExceptionsPlatformErrorCodes._internal(3010);
+  static const ExceptionsPlatformErrorCodes clanFireteamGameInvitesNotSupportForPlatform = const ExceptionsPlatformErrorCodes._internal(3011);
+  static const ExceptionsPlatformErrorCodes clanFireteamPlatformInvitePreqFailure = const ExceptionsPlatformErrorCodes._internal(3012);
+  static const ExceptionsPlatformErrorCodes clanFireteamInvalidAuthContext = const ExceptionsPlatformErrorCodes._internal(3013);
+  static const ExceptionsPlatformErrorCodes clanFireteamInvalidAuthProviderPsn = const ExceptionsPlatformErrorCodes._internal(3014);
+  static const ExceptionsPlatformErrorCodes clanFireteamPs4SessionFull = const ExceptionsPlatformErrorCodes._internal(3015);
+  static const ExceptionsPlatformErrorCodes clanFireteamInvalidAuthToken = const ExceptionsPlatformErrorCodes._internal(3016);
+  static const ExceptionsPlatformErrorCodes clanFireteamScheduledFireteamsDisabled = const ExceptionsPlatformErrorCodes._internal(3017);
+  static const ExceptionsPlatformErrorCodes clanFireteamNotReadyForInvitesNotScheduledYet = const ExceptionsPlatformErrorCodes._internal(3018);
+  static const ExceptionsPlatformErrorCodes clanFireteamNotReadyForInvitesClosed = const ExceptionsPlatformErrorCodes._internal(3019);
+  static const ExceptionsPlatformErrorCodes clanFireteamScheduledFireteamsRequireAdminPermissions = const ExceptionsPlatformErrorCodes._internal(3020);
 }
 
 class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<ExceptionsPlatformErrorCodes> {
@@ -688,6 +734,7 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 50: return ExceptionsPlatformErrorCodes.validationMaximumSequentialCarriageReturns;
       case 51: return ExceptionsPlatformErrorCodes.perEndpointRequestThrottleExceeded;
       case 52: return ExceptionsPlatformErrorCodes.authContextCacheAssertion;
+      case 53: return ExceptionsPlatformErrorCodes.exPlatformStringValidationError;
       case 89: return ExceptionsPlatformErrorCodes.obsoleteCredentialType;
       case 90: return ExceptionsPlatformErrorCodes.unableToUnPairMobileApp;
       case 91: return ExceptionsPlatformErrorCodes.unableToPairMobileApp;
@@ -815,6 +862,7 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 310: return ExceptionsPlatformErrorCodes.messagingMustIncludeSelfInPrivateMessage;
       case 311: return ExceptionsPlatformErrorCodes.messagingSenderIsBanned;
       case 312: return ExceptionsPlatformErrorCodes.messagingGroupOptionalChatExceededMaximum;
+      case 313: return ExceptionsPlatformErrorCodes.privateMessagingRequiresDestinyMembership;
       case 400: return ExceptionsPlatformErrorCodes.addSurveyAnswersUnknownSqlException;
       case 500: return ExceptionsPlatformErrorCodes.forumBodyCannotBeEmpty;
       case 501: return ExceptionsPlatformErrorCodes.forumSubjectCannotBeEmptyOnTopicPost;
@@ -901,6 +949,7 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 592: return ExceptionsPlatformErrorCodes.forumRecruitmentGlobalBan;
       case 593: return ExceptionsPlatformErrorCodes.forumUserBannedFromThisTopic;
       case 594: return ExceptionsPlatformErrorCodes.forumRecruitmentFireteamMembersOnly;
+      case 595: return ExceptionsPlatformErrorCodes.forumRequiresDestiny2Progress;
       case 601: return ExceptionsPlatformErrorCodes.groupMembershipApplicationAlreadyResolved;
       case 602: return ExceptionsPlatformErrorCodes.groupMembershipAlreadyApplied;
       case 603: return ExceptionsPlatformErrorCodes.groupMembershipInsufficientPrivileges;
@@ -1005,6 +1054,7 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 705: return ExceptionsPlatformErrorCodes.activityPermissionDenied;
       case 706: return ExceptionsPlatformErrorCodes.shareAlreadyShared;
       case 707: return ExceptionsPlatformErrorCodes.activityLoggingDisabled;
+      case 750: return ExceptionsPlatformErrorCodes.clanRequiresExistingDestinyAccount;
       case 801: return ExceptionsPlatformErrorCodes.itemAlreadyFollowed;
       case 802: return ExceptionsPlatformErrorCodes.itemNotFollowed;
       case 803: return ExceptionsPlatformErrorCodes.cannotFollowSelf;
@@ -1050,6 +1100,8 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 1235: return ExceptionsPlatformErrorCodes.psnApiProfilePrivacyRestriction;
       case 1236: return ExceptionsPlatformErrorCodes.psnApiProfileUnderMaintenance;
       case 1237: return ExceptionsPlatformErrorCodes.psnApiAccountAttributeMissing;
+      case 1238: return ExceptionsPlatformErrorCodes.psnApiNoPermission;
+      case 1239: return ExceptionsPlatformErrorCodes.psnApiTargetUserBlocked;
       case 1300: return ExceptionsPlatformErrorCodes.xblExSystemDisabled;
       case 1301: return ExceptionsPlatformErrorCodes.xblExUnknownError;
       case 1302: return ExceptionsPlatformErrorCodes.xblApiErrorWebException;
@@ -1151,6 +1203,14 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 1670: return ExceptionsPlatformErrorCodes.destinyLegacyPlatformInaccessible;
       case 1671: return ExceptionsPlatformErrorCodes.destinyCannotPerformActionAtThisLocation;
       case 1672: return ExceptionsPlatformErrorCodes.destinyThrottledByGameServer;
+      case 1673: return ExceptionsPlatformErrorCodes.destinyItemNotTransferrableHasSideEffects;
+      case 1674: return ExceptionsPlatformErrorCodes.destinyItemLocked;
+      case 1675: return ExceptionsPlatformErrorCodes.destinyCannotAffordMaterialRequirements;
+      case 1676: return ExceptionsPlatformErrorCodes.destinyFailedPlugInsertionRules;
+      case 1677: return ExceptionsPlatformErrorCodes.destinySocketNotFound;
+      case 1678: return ExceptionsPlatformErrorCodes.destinySocketActionNotAllowed;
+      case 1679: return ExceptionsPlatformErrorCodes.destinySocketAlreadyHasPlug;
+      case 1680: return ExceptionsPlatformErrorCodes.destinyPlugItemNotAvailable;
       case 1800: return ExceptionsPlatformErrorCodes.fbInvalidRequest;
       case 1801: return ExceptionsPlatformErrorCodes.fbRedirectMismatch;
       case 1802: return ExceptionsPlatformErrorCodes.fbAccessDenied;
@@ -1249,6 +1309,38 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 2502: return ExceptionsPlatformErrorCodes.twitchCouldNotLoadDestinyInfo;
       case 2600: return ExceptionsPlatformErrorCodes.trendingCategoryNotFound;
       case 2601: return ExceptionsPlatformErrorCodes.trendingEntryTypeNotSupported;
+      case 2700: return ExceptionsPlatformErrorCodes.reportOffenderNotInPgcr;
+      case 2701: return ExceptionsPlatformErrorCodes.reportRequestorNotInPgcr;
+      case 2702: return ExceptionsPlatformErrorCodes.reportSubmissionFailed;
+      case 2703: return ExceptionsPlatformErrorCodes.reportCannotReportSelf;
+      case 2800: return ExceptionsPlatformErrorCodes.awaTypeDisabled;
+      case 2801: return ExceptionsPlatformErrorCodes.awaTooManyPendingRequests;
+      case 2802: return ExceptionsPlatformErrorCodes.awaTheFeatureRequiresARegisteredDevice;
+      case 2803: return ExceptionsPlatformErrorCodes.awaRequestWasUnansweredForTooLong;
+      case 2804: return ExceptionsPlatformErrorCodes.awaWriteRequestMissingOrInvalidToken;
+      case 2805: return ExceptionsPlatformErrorCodes.awaWriteRequestTokenExpired;
+      case 2806: return ExceptionsPlatformErrorCodes.awaWriteRequestTokenUsageLimitReached;
+      case 3000: return ExceptionsPlatformErrorCodes.clanFireteamNotFound;
+      case 3001: return ExceptionsPlatformErrorCodes.clanFireteamAddNoAlternatesForImmediate;
+      case 3002: return ExceptionsPlatformErrorCodes.clanFireteamFull;
+      case 3003: return ExceptionsPlatformErrorCodes.clanFireteamAltFull;
+      case 3004: return ExceptionsPlatformErrorCodes.clanFireteamBlocked;
+      case 3005: return ExceptionsPlatformErrorCodes.clanFireteamPlayerEntryNotFound;
+      case 3006: return ExceptionsPlatformErrorCodes.clanFireteamPermissions;
+      case 3007: return ExceptionsPlatformErrorCodes.clanFireteamInvalidPlatform;
+      case 3008: return ExceptionsPlatformErrorCodes.clanFireteamCannotAdjustSlotCount;
+      case 3009: return ExceptionsPlatformErrorCodes.clanFireteamInvalidPlayerPlatform;
+      case 3010: return ExceptionsPlatformErrorCodes.clanFireteamNotReadyForInvitesNotEnoughPlayers;
+      case 3011: return ExceptionsPlatformErrorCodes.clanFireteamGameInvitesNotSupportForPlatform;
+      case 3012: return ExceptionsPlatformErrorCodes.clanFireteamPlatformInvitePreqFailure;
+      case 3013: return ExceptionsPlatformErrorCodes.clanFireteamInvalidAuthContext;
+      case 3014: return ExceptionsPlatformErrorCodes.clanFireteamInvalidAuthProviderPsn;
+      case 3015: return ExceptionsPlatformErrorCodes.clanFireteamPs4SessionFull;
+      case 3016: return ExceptionsPlatformErrorCodes.clanFireteamInvalidAuthToken;
+      case 3017: return ExceptionsPlatformErrorCodes.clanFireteamScheduledFireteamsDisabled;
+      case 3018: return ExceptionsPlatformErrorCodes.clanFireteamNotReadyForInvitesNotScheduledYet;
+      case 3019: return ExceptionsPlatformErrorCodes.clanFireteamNotReadyForInvitesClosed;
+      case 3020: return ExceptionsPlatformErrorCodes.clanFireteamScheduledFireteamsRequireAdminPermissions;
       default: throw('Unknown enum value to decode: $data');
     }
   }

@@ -2,7 +2,11 @@ part of destiny2_api.api;
 
 @Entity()
 class DestinyDefinitionsDestinyItemStatBlockDefinition {
-  /* If the item's stats are meant to be modified by a DestinyStatGroupDefinition, this will be the identifier for that definition.  If you are using live data or precomputed stats data on the DestinyInventoryItemDefinition.stats.stats property, you don't have to worry about statGroupHash and how it alters stats: the already altered stats are provided to you. But if you want to see how the sausage gets made, or perform computations yourself, this is valuable information. */
+  /* If true, the game won't show the \"primary\" stat on this item when you inspect it.  NOTE: This is being manually mapped, because I happen to want it in a block that isn't going to directly create this derivative block. */
+  @Property(name: 'disablePrimaryStatDisplay')
+  bool disablePrimaryStatDisplay = null;
+  
+/* If the item's stats are meant to be modified by a DestinyStatGroupDefinition, this will be the identifier for that definition.  If you are using live data or precomputed stats data on the DestinyInventoryItemDefinition.stats.stats property, you don't have to worry about statGroupHash and how it alters stats: the already altered stats are provided to you. But if you want to see how the sausage gets made, or perform computations yourself, this is valuable information. */
   @Property(name: 'statGroupHash')
   int statGroupHash = null;
   
@@ -22,7 +26,7 @@ class DestinyDefinitionsDestinyItemStatBlockDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyItemStatBlockDefinition[statGroupHash=$statGroupHash, stats=$stats, hasDisplayableStats=$hasDisplayableStats, primaryBaseStatHash=$primaryBaseStatHash, ]';
+    return 'DestinyDefinitionsDestinyItemStatBlockDefinition[disablePrimaryStatDisplay=$disablePrimaryStatDisplay, statGroupHash=$statGroupHash, stats=$stats, hasDisplayableStats=$hasDisplayableStats, primaryBaseStatHash=$primaryBaseStatHash, ]';
   }
 }
 

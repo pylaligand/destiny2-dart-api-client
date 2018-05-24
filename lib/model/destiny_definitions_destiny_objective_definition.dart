@@ -42,6 +42,18 @@ class DestinyDefinitionsDestinyObjectiveDefinition {
   @Property(name: 'stats')
   DestinyDefinitionsDestinyObjectiveStatEntryDefinition stats = null;
   
+/* If nonzero, this is the minimum value at which the objective's progression should be shown. Otherwise, don't show it yet. */
+  @Property(name: 'minimumVisibilityThreshold')
+  int minimumVisibilityThreshold = null;
+  
+/* If True, the progress will continue even beyond the point where the objective met its minimum completion requirements. Your UI will have to accommodate it. */
+  @Property(name: 'allowOvercompletion')
+  bool allowOvercompletion = null;
+  
+/* If True, you should continue showing the progression value in the UI after it's complete. I mean, we already do that in BNet anyways, but if you want to be better behaved than us you could honor this flag. */
+  @Property(name: 'showValueOnComplete')
+  bool showValueOnComplete = null;
+  
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
   int hash = null;
@@ -58,7 +70,7 @@ class DestinyDefinitionsDestinyObjectiveDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyObjectiveDefinition[displayProperties=$displayProperties, completionValue=$completionValue, locationHash=$locationHash, allowNegativeValue=$allowNegativeValue, allowValueChangeWhenCompleted=$allowValueChangeWhenCompleted, isCountingDownward=$isCountingDownward, valueStyle=$valueStyle, progressDescription=$progressDescription, perks=$perks, stats=$stats, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyObjectiveDefinition[displayProperties=$displayProperties, completionValue=$completionValue, locationHash=$locationHash, allowNegativeValue=$allowNegativeValue, allowValueChangeWhenCompleted=$allowValueChangeWhenCompleted, isCountingDownward=$isCountingDownward, valueStyle=$valueStyle, progressDescription=$progressDescription, perks=$perks, stats=$stats, minimumVisibilityThreshold=$minimumVisibilityThreshold, allowOvercompletion=$allowOvercompletion, showValueOnComplete=$showValueOnComplete, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

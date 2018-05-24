@@ -14,15 +14,23 @@ class DestinyEntitiesItemsDestinyItemSocketState {
   @Property(name: 'enableFailIndexes')
   List<int> enableFailIndexes = [];
   
-/* If the item supports reusable plugs, this is the list of plug item hashes that are currently allowed to be used for this socket. (sometimes restrictions may cause reusable plugs defined on the item definition to not be valid, so you should trust the instanced reusablePlugHashes list rather than the definition's list)  A Reusable Plug is a plug that you can *always* insert into this socket, regardless of whether or not you have the plug in your inventory. In practice, a socket will *either* have reusable plugs *or* it will allow for plugs in your inventory to be inserted. See DestinyInventoryItemDefinition.socket for more info. */
+/* If the item supports reusable plugs, this is the list of plug item hashes that are currently allowed to be used for this socket. See the \"reusablePlugs\" property, which has rendered this obsolete, for more information. */
   @Property(name: 'reusablePlugHashes')
   List<int> reusablePlugHashes = [];
+  
+/* Sometimes, Plugs may have objectives: generally, these are used for flavor and display purposes. For instance, a Plug might be tracking the number of PVP kills you have made. It will use the parent item's data about that tracking status to determine what to show, and will generally show it using the DestinyObjectiveDefinition's progressDescription property. Refer to the plug's itemHash and objective property for more information if you would like to display even more data. */
+  @Property(name: 'plugObjectives')
+  List<DestinyQuestsDestinyObjectiveProgress> plugObjectives = [];
+  
+/* If the item supports reusable plugs, this is the list of plugs that are allowed to be used for the socket, and any relevant information about whether they are \"enabled\", whether they are allowed to be inserted, and any other information such as objectives.  A Reusable Plug is a plug that you can always insert into this socket as long as its insertion rules are passed, regardless of whether or not you have the plug in your inventory. An example of it failing an insertion rule would be if it has an Objective that needs to be completed before it can be inserted, and that objective hasn't been completed yet.  In practice, a socket will *either* have reusable plugs *or* it will allow for plugs in your inventory to be inserted. See DestinyInventoryItemDefinition.socket for more info. */
+  @Property(name: 'reusablePlugs')
+  List<DestinySocketsDestinyItemPlug> reusablePlugs = [];
   
   DestinyEntitiesItemsDestinyItemSocketState();
 
   @override
   String toString()  {
-    return 'DestinyEntitiesItemsDestinyItemSocketState[plugHash=$plugHash, isEnabled=$isEnabled, enableFailIndexes=$enableFailIndexes, reusablePlugHashes=$reusablePlugHashes, ]';
+    return 'DestinyEntitiesItemsDestinyItemSocketState[plugHash=$plugHash, isEnabled=$isEnabled, enableFailIndexes=$enableFailIndexes, reusablePlugHashes=$reusablePlugHashes, plugObjectives=$plugObjectives, reusablePlugs=$reusablePlugs, ]';
   }
 }
 

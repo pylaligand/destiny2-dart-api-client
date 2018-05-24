@@ -10,6 +10,10 @@ class DestinyDefinitionsSocketsDestinySocketCategoryDefinition {
   @Property(name: 'uiCategoryStyle')
   int uiCategoryStyle = null;
   
+/* Same as uiCategoryStyle, but in a more usable enumeration form. */
+  @Property(name: 'categoryStyle')
+  DestinyDestinySocketCategoryStyle categoryStyle = null;
+  
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
   int hash = null;
@@ -26,7 +30,7 @@ class DestinyDefinitionsSocketsDestinySocketCategoryDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsSocketsDestinySocketCategoryDefinition[displayProperties=$displayProperties, uiCategoryStyle=$uiCategoryStyle, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsSocketsDestinySocketCategoryDefinition[displayProperties=$displayProperties, uiCategoryStyle=$uiCategoryStyle, categoryStyle=$categoryStyle, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

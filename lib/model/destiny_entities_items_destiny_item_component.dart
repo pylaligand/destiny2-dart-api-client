@@ -34,7 +34,7 @@ class DestinyEntitiesItemsDestinyItemComponent {
   @Property(name: 'lockable')
   bool lockable = null;
   
-/* A flags enumeration indicating the states of the item: whether it's tracked or locked for example. */
+/* A flags enumeration indicating the transient/custom states of the item that affect how it is rendered: whether it's tracked or locked for example, or whether it has a masterwork plug inserted. */
   @Property(name: 'state')
   DestinyItemState state = null;
   

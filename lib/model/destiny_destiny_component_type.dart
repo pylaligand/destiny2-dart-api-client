@@ -42,15 +42,20 @@ class DestinyDestinyComponentType {
   static const DestinyDestinyComponentType itemSockets = const DestinyDestinyComponentType._internal(305);
   /// Items can have talent grids, though that matters a lot less frequently than it used to. Asking for this component will return all relevant info about activated Nodes and Steps on this talent grid, like the good ol' days.
   static const DestinyDestinyComponentType itemTalentGrids = const DestinyDestinyComponentType._internal(306);
-  /// Items that *aren't* instanced still have important information you need to know: how much of it you have, the itemHash so you can look up their DestinyInventoryItemDefinition, whether they're locked, etc... Both instanced and non-instanced items will have these properties.
+  /// Items that *aren't* instanced still have important information you need to know: how much of it you have, the itemHash so you can look up their DestinyInventoryItemDefinition, whether they're locked, etc... Both instanced and non-instanced items will have these properties. You will get this automatically with Inventory components - you only need to pass this when calling GetItem on a specific item.
   static const DestinyDestinyComponentType itemCommonData = const DestinyDestinyComponentType._internal(307);
   /// Items that are "Plugs" can be inserted into sockets. This returns statuses about those plugs and why they can/can't be inserted. I hear you giggling, there's nothing funny about inserting plugs. Get your head out of the gutter and pay attention!
   static const DestinyDestinyComponentType itemPlugStates = const DestinyDestinyComponentType._internal(308);
+  /// When obtaining vendor information, this will return summary information about the Vendor or Vendors being returned.
   static const DestinyDestinyComponentType vendors = const DestinyDestinyComponentType._internal(400);
+  /// When obtaining vendor information, this will return information about the categories of items provided by the Vendor.
   static const DestinyDestinyComponentType vendorCategories = const DestinyDestinyComponentType._internal(401);
+  /// When obtaining vendor information, this will return the information about items being sold by the Vendor.
   static const DestinyDestinyComponentType vendorSales = const DestinyDestinyComponentType._internal(402);
   /// Asking for this component will return you the account's Kiosk statuses: that is, what items have been filled out/acquired. But only if you are the currently authenticated user or the user has elected to allow anonymous viewing of its progression info.
   static const DestinyDestinyComponentType kiosks = const DestinyDestinyComponentType._internal(500);
+  /// A "shortcut" component that will give you all of the item hashes/quantities of items that the requested character can use to determine if an action (purchasing, socket insertion) has the required currency. (recall that all currencies are just items, and that some vendor purchases require items that you might not traditionally consider to be a "currency", like plugs/mods!)
+  static const DestinyDestinyComponentType currencyLookups = const DestinyDestinyComponentType._internal(600);
 }
 
 class DestinyDestinyComponentTypeTypeTransformer extends TypeTransformer<DestinyDestinyComponentType> {
@@ -87,6 +92,7 @@ class DestinyDestinyComponentTypeTypeTransformer extends TypeTransformer<Destiny
       case 401: return DestinyDestinyComponentType.vendorCategories;
       case 402: return DestinyDestinyComponentType.vendorSales;
       case 500: return DestinyDestinyComponentType.kiosks;
+      case 600: return DestinyDestinyComponentType.currencyLookups;
       default: throw('Unknown enum value to decode: $data');
     }
   }

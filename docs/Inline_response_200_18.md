@@ -8,7 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**List&lt;GroupsV2GroupOptionalConversation&gt;**](GroupsV2GroupOptionalConversation.md) |  | [optional] [default to []]
+**response** | [**GroupsV2GroupSearchResponse**](GroupsV2GroupSearchResponse.md) |  | [optional] [default to null]
 **errorCode** | [**ExceptionsPlatformErrorCodes**](ExceptionsPlatformErrorCodes.md) |  | [optional] [default to null]
 **throttleSeconds** | **int** |  | [optional] [default to null]
 **errorStatus** | **String** |  | [optional] [default to null]

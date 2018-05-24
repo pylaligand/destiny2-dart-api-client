@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20052 {
   
   @Property(name: 'Response')
-  TrendingTrendingCategories response = null;
+  Map<String, DestinyMilestonesDestinyPublicMilestone> response = {};
   
 
   @Property(name: 'ErrorCode')

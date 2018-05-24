@@ -10,6 +10,10 @@ class DestinyDefinitionsDestinyItemCategoryDefinition {
   @Property(name: 'visible')
   bool visible = null;
   
+/* If True, this category has been deprecated: it may have no items left, or there may be only legacy items that remain in it which are no longer relevant to the game. */
+  @Property(name: 'deprecated')
+  bool deprecated = null;
+  
 /* A shortened version of the title. The reason why we have this is because the Armory in German had titles that were too long to display in our UI, so these were localized abbreviated versions of those categories. The property still exists today, even though the Armory doesn't exist for D2... yet. */
   @Property(name: 'shortTitle')
   String shortTitle = null;
@@ -42,6 +46,14 @@ class DestinyDefinitionsDestinyItemCategoryDefinition {
   @Property(name: 'groupedCategoryHashes')
   List<int> groupedCategoryHashes = [];
   
+/* All item category hashes of \"parent\" categories: categories that contain this as a child through the hierarchy of groupedCategoryHashes. It's a bit redundant, but having this child-centric list speeds up some calculations. */
+  @Property(name: 'parentCategoryHashes')
+  List<int> parentCategoryHashes = [];
+  
+/* If true, this category is only used for grouping, and should not be evaluated with its own checks. Rather, the item only has this category if it has one of its child categories. */
+  @Property(name: 'groupCategoryOnly')
+  bool groupCategoryOnly = null;
+  
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
   int hash = null;
@@ -58,7 +70,7 @@ class DestinyDefinitionsDestinyItemCategoryDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyItemCategoryDefinition[displayProperties=$displayProperties, visible=$visible, shortTitle=$shortTitle, itemTypeRegex=$itemTypeRegex, itemTypeRegexNot=$itemTypeRegexNot, originBucketIdentifier=$originBucketIdentifier, grantDestinyItemType=$grantDestinyItemType, grantDestinySubType=$grantDestinySubType, grantDestinyClass=$grantDestinyClass, groupedCategoryHashes=$groupedCategoryHashes, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyItemCategoryDefinition[displayProperties=$displayProperties, visible=$visible, deprecated=$deprecated, shortTitle=$shortTitle, itemTypeRegex=$itemTypeRegex, itemTypeRegexNot=$itemTypeRegexNot, originBucketIdentifier=$originBucketIdentifier, grantDestinyItemType=$grantDestinyItemType, grantDestinySubType=$grantDestinySubType, grantDestinyClass=$grantDestinyClass, groupedCategoryHashes=$groupedCategoryHashes, parentCategoryHashes=$parentCategoryHashes, groupCategoryOnly=$groupCategoryOnly, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 
