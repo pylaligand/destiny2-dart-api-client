@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **webmVideo** | **String** | If this is populated, the entry has a related WebM video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo | [optional] [default to null]
 **mp4Video** | **String** | If this is populated, the entry has a related MP4 video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo | [optional] [default to null]
 **featureImage** | **String** | If isFeatured, this image will be populated with whatever the featured image is. Note that this will likely be a very large image, so don&#39;t use it all the time. | [optional] [default to null]
+**items** | [**List&lt;TrendingTrendingEntry&gt;**](TrendingTrendingEntry.md) | If the item is of entityType TrendingEntryType.Container, it may have items - also Trending Entries - contained within it. This is the ordered list of those to display under the Container&#39;s header. | [optional] [default to []]
+**creationDate** | [**DateTime**](DateTime.md) | If the entry has a date at which it was created, this is that date. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -22,6 +22,10 @@ class DestinyResponsesDestinyProfileResponse {
   @Property(name: 'profileKiosks')
   SingleComponentResponseOfDestinyKiosksComponent profileKiosks = null;
   
+/* When sockets refer to reusable Plug Sets (see DestinyPlugSetDefinition for more info), this is the set of plugs and their states that are profile-scoped.  This comes back with ItemSockets, as it is needed for a complete picture of the sockets on requested items.  COMPONENT TYPE: ItemSockets */
+  @Property(name: 'profilePlugSets')
+  SingleComponentResponseOfDestinyPlugSetsComponent profilePlugSets = null;
+  
 /* Basic information about each character, keyed by the CharacterId.  COMPONENT TYPE: Characters */
   @Property(name: 'characters')
   DictionaryComponentResponseOfint64AndDestinyCharacterComponent characters = null;
@@ -50,15 +54,23 @@ class DestinyResponsesDestinyProfileResponse {
   @Property(name: 'characterKiosks')
   DictionaryComponentResponseOfint64AndDestinyKiosksComponent characterKiosks = null;
   
+/* When sockets refer to reusable Plug Sets (see DestinyPlugSetDefinition for more info), this is the set of plugs and their states, per character, that are character-scoped.  This comes back with ItemSockets, as it is needed for a complete picture of the sockets on requested items.  COMPONENT TYPE: ItemSockets */
+  @Property(name: 'characterPlugSets')
+  DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent characterPlugSets = null;
+  
 /* Information about instanced items across all returned characters, keyed by the item's instance ID.  COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.] */
   @Property(name: 'itemComponents')
   DestinyItemComponentSetOfint64 itemComponents = null;
+  
+/* A \"lookup\" convenience component that can be used to quickly check if the character has access to items that can be used for purchasing.  COMPONENT TYPE: CurrencyLookups */
+  @Property(name: 'characterCurrencyLookups')
+  DictionaryComponentResponseOfint64AndDestinyCurrenciesComponent characterCurrencyLookups = null;
   
   DestinyResponsesDestinyProfileResponse();
 
   @override
   String toString()  {
-    return 'DestinyResponsesDestinyProfileResponse[vendorReceipts=$vendorReceipts, profileInventory=$profileInventory, profileCurrencies=$profileCurrencies, profile=$profile, profileKiosks=$profileKiosks, characters=$characters, characterInventories=$characterInventories, characterProgressions=$characterProgressions, characterRenderData=$characterRenderData, characterActivities=$characterActivities, characterEquipment=$characterEquipment, characterKiosks=$characterKiosks, itemComponents=$itemComponents, ]';
+    return 'DestinyResponsesDestinyProfileResponse[vendorReceipts=$vendorReceipts, profileInventory=$profileInventory, profileCurrencies=$profileCurrencies, profile=$profile, profileKiosks=$profileKiosks, profilePlugSets=$profilePlugSets, characters=$characters, characterInventories=$characterInventories, characterProgressions=$characterProgressions, characterRenderData=$characterRenderData, characterActivities=$characterActivities, characterEquipment=$characterEquipment, characterKiosks=$characterKiosks, characterPlugSets=$characterPlugSets, itemComponents=$itemComponents, characterCurrencyLookups=$characterCurrencyLookups, ]';
   }
 }
 

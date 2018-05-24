@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20019 {
   
   @Property(name: 'Response')
-  GroupsV2GroupCreationResponse response = null;
+  GroupsV2GroupResponse response = null;
   
 
   @Property(name: 'ErrorCode')

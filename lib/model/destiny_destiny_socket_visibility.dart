@@ -10,6 +10,7 @@ class DestinyDestinySocketVisibility {
   static const DestinyDestinySocketVisibility visible = const DestinyDestinySocketVisibility._internal(0);
   static const DestinyDestinySocketVisibility hidden = const DestinyDestinySocketVisibility._internal(1);
   static const DestinyDestinySocketVisibility hiddenWhenEmpty = const DestinyDestinySocketVisibility._internal(2);
+  static const DestinyDestinySocketVisibility hiddenIfNoPlugsAvailable = const DestinyDestinySocketVisibility._internal(3);
 }
 
 class DestinyDestinySocketVisibilityTypeTransformer extends TypeTransformer<DestinyDestinySocketVisibility> {
@@ -25,6 +26,7 @@ class DestinyDestinySocketVisibilityTypeTransformer extends TypeTransformer<Dest
       case 0: return DestinyDestinySocketVisibility.visible;
       case 1: return DestinyDestinySocketVisibility.hidden;
       case 2: return DestinyDestinySocketVisibility.hiddenWhenEmpty;
+      case 3: return DestinyDestinySocketVisibility.hiddenIfNoPlugsAvailable;
       default: throw('Unknown enum value to decode: $data');
     }
   }

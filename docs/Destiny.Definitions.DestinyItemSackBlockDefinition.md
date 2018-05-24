@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **openAction** | **String** | The localized name of the action being performed when you open the sack. | [optional] [default to null]
 **selectItemCount** | **int** |  | [optional] [default to null]
 **vendorSackType** | **String** |  | [optional] [default to null]
+**openOnAcquire** | **bool** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

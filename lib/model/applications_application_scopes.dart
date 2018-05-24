@@ -19,16 +19,18 @@ class ApplicationsApplicationScopes {
   static const ApplicationsApplicationScopes bnetWrite = const ApplicationsApplicationScopes._internal(16);
   /// Move or equip Destiny items
   static const ApplicationsApplicationScopes moveEquipDestinyItems = const ApplicationsApplicationScopes._internal(32);
-  /// Read Destiny Inventory and Vault contents.
+  /// Read Destiny 1 Inventory and Vault contents. For Destiny 2, this scope is needed to read anything regarded as private. This is the only scope a Destiny 2 app needs for read operations against Destiny 2 data such as inventory, vault, currency, vendors, milestones, progression, etc.
   static const ApplicationsApplicationScopes readDestinyInventoryAndVault = const ApplicationsApplicationScopes._internal(64);
   /// Read user data such as who they are web notifications, clan/group memberships, recent activity, muted users.
   static const ApplicationsApplicationScopes readUserData = const ApplicationsApplicationScopes._internal(128);
   /// Edit user data such as preferred language, status, motto, avatar selection and theme.
   static const ApplicationsApplicationScopes editUserData = const ApplicationsApplicationScopes._internal(256);
-  /// Access vendor and advisor data specific to a user.
+  /// Access vendor and advisor data specific to a user. OBSOLETE. This scope is only used on the Destiny 1 API.
   static const ApplicationsApplicationScopes readDestinyVendorsAndAdvisors = const ApplicationsApplicationScopes._internal(512);
   /// Read offer history and claim and apply tokens for the user.
   static const ApplicationsApplicationScopes readAndApplyTokens = const ApplicationsApplicationScopes._internal(1024);
+  /// Can perform actions that will result in a prompt to the user via the Destiny app.
+  static const ApplicationsApplicationScopes advancedWriteActions = const ApplicationsApplicationScopes._internal(2048);
 }
 
 class ApplicationsApplicationScopesTypeTransformer extends TypeTransformer<ApplicationsApplicationScopes> {
@@ -52,6 +54,7 @@ class ApplicationsApplicationScopesTypeTransformer extends TypeTransformer<Appli
       case 256: return ApplicationsApplicationScopes.editUserData;
       case 512: return ApplicationsApplicationScopes.readDestinyVendorsAndAdvisors;
       case 1024: return ApplicationsApplicationScopes.readAndApplyTokens;
+      case 2048: return ApplicationsApplicationScopes.advancedWriteActions;
       default: throw('Unknown enum value to decode: $data');
     }
   }

@@ -10,6 +10,18 @@ class DestinyHistoricalStatsDestinyPlayer {
   @Property(name: 'characterClass')
   String characterClass = null;
   
+
+  @Property(name: 'classHash')
+  int classHash = null;
+  
+
+  @Property(name: 'raceHash')
+  int raceHash = null;
+  
+
+  @Property(name: 'genderHash')
+  int genderHash = null;
+  
 /* Level of the character if available. Zero if it is not available. */
   @Property(name: 'characterLevel')
   int characterLevel = null;
@@ -30,11 +42,15 @@ class DestinyHistoricalStatsDestinyPlayer {
   @Property(name: 'clanTag')
   String clanTag = null;
   
+/* If we know the emblem's hash, this can be used to look up the player's emblem at the time of a match when receiving PGCR data, or otherwise their currently equipped emblem (if we are able to obtain it). */
+  @Property(name: 'emblemHash')
+  int emblemHash = null;
+  
   DestinyHistoricalStatsDestinyPlayer();
 
   @override
   String toString()  {
-    return 'DestinyHistoricalStatsDestinyPlayer[destinyUserInfo=$destinyUserInfo, characterClass=$characterClass, characterLevel=$characterLevel, lightLevel=$lightLevel, bungieNetUserInfo=$bungieNetUserInfo, clanName=$clanName, clanTag=$clanTag, ]';
+    return 'DestinyHistoricalStatsDestinyPlayer[destinyUserInfo=$destinyUserInfo, characterClass=$characterClass, classHash=$classHash, raceHash=$raceHash, genderHash=$genderHash, characterLevel=$characterLevel, lightLevel=$lightLevel, bungieNetUserInfo=$bungieNetUserInfo, clanName=$clanName, clanTag=$clanTag, emblemHash=$emblemHash, ]';
   }
 }
 

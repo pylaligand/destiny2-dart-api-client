@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse2006 {
   
   @Property(name: 'Response')
-  ForumPostSearchResponse response = null;
+  List<PartnershipsPublicPartnershipDetail> response = [];
   
 
   @Property(name: 'ErrorCode')

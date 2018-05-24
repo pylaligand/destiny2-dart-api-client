@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse200 {
   
   @Property(name: 'Response')
-  UserGeneralUser response = null;
+  ApplicationsApiUsage response = null;
   
 
   @Property(name: 'ErrorCode')

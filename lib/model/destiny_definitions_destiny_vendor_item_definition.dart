@@ -18,9 +18,9 @@ class DestinyDefinitionsDestinyVendorItemDefinition {
   @Property(name: 'failureIndexes')
   List<int> failureIndexes = [];
   
-/* This is a pre-compiled aggregation of item value and priceOverrideList, so that we have one place to check for what the purchaser must pay for the item. Use this instead of trying to piece together the price separately. */
+/* This is a pre-compiled aggregation of item value and priceOverrideList, so that we have one place to check for what the purchaser must pay for the item. Use this instead of trying to piece together the price separately.  The somewhat crappy part about this is that, now that item quantity overrides have dynamic modifiers, this will not necessarily be statically true. If you were using this instead of live data, switch to using live data. */
   @Property(name: 'currencies')
-  List<DestinyDestinyItemQuantity> currencies = [];
+  List<DestinyDefinitionsDestinyVendorItemQuantity> currencies = [];
   
 /* If this item can be refunded, this is the policy for what will be refundd, how, and in what time period. */
   @Property(name: 'refundPolicy')
@@ -74,11 +74,27 @@ class DestinyDefinitionsDestinyVendorItemDefinition {
   @Property(name: 'purchasableScope')
   DestinyDestinyGatingScope purchasableScope = null;
   
+/* If this item can only be purchased by a given platform, this indicates the platform to which it is restricted. */
+  @Property(name: 'exclusivity')
+  BungieMembershipType exclusivity = null;
+  
+/* If this sale can only be performed as the result of an offer check, this is true. */
+  @Property(name: 'isOffer')
+  bool isOffer = null;
+  
+/* If this sale can only be performed as the result of receiving a CRM offer, this is true. */
+  @Property(name: 'isCrm')
+  bool isCrm = null;
+  
+/* *if* the category this item is in supports non-default sorting, this value should represent the sorting value to use, pre-processed and ready to go. */
+  @Property(name: 'sortValue')
+  int sortValue = null;
+  
   DestinyDefinitionsDestinyVendorItemDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyVendorItemDefinition[vendorItemIndex=$vendorItemIndex, itemHash=$itemHash, quantity=$quantity, failureIndexes=$failureIndexes, currencies=$currencies, refundPolicy=$refundPolicy, refundTimeLimit=$refundTimeLimit, creationLevels=$creationLevels, displayCategoryIndex=$displayCategoryIndex, categoryIndex=$categoryIndex, originalCategoryIndex=$originalCategoryIndex, minimumLevel=$minimumLevel, maximumLevel=$maximumLevel, action=$action, displayCategory=$displayCategory, inventoryBucketHash=$inventoryBucketHash, visibilityScope=$visibilityScope, purchasableScope=$purchasableScope, ]';
+    return 'DestinyDefinitionsDestinyVendorItemDefinition[vendorItemIndex=$vendorItemIndex, itemHash=$itemHash, quantity=$quantity, failureIndexes=$failureIndexes, currencies=$currencies, refundPolicy=$refundPolicy, refundTimeLimit=$refundTimeLimit, creationLevels=$creationLevels, displayCategoryIndex=$displayCategoryIndex, categoryIndex=$categoryIndex, originalCategoryIndex=$originalCategoryIndex, minimumLevel=$minimumLevel, maximumLevel=$maximumLevel, action=$action, displayCategory=$displayCategory, inventoryBucketHash=$inventoryBucketHash, visibilityScope=$visibilityScope, purchasableScope=$purchasableScope, exclusivity=$exclusivity, isOffer=$isOffer, isCrm=$isCrm, sortValue=$sortValue, ]';
   }
 }
 

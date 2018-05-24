@@ -18,11 +18,15 @@ class DestinyDefinitionsDestinyItemSackBlockDefinition {
   @Property(name: 'vendorSackType')
   String vendorSackType = null;
   
+
+  @Property(name: 'openOnAcquire')
+  bool openOnAcquire = null;
+  
   DestinyDefinitionsDestinyItemSackBlockDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyItemSackBlockDefinition[detailAction=$detailAction, openAction=$openAction, selectItemCount=$selectItemCount, vendorSackType=$vendorSackType, ]';
+    return 'DestinyDefinitionsDestinyItemSackBlockDefinition[detailAction=$detailAction, openAction=$openAction, selectItemCount=$selectItemCount, vendorSackType=$vendorSackType, openOnAcquire=$openOnAcquire, ]';
   }
 }
 

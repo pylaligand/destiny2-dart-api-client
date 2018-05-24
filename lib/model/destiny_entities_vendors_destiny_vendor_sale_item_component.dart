@@ -10,6 +10,10 @@ class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
   @Property(name: 'itemHash')
   int itemHash = null;
   
+/* How much of the item you'll be getting. */
+  @Property(name: 'quantity')
+  int quantity = null;
+  
 /* A flag indicating whether the requesting character can buy the item, and if not the reasons why the character can't buy it. */
   @Property(name: 'saleStatus')
   DestinyVendorItemStatus saleStatus = null;
@@ -30,11 +34,15 @@ class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
   @Property(name: 'failureIndexes')
   List<int> failureIndexes = [];
   
+/* A flags enumeration value representing the current state of any \"state modifiers\" on the item being sold. These are meant to correspond with some sort of visual indicator as to the augmentation: for instance, if an item is on sale or if you already own the item in question.  Determining how you want to represent these in your own app (or if you even want to) is an exercise left for the reader. */
+  @Property(name: 'augments')
+  DestinyDestinyVendorItemState augments = null;
+  
   DestinyEntitiesVendorsDestinyVendorSaleItemComponent();
 
   @override
   String toString()  {
-    return 'DestinyEntitiesVendorsDestinyVendorSaleItemComponent[vendorItemIndex=$vendorItemIndex, itemHash=$itemHash, saleStatus=$saleStatus, costs=$costs, requiredUnlocks=$requiredUnlocks, unlockStatuses=$unlockStatuses, failureIndexes=$failureIndexes, ]';
+    return 'DestinyEntitiesVendorsDestinyVendorSaleItemComponent[vendorItemIndex=$vendorItemIndex, itemHash=$itemHash, quantity=$quantity, saleStatus=$saleStatus, costs=$costs, requiredUnlocks=$requiredUnlocks, unlockStatuses=$unlockStatuses, failureIndexes=$failureIndexes, augments=$augments, ]';
   }
 }
 

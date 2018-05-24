@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20049 {
   
   @Property(name: 'Response')
-  Map<String, DestinyMilestonesDestinyPublicMilestone> response = {};
+  DestinyHistoricalStatsDestinyHistoricalWeaponStatsData response = null;
   
 
   @Property(name: 'ErrorCode')

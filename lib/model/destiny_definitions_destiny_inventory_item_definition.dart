@@ -18,6 +18,10 @@ class DestinyDefinitionsDestinyInventoryItemDefinition {
   @Property(name: 'secondarySpecial')
   String secondarySpecial = null;
   
+/* Sometimes, an item will have a background color. Most notably this occurs with Emblems, who use the Background Color for small character nameplates such as the \"friends\" view you see in-game. There are almost certainly other items that have background color as well, though I have not bothered to investigate what items have it nor what purposes they serve: use it as you will. */
+  @Property(name: 'backgroundColor')
+  DestinyMiscDestinyColor backgroundColor = null;
+  
 /* If we were able to acquire an in-game screenshot for the item, the path to that screenshot will be returned here. Note that not all items have screenshots: particularly not any non-equippable items. */
   @Property(name: 'screenshot')
   String screenshot = null;
@@ -25,6 +29,10 @@ class DestinyDefinitionsDestinyInventoryItemDefinition {
 /* The localized title/name of the item's type. This can be whatever the designers want, and has no guarantee of consistency between items. */
   @Property(name: 'itemTypeDisplayName')
   String itemTypeDisplayName = null;
+  
+/* A string identifier that the game's UI uses to determine how the item should be rendered in inventory screens and the like. This could really be anything - at the moment, we don't have the time to really breakdown and maintain all the possible strings this could be, partly because new ones could be added ad hoc. But if you want to use it to dictate your own UI, or look for items with a certain display style, go for it! */
+  @Property(name: 'uiItemDisplayStyle')
+  String uiItemDisplayStyle = null;
   
 /* It became a common enough pattern in our UI to show Item Type and Tier combined into a single localized string that I'm just going to go ahead and start pre-creating these for items. */
   @Property(name: 'itemTypeAndTierDisplayName')
@@ -53,6 +61,10 @@ class DestinyDefinitionsDestinyInventoryItemDefinition {
 /* If this item can have stats (such as a weapon, armor, or vehicle), this block will be non-null and populated with the stats found on the item. */
   @Property(name: 'stats')
   DestinyDefinitionsDestinyItemStatBlockDefinition stats = null;
+  
+/* If the item is an emblem that has a special Objective attached to it - for instance, if the emblem tracks PVP Kills, or what-have-you. This is a bit different from, for example, the Vanguard Kill Tracker mod, which pipes data into the \"art channel\". When I get some time, I would like to standardize these so you can get at the values they expose without having to care about what they're being used for and how they are wired up, but for now here's the raw data. */
+  @Property(name: 'emblemObjectiveHash')
+  int emblemObjectiveHash = null;
   
 /* If this item can be equipped, this block will be non-null and will be populated with the conditions under which it can be equipped. */
   @Property(name: 'equippingBlock')
@@ -134,6 +146,10 @@ class DestinyDefinitionsDestinyInventoryItemDefinition {
   @Property(name: 'links')
   List<LinksHyperlinkReference> links = [];
   
+/* The boolean will indicate to us (and you!) whether something *could* happen when you transfer this item from the Postmaster that might be considered a \"destructive\" action.  It is not feasible currently to tell you (or ourelves!) in a consistent way whether this *will* actually cause a destructive action, so we are playing it safe: if it has the potential to do so, we will not allow it to be transferred from the Postmaster by default. You will need to check for this flag before transferring an item from the Postmaster, or else you'll end up receiving an error. */
+  @Property(name: 'doesPostmasterPullHaveSideEffects')
+  bool doesPostmasterPullHaveSideEffects = null;
+  
 /* The intrinsic transferability of an item.  I hate that this boolean is negative - but there's a reason.  Just because an item is intrinsically transferrable doesn't mean that it can be transferred, and we don't want to imply that this is the only source of that transferability. */
   @Property(name: 'nonTransferrable')
   bool nonTransferrable = null;
@@ -194,7 +210,7 @@ class DestinyDefinitionsDestinyInventoryItemDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyInventoryItemDefinition[displayProperties=$displayProperties, secondaryIcon=$secondaryIcon, secondaryOverlay=$secondaryOverlay, secondarySpecial=$secondarySpecial, screenshot=$screenshot, itemTypeDisplayName=$itemTypeDisplayName, itemTypeAndTierDisplayName=$itemTypeAndTierDisplayName, displaySource=$displaySource, tooltipStyle=$tooltipStyle, action=$action, inventory=$inventory, setData=$setData, stats=$stats, equippingBlock=$equippingBlock, translationBlock=$translationBlock, preview=$preview, quality=$quality, value=$value, sourceData=$sourceData, objectives=$objectives, plug=$plug, gearset=$gearset, sack=$sack, sockets=$sockets, summary=$summary, talentGrid=$talentGrid, investmentStats=$investmentStats, perks=$perks, loreHash=$loreHash, summaryItemHash=$summaryItemHash, animations=$animations, allowActions=$allowActions, links=$links, nonTransferrable=$nonTransferrable, itemCategoryHashes=$itemCategoryHashes, specialItemType=$specialItemType, itemType=$itemType, itemSubType=$itemSubType, classType=$classType, equippable=$equippable, damageTypeHashes=$damageTypeHashes, damageTypes=$damageTypes, defaultDamageType=$defaultDamageType, defaultDamageTypeHash=$defaultDamageTypeHash, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyInventoryItemDefinition[displayProperties=$displayProperties, secondaryIcon=$secondaryIcon, secondaryOverlay=$secondaryOverlay, secondarySpecial=$secondarySpecial, backgroundColor=$backgroundColor, screenshot=$screenshot, itemTypeDisplayName=$itemTypeDisplayName, uiItemDisplayStyle=$uiItemDisplayStyle, itemTypeAndTierDisplayName=$itemTypeAndTierDisplayName, displaySource=$displaySource, tooltipStyle=$tooltipStyle, action=$action, inventory=$inventory, setData=$setData, stats=$stats, emblemObjectiveHash=$emblemObjectiveHash, equippingBlock=$equippingBlock, translationBlock=$translationBlock, preview=$preview, quality=$quality, value=$value, sourceData=$sourceData, objectives=$objectives, plug=$plug, gearset=$gearset, sack=$sack, sockets=$sockets, summary=$summary, talentGrid=$talentGrid, investmentStats=$investmentStats, perks=$perks, loreHash=$loreHash, summaryItemHash=$summaryItemHash, animations=$animations, allowActions=$allowActions, links=$links, doesPostmasterPullHaveSideEffects=$doesPostmasterPullHaveSideEffects, nonTransferrable=$nonTransferrable, itemCategoryHashes=$itemCategoryHashes, specialItemType=$specialItemType, itemType=$itemType, itemSubType=$itemSubType, classType=$classType, equippable=$equippable, damageTypeHashes=$damageTypeHashes, damageTypes=$damageTypes, defaultDamageType=$defaultDamageType, defaultDamageTypeHash=$defaultDamageTypeHash, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

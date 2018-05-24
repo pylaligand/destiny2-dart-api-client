@@ -18,6 +18,10 @@ class DestinyDefinitionsDestinyEquipmentSlotDefinition {
   @Property(name: 'applyCustomArtDyes')
   bool applyCustomArtDyes = null;
   
+/* The Art Dye Channels that apply to this equipment slot. */
+  @Property(name: 'artDyeChannels')
+  List<DestinyDefinitionsDestinyArtDyeReference> artDyeChannels = [];
+  
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
   int hash = null;
@@ -34,7 +38,7 @@ class DestinyDefinitionsDestinyEquipmentSlotDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyEquipmentSlotDefinition[displayProperties=$displayProperties, equipmentCategoryHash=$equipmentCategoryHash, bucketTypeHash=$bucketTypeHash, applyCustomArtDyes=$applyCustomArtDyes, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyEquipmentSlotDefinition[displayProperties=$displayProperties, equipmentCategoryHash=$equipmentCategoryHash, bucketTypeHash=$bucketTypeHash, applyCustomArtDyes=$applyCustomArtDyes, artDyeChannels=$artDyeChannels, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20054 {
   
   @Property(name: 'Response')
-  TrendingTrendingDetail response = null;
+  DestinyAdvancedAwaAuthorizationResult response = null;
   
 
   @Property(name: 'ErrorCode')

@@ -8,7 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | **Map&lt;String, String&gt;** |  | [optional] [default to {}]
+**response** | [**List&lt;ForumForumRecruitmentDetail&gt;**](ForumForumRecruitmentDetail.md) |  | [optional] [default to []]
 **errorCode** | [**ExceptionsPlatformErrorCodes**](ExceptionsPlatformErrorCodes.md) |  | [optional] [default to null]
 **throttleSeconds** | **int** |  | [optional] [default to null]
 **errorStatus** | **String** |  | [optional] [default to null]

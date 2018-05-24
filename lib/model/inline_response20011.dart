@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20011 {
   
   @Property(name: 'Response')
-  List<ForumForumRecruitmentDetail> response = [];
+  MessagesResponsesSaveMessageResult response = null;
   
 
   @Property(name: 'ErrorCode')

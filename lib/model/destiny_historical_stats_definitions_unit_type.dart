@@ -32,6 +32,8 @@ class DestinyHistoricalStatsDefinitionsUnitType {
   static const DestinyHistoricalStatsDefinitionsUnitType standing = const DestinyHistoricalStatsDefinitionsUnitType._internal(11);
   /// Number of milliseconds some event spanned. For example, race time, or lap time.
   static const DestinyHistoricalStatsDefinitionsUnitType milliseconds = const DestinyHistoricalStatsDefinitionsUnitType._internal(12);
+  /// The value is a enumeration of the Completion Reason type.
+  static const DestinyHistoricalStatsDefinitionsUnitType completionReason = const DestinyHistoricalStatsDefinitionsUnitType._internal(13);
 }
 
 class DestinyHistoricalStatsDefinitionsUnitTypeTypeTransformer extends TypeTransformer<DestinyHistoricalStatsDefinitionsUnitType> {
@@ -57,6 +59,7 @@ class DestinyHistoricalStatsDefinitionsUnitTypeTypeTransformer extends TypeTrans
       case 10: return DestinyHistoricalStatsDefinitionsUnitType.weaponType;
       case 11: return DestinyHistoricalStatsDefinitionsUnitType.standing;
       case 12: return DestinyHistoricalStatsDefinitionsUnitType.milliseconds;
+      case 13: return DestinyHistoricalStatsDefinitionsUnitType.completionReason;
       default: throw('Unknown enum value to decode: $data');
     }
   }

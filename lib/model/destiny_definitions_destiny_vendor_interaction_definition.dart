@@ -18,9 +18,13 @@ class DestinyDefinitionsDestinyVendorInteractionDefinition {
   @Property(name: 'sackInteractionList')
   List<DestinyDefinitionsDestinyVendorInteractionSackEntryDefinition> sackInteractionList = [];
   
-/* A UI hint for the behavior of the interaction screen. BNet doesn't use this, but you can choose to. */
+/* A UI hint for the behavior of the interaction screen. This is useful to determine what type of interaction is occurring, such as a prompt to receive a rank up reward or a prompt to choose a reward for completing a quest. The hash isn't as useful as the Enum in retrospect, well what can you do. Try using interactionType instead. */
   @Property(name: 'uiInteractionType')
   int uiInteractionType = null;
+  
+/* The enumerated version of the possible UI hints for vendor interactions, which is a little easier to grok than the hash found in uiInteractionType. */
+  @Property(name: 'interactionType')
+  DestinyVendorInteractionType interactionType = null;
   
 /* If this interaction is displaying rewards, this is the text to use for the header of the reward-displaying section of the interaction. */
   @Property(name: 'rewardBlockLabel')
@@ -50,7 +54,7 @@ class DestinyDefinitionsDestinyVendorInteractionDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyVendorInteractionDefinition[replies=$replies, vendorCategoryIndex=$vendorCategoryIndex, questlineItemHash=$questlineItemHash, sackInteractionList=$sackInteractionList, uiInteractionType=$uiInteractionType, rewardBlockLabel=$rewardBlockLabel, rewardVendorCategoryIndex=$rewardVendorCategoryIndex, flavorLineOne=$flavorLineOne, flavorLineTwo=$flavorLineTwo, headerDisplayProperties=$headerDisplayProperties, instructions=$instructions, ]';
+    return 'DestinyDefinitionsDestinyVendorInteractionDefinition[replies=$replies, vendorCategoryIndex=$vendorCategoryIndex, questlineItemHash=$questlineItemHash, sackInteractionList=$sackInteractionList, uiInteractionType=$uiInteractionType, interactionType=$interactionType, rewardBlockLabel=$rewardBlockLabel, rewardVendorCategoryIndex=$rewardVendorCategoryIndex, flavorLineOne=$flavorLineOne, flavorLineTwo=$flavorLineTwo, headerDisplayProperties=$headerDisplayProperties, instructions=$instructions, ]';
   }
 }
 

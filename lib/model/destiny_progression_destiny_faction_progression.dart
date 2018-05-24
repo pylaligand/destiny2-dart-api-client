@@ -6,6 +6,10 @@ class DestinyProgressionDestinyFactionProgression {
   @Property(name: 'factionHash')
   int factionHash = null;
   
+/* The index of the Faction vendor that is currently available. Will be set to -1 if no vendors are available. */
+  @Property(name: 'factionVendorIndex')
+  int factionVendorIndex = null;
+  
 /* The hash identifier of the Progression in question. Use it to look up the DestinyProgressionDefinition in static data. */
   @Property(name: 'progressionHash')
   int progressionHash = null;
@@ -54,7 +58,7 @@ class DestinyProgressionDestinyFactionProgression {
 
   @override
   String toString()  {
-    return 'DestinyProgressionDestinyFactionProgression[factionHash=$factionHash, progressionHash=$progressionHash, dailyProgress=$dailyProgress, dailyLimit=$dailyLimit, weeklyProgress=$weeklyProgress, weeklyLimit=$weeklyLimit, currentProgress=$currentProgress, level=$level, levelCap=$levelCap, stepIndex=$stepIndex, progressToNextLevel=$progressToNextLevel, nextLevelAt=$nextLevelAt, ]';
+    return 'DestinyProgressionDestinyFactionProgression[factionHash=$factionHash, factionVendorIndex=$factionVendorIndex, progressionHash=$progressionHash, dailyProgress=$dailyProgress, dailyLimit=$dailyLimit, weeklyProgress=$weeklyProgress, weeklyLimit=$weeklyLimit, currentProgress=$currentProgress, level=$level, levelCap=$levelCap, stepIndex=$stepIndex, progressToNextLevel=$progressToNextLevel, nextLevelAt=$nextLevelAt, ]';
   }
 }
 

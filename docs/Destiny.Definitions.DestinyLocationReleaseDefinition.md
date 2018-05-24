@@ -9,6 +9,9 @@ import 'package:destiny2_api/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) | Sadly, these don&#39;t appear to be populated anymore (ever?) | [optional] [default to null]
+**smallTransparentIcon** | **String** |  | [optional] [default to null]
+**mapIcon** | **String** |  | [optional] [default to null]
+**largeTransparentIcon** | **String** |  | [optional] [default to null]
 **spawnPoint** | **int** | If we had map information, this spawnPoint would be interesting. But sadly, we don&#39;t have that info. | [optional] [default to null]
 **destinationHash** | **int** | The Destination being pointed to by this location. | [optional] [default to null]
 **activityHash** | **int** | The Activity being pointed to by this location. | [optional] [default to null]

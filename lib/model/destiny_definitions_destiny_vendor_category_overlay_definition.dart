@@ -18,11 +18,15 @@ class DestinyDefinitionsDestinyVendorCategoryOverlayDefinition {
   @Property(name: 'title')
   String title = null;
   
+/* If this overlay has a currency item that it features, this is said featured item. */
+  @Property(name: 'currencyItemHash')
+  int currencyItemHash = null;
+  
   DestinyDefinitionsDestinyVendorCategoryOverlayDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyVendorCategoryOverlayDefinition[choiceDescription=$choiceDescription, description=$description, icon=$icon, title=$title, ]';
+    return 'DestinyDefinitionsDestinyVendorCategoryOverlayDefinition[choiceDescription=$choiceDescription, description=$description, icon=$icon, title=$title, currencyItemHash=$currencyItemHash, ]';
   }
 }
 

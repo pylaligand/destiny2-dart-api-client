@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse2005 {
   
   @Property(name: 'Response')
-  List<PartnershipsPublicPartnershipDetail> response = [];
+  UserUserMembershipData response = null;
   
 
   @Property(name: 'ErrorCode')

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **modes** | [**List&lt;DestinyHistoricalStatsDefinitionsDestinyActivityModeType&gt;**](DestinyHistoricalStatsDefinitionsDestinyActivityModeType.md) | Game modes where this statistic can be reported. | [optional] [default to []]
 **category** | [**DestinyHistoricalStatsDefinitionsDestinyStatsCategoryType**](DestinyHistoricalStatsDefinitionsDestinyStatsCategoryType.md) | Category for the stat. | [optional] [default to null]
 **statName** | **String** | Display name | [optional] [default to null]
+**statNameAbbr** | **String** | Display name abbreviated | [optional] [default to null]
 **statDescription** | **String** | Description of a stat if applicable. | [optional] [default to null]
 **unitType** | [**DestinyHistoricalStatsDefinitionsUnitType**](DestinyHistoricalStatsDefinitionsUnitType.md) | Unit, if any, for the statistic | [optional] [default to null]
 **iconImage** | **String** | Optional URI to an icon for the statistic | [optional] [default to null]

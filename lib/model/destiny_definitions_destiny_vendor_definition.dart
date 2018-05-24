@@ -66,10 +66,6 @@ class DestinyDefinitionsDestinyVendorDefinition {
   @Property(name: 'visible')
   bool visible = null;
   
-/* The identifier of the VendorCategoryDefinition for this vendor. */
-  @Property(name: 'vendorCategoryIdentifier')
-  String vendorCategoryIdentifier = null;
-  
 /* The identifier of the VendorCategoryDefinition for this vendor's subcategory. */
   @Property(name: 'vendorSubcategoryIdentifier')
   String vendorSubcategoryIdentifier = null;
@@ -114,6 +110,18 @@ class DestinyDefinitionsDestinyVendorDefinition {
   @Property(name: 'acceptedItems')
   List<DestinyDefinitionsDestinyVendorAcceptedItemDefinition> acceptedItems = [];
   
+/* As many of you know, Vendor data has historically been pretty brutal on the BNet servers. In an effort to reduce this workload, only Vendors with this flag set will be returned on Vendor requests. This allows us to filter out Vendors that don't dynamic data that's particularly useful: things like \"Preview/Sack\" vendors, for example, that you can usually suss out the details for using just the definitions themselves. */
+  @Property(name: 'returnWithVendorRequest')
+  bool returnWithVendorRequest = null;
+  
+/* A vendor can be at different places in the world depending on the game/character/account state. This is the list of possible locations for the vendor, along with conditions we use to determine which one is currently active. */
+  @Property(name: 'locations')
+  List<DestinyDefinitionsVendorsDestinyVendorLocationDefinition> locations = [];
+  
+/* A vendor can be a part of 0 or 1 \"groups\" at a time: a group being a collection of Vendors related by either location or function/purpose. It's used for our our Companion Vendor UI. Only one of these can be active for a Vendor at a time. */
+  @Property(name: 'groups')
+  List<DestinyDefinitionsDestinyVendorGroupReference> groups = [];
+  
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
   int hash = null;
@@ -130,7 +138,7 @@ class DestinyDefinitionsDestinyVendorDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyVendorDefinition[displayProperties=$displayProperties, buyString=$buyString, sellString=$sellString, displayItemHash=$displayItemHash, inhibitBuying=$inhibitBuying, inhibitSelling=$inhibitSelling, factionHash=$factionHash, resetIntervalMinutes=$resetIntervalMinutes, resetOffsetMinutes=$resetOffsetMinutes, failureStrings=$failureStrings, unlockRanges=$unlockRanges, vendorIdentifier=$vendorIdentifier, vendorPortrait=$vendorPortrait, vendorBanner=$vendorBanner, enabled=$enabled, visible=$visible, vendorCategoryIdentifier=$vendorCategoryIdentifier, vendorSubcategoryIdentifier=$vendorSubcategoryIdentifier, consolidateCategories=$consolidateCategories, actions=$actions, categories=$categories, originalCategories=$originalCategories, displayCategories=$displayCategories, interactions=$interactions, inventoryFlyouts=$inventoryFlyouts, itemList=$itemList, services=$services, acceptedItems=$acceptedItems, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyVendorDefinition[displayProperties=$displayProperties, buyString=$buyString, sellString=$sellString, displayItemHash=$displayItemHash, inhibitBuying=$inhibitBuying, inhibitSelling=$inhibitSelling, factionHash=$factionHash, resetIntervalMinutes=$resetIntervalMinutes, resetOffsetMinutes=$resetOffsetMinutes, failureStrings=$failureStrings, unlockRanges=$unlockRanges, vendorIdentifier=$vendorIdentifier, vendorPortrait=$vendorPortrait, vendorBanner=$vendorBanner, enabled=$enabled, visible=$visible, vendorSubcategoryIdentifier=$vendorSubcategoryIdentifier, consolidateCategories=$consolidateCategories, actions=$actions, categories=$categories, originalCategories=$originalCategories, displayCategories=$displayCategories, interactions=$interactions, inventoryFlyouts=$inventoryFlyouts, itemList=$itemList, services=$services, acceptedItems=$acceptedItems, returnWithVendorRequest=$returnWithVendorRequest, locations=$locations, groups=$groups, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

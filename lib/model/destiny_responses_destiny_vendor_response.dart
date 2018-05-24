@@ -15,14 +15,18 @@ class DestinyResponsesDestinyVendorResponse {
   DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent sales = null;
   
 /* Item components, keyed by the vendorItemIndex of the active sale items.  COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.] */
-  @Property(name: 'items')
-  DestinyItemComponentSetOfint32 items = null;
+  @Property(name: 'itemComponents')
+  DestinyItemComponentSetOfint32 itemComponents = null;
+  
+/* A \"lookup\" convenience component that can be used to quickly check if the character has access to items that can be used for purchasing.  COMPONENT TYPE: CurrencyLookups */
+  @Property(name: 'currencyLookups')
+  SingleComponentResponseOfDestinyCurrenciesComponent currencyLookups = null;
   
   DestinyResponsesDestinyVendorResponse();
 
   @override
   String toString()  {
-    return 'DestinyResponsesDestinyVendorResponse[vendor=$vendor, categories=$categories, sales=$sales, items=$items, ]';
+    return 'DestinyResponsesDestinyVendorResponse[vendor=$vendor, categories=$categories, sales=$sales, itemComponents=$itemComponents, currencyLookups=$currencyLookups, ]';
   }
 }
 

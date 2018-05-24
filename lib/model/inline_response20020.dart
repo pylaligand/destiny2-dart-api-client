@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20020 {
   
   @Property(name: 'Response')
-  SearchResultOfGroupMember response = null;
+  List<GroupsV2GroupOptionalConversation> response = [];
   
 
   @Property(name: 'ErrorCode')

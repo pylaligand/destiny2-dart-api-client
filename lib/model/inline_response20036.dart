@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20036 {
   
   @Property(name: 'Response')
-  DestinyResponsesDestinyVendorResponse response = null;
+  DestinyResponsesDestinyItemResponse response = null;
   
 
   @Property(name: 'ErrorCode')

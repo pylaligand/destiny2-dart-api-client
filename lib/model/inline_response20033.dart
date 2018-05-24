@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20033 {
   
   @Property(name: 'Response')
-  DestinyMilestonesDestinyMilestone response = null;
+  DestinyResponsesDestinyProfileResponse response = null;
   
 
   @Property(name: 'ErrorCode')

@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20030 {
   
   @Property(name: 'Response')
-  List<UserUserInfoCard> response = [];
+  DestinyConfigDestinyManifest response = null;
   
 
   @Property(name: 'ErrorCode')

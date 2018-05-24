@@ -10,11 +10,15 @@ class DestinyDefinitionsDestinyItemPerkEntryDefinition {
   @Property(name: 'perkHash')
   int perkHash = null;
   
+/* Indicates whether this perk should be shown, or if it should be shown disabled. */
+  @Property(name: 'perkVisibility')
+  DestinyItemPerkVisibility perkVisibility = null;
+  
   DestinyDefinitionsDestinyItemPerkEntryDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyItemPerkEntryDefinition[requirementDisplayString=$requirementDisplayString, perkHash=$perkHash, ]';
+    return 'DestinyDefinitionsDestinyItemPerkEntryDefinition[requirementDisplayString=$requirementDisplayString, perkHash=$perkHash, perkVisibility=$perkVisibility, ]';
   }
 }
 

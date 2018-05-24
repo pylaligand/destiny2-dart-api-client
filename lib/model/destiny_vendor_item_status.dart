@@ -21,6 +21,7 @@ class DestinyVendorItemStatus {
   static const DestinyVendorItemStatus unsellable = const DestinyVendorItemStatus._internal(1024);
   static const DestinyVendorItemStatus sellingInhibited = const DestinyVendorItemStatus._internal(2048);
   static const DestinyVendorItemStatus alreadyOwned = const DestinyVendorItemStatus._internal(4096);
+  static const DestinyVendorItemStatus displayOnly = const DestinyVendorItemStatus._internal(8192);
 }
 
 class DestinyVendorItemStatusTypeTransformer extends TypeTransformer<DestinyVendorItemStatus> {
@@ -47,6 +48,7 @@ class DestinyVendorItemStatusTypeTransformer extends TypeTransformer<DestinyVend
       case 1024: return DestinyVendorItemStatus.unsellable;
       case 2048: return DestinyVendorItemStatus.sellingInhibited;
       case 4096: return DestinyVendorItemStatus.alreadyOwned;
+      case 8192: return DestinyVendorItemStatus.displayOnly;
       default: throw('Unknown enum value to decode: $data');
     }
   }

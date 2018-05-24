@@ -25,6 +25,8 @@ class DestinyDestinyUnlockValueUIStyle {
   static const DestinyDestinyUnlockValueUIStyle timeDuration = const DestinyDestinyUnlockValueUIStyle._internal(7);
   /// Don't bother showing the value at all, it's not easily human-interpretable, and used for some internal purpose.
   static const DestinyDestinyUnlockValueUIStyle hidden = const DestinyDestinyUnlockValueUIStyle._internal(8);
+  /// If you're showing an unlock value in the UI, this is the format in which it should be shown. You'll have to build your own algorithms on the client side to determine how best to render these options.
+  static const DestinyDestinyUnlockValueUIStyle multiplier = const DestinyDestinyUnlockValueUIStyle._internal(9);
 }
 
 class DestinyDestinyUnlockValueUIStyleTypeTransformer extends TypeTransformer<DestinyDestinyUnlockValueUIStyle> {
@@ -46,6 +48,7 @@ class DestinyDestinyUnlockValueUIStyleTypeTransformer extends TypeTransformer<De
       case 6: return DestinyDestinyUnlockValueUIStyle.integer;
       case 7: return DestinyDestinyUnlockValueUIStyle.timeDuration;
       case 8: return DestinyDestinyUnlockValueUIStyle.hidden;
+      case 9: return DestinyDestinyUnlockValueUIStyle.multiplier;
       default: throw('Unknown enum value to decode: $data');
     }
   }

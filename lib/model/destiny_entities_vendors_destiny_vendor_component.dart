@@ -6,11 +6,7 @@ class DestinyEntitiesVendorsDestinyVendorComponent {
   @Property(name: 'vendorHash')
   int vendorHash = null;
   
-/* Long ago, we thought it would be a good idea to have special UI that showed whether or not you've seen a Vendor's inventory after cycling.   For now, we don't have that UI anymore. This property still exists for historical purposes. Don't worry about it. */
-  @Property(name: 'ackState')
-  UserAckState ackState = null;
-  
-/* The date when this vendor's inventory will next rotate/refresh. */
+/* The date when this vendor's inventory will next rotate/refresh.  Note that this is distinct from the date ranges that the vendor is visible/available in-game: this field indicates the specific time when the vendor's available items refresh and rotate, regardless of whether the vendor is actually available at that time. Unfortunately, these two values may be (and are, for the case of important vendors like Xur) different.  Issue https://github.com/Bungie-net/api/issues/353 is tracking a fix to start providing visibility date ranges where possible in addition to this refresh date, so that all important dates for vendors are available for use. */
   @Property(name: 'nextRefreshDate')
   DateTime nextRefreshDate = null;
   
@@ -26,11 +22,19 @@ class DestinyEntitiesVendorsDestinyVendorComponent {
   @Property(name: 'progression')
   DestinyDestinyProgression progression = null;
   
+/* An index into the vendor definition's \"locations\" property array, indicating which location they are at currently. If -1, then the vendor has no known location (and you may choose not to show them in your UI as a result. I mean, it's your bag honey) */
+  @Property(name: 'vendorLocationIndex')
+  int vendorLocationIndex = null;
+  
+/* If this vendor has a seasonal rank, this will be the calculated value of that rank. How nice is that? I mean, that's pretty sweeet. It's a whole 32 bit integer. */
+  @Property(name: 'seasonalRank')
+  int seasonalRank = null;
+  
   DestinyEntitiesVendorsDestinyVendorComponent();
 
   @override
   String toString()  {
-    return 'DestinyEntitiesVendorsDestinyVendorComponent[vendorHash=$vendorHash, ackState=$ackState, nextRefreshDate=$nextRefreshDate, enabled=$enabled, canPurchase=$canPurchase, progression=$progression, ]';
+    return 'DestinyEntitiesVendorsDestinyVendorComponent[vendorHash=$vendorHash, nextRefreshDate=$nextRefreshDate, enabled=$enabled, canPurchase=$canPurchase, progression=$progression, vendorLocationIndex=$vendorLocationIndex, seasonalRank=$seasonalRank, ]';
   }
 }
 

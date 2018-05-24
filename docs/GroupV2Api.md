@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**groupV2AbdicateFoundership**](GroupV2Api.md#groupV2AbdicateFoundership) | **POST** /GroupV2/{groupId}/Admin/AbdicateFoundership/{membershipType}/{founderIdNew}/ | 
 [**groupV2AddOptionalConversation**](GroupV2Api.md#groupV2AddOptionalConversation) | **POST** /GroupV2/{groupId}/OptionalConversations/Add/ | 
 [**groupV2ApproveAllPending**](GroupV2Api.md#groupV2ApproveAllPending) | **POST** /GroupV2/{groupId}/Members/ApproveAll/ | 
+[**groupV2ApprovePending**](GroupV2Api.md#groupV2ApprovePending) | **POST** /GroupV2/{groupId}/Members/Approve/{membershipType}/{membershipId}/ | 
 [**groupV2ApprovePendingForList**](GroupV2Api.md#groupV2ApprovePendingForList) | **POST** /GroupV2/{groupId}/Members/ApproveList/ | 
 [**groupV2BanMember**](GroupV2Api.md#groupV2BanMember) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Ban/ | 
 [**groupV2CreateGroup**](GroupV2Api.md#groupV2CreateGroup) | **POST** /GroupV2/Create/ | 
@@ -34,7 +35,7 @@ Method | HTTP request | Description
 [**groupV2GetMembersOfGroup**](GroupV2Api.md#groupV2GetMembersOfGroup) | **GET** /GroupV2/{groupId}/Members/ | 
 [**groupV2GetPendingMemberships**](GroupV2Api.md#groupV2GetPendingMemberships) | **GET** /GroupV2/{groupId}/Members/Pending/ | 
 [**groupV2GetPotentialGroupsForMember**](GroupV2Api.md#groupV2GetPotentialGroupsForMember) | **GET** /GroupV2/User/Potential/{membershipType}/{membershipId}/{filter}/{groupType}/ | 
-[**groupV2GetRecommendedGroups**](GroupV2Api.md#groupV2GetRecommendedGroups) | **POST** /GroupV2/Recommended/ | 
+[**groupV2GetRecommendedGroups**](GroupV2Api.md#groupV2GetRecommendedGroups) | **POST** /GroupV2/Recommended/{groupType}/{createDateRange}/ | 
 [**groupV2GetUserClanInviteSetting**](GroupV2Api.md#groupV2GetUserClanInviteSetting) | **GET** /GroupV2/GetUserClanInviteSetting/{mType}/ | 
 [**groupV2GroupSearch**](GroupV2Api.md#groupV2GroupSearch) | **POST** /GroupV2/Search/ | 
 [**groupV2IndividualGroupInvite**](GroupV2Api.md#groupV2IndividualGroupInvite) | **POST** /GroupV2/{groupId}/Members/IndividualInvite/{membershipType}/{membershipId}/ | 
@@ -47,7 +48,7 @@ Method | HTTP request | Description
 
 
 # **groupV2AbdicateFoundership**
-> InlineResponse20014 groupV2AbdicateFoundership(founderIdNew, groupId, membershipType)
+> InlineResponse20015 groupV2AbdicateFoundership(founderIdNew, groupId, membershipType)
 
 
 
@@ -80,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -94,7 +95,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2AddOptionalConversation**
-> InlineResponse2007 groupV2AddOptionalConversation(groupId)
+> InlineResponse2008 groupV2AddOptionalConversation(groupId)
 
 
 
@@ -125,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -139,7 +140,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2ApproveAllPending**
-> InlineResponse20025 groupV2ApproveAllPending(groupId)
+> InlineResponse20027 groupV2ApproveAllPending(groupId)
 
 
 
@@ -170,7 +171,56 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20027**](InlineResponse20027.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **groupV2ApprovePending**
+> InlineResponse20015 groupV2ApprovePending(groupId, membershipId, membershipType)
+
+
+
+Approve the given membershipId to join the group/clan as long as they have applied.
+
+### Example 
+```dart
+import 'package:destiny2_api/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//destiny2_api.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
+
+var api_instance = new GroupV2Api();
+var groupId = 789; // int | ID of the group.
+var membershipId = 789; // int | The membership id being approved.
+var membershipType = 56; // int | Membership type of the supplied membership ID.
+
+try { 
+    var result = api_instance.groupV2ApprovePending(groupId, membershipId, membershipType);
+    print(result);
+} catch (e) {
+    print("Exception when calling GroupV2Api->groupV2ApprovePending: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **int**| ID of the group. | 
+ **membershipId** | **int**| The membership id being approved. | 
+ **membershipType** | **int**| Membership type of the supplied membership ID. | 
+
+### Return type
+
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -184,7 +234,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2ApprovePendingForList**
-> InlineResponse20025 groupV2ApprovePendingForList(groupId)
+> InlineResponse20027 groupV2ApprovePendingForList(groupId)
 
 
 
@@ -215,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -229,7 +279,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2BanMember**
-> InlineResponse20015 groupV2BanMember(groupId, membershipId, membershipType)
+> InlineResponse20016 groupV2BanMember(groupId, membershipId, membershipType)
 
 
 
@@ -264,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -278,7 +328,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2CreateGroup**
-> InlineResponse20019 groupV2CreateGroup()
+> InlineResponse20021 groupV2CreateGroup()
 
 
 
@@ -305,7 +355,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 
@@ -319,7 +369,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2DenyAllPending**
-> InlineResponse20025 groupV2DenyAllPending(groupId)
+> InlineResponse20027 groupV2DenyAllPending(groupId)
 
 
 
@@ -350,7 +400,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -364,7 +414,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2DenyPendingForList**
-> InlineResponse20025 groupV2DenyPendingForList(groupId)
+> InlineResponse20027 groupV2DenyPendingForList(groupId)
 
 
 
@@ -395,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -409,7 +459,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2EditClanBanner**
-> InlineResponse20015 groupV2EditClanBanner(groupId)
+> InlineResponse20016 groupV2EditClanBanner(groupId)
 
 
 
@@ -440,7 +490,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -454,7 +504,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2EditFounderOptions**
-> InlineResponse20015 groupV2EditFounderOptions(groupId)
+> InlineResponse20016 groupV2EditFounderOptions(groupId)
 
 
 
@@ -485,7 +535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -499,7 +549,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2EditGroup**
-> InlineResponse20015 groupV2EditGroup(groupId)
+> InlineResponse20016 groupV2EditGroup(groupId)
 
 
 
@@ -530,7 +580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -544,7 +594,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2EditGroupMembership**
-> InlineResponse20015 groupV2EditGroupMembership(groupId, membershipId, membershipType, memberType)
+> InlineResponse20016 groupV2EditGroupMembership(groupId, membershipId, membershipType, memberType)
 
 
 
@@ -581,7 +631,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -595,7 +645,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2EditOptionalConversation**
-> InlineResponse2007 groupV2EditOptionalConversation(conversationId, groupId)
+> InlineResponse2008 groupV2EditOptionalConversation(conversationId, groupId)
 
 
 
@@ -628,7 +678,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -642,7 +692,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetAdminsAndFounderOfGroup**
-> InlineResponse20020 groupV2GetAdminsAndFounderOfGroup(currentpage, groupId)
+> InlineResponse20022 groupV2GetAdminsAndFounderOfGroup(currentpage, groupId)
 
 
 
@@ -673,7 +723,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -687,7 +737,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetAvailableAvatars**
-> InlineResponse20012 groupV2GetAvailableAvatars()
+> InlineResponse20013 groupV2GetAvailableAvatars()
 
 
 
@@ -712,7 +762,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -726,7 +776,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetAvailableThemes**
-> InlineResponse20013 groupV2GetAvailableThemes()
+> InlineResponse20014 groupV2GetAvailableThemes()
 
 
 
@@ -751,7 +801,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -765,7 +815,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetBannedMembersOfGroup**
-> InlineResponse20022 groupV2GetBannedMembersOfGroup(currentpage, groupId)
+> InlineResponse20024 groupV2GetBannedMembersOfGroup(currentpage, groupId)
 
 
 
@@ -798,7 +848,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022**](InlineResponse20022.md)
+[**InlineResponse20024**](InlineResponse20024.md)
 
 ### Authorization
 
@@ -812,7 +862,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetGroup**
-> InlineResponse20017 groupV2GetGroup(groupId)
+> InlineResponse20019 groupV2GetGroup(groupId)
 
 
 
@@ -841,7 +891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -855,7 +905,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetGroupByName**
-> InlineResponse20017 groupV2GetGroupByName(groupName, groupType)
+> InlineResponse20019 groupV2GetGroupByName(groupName, groupType)
 
 
 
@@ -886,7 +936,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -900,7 +950,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetGroupOptionalConversations**
-> InlineResponse20018 groupV2GetGroupOptionalConversations(groupId)
+> InlineResponse20020 groupV2GetGroupOptionalConversations(groupId)
 
 
 
@@ -929,7 +979,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -943,7 +993,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetGroupsForMember**
-> InlineResponse20026 groupV2GetGroupsForMember(filter, groupType, membershipId, membershipType)
+> InlineResponse20028 groupV2GetGroupsForMember(filter, groupType, membershipId, membershipType)
 
 
 
@@ -978,7 +1028,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20028**](InlineResponse20028.md)
 
 ### Authorization
 
@@ -992,7 +1042,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetInvitedIndividuals**
-> InlineResponse20024 groupV2GetInvitedIndividuals(currentpage, groupId)
+> InlineResponse20026 groupV2GetInvitedIndividuals(currentpage, groupId)
 
 
 
@@ -1025,7 +1075,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 
@@ -1039,7 +1089,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetMembersOfGroup**
-> InlineResponse20020 groupV2GetMembersOfGroup(currentpage, groupId, memberType, nameSearch)
+> InlineResponse20022 groupV2GetMembersOfGroup(currentpage, groupId, memberType, nameSearch)
 
 
 
@@ -1074,7 +1124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -1088,7 +1138,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetPendingMemberships**
-> InlineResponse20024 groupV2GetPendingMemberships(currentpage, groupId)
+> InlineResponse20026 groupV2GetPendingMemberships(currentpage, groupId)
 
 
 
@@ -1121,7 +1171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 
@@ -1135,7 +1185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetPotentialGroupsForMember**
-> InlineResponse20027 groupV2GetPotentialGroupsForMember(filter, groupType, membershipId, membershipType)
+> InlineResponse20029 groupV2GetPotentialGroupsForMember(filter, groupType, membershipId, membershipType)
 
 
 
@@ -1170,7 +1220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -1184,7 +1234,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetRecommendedGroups**
-> InlineResponse20016 groupV2GetRecommendedGroups()
+> InlineResponse20017 groupV2GetRecommendedGroups(createDateRange, groupType)
 
 
 
@@ -1197,9 +1247,11 @@ import 'package:destiny2_api/api.dart';
 //destiny2_api.api.Configuration.accessToken = 'YOUR_ACCESS_TOKEN';
 
 var api_instance = new GroupV2Api();
+var createDateRange = 56; // int | Requested range in which to pull recommended groups
+var groupType = 56; // int | Type of groups requested
 
 try { 
-    var result = api_instance.groupV2GetRecommendedGroups();
+    var result = api_instance.groupV2GetRecommendedGroups(createDateRange, groupType);
     print(result);
 } catch (e) {
     print("Exception when calling GroupV2Api->groupV2GetRecommendedGroups: $e\n");
@@ -1207,11 +1259,15 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createDateRange** | **int**| Requested range in which to pull recommended groups | 
+ **groupType** | **int**| Type of groups requested | 
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -1225,7 +1281,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GetUserClanInviteSetting**
-> InlineResponse20014 groupV2GetUserClanInviteSetting(mType)
+> InlineResponse20015 groupV2GetUserClanInviteSetting(mType)
 
 
 
@@ -1256,7 +1312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -1270,7 +1326,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2GroupSearch**
-> InlineResponse20016 groupV2GroupSearch()
+> InlineResponse20018 groupV2GroupSearch()
 
 
 
@@ -1295,7 +1351,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -1309,7 +1365,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2IndividualGroupInvite**
-> InlineResponse20023 groupV2IndividualGroupInvite(groupId, membershipId, membershipType)
+> InlineResponse20025 groupV2IndividualGroupInvite(groupId, membershipId, membershipType)
 
 
 
@@ -1344,7 +1400,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -1358,7 +1414,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2IndividualGroupInviteCancel**
-> InlineResponse20023 groupV2IndividualGroupInviteCancel(groupId, membershipId, membershipType)
+> InlineResponse20025 groupV2IndividualGroupInviteCancel(groupId, membershipId, membershipType)
 
 
 
@@ -1393,7 +1449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -1407,7 +1463,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2KickMember**
-> InlineResponse20021 groupV2KickMember(groupId, membershipId, membershipType)
+> InlineResponse20023 groupV2KickMember(groupId, membershipId, membershipType)
 
 
 
@@ -1442,7 +1498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**InlineResponse20023**](InlineResponse20023.md)
 
 ### Authorization
 
@@ -1456,7 +1512,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2RequestGroupMembership**
-> InlineResponse20023 groupV2RequestGroupMembership(groupId, membershipType)
+> InlineResponse20025 groupV2RequestGroupMembership(groupId, membershipType)
 
 
 
@@ -1489,7 +1545,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -1503,7 +1559,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2RescindGroupMembership**
-> InlineResponse20021 groupV2RescindGroupMembership(groupId, membershipType)
+> InlineResponse20023 groupV2RescindGroupMembership(groupId, membershipType)
 
 
 
@@ -1536,7 +1592,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**InlineResponse20023**](InlineResponse20023.md)
 
 ### Authorization
 
@@ -1550,7 +1606,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2SetUserClanInviteSetting**
-> InlineResponse20015 groupV2SetUserClanInviteSetting(allowInvites, mType)
+> InlineResponse20016 groupV2SetUserClanInviteSetting(allowInvites, mType)
 
 
 
@@ -1583,7 +1639,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -1597,7 +1653,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **groupV2UnbanMember**
-> InlineResponse20015 groupV2UnbanMember(groupId, membershipId, membershipType)
+> InlineResponse20016 groupV2UnbanMember(groupId, membershipId, membershipType)
 
 
 
@@ -1632,7 +1688,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
