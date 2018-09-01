@@ -62,11 +62,15 @@ class DestinyDefinitionsItemsDestinyItemPlugDefinition {
   @Property(name: 'isDummyPlug')
   bool isDummyPlug = null;
   
+/* Do you ever get the feeling that a system has become so overburdened by edge cases that it probably should have become some other system entirely? So do I!  In totally unrelated news, Plugs can now override properties of their parent items. This is some of the relevant definition data for those overrides.  If this is populated, it will have the override data to be applied when this plug is applied to an item. */
+  @Property(name: 'parentItemOverride')
+  DestinyDefinitionsItemsDestinyParentItemOverride parentItemOverride = null;
+  
   DestinyDefinitionsItemsDestinyItemPlugDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsItemsDestinyItemPlugDefinition[insertionRules=$insertionRules, plugCategoryIdentifier=$plugCategoryIdentifier, plugCategoryHash=$plugCategoryHash, onActionRecreateSelf=$onActionRecreateSelf, insertionMaterialRequirementHash=$insertionMaterialRequirementHash, previewItemOverrideHash=$previewItemOverrideHash, enabledMaterialRequirementHash=$enabledMaterialRequirementHash, enabledRules=$enabledRules, uiPlugLabel=$uiPlugLabel, plugStyle=$plugStyle, isPseudoPlug=$isPseudoPlug, plugAvailability=$plugAvailability, alternateUiPlugLabel=$alternateUiPlugLabel, alternatePlugStyle=$alternatePlugStyle, isDummyPlug=$isDummyPlug, ]';
+    return 'DestinyDefinitionsItemsDestinyItemPlugDefinition[insertionRules=$insertionRules, plugCategoryIdentifier=$plugCategoryIdentifier, plugCategoryHash=$plugCategoryHash, onActionRecreateSelf=$onActionRecreateSelf, insertionMaterialRequirementHash=$insertionMaterialRequirementHash, previewItemOverrideHash=$previewItemOverrideHash, enabledMaterialRequirementHash=$enabledMaterialRequirementHash, enabledRules=$enabledRules, uiPlugLabel=$uiPlugLabel, plugStyle=$plugStyle, isPseudoPlug=$isPseudoPlug, plugAvailability=$plugAvailability, alternateUiPlugLabel=$alternateUiPlugLabel, alternatePlugStyle=$alternatePlugStyle, isDummyPlug=$isDummyPlug, parentItemOverride=$parentItemOverride, ]';
   }
 }
 

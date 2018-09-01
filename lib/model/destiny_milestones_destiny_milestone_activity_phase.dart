@@ -6,11 +6,15 @@ class DestinyMilestonesDestinyMilestoneActivityPhase {
   @Property(name: 'complete')
   bool complete = null;
   
+/* In DestinyActivityDefinition, if the activity has phases, there will be a set of phases defined in the \"insertionPoints\" property. This is the hash that maps to that phase. */
+  @Property(name: 'phaseHash')
+  int phaseHash = null;
+  
   DestinyMilestonesDestinyMilestoneActivityPhase();
 
   @override
   String toString()  {
-    return 'DestinyMilestonesDestinyMilestoneActivityPhase[complete=$complete, ]';
+    return 'DestinyMilestonesDestinyMilestoneActivityPhase[complete=$complete, phaseHash=$phaseHash, ]';
   }
 }
 

@@ -10,7 +10,7 @@ class Destiny2Api {
   /// 
   ///
   /// Returns the action token if user approves the request.
-  Future<InlineResponse20054> destiny2AwaGetActionToken(String correlationId) async {
+  Future<InlineResponse20058> destiny2AwaGetActionToken(String correlationId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -53,7 +53,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20054') as InlineResponse20054 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20058') as InlineResponse20058 ;
     } else {
       return null;
     }
@@ -61,7 +61,7 @@ class Destiny2Api {
   /// 
   ///
   /// Initialize a request to perform an advanced write action.
-  Future<InlineResponse20053> destiny2AwaInitializeRequest() async {
+  Future<InlineResponse20057> destiny2AwaInitializeRequest() async {
     Object postBody = null;
 
     // verify required params are set
@@ -101,7 +101,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20053') as InlineResponse20053 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20057') as InlineResponse20057 ;
     } else {
       return null;
     }
@@ -109,7 +109,7 @@ class Destiny2Api {
   /// 
   ///
   /// Provide the result of the user interaction. Called by the Bungie Destiny App to approve or reject a request.
-  Future<InlineResponse20016> destiny2AwaProvideAuthorizationResult() async {
+  Future<InlineResponse20019> destiny2AwaProvideAuthorizationResult() async {
     Object postBody = null;
 
     // verify required params are set
@@ -149,7 +149,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -157,7 +157,7 @@ class Destiny2Api {
   /// 
   ///
   /// Equip an item. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
-  Future<InlineResponse20016> destiny2EquipItem() async {
+  Future<InlineResponse20019> destiny2EquipItem() async {
     Object postBody = null;
 
     // verify required params are set
@@ -197,7 +197,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -205,7 +205,7 @@ class Destiny2Api {
   /// 
   ///
   /// Equip a list of items by itemInstanceIds. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Any items not found on your character will be ignored.
-  Future<InlineResponse20039> destiny2EquipItems() async {
+  Future<InlineResponse20043> destiny2EquipItems() async {
     Object postBody = null;
 
     // verify required params are set
@@ -245,7 +245,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20039') as InlineResponse20039 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20043') as InlineResponse20043 ;
     } else {
       return null;
     }
@@ -253,7 +253,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets activity history stats for indicated character.
-  Future<InlineResponse20048> destiny2GetActivityHistory(int characterId, int destinyMembershipId, int membershipType, { int count, int mode, int page }) async {
+  Future<InlineResponse20052> destiny2GetActivityHistory(int characterId, int destinyMembershipId, int membershipType, { int count, int mode, int page }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -311,7 +311,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20048') as InlineResponse20048 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20052') as InlineResponse20052 ;
     } else {
       return null;
     }
@@ -319,7 +319,7 @@ class Destiny2Api {
   /// 
   ///
   /// Returns character information for the supplied character.
-  Future<InlineResponse20034> destiny2GetCharacter(int characterId, int destinyMembershipId, int membershipType, { List<DestinyDestinyComponentType> components }) async {
+  Future<InlineResponse20038> destiny2GetCharacter(int characterId, int destinyMembershipId, int membershipType, { List<DestinyDestinyComponentType> components }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -371,7 +371,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20034') as InlineResponse20034 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20038') as InlineResponse20038 ;
     } else {
       return null;
     }
@@ -379,7 +379,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets aggregated stats for a clan using the same categories as the clan leaderboards. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
-  Future<InlineResponse20044> destiny2GetClanAggregateStats(int groupId, { String modes }) async {
+  Future<InlineResponse20048> destiny2GetClanAggregateStats(int groupId, { String modes }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -425,7 +425,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20044') as InlineResponse20044 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20048') as InlineResponse20048 ;
     } else {
       return null;
     }
@@ -433,7 +433,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets leaderboards with the signed in user&#39;s friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
-  Future<InlineResponse20043> destiny2GetClanLeaderboards(int groupId, { int maxtop, String modes, String statid }) async {
+  Future<InlineResponse20047> destiny2GetClanLeaderboards(int groupId, { int maxtop, String modes, String statid }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -485,7 +485,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20043') as InlineResponse20043 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20047') as InlineResponse20047 ;
     } else {
       return null;
     }
@@ -493,7 +493,7 @@ class Destiny2Api {
   /// 
   ///
   /// Returns information on the weekly clan rewards and if the clan has earned them or not. Note that this will always report rewards as not redeemed.
-  Future<InlineResponse20035> destiny2GetClanWeeklyRewardState(int groupId) async {
+  Future<InlineResponse20039> destiny2GetClanWeeklyRewardState(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -536,7 +536,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20035') as InlineResponse20035 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20039') as InlineResponse20039 ;
     } else {
       return null;
     }
@@ -544,7 +544,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets all activities the character has participated in together with aggregate statistics for those activities.
-  Future<InlineResponse20050> destiny2GetDestinyAggregateActivityStats(int characterId, int destinyMembershipId, int membershipType) async {
+  Future<InlineResponse20054> destiny2GetDestinyAggregateActivityStats(int characterId, int destinyMembershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -593,7 +593,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20050') as InlineResponse20050 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20054') as InlineResponse20054 ;
     } else {
       return null;
     }
@@ -601,7 +601,7 @@ class Destiny2Api {
   /// 
   ///
   /// Returns the static definition of an entity of the given Type and hash identifier. Examine the API Documentation for the Type Names of entities that have their own definitions. Note that the return type will always *inherit from* DestinyDefinition, but the specific type returned will be the requested entity type if it can be found. Please don&#39;t use this as a chatty alternative to the Manifest database if you require large sets of data, but for simple and one-off accesses this should be handy.
-  Future<InlineResponse20031> destiny2GetDestinyEntityDefinition(String entityType, int hashIdentifier) async {
+  Future<InlineResponse20034> destiny2GetDestinyEntityDefinition(String entityType, int hashIdentifier) async {
     Object postBody = null;
 
     // verify required params are set
@@ -647,7 +647,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20031') as InlineResponse20031 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20034') as InlineResponse20034 ;
     } else {
       return null;
     }
@@ -655,7 +655,7 @@ class Destiny2Api {
   /// 
   ///
   /// Returns the current version of the manifest as a json object.
-  Future<InlineResponse20030> destiny2GetDestinyManifest() async {
+  Future<InlineResponse20033> destiny2GetDestinyManifest() async {
     Object postBody = null;
 
     // verify required params are set
@@ -695,7 +695,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20030') as InlineResponse20030 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20033') as InlineResponse20033 ;
     } else {
       return null;
     }
@@ -703,7 +703,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets historical stats for indicated character.
-  Future<InlineResponse20046> destiny2GetHistoricalStats(int characterId, int destinyMembershipId, int membershipType, { DateTime dayend, DateTime daystart, List<DestinyHistoricalStatsDefinitionsDestinyStatsGroupType> groups, List<DestinyHistoricalStatsDefinitionsDestinyActivityModeType> modes, int periodType }) async {
+  Future<InlineResponse20050> destiny2GetHistoricalStats(int characterId, int destinyMembershipId, int membershipType, { DateTime dayend, DateTime daystart, List<DestinyHistoricalStatsDefinitionsDestinyStatsGroupType> groups, List<DestinyHistoricalStatsDefinitionsDestinyActivityModeType> modes, int periodType }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -767,7 +767,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20046') as InlineResponse20046 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20050') as InlineResponse20050 ;
     } else {
       return null;
     }
@@ -775,7 +775,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets historical stats definitions.
-  Future<InlineResponse20042> destiny2GetHistoricalStatsDefinition() async {
+  Future<InlineResponse20046> destiny2GetHistoricalStatsDefinition() async {
     Object postBody = null;
 
     // verify required params are set
@@ -815,7 +815,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20042') as InlineResponse20042 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20046') as InlineResponse20046 ;
     } else {
       return null;
     }
@@ -823,7 +823,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets aggregate historical stats organized around each character for a given account.
-  Future<InlineResponse20047> destiny2GetHistoricalStatsForAccount(int destinyMembershipId, int membershipType, { List<DestinyHistoricalStatsDefinitionsDestinyStatsGroupType> groups }) async {
+  Future<InlineResponse20051> destiny2GetHistoricalStatsForAccount(int destinyMembershipId, int membershipType, { List<DestinyHistoricalStatsDefinitionsDestinyStatsGroupType> groups }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -872,7 +872,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20047') as InlineResponse20047 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20051') as InlineResponse20051 ;
     } else {
       return null;
     }
@@ -880,7 +880,7 @@ class Destiny2Api {
   /// 
   ///
   /// Retrieve the details of an instanced Destiny Item. An instanced Destiny item is one with an ItemInstanceId. Non-instanced items, such as materials, have no useful instance-specific details and thus are not queryable here.
-  Future<InlineResponse20036> destiny2GetItem(int destinyMembershipId, int itemInstanceId, int membershipType, { List<DestinyDestinyComponentType> components }) async {
+  Future<InlineResponse20040> destiny2GetItem(int destinyMembershipId, int itemInstanceId, int membershipType, { List<DestinyDestinyComponentType> components }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -932,7 +932,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20036') as InlineResponse20036 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20040') as InlineResponse20040 ;
     } else {
       return null;
     }
@@ -940,7 +940,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets leaderboards with the signed in user&#39;s friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint has not yet been implemented. It is being returned for a preview of future functionality, and for public comment/suggestion/preparation.
-  Future<InlineResponse20043> destiny2GetLeaderboards(int destinyMembershipId, int membershipType, { int maxtop, String modes, String statid }) async {
+  Future<InlineResponse20047> destiny2GetLeaderboards(int destinyMembershipId, int membershipType, { int maxtop, String modes, String statid }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -995,7 +995,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20043') as InlineResponse20043 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20047') as InlineResponse20047 ;
     } else {
       return null;
     }
@@ -1003,7 +1003,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets leaderboards with the signed in user&#39;s friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
-  Future<InlineResponse20043> destiny2GetLeaderboardsForCharacter(int characterId, int destinyMembershipId, int membershipType, { int maxtop, String modes, String statid }) async {
+  Future<InlineResponse20047> destiny2GetLeaderboardsForCharacter(int characterId, int destinyMembershipId, int membershipType, { int maxtop, String modes, String statid }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1061,7 +1061,61 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20043') as InlineResponse20043 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20047') as InlineResponse20047 ;
+    } else {
+      return null;
+    }
+  }
+  /// 
+  ///
+  /// Returns a summary information about all profiles linked to the requesting membership type/membership ID that have valid Destiny information. The passed-in Membership Type/Membership ID may be a Bungie.Net membership or a Destiny membership. It only returns the minimal amount of data to begin making more substantive requests, but will hopefully serve as a useful alternative to UserServices for people who just care about Destiny data. Note that it will only return linked accounts whose linkages you are allowed to view.
+  Future<InlineResponse20036> destiny2GetLinkedProfiles(int membershipId, int membershipType) async {
+    Object postBody = null;
+
+    // verify required params are set
+    if(membershipId == null) {
+     throw new ApiException(400, "Missing required param: membershipId");
+    }
+    if(membershipType == null) {
+     throw new ApiException(400, "Missing required param: membershipType");
+    }
+
+    // create path and map variables
+    String path = "/Destiny2/{membershipType}/Profile/{membershipId}/LinkedProfiles/".replaceAll("{format}","json").replaceAll("{" + "membershipId" + "}", membershipId.toString()).replaceAll("{" + "membershipType" + "}", membershipType.toString());
+
+    // query params
+    List<QueryParam> queryParams = [];
+    Map<String, String> headerParams = {};
+    Map<String, String> formParams = {};
+    
+    List<String> contentTypes = [];
+
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+    List<String> authNames = [];
+
+    if(contentType.startsWith("multipart/form-data")) {
+      bool hasFields = false;
+      MultipartRequest mp = new MultipartRequest(null, null);
+      
+      if(hasFields)
+        postBody = mp;
+    }
+    else {
+          }
+
+    var response = await apiClient.invokeAPI(path,
+                                             'GET',
+                                             queryParams,
+                                             postBody,
+                                             headerParams,
+                                             formParams,
+                                             contentType,
+                                             authNames);
+
+    if(response.statusCode >= 400) {
+      throw new ApiException(response.statusCode, response.body);
+    } else if(response.body != null) {
+      return apiClient.deserialize(response.body, 'InlineResponse20036') as InlineResponse20036 ;
     } else {
       return null;
     }
@@ -1069,7 +1123,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets the available post game carnage report for the activity ID.
-  Future<InlineResponse20041> destiny2GetPostGameCarnageReport(int activityId) async {
+  Future<InlineResponse20045> destiny2GetPostGameCarnageReport(int activityId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1112,7 +1166,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20041') as InlineResponse20041 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20045') as InlineResponse20045 ;
     } else {
       return null;
     }
@@ -1120,7 +1174,7 @@ class Destiny2Api {
   /// 
   ///
   /// Returns Destiny Profile information for the supplied membership.
-  Future<InlineResponse20033> destiny2GetProfile(int destinyMembershipId, int membershipType, { List<DestinyDestinyComponentType> components }) async {
+  Future<InlineResponse20037> destiny2GetProfile(int destinyMembershipId, int membershipType, { List<DestinyDestinyComponentType> components }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1169,7 +1223,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20033') as InlineResponse20033 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20037') as InlineResponse20037 ;
     } else {
       return null;
     }
@@ -1177,7 +1231,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets custom localized content for the milestone of the given hash, if it exists.
-  Future<InlineResponse20051> destiny2GetPublicMilestoneContent(int milestoneHash) async {
+  Future<InlineResponse20055> destiny2GetPublicMilestoneContent(int milestoneHash) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1220,7 +1274,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20051') as InlineResponse20051 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20055') as InlineResponse20055 ;
     } else {
       return null;
     }
@@ -1228,7 +1282,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets public information about currently available Milestones.
-  Future<InlineResponse20052> destiny2GetPublicMilestones() async {
+  Future<InlineResponse20056> destiny2GetPublicMilestones() async {
     Object postBody = null;
 
     // verify required params are set
@@ -1268,7 +1322,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20052') as InlineResponse20052 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20056') as InlineResponse20056 ;
     } else {
       return null;
     }
@@ -1276,7 +1330,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets details about unique weapon usage, including all exotic weapons.
-  Future<InlineResponse20049> destiny2GetUniqueWeaponHistory(int characterId, int destinyMembershipId, int membershipType) async {
+  Future<InlineResponse20053> destiny2GetUniqueWeaponHistory(int characterId, int destinyMembershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1325,7 +1379,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20049') as InlineResponse20049 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20053') as InlineResponse20053 ;
     } else {
       return null;
     }
@@ -1333,7 +1387,7 @@ class Destiny2Api {
   /// 
   ///
   /// Get the details of a specific Vendor.
-  Future<InlineResponse20038> destiny2GetVendor(int characterId, int destinyMembershipId, int membershipType, int vendorHash, { List<DestinyDestinyComponentType> components }) async {
+  Future<InlineResponse20042> destiny2GetVendor(int characterId, int destinyMembershipId, int membershipType, int vendorHash, { List<DestinyDestinyComponentType> components }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1388,7 +1442,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20038') as InlineResponse20038 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20042') as InlineResponse20042 ;
     } else {
       return null;
     }
@@ -1396,7 +1450,7 @@ class Destiny2Api {
   /// 
   ///
   /// Get currently available vendors from the list of vendors that can possibly have rotating inventory. Note that this does not include things like preview vendors and vendors-as-kiosks, neither of whom have rotating/dynamic inventories. Use their definitions as-is for those.
-  Future<InlineResponse20037> destiny2GetVendors(int characterId, int destinyMembershipId, int membershipType, { List<DestinyDestinyComponentType> components }) async {
+  Future<InlineResponse20041> destiny2GetVendors(int characterId, int destinyMembershipId, int membershipType, { List<DestinyDestinyComponentType> components }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1448,7 +1502,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20037') as InlineResponse20037 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20041') as InlineResponse20041 ;
     } else {
       return null;
     }
@@ -1456,7 +1510,7 @@ class Destiny2Api {
   /// 
   ///
   /// Insert a plug into a socketed item. I know how it sounds, but I assure you it&#39;s much more G-rated than you might be guessing. We haven&#39;t decided yet whether this will be able to insert plugs that have side effects, but if we do it will require special scope permission for an application attempting to do so. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Request must include proof of permission for &#39;InsertPlugs&#39; from the account owner.
-  Future<InlineResponse20040> destiny2InsertSocketPlug() async {
+  Future<InlineResponse20044> destiny2InsertSocketPlug() async {
     Object postBody = null;
 
     // verify required params are set
@@ -1496,7 +1550,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20040') as InlineResponse20040 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20044') as InlineResponse20044 ;
     } else {
       return null;
     }
@@ -1504,7 +1558,7 @@ class Destiny2Api {
   /// 
   ///
   /// Extract an item from the Postmaster, with whatever implications that may entail. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it&#39;s an instanced item.
-  Future<InlineResponse20016> destiny2PullFromPostmaster() async {
+  Future<InlineResponse20019> destiny2PullFromPostmaster() async {
     Object postBody = null;
 
     // verify required params are set
@@ -1544,7 +1598,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -1552,7 +1606,7 @@ class Destiny2Api {
   /// 
   ///
   /// Report a player that you met in an activity that was engaging in ToS-violating activities. Both you and the offending player must have played in the activityId passed in. Please use this judiciously and only when you have strong suspicions of violation, pretty please.
-  Future<InlineResponse20016> destiny2ReportOffensivePostGameCarnageReportPlayer(int activityId) async {
+  Future<InlineResponse20019> destiny2ReportOffensivePostGameCarnageReportPlayer(int activityId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1595,7 +1649,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -1603,7 +1657,7 @@ class Destiny2Api {
   /// 
   ///
   /// Gets a page list of Destiny items.
-  Future<InlineResponse20045> destiny2SearchDestinyEntities(String searchTerm, String type, { int page }) async {
+  Future<InlineResponse20049> destiny2SearchDestinyEntities(String searchTerm, String type, { int page }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1652,7 +1706,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20045') as InlineResponse20045 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20049') as InlineResponse20049 ;
     } else {
       return null;
     }
@@ -1660,7 +1714,7 @@ class Destiny2Api {
   /// 
   ///
   /// Returns a list of Destiny memberships given a full Gamertag or PSN ID.
-  Future<InlineResponse20032> destiny2SearchDestinyPlayer(String displayName, int membershipType) async {
+  Future<InlineResponse20035> destiny2SearchDestinyPlayer(String displayName, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1706,7 +1760,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20032') as InlineResponse20032 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20035') as InlineResponse20035 ;
     } else {
       return null;
     }
@@ -1714,7 +1768,7 @@ class Destiny2Api {
   /// 
   ///
   /// Set the Lock State for an instanced item. You must have a valid Destiny Account.
-  Future<InlineResponse20016> destiny2SetItemLockState() async {
+  Future<InlineResponse20019> destiny2SetItemLockState() async {
     Object postBody = null;
 
     // verify required params are set
@@ -1754,7 +1808,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -1762,7 +1816,7 @@ class Destiny2Api {
   /// 
   ///
   /// Transfer an item to/from your vault. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it&#39;s an instanced item. itshappening.gif
-  Future<InlineResponse20016> destiny2TransferItem() async {
+  Future<InlineResponse20019> destiny2TransferItem() async {
     Object postBody = null;
 
     // verify required params are set
@@ -1802,7 +1856,7 @@ class Destiny2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }

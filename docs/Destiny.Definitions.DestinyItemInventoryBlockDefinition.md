@@ -16,6 +16,10 @@ Name | Type | Description | Notes
 **isInstanceItem** | **bool** | If TRUE, this item is instanced. Otherwise, it is a generic item that merely has a quantity in a stack (like Glimmer). | [optional] [default to null]
 **tierTypeName** | **String** | The localized name of the tier type, which is a useful shortcut so you don&#39;t have to look up the definition every time. However, it&#39;s mostly a holdover from days before we had a DestinyItemTierTypeDefinition to refer to. | [optional] [default to null]
 **tierType** | [**DestinyTierType**](DestinyTierType.md) | The enumeration matching the tier type of the item to known values, again for convenience sake. | [optional] [default to null]
+**expirationTooltip** | **String** | The tooltip message to show, if any, when the item expires. | [optional] [default to null]
+**expiredInActivityMessage** | **String** | If the item expires while playing in an activity, we show a different message. | [optional] [default to null]
+**expiredInOrbitMessage** | **String** | If the item expires in orbit, we show a... more different message. (\&quot;Consummate V&#39;s, consummate!\&quot;) | [optional] [default to null]
+**suppressExpirationWhenObjectivesComplete** | **bool** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

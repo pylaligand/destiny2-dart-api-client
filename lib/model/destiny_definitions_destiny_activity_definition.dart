@@ -85,7 +85,11 @@ class DestinyDefinitionsDestinyActivityDefinition {
 /* If the activity had an activity mode directly defined on it, this will be the enum value of that mode. */
   @Property(name: 'directActivityModeType')
   int directActivityModeType = null;
-  //enum directActivityModeTypeEnum {  0,  2,  3,  4,  5,  6,  7,  9,  10,  11,  12,  13,  15,  16,  17,  18,  19,  20,  21,  22,  24,  25,  26,  27,  28,  29,  30,  31,  32,  37,  38,  39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,  52,  53,  54,  55,  56,  57,  58,  };
+  //enum directActivityModeTypeEnum {  0,  2,  3,  4,  5,  6,  7,  9,  10,  11,  12,  13,  15,  16,  17,  18,  19,  20,  21,  22,  24,  25,  26,  27,  28,  29,  30,  31,  32,  37,  38,  39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,  52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,  };
+/* The set of all possible loadout requirements that could be active for this activity. Only one will be active at any given time, and you can discover which one through activity-associated data such as Milestones that have activity info on them. */
+  @Property(name: 'loadouts')
+  List<DestinyDefinitionsDestinyActivityLoadoutRequirementSet> loadouts = [];
+  
 /* The hash identifiers for Activity Modes relevant to this activity.  Note that if this is a playlist, the specific playlist entry chosen will determine the actual activity modes that end up being relevant. */
   @Property(name: 'activityModeHashes')
   List<int> activityModeHashes = [];
@@ -97,6 +101,14 @@ class DestinyDefinitionsDestinyActivityDefinition {
 /* If true, this activity is a PVP activity or playlist. */
   @Property(name: 'isPvP')
   bool isPvP = null;
+  
+/* The list of phases or points of entry into an activity, along with information we can use to determine their gating and availability. */
+  @Property(name: 'insertionPoints')
+  List<DestinyDefinitionsDestinyActivityInsertionPointDefinition> insertionPoints = [];
+  
+/* A list of location mappings that are affected by this activity. Pulled out of DestinyLocationDefinitions for our/your lookup convenience. */
+  @Property(name: 'activityLocationMappings')
+  List<DestinyConstantsDestinyEnvironmentLocationMapping> activityLocationMappings = [];
   
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
@@ -114,7 +126,7 @@ class DestinyDefinitionsDestinyActivityDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyActivityDefinition[displayProperties=$displayProperties, releaseIcon=$releaseIcon, releaseTime=$releaseTime, activityLevel=$activityLevel, activityLightLevel=$activityLightLevel, destinationHash=$destinationHash, placeHash=$placeHash, activityTypeHash=$activityTypeHash, tier=$tier, pgcrImage=$pgcrImage, rewards=$rewards, modifiers=$modifiers, isPlaylist=$isPlaylist, challenges=$challenges, optionalUnlockStrings=$optionalUnlockStrings, playlistItems=$playlistItems, activityGraphList=$activityGraphList, matchmaking=$matchmaking, guidedGame=$guidedGame, directActivityModeHash=$directActivityModeHash, directActivityModeType=$directActivityModeType, activityModeHashes=$activityModeHashes, activityModeTypes=$activityModeTypes, isPvP=$isPvP, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyActivityDefinition[displayProperties=$displayProperties, releaseIcon=$releaseIcon, releaseTime=$releaseTime, activityLevel=$activityLevel, activityLightLevel=$activityLightLevel, destinationHash=$destinationHash, placeHash=$placeHash, activityTypeHash=$activityTypeHash, tier=$tier, pgcrImage=$pgcrImage, rewards=$rewards, modifiers=$modifiers, isPlaylist=$isPlaylist, challenges=$challenges, optionalUnlockStrings=$optionalUnlockStrings, playlistItems=$playlistItems, activityGraphList=$activityGraphList, matchmaking=$matchmaking, guidedGame=$guidedGame, directActivityModeHash=$directActivityModeHash, directActivityModeType=$directActivityModeType, loadouts=$loadouts, activityModeHashes=$activityModeHashes, activityModeTypes=$activityModeTypes, isPvP=$isPvP, insertionPoints=$insertionPoints, activityLocationMappings=$activityLocationMappings, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

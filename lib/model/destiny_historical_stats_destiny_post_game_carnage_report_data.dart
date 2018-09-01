@@ -6,6 +6,10 @@ class DestinyHistoricalStatsDestinyPostGameCarnageReportData {
   @Property(name: 'period')
   DateTime period = null;
   
+/* If this activity has \"phases\", this is the phase at which the activity was started. */
+  @Property(name: 'startingPhaseIndex')
+  int startingPhaseIndex = null;
+  
 /* Details about the activity. */
   @Property(name: 'activityDetails')
   DestinyHistoricalStatsDestinyHistoricalStatsActivity activityDetails = null;
@@ -22,7 +26,7 @@ class DestinyHistoricalStatsDestinyPostGameCarnageReportData {
 
   @override
   String toString()  {
-    return 'DestinyHistoricalStatsDestinyPostGameCarnageReportData[period=$period, activityDetails=$activityDetails, entries=$entries, teams=$teams, ]';
+    return 'DestinyHistoricalStatsDestinyPostGameCarnageReportData[period=$period, startingPhaseIndex=$startingPhaseIndex, activityDetails=$activityDetails, entries=$entries, teams=$teams, ]';
   }
 }
 

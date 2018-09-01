@@ -26,6 +26,10 @@ class DestinyResponsesDestinyProfileResponse {
   @Property(name: 'profilePlugSets')
   SingleComponentResponseOfDestinyPlugSetsComponent profilePlugSets = null;
   
+/* When we have progression information - such as Checklists - that may apply profile-wide, it will be returned here rather than in the per-character progression data.  COMPONENT TYPE: ProfileProgression */
+  @Property(name: 'profileProgression')
+  SingleComponentResponseOfDestinyProfileProgressionComponent profileProgression = null;
+  
 /* Basic information about each character, keyed by the CharacterId.  COMPONENT TYPE: Characters */
   @Property(name: 'characters')
   DictionaryComponentResponseOfint64AndDestinyCharacterComponent characters = null;
@@ -58,6 +62,10 @@ class DestinyResponsesDestinyProfileResponse {
   @Property(name: 'characterPlugSets')
   DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent characterPlugSets = null;
   
+/* Do you ever get the feeling that a system was designed *too* flexibly? That it can be used in so many different ways that you end up being unable to provide an easy to use abstraction for the mess that's happening under the surface?  Let's talk about character-specific data that might be related to items without instances. These two statements are totally unrelated, I promise.  At some point during D2, it was decided that items - such as Bounties - could be given to characters and *not* have instance data, but that *could* display and even use relevant state information on your account and character.  Up to now, any item that had meaningful dependencies on character or account state had to be instanced, and thus \"itemComponents\" was all that you needed: it was keyed by item's instance IDs and provided the stateful information you needed inside.  Unfortunately, we don't live in such a magical world anymore. This is information held on a per-character basis about non-instanced items that the characters have in their inventory - or that reference character-specific state information even if it's in Account-level inventory - and the values related to that item's state in relation to the given character.  To give a concrete example, look at a Moments of Triumph bounty. They exist in a character's inventory, and show/care about a character's progression toward completing the bounty. But the bounty itself is a non-instanced item, like a mod or a currency. This returns that data for the characters who have the bounty in their inventory.  I'm not crying, you're crying Okay we're both crying but it's going to be okay I promise Actually I shouldn't promise that, I don't know if it's going to be okay */
+  @Property(name: 'characterUninstancedItemComponents')
+  Map<String, DestinyBaseItemComponentSetOfuint32> characterUninstancedItemComponents = {};
+  
 /* Information about instanced items across all returned characters, keyed by the item's instance ID.  COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.] */
   @Property(name: 'itemComponents')
   DestinyItemComponentSetOfint64 itemComponents = null;
@@ -70,7 +78,7 @@ class DestinyResponsesDestinyProfileResponse {
 
   @override
   String toString()  {
-    return 'DestinyResponsesDestinyProfileResponse[vendorReceipts=$vendorReceipts, profileInventory=$profileInventory, profileCurrencies=$profileCurrencies, profile=$profile, profileKiosks=$profileKiosks, profilePlugSets=$profilePlugSets, characters=$characters, characterInventories=$characterInventories, characterProgressions=$characterProgressions, characterRenderData=$characterRenderData, characterActivities=$characterActivities, characterEquipment=$characterEquipment, characterKiosks=$characterKiosks, characterPlugSets=$characterPlugSets, itemComponents=$itemComponents, characterCurrencyLookups=$characterCurrencyLookups, ]';
+    return 'DestinyResponsesDestinyProfileResponse[vendorReceipts=$vendorReceipts, profileInventory=$profileInventory, profileCurrencies=$profileCurrencies, profile=$profile, profileKiosks=$profileKiosks, profilePlugSets=$profilePlugSets, profileProgression=$profileProgression, characters=$characters, characterInventories=$characterInventories, characterProgressions=$characterProgressions, characterRenderData=$characterRenderData, characterActivities=$characterActivities, characterEquipment=$characterEquipment, characterKiosks=$characterKiosks, characterPlugSets=$characterPlugSets, characterUninstancedItemComponents=$characterUninstancedItemComponents, itemComponents=$itemComponents, characterCurrencyLookups=$characterCurrencyLookups, ]';
   }
 }
 

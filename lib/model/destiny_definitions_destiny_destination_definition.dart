@@ -18,7 +18,7 @@ class DestinyDefinitionsDestinyDestinationDefinition {
   @Property(name: 'activityGraphEntries')
   List<DestinyDefinitionsDestinyActivityGraphListEntryDefinition> activityGraphEntries = [];
   
-/* A Destination may have many \"Bubbles\" zones with human readable properties.  We don't get as much info as I'd like about them - I'd love to return info like where on the map they are located - but at least this gives you the name of those bubbles. bubbleSettings and bubbles both have the identical number of entries, and you should match up their indexes to provide matching bubble and bubbleSettings data. */
+/* A Destination may have many \"Bubbles\" zones with human readable properties.  We don't get as much info as I'd like about them - I'd love to return info like where on the map they are located - but at least this gives you the name of those bubbles. bubbleSettings and bubbles both have the identical number of entries, and you should match up their indexes to provide matching bubble and bubbleSettings data.  DEPRECATED - Just use bubbles, it now has this data. */
   @Property(name: 'bubbleSettings')
   List<DestinyDefinitionsDestinyDestinationBubbleSettingDefinition> bubbleSettings = [];
   

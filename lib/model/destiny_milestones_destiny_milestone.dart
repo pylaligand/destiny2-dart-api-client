@@ -10,6 +10,10 @@ class DestinyMilestonesDestinyMilestone {
   @Property(name: 'availableQuests')
   List<DestinyMilestonesDestinyMilestoneQuest> availableQuests = [];
   
+/* The currently active Activities in this milestone, when the Milestone is driven by Challenges.  Not all Milestones have Challenges, but when they do this will indicate the Activities and Challenges under those Activities related to this Milestone. */
+  @Property(name: 'activities')
+  List<DestinyMilestonesDestinyMilestoneChallengeActivity> activities = [];
+  
 /* Milestones may have arbitrary key/value pairs associated with them, for data that users will want to know about but that doesn't fit neatly into any of the common components such as Quests. A good example of this would be - if this existed in Destiny 1 - the number of wins you currently have on your Trials of Osiris ticket. Looking in the DestinyMilestoneDefinition, you can use the string identifier of this dictionary to look up more info about the value, including localized string content for displaying the value. The value in the dictionary is the floating point number. The definition will tell you how to format this number. */
   @Property(name: 'values')
   Map<String, double> values = {};
@@ -34,11 +38,15 @@ class DestinyMilestonesDestinyMilestone {
   @Property(name: 'endDate')
   DateTime endDate = null;
   
+/* Used for ordering milestones in a display to match how we order them in BNet. May pull from static data, or possibly in the future from dynamic information. */
+  @Property(name: 'order')
+  int order = null;
+  
   DestinyMilestonesDestinyMilestone();
 
   @override
   String toString()  {
-    return 'DestinyMilestonesDestinyMilestone[milestoneHash=$milestoneHash, availableQuests=$availableQuests, values=$values, vendorHashes=$vendorHashes, vendors=$vendors, rewards=$rewards, startDate=$startDate, endDate=$endDate, ]';
+    return 'DestinyMilestonesDestinyMilestone[milestoneHash=$milestoneHash, availableQuests=$availableQuests, activities=$activities, values=$values, vendorHashes=$vendorHashes, vendors=$vendors, rewards=$rewards, startDate=$startDate, endDate=$endDate, order=$order, ]';
   }
 }
 

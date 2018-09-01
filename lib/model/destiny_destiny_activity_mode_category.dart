@@ -13,6 +13,8 @@ class DestinyDestinyActivityModeCategory {
   static const DestinyDestinyActivityModeCategory pvE = const DestinyDestinyActivityModeCategory._internal(1);
   /// PvP activities, where you teabag other humans in the face.
   static const DestinyDestinyActivityModeCategory pvP = const DestinyDestinyActivityModeCategory._internal(2);
+  /// PVE competitive activities.
+  static const DestinyDestinyActivityModeCategory pvECompetitive = const DestinyDestinyActivityModeCategory._internal(3);
 }
 
 class DestinyDestinyActivityModeCategoryTypeTransformer extends TypeTransformer<DestinyDestinyActivityModeCategory> {
@@ -28,6 +30,7 @@ class DestinyDestinyActivityModeCategoryTypeTransformer extends TypeTransformer<
       case 0: return DestinyDestinyActivityModeCategory.none;
       case 1: return DestinyDestinyActivityModeCategory.pvE;
       case 2: return DestinyDestinyActivityModeCategory.pvP;
+      case 3: return DestinyDestinyActivityModeCategory.pvECompetitive;
       default: throw('Unknown enum value to decode: $data');
     }
   }

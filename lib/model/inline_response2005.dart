@@ -26,11 +26,15 @@ class InlineResponse2005 {
   @Property(name: 'MessageData')
   Map<String, String> messageData = {};
   
+
+  @Property(name: 'DetailedErrorTrace')
+  String detailedErrorTrace = null;
+  
   InlineResponse2005();
 
   @override
   String toString()  {
-    return 'InlineResponse2005[response=$response, errorCode=$errorCode, throttleSeconds=$throttleSeconds, errorStatus=$errorStatus, message=$message, messageData=$messageData, ]';
+    return 'InlineResponse2005[response=$response, errorCode=$errorCode, throttleSeconds=$throttleSeconds, errorStatus=$errorStatus, message=$message, messageData=$messageData, detailedErrorTrace=$detailedErrorTrace, ]';
   }
 }
 

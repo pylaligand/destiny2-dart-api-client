@@ -22,11 +22,15 @@ class DestinyDefinitionsMilestonesDestinyMilestoneQuestDefinition {
   @Property(name: 'activities')
   Map<String, DestinyDefinitionsMilestonesDestinyMilestoneActivityDefinition> activities = {};
   
+/* Sometimes, a Milestone's quest is related to an entire Destination rather than a specific activity. In that situation, this will be the hash of that Destination. Hotspots are currently the only Milestones that expose this data, but that does not preclude this data from being returned for other Milestones in the future. */
+  @Property(name: 'destinationHash')
+  int destinationHash = null;
+  
   DestinyDefinitionsMilestonesDestinyMilestoneQuestDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsMilestonesDestinyMilestoneQuestDefinition[questItemHash=$questItemHash, displayProperties=$displayProperties, overrideImage=$overrideImage, questRewards=$questRewards, activities=$activities, ]';
+    return 'DestinyDefinitionsMilestonesDestinyMilestoneQuestDefinition[questItemHash=$questItemHash, displayProperties=$displayProperties, overrideImage=$overrideImage, questRewards=$questRewards, activities=$activities, destinationHash=$destinationHash, ]';
   }
 }
 

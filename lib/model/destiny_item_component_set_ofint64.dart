@@ -7,10 +7,6 @@ class DestinyItemComponentSetOfint64 {
   DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent instances = null;
   
 
-  @Property(name: 'objectives')
-  DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent objectives = null;
-  
-
   @Property(name: 'perks')
   DictionaryComponentResponseOfint64AndDestinyItemPerksComponent perks = null;
   
@@ -34,11 +30,15 @@ class DestinyItemComponentSetOfint64 {
   @Property(name: 'plugStates')
   DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates = null;
   
+
+  @Property(name: 'objectives')
+  DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent objectives = null;
+  
   DestinyItemComponentSetOfint64();
 
   @override
   String toString()  {
-    return 'DestinyItemComponentSetOfint64[instances=$instances, objectives=$objectives, perks=$perks, renderData=$renderData, stats=$stats, sockets=$sockets, talentGrids=$talentGrids, plugStates=$plugStates, ]';
+    return 'DestinyItemComponentSetOfint64[instances=$instances, perks=$perks, renderData=$renderData, stats=$stats, sockets=$sockets, talentGrids=$talentGrids, plugStates=$plugStates, objectives=$objectives, ]';
   }
 }
 

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **errorStatus** | **String** |  | [optional] [default to null]
 **message** | **String** |  | [optional] [default to null]
 **messageData** | **Map&lt;String, String&gt;** |  | [optional] [default to {}]
+**detailedErrorTrace** | **String** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

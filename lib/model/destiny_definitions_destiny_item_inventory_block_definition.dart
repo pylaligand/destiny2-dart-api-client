@@ -34,11 +34,27 @@ class DestinyDefinitionsDestinyItemInventoryBlockDefinition {
   @Property(name: 'tierType')
   DestinyTierType tierType = null;
   
+/* The tooltip message to show, if any, when the item expires. */
+  @Property(name: 'expirationTooltip')
+  String expirationTooltip = null;
+  
+/* If the item expires while playing in an activity, we show a different message. */
+  @Property(name: 'expiredInActivityMessage')
+  String expiredInActivityMessage = null;
+  
+/* If the item expires in orbit, we show a... more different message. (\"Consummate V's, consummate!\") */
+  @Property(name: 'expiredInOrbitMessage')
+  String expiredInOrbitMessage = null;
+  
+
+  @Property(name: 'suppressExpirationWhenObjectivesComplete')
+  bool suppressExpirationWhenObjectivesComplete = null;
+  
   DestinyDefinitionsDestinyItemInventoryBlockDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyItemInventoryBlockDefinition[stackUniqueLabel=$stackUniqueLabel, maxStackSize=$maxStackSize, bucketTypeHash=$bucketTypeHash, recoveryBucketTypeHash=$recoveryBucketTypeHash, tierTypeHash=$tierTypeHash, isInstanceItem=$isInstanceItem, tierTypeName=$tierTypeName, tierType=$tierType, ]';
+    return 'DestinyDefinitionsDestinyItemInventoryBlockDefinition[stackUniqueLabel=$stackUniqueLabel, maxStackSize=$maxStackSize, bucketTypeHash=$bucketTypeHash, recoveryBucketTypeHash=$recoveryBucketTypeHash, tierTypeHash=$tierTypeHash, isInstanceItem=$isInstanceItem, tierTypeName=$tierTypeName, tierType=$tierType, expirationTooltip=$expirationTooltip, expiredInActivityMessage=$expiredInActivityMessage, expiredInOrbitMessage=$expiredInOrbitMessage, suppressExpirationWhenObjectivesComplete=$suppressExpirationWhenObjectivesComplete, ]';
   }
 }
 

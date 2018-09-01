@@ -54,6 +54,14 @@ class DestinyDefinitionsDestinyObjectiveDefinition {
   @Property(name: 'showValueOnComplete')
   bool showValueOnComplete = null;
   
+/* The style to use when the objective is completed. */
+  @Property(name: 'completedValueStyle')
+  DestinyDestinyUnlockValueUIStyle completedValueStyle = null;
+  
+/* The style to use when the objective is still in progress. */
+  @Property(name: 'inProgressValueStyle')
+  DestinyDestinyUnlockValueUIStyle inProgressValueStyle = null;
+  
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
   int hash = null;
@@ -70,7 +78,7 @@ class DestinyDefinitionsDestinyObjectiveDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyObjectiveDefinition[displayProperties=$displayProperties, completionValue=$completionValue, locationHash=$locationHash, allowNegativeValue=$allowNegativeValue, allowValueChangeWhenCompleted=$allowValueChangeWhenCompleted, isCountingDownward=$isCountingDownward, valueStyle=$valueStyle, progressDescription=$progressDescription, perks=$perks, stats=$stats, minimumVisibilityThreshold=$minimumVisibilityThreshold, allowOvercompletion=$allowOvercompletion, showValueOnComplete=$showValueOnComplete, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyObjectiveDefinition[displayProperties=$displayProperties, completionValue=$completionValue, locationHash=$locationHash, allowNegativeValue=$allowNegativeValue, allowValueChangeWhenCompleted=$allowValueChangeWhenCompleted, isCountingDownward=$isCountingDownward, valueStyle=$valueStyle, progressDescription=$progressDescription, perks=$perks, stats=$stats, minimumVisibilityThreshold=$minimumVisibilityThreshold, allowOvercompletion=$allowOvercompletion, showValueOnComplete=$showValueOnComplete, completedValueStyle=$completedValueStyle, inProgressValueStyle=$inProgressValueStyle, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

@@ -26,6 +26,10 @@ class DestinyDefinitionsMilestonesDestinyMilestoneDefinition {
   @Property(name: 'showInExplorer')
   bool showInExplorer = null;
   
+/* Determines whether we'll show this Milestone in the user's personal Milestones list. */
+  @Property(name: 'showInMilestones')
+  bool showInMilestones = null;
+  
 /* If TRUE, \"Explore Destiny\" (the front page of BNet and the companion app) prioritize using the activity image over any overriding Quest or Milestone image provided. This unfortunate hack is brought to you by Trials of The Nine. */
   @Property(name: 'explorePrioritizesActivityImage')
   bool explorePrioritizesActivityImage = null;
@@ -34,11 +38,11 @@ class DestinyDefinitionsMilestonesDestinyMilestoneDefinition {
   @Property(name: 'hasPredictableDates')
   bool hasPredictableDates = null;
   
-/* The full set of possible Quests that give the overview of the Milestone event/activity in question. Only one of these can be active at a time for a given Conceptual Milestone, but many of them may be \"available\" for the user to choose from. (for instance, with Milestones you can choose from the three available Quests, but only one can be active at a time) Keyed by the quest item. */
+/* The full set of possible Quests that give the overview of the Milestone event/activity in question. Only one of these can be active at a time for a given Conceptual Milestone, but many of them may be \"available\" for the user to choose from. (for instance, with Milestones you can choose from the three available Quests, but only one can be active at a time) Keyed by the quest item.  As of Forsaken (~September 2018), Quest-style Milestones are being removed for many types of activities. There will likely be further revisions to the Milestone concept in the future. */
   @Property(name: 'quests')
   Map<String, DestinyDefinitionsMilestonesDestinyMilestoneQuestDefinition> quests = {};
   
-/* If this milestone can provide rewards, this will define the categories into which the individual reward entries are placed. */
+/* If this milestone can provide rewards, this will define the categories into which the individual reward entries are placed.  This is keyed by the Category's hash, which is only guaranteed to be unique within a given Milestone. */
   @Property(name: 'rewards')
   Map<String, DestinyDefinitionsMilestonesDestinyMilestoneRewardCategoryDefinition> rewards = {};
   
@@ -58,6 +62,14 @@ class DestinyDefinitionsMilestonesDestinyMilestoneDefinition {
   @Property(name: 'isInGameMilestone')
   bool isInGameMilestone = null;
   
+/* A Milestone can now be represented by one or more activities directly (without a backing Quest), and that activity can have many challenges, modifiers, and related to it. */
+  @Property(name: 'activities')
+  List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityDefinition> activities = [];
+  
+
+  @Property(name: 'defaultOrder')
+  int defaultOrder = null;
+  
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
   int hash = null;
@@ -74,7 +86,7 @@ class DestinyDefinitionsMilestonesDestinyMilestoneDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsMilestonesDestinyMilestoneDefinition[displayProperties=$displayProperties, image=$image, milestoneType=$milestoneType, recruitable=$recruitable, friendlyName=$friendlyName, showInExplorer=$showInExplorer, explorePrioritizesActivityImage=$explorePrioritizesActivityImage, hasPredictableDates=$hasPredictableDates, quests=$quests, rewards=$rewards, vendorsDisplayTitle=$vendorsDisplayTitle, vendors=$vendors, values=$values, isInGameMilestone=$isInGameMilestone, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsMilestonesDestinyMilestoneDefinition[displayProperties=$displayProperties, image=$image, milestoneType=$milestoneType, recruitable=$recruitable, friendlyName=$friendlyName, showInExplorer=$showInExplorer, showInMilestones=$showInMilestones, explorePrioritizesActivityImage=$explorePrioritizesActivityImage, hasPredictableDates=$hasPredictableDates, quests=$quests, rewards=$rewards, vendorsDisplayTitle=$vendorsDisplayTitle, vendors=$vendors, values=$values, isInGameMilestone=$isInGameMilestone, activities=$activities, defaultOrder=$defaultOrder, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

@@ -32,7 +32,7 @@ class TrendingTrendingEntryDestinyRitual {
   
 /* A destiny event will not necessarily have milestone \"custom content\", but if it does the details will be here. */
   @Property(name: 'eventContent')
-  DestinyMilestonesDestinyMilestoneContent eventContent = null;
+  Object eventContent = null;
   
   TrendingTrendingEntryDestinyRitual();
 

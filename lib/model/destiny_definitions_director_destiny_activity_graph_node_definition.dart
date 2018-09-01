@@ -22,11 +22,15 @@ class DestinyDefinitionsDirectorDestinyActivityGraphNodeDefinition {
   @Property(name: 'activities')
   List<DestinyDefinitionsDirectorDestinyActivityGraphNodeActivityDefinition> activities = [];
   
+/* Represents possible states that the graph node can be in. These are combined with some checking that happens in the game client and server to determine which state is actually active at any given time. */
+  @Property(name: 'states')
+  List<DestinyDefinitionsDirectorDestinyActivityGraphNodeStateEntry> states = [];
+  
   DestinyDefinitionsDirectorDestinyActivityGraphNodeDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDirectorDestinyActivityGraphNodeDefinition[nodeId=$nodeId, overrideDisplay=$overrideDisplay, position=$position, featuringStates=$featuringStates, activities=$activities, ]';
+    return 'DestinyDefinitionsDirectorDestinyActivityGraphNodeDefinition[nodeId=$nodeId, overrideDisplay=$overrideDisplay, position=$position, featuringStates=$featuringStates, activities=$activities, states=$states, ]';
   }
 }
 

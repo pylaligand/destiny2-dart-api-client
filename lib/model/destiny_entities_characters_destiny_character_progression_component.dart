@@ -22,11 +22,15 @@ class DestinyEntitiesCharactersDestinyCharacterProgressionComponent {
   @Property(name: 'uninstancedItemObjectives')
   Map<String, List<DestinyQuestsDestinyObjectiveProgress>> uninstancedItemObjectives = {};
   
+/* The set of checklists that can be examined for this specific character, keyed by the hash identifier of the Checklist (DestinyChecklistDefinition)  For each checklist returned, its value is itself a Dictionary keyed by the checklist's hash identifier with the value being a boolean indicating if it's been discovered yet. */
+  @Property(name: 'checklists')
+  Map<String, Map<String, bool>> checklists = {};
+  
   DestinyEntitiesCharactersDestinyCharacterProgressionComponent();
 
   @override
   String toString()  {
-    return 'DestinyEntitiesCharactersDestinyCharacterProgressionComponent[progressions=$progressions, factions=$factions, milestones=$milestones, quests=$quests, uninstancedItemObjectives=$uninstancedItemObjectives, ]';
+    return 'DestinyEntitiesCharactersDestinyCharacterProgressionComponent[progressions=$progressions, factions=$factions, milestones=$milestones, quests=$quests, uninstancedItemObjectives=$uninstancedItemObjectives, checklists=$checklists, ]';
   }
 }
 

@@ -9,11 +9,11 @@ class DestinyDestinyVendorItemState {
 
   /// There are no augments on the item.
   static const DestinyDestinyVendorItemState none = const DestinyDestinyVendorItemState._internal(0);
-  /// DEPRECATED, for now...
+  /// Deprecated forever (probably). There was a time when Records were going to be implemented through Vendors, and this field was relevant. Now they're implemented through Presentation Nodes, and this field doesn't matter anymore.
   static const DestinyDestinyVendorItemState incomplete = const DestinyDestinyVendorItemState._internal(1);
-  /// DEPRECATED, for now...
+  /// Deprecated forever (probably). See the description of the "Incomplete" value for the juicy scoop.
   static const DestinyDestinyVendorItemState rewardAvailable = const DestinyDestinyVendorItemState._internal(2);
-  /// DEPRECATED, for now...
+  /// Deprecated forever (probably). See the description of the "Incomplete" value for the juicy scoop.
   static const DestinyDestinyVendorItemState complete = const DestinyDestinyVendorItemState._internal(4);
   /// This item is considered to be "newly available", and should have some UI showing how shiny it is.
   static const DestinyDestinyVendorItemState new_ = const DestinyDestinyVendorItemState._internal(8);
@@ -25,6 +25,10 @@ class DestinyDestinyVendorItemState {
   static const DestinyDestinyVendorItemState onSale = const DestinyDestinyVendorItemState._internal(64);
   /// This item is already owned.
   static const DestinyDestinyVendorItemState owned = const DestinyDestinyVendorItemState._internal(128);
+  /// This item should be shown with a "wide view" instead of normal icon view.
+  static const DestinyDestinyVendorItemState wideView = const DestinyDestinyVendorItemState._internal(256);
+  /// This indicates that you should show some kind of attention-requesting indicator on the item, in a similar manner to items in the nexus that have such notifications.
+  static const DestinyDestinyVendorItemState nexusAttention = const DestinyDestinyVendorItemState._internal(512);
 }
 
 class DestinyDestinyVendorItemStateTypeTransformer extends TypeTransformer<DestinyDestinyVendorItemState> {
@@ -46,6 +50,8 @@ class DestinyDestinyVendorItemStateTypeTransformer extends TypeTransformer<Desti
       case 32: return DestinyDestinyVendorItemState.ending;
       case 64: return DestinyDestinyVendorItemState.onSale;
       case 128: return DestinyDestinyVendorItemState.owned;
+      case 256: return DestinyDestinyVendorItemState.wideView;
+      case 512: return DestinyDestinyVendorItemState.nexusAttention;
       default: throw('Unknown enum value to decode: $data');
     }
   }

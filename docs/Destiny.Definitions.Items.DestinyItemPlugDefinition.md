@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **alternateUiPlugLabel** | **String** | If the plug meets certain state requirements, it may have an alternative label applied to it. This is the alternative label that will be applied in such a situation. | [optional] [default to null]
 **alternatePlugStyle** | [**DestinyPlugUiStyles**](DestinyPlugUiStyles.md) | The alternate plug of the plug: only applies when the item is in states that only the server can know about and control, unfortunately. See AlternateUiPlugLabel for the related label info. | [optional] [default to null]
 **isDummyPlug** | **bool** | If TRUE, this plug is used for UI display purposes only, and doesn&#39;t have any interesting effects of its own. | [optional] [default to null]
+**parentItemOverride** | [**DestinyDefinitionsItemsDestinyParentItemOverride**](DestinyDefinitionsItemsDestinyParentItemOverride.md) | Do you ever get the feeling that a system has become so overburdened by edge cases that it probably should have become some other system entirely? So do I!  In totally unrelated news, Plugs can now override properties of their parent items. This is some of the relevant definition data for those overrides.  If this is populated, it will have the override data to be applied when this plug is applied to an item. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

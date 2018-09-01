@@ -22,11 +22,15 @@ class DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition {
   @Property(name: 'suppressNewness')
   bool suppressNewness = null;
   
+/* If this flyout is meant to show you the contents of the player's equipment slot, this is the slot to show. */
+  @Property(name: 'equipmentSlotHash')
+  int equipmentSlotHash = null;
+  
   DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition[lockedDescription=$lockedDescription, displayProperties=$displayProperties, buckets=$buckets, flyoutId=$flyoutId, suppressNewness=$suppressNewness, ]';
+    return 'DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition[lockedDescription=$lockedDescription, displayProperties=$displayProperties, buckets=$buckets, flyoutId=$flyoutId, suppressNewness=$suppressNewness, equipmentSlotHash=$equipmentSlotHash, ]';
   }
 }
 

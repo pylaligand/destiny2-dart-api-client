@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **levelProgression** | [**DestinyDestinyProgression**](DestinyDestinyProgression.md) | The progression that indicates your character&#39;s level. Not their light level, but their character level: you know, the thing you max out a couple hours in and then ignore for the sake of light level. | [optional] [default to null]
 **baseCharacterLevel** | **int** | The \&quot;base\&quot; level of your character, not accounting for any light level. | [optional] [default to null]
 **percentToNextLevel** | **double** | A number between 0 and 100, indicating the whole and fractional % remaining to get to the next character level. | [optional] [default to null]
+**titleRecordHash** | **int** | If this Character has a title assigned to it, this is the identifier of the DestinyRecordDefinition that has that title information. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

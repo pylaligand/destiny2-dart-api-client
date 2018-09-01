@@ -86,11 +86,15 @@ class DestinyEntitiesCharactersDestinyCharacterComponent {
   @Property(name: 'percentToNextLevel')
   double percentToNextLevel = null;
   
+/* If this Character has a title assigned to it, this is the identifier of the DestinyRecordDefinition that has that title information. */
+  @Property(name: 'titleRecordHash')
+  int titleRecordHash = null;
+  
   DestinyEntitiesCharactersDestinyCharacterComponent();
 
   @override
   String toString()  {
-    return 'DestinyEntitiesCharactersDestinyCharacterComponent[membershipId=$membershipId, membershipType=$membershipType, characterId=$characterId, dateLastPlayed=$dateLastPlayed, minutesPlayedThisSession=$minutesPlayedThisSession, minutesPlayedTotal=$minutesPlayedTotal, light=$light, stats=$stats, raceHash=$raceHash, genderHash=$genderHash, classHash=$classHash, raceType=$raceType, classType=$classType, genderType=$genderType, emblemPath=$emblemPath, emblemBackgroundPath=$emblemBackgroundPath, emblemHash=$emblemHash, emblemColor=$emblemColor, levelProgression=$levelProgression, baseCharacterLevel=$baseCharacterLevel, percentToNextLevel=$percentToNextLevel, ]';
+    return 'DestinyEntitiesCharactersDestinyCharacterComponent[membershipId=$membershipId, membershipType=$membershipType, characterId=$characterId, dateLastPlayed=$dateLastPlayed, minutesPlayedThisSession=$minutesPlayedThisSession, minutesPlayedTotal=$minutesPlayedTotal, light=$light, stats=$stats, raceHash=$raceHash, genderHash=$genderHash, classHash=$classHash, raceType=$raceType, classType=$classType, genderType=$genderType, emblemPath=$emblemPath, emblemBackgroundPath=$emblemBackgroundPath, emblemHash=$emblemHash, emblemColor=$emblemColor, levelProgression=$levelProgression, baseCharacterLevel=$baseCharacterLevel, percentToNextLevel=$percentToNextLevel, titleRecordHash=$titleRecordHash, ]';
   }
 }
 

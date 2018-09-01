@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **minimumVisibilityThreshold** | **int** | If nonzero, this is the minimum value at which the objective&#39;s progression should be shown. Otherwise, don&#39;t show it yet. | [optional] [default to null]
 **allowOvercompletion** | **bool** | If True, the progress will continue even beyond the point where the objective met its minimum completion requirements. Your UI will have to accommodate it. | [optional] [default to null]
 **showValueOnComplete** | **bool** | If True, you should continue showing the progression value in the UI after it&#39;s complete. I mean, we already do that in BNet anyways, but if you want to be better behaved than us you could honor this flag. | [optional] [default to null]
+**completedValueStyle** | [**DestinyDestinyUnlockValueUIStyle**](DestinyDestinyUnlockValueUIStyle.md) | The style to use when the objective is completed. | [optional] [default to null]
+**inProgressValueStyle** | [**DestinyDestinyUnlockValueUIStyle**](DestinyDestinyUnlockValueUIStyle.md) | The style to use when the objective is still in progress. | [optional] [default to null]
 **hash** | **int** | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. | [optional] [default to null]
 **index** | **int** | The index of the entity as it was found in the investment tables. | [optional] [default to null]
 **redacted** | **bool** | If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry! | [optional] [default to null]

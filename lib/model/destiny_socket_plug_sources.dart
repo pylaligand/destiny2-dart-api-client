@@ -10,6 +10,7 @@ class DestinySocketPlugSources {
   /// If there's no way we can detect to insert new plugs.
   static const DestinySocketPlugSources none = const DestinySocketPlugSources._internal(0);
   /// Use plugs found in the player's inventory, based on the socket type rules (see DestinySocketTypeDefinition for more info)
+Note that a socket - like Shaders - can have *both* reusable plugs and inventory items inserted theoretically.
   static const DestinySocketPlugSources inventorySourced = const DestinySocketPlugSources._internal(1);
   /// Use the DestinyItemSocketsComponent.sockets.reusablePlugs property to determine which plugs are valid for this socket.
   static const DestinySocketPlugSources reusablePlugItems = const DestinySocketPlugSources._internal(2);

@@ -10,7 +10,7 @@ class FireteamApi {
   /// 
   ///
   /// Gets a count of all active non-public fireteams for the specified clan. Maximum value returned is 25.
-  Future<InlineResponse20016> fireteamGetActivePrivateClanFireteamCount(int groupId) async {
+  Future<InlineResponse20019> fireteamGetActivePrivateClanFireteamCount(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -53,7 +53,7 @@ class FireteamApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -61,7 +61,7 @@ class FireteamApi {
   /// 
   ///
   /// Gets a listing of all of this clan&#39;s fireteams that are have available slots. Caller is not checked for join criteria so caching is maximized.
-  Future<InlineResponse20060> fireteamGetAvailableClanFireteams(int activityType, int dateRange, int groupId, int page, int platform, int publicOnly, int slotFilter) async {
+  Future<InlineResponse20064> fireteamGetAvailableClanFireteams(int activityType, int dateRange, int groupId, int page, int platform, int publicOnly, int slotFilter, { String langFilter }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -94,6 +94,9 @@ class FireteamApi {
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
+    if(langFilter != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat("", "langFilter", langFilter));
+    }
     
     List<String> contentTypes = [];
 
@@ -122,7 +125,7 @@ class FireteamApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20060') as InlineResponse20060 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20064') as InlineResponse20064 ;
     } else {
       return null;
     }
@@ -130,7 +133,7 @@ class FireteamApi {
   /// 
   ///
   /// Gets a specific clan fireteam.
-  Future<InlineResponse20062> fireteamGetClanFireteam(int fireteamId, int groupId) async {
+  Future<InlineResponse20066> fireteamGetClanFireteam(int fireteamId, int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -176,7 +179,7 @@ class FireteamApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20062') as InlineResponse20062 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20066') as InlineResponse20066 ;
     } else {
       return null;
     }
@@ -184,7 +187,7 @@ class FireteamApi {
   /// 
   ///
   /// Gets a listing of all clan fireteams that caller is an applicant, a member, or an alternate of.
-  Future<InlineResponse20061> fireteamGetMyClanFireteams(int groupId, bool includeClosed, int page, int platform, { bool groupFilter }) async {
+  Future<InlineResponse20065> fireteamGetMyClanFireteams(int groupId, bool includeClosed, int page, int platform, { bool groupFilter, String langFilter }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -211,6 +214,9 @@ class FireteamApi {
     if(groupFilter != null) {
       queryParams.addAll(_convertParametersForCollectionFormat("", "groupFilter", groupFilter));
     }
+    if(langFilter != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat("", "langFilter", langFilter));
+    }
     
     List<String> contentTypes = [];
 
@@ -239,7 +245,7 @@ class FireteamApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20061') as InlineResponse20061 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20065') as InlineResponse20065 ;
     } else {
       return null;
     }
@@ -247,7 +253,7 @@ class FireteamApi {
   /// 
   ///
   /// Gets a listing of all public fireteams starting now with open slots. Caller is not checked for join criteria so caching is maximized.
-  Future<InlineResponse20060> fireteamSearchPublicAvailableClanFireteams(int activityType, int dateRange, int page, int platform, int slotFilter) async {
+  Future<InlineResponse20064> fireteamSearchPublicAvailableClanFireteams(int activityType, int dateRange, int page, int platform, int slotFilter, { String langFilter }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -274,6 +280,9 @@ class FireteamApi {
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
+    if(langFilter != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat("", "langFilter", langFilter));
+    }
     
     List<String> contentTypes = [];
 
@@ -302,7 +311,7 @@ class FireteamApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20060') as InlineResponse20060 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20064') as InlineResponse20064 ;
     } else {
       return null;
     }

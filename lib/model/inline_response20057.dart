@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20057 {
   
   @Property(name: 'Response')
-  TrendingTrendingCategories response = null;
+  DestinyAdvancedAwaInitializeResponse response = null;
   
 
   @Property(name: 'ErrorCode')
@@ -26,11 +26,15 @@ class InlineResponse20057 {
   @Property(name: 'MessageData')
   Map<String, String> messageData = {};
   
+
+  @Property(name: 'DetailedErrorTrace')
+  String detailedErrorTrace = null;
+  
   InlineResponse20057();
 
   @override
   String toString()  {
-    return 'InlineResponse20057[response=$response, errorCode=$errorCode, throttleSeconds=$throttleSeconds, errorStatus=$errorStatus, message=$message, messageData=$messageData, ]';
+    return 'InlineResponse20057[response=$response, errorCode=$errorCode, throttleSeconds=$throttleSeconds, errorStatus=$errorStatus, message=$message, messageData=$messageData, detailedErrorTrace=$detailedErrorTrace, ]';
   }
 }
 

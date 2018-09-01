@@ -6,7 +6,7 @@ class DestinyDefinitionsDestinyItemObjectiveBlockDefinition {
   @Property(name: 'objectiveHashes')
   List<int> objectiveHashes = [];
   
-/* For every entry in objectiveHashes, there is a corresponding entry in this array at the same index. If the objective is meant to be associated with a specific DestinyActivityDefinition, there will be a valid hash at that index. Otherwise, it will be invalid (0). */
+/* For every entry in objectiveHashes, there is a corresponding entry in this array at the same index. If the objective is meant to be associated with a specific DestinyActivityDefinition, there will be a valid hash at that index. Otherwise, it will be invalid (0).  Rendered somewhat obsolete by perObjectiveDisplayProperties, which currently has much the same information but may end up with more info in the future. */
   @Property(name: 'displayActivityHashes')
   List<int> displayActivityHashes = [];
   
@@ -34,11 +34,15 @@ class DestinyDefinitionsDestinyItemObjectiveBlockDefinition {
   @Property(name: 'questTypeHash')
   int questTypeHash = null;
   
+/* One entry per Objective on the item, it will have related display information. */
+  @Property(name: 'perObjectiveDisplayProperties')
+  List<DestinyDefinitionsDestinyObjectiveDisplayProperties> perObjectiveDisplayProperties = [];
+  
   DestinyDefinitionsDestinyItemObjectiveBlockDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyItemObjectiveBlockDefinition[objectiveHashes=$objectiveHashes, displayActivityHashes=$displayActivityHashes, requireFullObjectiveCompletion=$requireFullObjectiveCompletion, questlineItemHash=$questlineItemHash, narrative=$narrative, objectiveVerbName=$objectiveVerbName, questTypeIdentifier=$questTypeIdentifier, questTypeHash=$questTypeHash, ]';
+    return 'DestinyDefinitionsDestinyItemObjectiveBlockDefinition[objectiveHashes=$objectiveHashes, displayActivityHashes=$displayActivityHashes, requireFullObjectiveCompletion=$requireFullObjectiveCompletion, questlineItemHash=$questlineItemHash, narrative=$narrative, objectiveVerbName=$objectiveVerbName, questTypeIdentifier=$questTypeIdentifier, questTypeHash=$questTypeHash, perObjectiveDisplayProperties=$perObjectiveDisplayProperties, ]';
   }
 }
 

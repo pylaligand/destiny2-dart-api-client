@@ -2,7 +2,11 @@ part of destiny2_api.api;
 
 @Entity()
 class DestinyDefinitionsSocketsDestinyPlugSetDefinition {
-  /* This is a list of pre-determined plugs that can be plugged into this socket, without the character having the plug in their inventory.  If this list is populated, you will not be allowed to plug an arbitrary item in the socket: you will only be able to choose from one of these reusable plugs. */
+  /* If you want to show these plugs in isolation, these are the display properties for them. */
+  @Property(name: 'displayProperties')
+  DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
+  
+/* This is a list of pre-determined plugs that can be plugged into this socket, without the character having the plug in their inventory.  If this list is populated, you will not be allowed to plug an arbitrary item in the socket: you will only be able to choose from one of these reusable plugs. */
   @Property(name: 'reusablePlugItems')
   List<DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition> reusablePlugItems = [];
   
@@ -22,7 +26,7 @@ class DestinyDefinitionsSocketsDestinyPlugSetDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsSocketsDestinyPlugSetDefinition[reusablePlugItems=$reusablePlugItems, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsSocketsDestinyPlugSetDefinition[displayProperties=$displayProperties, reusablePlugItems=$reusablePlugItems, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

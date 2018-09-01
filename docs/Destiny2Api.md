@@ -28,6 +28,7 @@ Method | HTTP request | Description
 [**destiny2GetItem**](Destiny2Api.md#destiny2GetItem) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Item/{itemInstanceId}/ | 
 [**destiny2GetLeaderboards**](Destiny2Api.md#destiny2GetLeaderboards) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/ | 
 [**destiny2GetLeaderboardsForCharacter**](Destiny2Api.md#destiny2GetLeaderboardsForCharacter) | **GET** /Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/ | 
+[**destiny2GetLinkedProfiles**](Destiny2Api.md#destiny2GetLinkedProfiles) | **GET** /Destiny2/{membershipType}/Profile/{membershipId}/LinkedProfiles/ | 
 [**destiny2GetPostGameCarnageReport**](Destiny2Api.md#destiny2GetPostGameCarnageReport) | **GET** /Destiny2/Stats/PostGameCarnageReport/{activityId}/ | 
 [**destiny2GetProfile**](Destiny2Api.md#destiny2GetProfile) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/ | 
 [**destiny2GetPublicMilestoneContent**](Destiny2Api.md#destiny2GetPublicMilestoneContent) | **GET** /Destiny2/Milestones/{milestoneHash}/Content/ | 
@@ -45,7 +46,7 @@ Method | HTTP request | Description
 
 
 # **destiny2AwaGetActionToken**
-> InlineResponse20054 destiny2AwaGetActionToken(correlationId)
+> InlineResponse20058 destiny2AwaGetActionToken(correlationId)
 
 
 
@@ -76,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20054**](InlineResponse20054.md)
+[**InlineResponse20058**](InlineResponse20058.md)
 
 ### Authorization
 
@@ -90,7 +91,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2AwaInitializeRequest**
-> InlineResponse20053 destiny2AwaInitializeRequest()
+> InlineResponse20057 destiny2AwaInitializeRequest()
 
 
 
@@ -117,7 +118,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20053**](InlineResponse20053.md)
+[**InlineResponse20057**](InlineResponse20057.md)
 
 ### Authorization
 
@@ -131,7 +132,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2AwaProvideAuthorizationResult**
-> InlineResponse20016 destiny2AwaProvideAuthorizationResult()
+> InlineResponse20019 destiny2AwaProvideAuthorizationResult()
 
 
 
@@ -156,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -170,7 +171,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2EquipItem**
-> InlineResponse20016 destiny2EquipItem()
+> InlineResponse20019 destiny2EquipItem()
 
 
 
@@ -197,7 +198,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -211,7 +212,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2EquipItems**
-> InlineResponse20039 destiny2EquipItems()
+> InlineResponse20043 destiny2EquipItems()
 
 
 
@@ -238,7 +239,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 
@@ -252,7 +253,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetActivityHistory**
-> InlineResponse20048 destiny2GetActivityHistory(characterId, destinyMembershipId, membershipType, count, mode, page)
+> InlineResponse20052 destiny2GetActivityHistory(characterId, destinyMembershipId, membershipType, count, mode, page)
 
 
 
@@ -291,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20048**](InlineResponse20048.md)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 
@@ -305,7 +306,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetCharacter**
-> InlineResponse20034 destiny2GetCharacter(characterId, destinyMembershipId, membershipType, components)
+> InlineResponse20038 destiny2GetCharacter(characterId, destinyMembershipId, membershipType, components)
 
 
 
@@ -340,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -354,7 +355,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetClanAggregateStats**
-> InlineResponse20044 destiny2GetClanAggregateStats(groupId, modes)
+> InlineResponse20048 destiny2GetClanAggregateStats(groupId, modes)
 
 
 
@@ -385,7 +386,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20044**](InlineResponse20044.md)
+[**InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 
@@ -399,7 +400,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetClanLeaderboards**
-> InlineResponse20043 destiny2GetClanLeaderboards(groupId, maxtop, modes, statid)
+> InlineResponse20047 destiny2GetClanLeaderboards(groupId, maxtop, modes, statid)
 
 
 
@@ -434,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -448,7 +449,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetClanWeeklyRewardState**
-> InlineResponse20035 destiny2GetClanWeeklyRewardState(groupId)
+> InlineResponse20039 destiny2GetClanWeeklyRewardState(groupId)
 
 
 
@@ -477,7 +478,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**InlineResponse20039**](InlineResponse20039.md)
 
 ### Authorization
 
@@ -491,7 +492,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetDestinyAggregateActivityStats**
-> InlineResponse20050 destiny2GetDestinyAggregateActivityStats(characterId, destinyMembershipId, membershipType)
+> InlineResponse20054 destiny2GetDestinyAggregateActivityStats(characterId, destinyMembershipId, membershipType)
 
 
 
@@ -524,7 +525,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 
@@ -538,7 +539,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetDestinyEntityDefinition**
-> InlineResponse20031 destiny2GetDestinyEntityDefinition(entityType, hashIdentifier)
+> InlineResponse20034 destiny2GetDestinyEntityDefinition(entityType, hashIdentifier)
 
 
 
@@ -569,7 +570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20031**](InlineResponse20031.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -583,7 +584,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetDestinyManifest**
-> InlineResponse20030 destiny2GetDestinyManifest()
+> InlineResponse20033 destiny2GetDestinyManifest()
 
 
 
@@ -608,7 +609,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20030**](InlineResponse20030.md)
+[**InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 
@@ -622,7 +623,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetHistoricalStats**
-> InlineResponse20046 destiny2GetHistoricalStats(characterId, destinyMembershipId, membershipType, dayend, daystart, groups, modes, periodType)
+> InlineResponse20050 destiny2GetHistoricalStats(characterId, destinyMembershipId, membershipType, dayend, daystart, groups, modes, periodType)
 
 
 
@@ -665,7 +666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20046**](InlineResponse20046.md)
+[**InlineResponse20050**](InlineResponse20050.md)
 
 ### Authorization
 
@@ -679,7 +680,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetHistoricalStatsDefinition**
-> InlineResponse20042 destiny2GetHistoricalStatsDefinition()
+> InlineResponse20046 destiny2GetHistoricalStatsDefinition()
 
 
 
@@ -704,7 +705,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20042**](InlineResponse20042.md)
+[**InlineResponse20046**](InlineResponse20046.md)
 
 ### Authorization
 
@@ -718,7 +719,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetHistoricalStatsForAccount**
-> InlineResponse20047 destiny2GetHistoricalStatsForAccount(destinyMembershipId, membershipType, groups)
+> InlineResponse20051 destiny2GetHistoricalStatsForAccount(destinyMembershipId, membershipType, groups)
 
 
 
@@ -751,7 +752,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20047**](InlineResponse20047.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -765,7 +766,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetItem**
-> InlineResponse20036 destiny2GetItem(destinyMembershipId, itemInstanceId, membershipType, components)
+> InlineResponse20040 destiny2GetItem(destinyMembershipId, itemInstanceId, membershipType, components)
 
 
 
@@ -800,7 +801,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20040**](InlineResponse20040.md)
 
 ### Authorization
 
@@ -814,7 +815,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetLeaderboards**
-> InlineResponse20043 destiny2GetLeaderboards(destinyMembershipId, membershipType, maxtop, modes, statid)
+> InlineResponse20047 destiny2GetLeaderboards(destinyMembershipId, membershipType, maxtop, modes, statid)
 
 
 
@@ -851,7 +852,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -865,7 +866,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetLeaderboardsForCharacter**
-> InlineResponse20043 destiny2GetLeaderboardsForCharacter(characterId, destinyMembershipId, membershipType, maxtop, modes, statid)
+> InlineResponse20047 destiny2GetLeaderboardsForCharacter(characterId, destinyMembershipId, membershipType, maxtop, modes, statid)
 
 
 
@@ -904,7 +905,52 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20047**](InlineResponse20047.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **destiny2GetLinkedProfiles**
+> InlineResponse20036 destiny2GetLinkedProfiles(membershipId, membershipType)
+
+
+
+Returns a summary information about all profiles linked to the requesting membership type/membership ID that have valid Destiny information. The passed-in Membership Type/Membership ID may be a Bungie.Net membership or a Destiny membership. It only returns the minimal amount of data to begin making more substantive requests, but will hopefully serve as a useful alternative to UserServices for people who just care about Destiny data. Note that it will only return linked accounts whose linkages you are allowed to view.
+
+### Example 
+```dart
+import 'package:destiny2_api/api.dart';
+
+var api_instance = new Destiny2Api();
+var membershipId = 789; // int | The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don't pass us a PSN membership ID and the XBox membership type, it's not going to work!
+var membershipType = 56; // int | The type for the membership whose linked Destiny accounts you want returned.
+
+try { 
+    var result = api_instance.destiny2GetLinkedProfiles(membershipId, membershipType);
+    print(result);
+} catch (e) {
+    print("Exception when calling Destiny2Api->destiny2GetLinkedProfiles: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **membershipId** | **int**| The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don&#39;t pass us a PSN membership ID and the XBox membership type, it&#39;s not going to work! | 
+ **membershipType** | **int**| The type for the membership whose linked Destiny accounts you want returned. | 
+
+### Return type
+
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 
@@ -918,7 +964,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetPostGameCarnageReport**
-> InlineResponse20041 destiny2GetPostGameCarnageReport(activityId)
+> InlineResponse20045 destiny2GetPostGameCarnageReport(activityId)
 
 
 
@@ -947,7 +993,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20041**](InlineResponse20041.md)
+[**InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -961,7 +1007,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetProfile**
-> InlineResponse20033 destiny2GetProfile(destinyMembershipId, membershipType, components)
+> InlineResponse20037 destiny2GetProfile(destinyMembershipId, membershipType, components)
 
 
 
@@ -994,7 +1040,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20037**](InlineResponse20037.md)
 
 ### Authorization
 
@@ -1008,7 +1054,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetPublicMilestoneContent**
-> InlineResponse20051 destiny2GetPublicMilestoneContent(milestoneHash)
+> InlineResponse20055 destiny2GetPublicMilestoneContent(milestoneHash)
 
 
 
@@ -1037,7 +1083,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 
@@ -1051,7 +1097,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetPublicMilestones**
-> InlineResponse20052 destiny2GetPublicMilestones()
+> InlineResponse20056 destiny2GetPublicMilestones()
 
 
 
@@ -1076,7 +1122,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20052**](InlineResponse20052.md)
+[**InlineResponse20056**](InlineResponse20056.md)
 
 ### Authorization
 
@@ -1090,7 +1136,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetUniqueWeaponHistory**
-> InlineResponse20049 destiny2GetUniqueWeaponHistory(characterId, destinyMembershipId, membershipType)
+> InlineResponse20053 destiny2GetUniqueWeaponHistory(characterId, destinyMembershipId, membershipType)
 
 
 
@@ -1123,7 +1169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 
@@ -1137,7 +1183,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetVendor**
-> InlineResponse20038 destiny2GetVendor(characterId, destinyMembershipId, membershipType, vendorHash, components)
+> InlineResponse20042 destiny2GetVendor(characterId, destinyMembershipId, membershipType, vendorHash, components)
 
 
 
@@ -1174,7 +1220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -1188,7 +1234,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetVendors**
-> InlineResponse20037 destiny2GetVendors(characterId, destinyMembershipId, membershipType, components)
+> InlineResponse20041 destiny2GetVendors(characterId, destinyMembershipId, membershipType, components)
 
 
 
@@ -1223,7 +1269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -1237,7 +1283,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2InsertSocketPlug**
-> InlineResponse20040 destiny2InsertSocketPlug()
+> InlineResponse20044 destiny2InsertSocketPlug()
 
 
 
@@ -1264,7 +1310,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -1278,7 +1324,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2PullFromPostmaster**
-> InlineResponse20016 destiny2PullFromPostmaster()
+> InlineResponse20019 destiny2PullFromPostmaster()
 
 
 
@@ -1305,7 +1351,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -1319,7 +1365,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2ReportOffensivePostGameCarnageReportPlayer**
-> InlineResponse20016 destiny2ReportOffensivePostGameCarnageReportPlayer(activityId)
+> InlineResponse20019 destiny2ReportOffensivePostGameCarnageReportPlayer(activityId)
 
 
 
@@ -1350,7 +1396,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -1364,7 +1410,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2SearchDestinyEntities**
-> InlineResponse20045 destiny2SearchDestinyEntities(searchTerm, type, page)
+> InlineResponse20049 destiny2SearchDestinyEntities(searchTerm, type, page)
 
 
 
@@ -1397,7 +1443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20049**](InlineResponse20049.md)
 
 ### Authorization
 
@@ -1411,7 +1457,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2SearchDestinyPlayer**
-> InlineResponse20032 destiny2SearchDestinyPlayer(displayName, membershipType)
+> InlineResponse20035 destiny2SearchDestinyPlayer(displayName, membershipType)
 
 
 
@@ -1442,7 +1488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20032**](InlineResponse20032.md)
+[**InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 
@@ -1456,7 +1502,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2SetItemLockState**
-> InlineResponse20016 destiny2SetItemLockState()
+> InlineResponse20019 destiny2SetItemLockState()
 
 
 
@@ -1483,7 +1529,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -1497,7 +1543,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2TransferItem**
-> InlineResponse20016 destiny2TransferItem()
+> InlineResponse20019 destiny2TransferItem()
 
 
 
@@ -1524,7 +1570,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 

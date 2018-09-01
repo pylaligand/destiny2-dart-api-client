@@ -122,6 +122,10 @@ class DestinyDefinitionsDestinyVendorDefinition {
   @Property(name: 'groups')
   List<DestinyDefinitionsDestinyVendorGroupReference> groups = [];
   
+/* Some items don't make sense to return in the API, for example because they represent an action to be performed rather than an item being sold. I'd rather we not do this, but at least in the short term this is a workable workaround. */
+  @Property(name: 'ignoreSaleItemHashes')
+  List<int> ignoreSaleItemHashes = [];
+  
 /* The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. */
   @Property(name: 'hash')
   int hash = null;
@@ -138,7 +142,7 @@ class DestinyDefinitionsDestinyVendorDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyVendorDefinition[displayProperties=$displayProperties, buyString=$buyString, sellString=$sellString, displayItemHash=$displayItemHash, inhibitBuying=$inhibitBuying, inhibitSelling=$inhibitSelling, factionHash=$factionHash, resetIntervalMinutes=$resetIntervalMinutes, resetOffsetMinutes=$resetOffsetMinutes, failureStrings=$failureStrings, unlockRanges=$unlockRanges, vendorIdentifier=$vendorIdentifier, vendorPortrait=$vendorPortrait, vendorBanner=$vendorBanner, enabled=$enabled, visible=$visible, vendorSubcategoryIdentifier=$vendorSubcategoryIdentifier, consolidateCategories=$consolidateCategories, actions=$actions, categories=$categories, originalCategories=$originalCategories, displayCategories=$displayCategories, interactions=$interactions, inventoryFlyouts=$inventoryFlyouts, itemList=$itemList, services=$services, acceptedItems=$acceptedItems, returnWithVendorRequest=$returnWithVendorRequest, locations=$locations, groups=$groups, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyVendorDefinition[displayProperties=$displayProperties, buyString=$buyString, sellString=$sellString, displayItemHash=$displayItemHash, inhibitBuying=$inhibitBuying, inhibitSelling=$inhibitSelling, factionHash=$factionHash, resetIntervalMinutes=$resetIntervalMinutes, resetOffsetMinutes=$resetOffsetMinutes, failureStrings=$failureStrings, unlockRanges=$unlockRanges, vendorIdentifier=$vendorIdentifier, vendorPortrait=$vendorPortrait, vendorBanner=$vendorBanner, enabled=$enabled, visible=$visible, vendorSubcategoryIdentifier=$vendorSubcategoryIdentifier, consolidateCategories=$consolidateCategories, actions=$actions, categories=$categories, originalCategories=$originalCategories, displayCategories=$displayCategories, interactions=$interactions, inventoryFlyouts=$inventoryFlyouts, itemList=$itemList, services=$services, acceptedItems=$acceptedItems, returnWithVendorRequest=$returnWithVendorRequest, locations=$locations, groups=$groups, ignoreSaleItemHashes=$ignoreSaleItemHashes, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

@@ -22,6 +22,10 @@ class DestinyDefinitionsDestinyItemCategoryDefinition {
   @Property(name: 'itemTypeRegex')
   String itemTypeRegex = null;
   
+/* If the item is a plug, this is the identifier we expect to find associated with it if it is in this category. */
+  @Property(name: 'plugCategoryIdentifier')
+  String plugCategoryIdentifier = null;
+  
 /* If the item type matches this janky regex, it does *not* belong to this category. */
   @Property(name: 'itemTypeRegexNot')
   String itemTypeRegexNot = null;
@@ -70,7 +74,7 @@ class DestinyDefinitionsDestinyItemCategoryDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyItemCategoryDefinition[displayProperties=$displayProperties, visible=$visible, deprecated=$deprecated, shortTitle=$shortTitle, itemTypeRegex=$itemTypeRegex, itemTypeRegexNot=$itemTypeRegexNot, originBucketIdentifier=$originBucketIdentifier, grantDestinyItemType=$grantDestinyItemType, grantDestinySubType=$grantDestinySubType, grantDestinyClass=$grantDestinyClass, groupedCategoryHashes=$groupedCategoryHashes, parentCategoryHashes=$parentCategoryHashes, groupCategoryOnly=$groupCategoryOnly, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyItemCategoryDefinition[displayProperties=$displayProperties, visible=$visible, deprecated=$deprecated, shortTitle=$shortTitle, itemTypeRegex=$itemTypeRegex, plugCategoryIdentifier=$plugCategoryIdentifier, itemTypeRegexNot=$itemTypeRegexNot, originBucketIdentifier=$originBucketIdentifier, grantDestinyItemType=$grantDestinyItemType, grantDestinySubType=$grantDestinySubType, grantDestinyClass=$grantDestinyClass, groupedCategoryHashes=$groupedCategoryHashes, parentCategoryHashes=$parentCategoryHashes, groupCategoryOnly=$groupCategoryOnly, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

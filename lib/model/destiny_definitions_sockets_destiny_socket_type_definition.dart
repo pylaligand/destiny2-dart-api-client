@@ -18,7 +18,7 @@ class DestinyDefinitionsSocketsDestinySocketTypeDefinition {
   @Property(name: 'socketCategoryHash')
   int socketCategoryHash = null;
   
-
+/* Sometimes a socket isn't visible. These are some of the conditions under which sockets of this type are not visible. Unfortunately, the truth of visibility is much, much more complex. Best to rely on the live data for whether the socket is visible and enabled. */
   @Property(name: 'visibility')
   DestinyDestinySocketVisibility visibility = null;
   

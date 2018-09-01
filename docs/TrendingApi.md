@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **trendingGetTrendingCategories**
-> InlineResponse20057 trendingGetTrendingCategories()
+> InlineResponse20061 trendingGetTrendingCategories()
 
 
 
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20057**](InlineResponse20057.md)
+[**InlineResponse20061**](InlineResponse20061.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **trendingGetTrendingCategory**
-> InlineResponse20058 trendingGetTrendingCategory(categoryId, pageNumber)
+> InlineResponse20062 trendingGetTrendingCategory(categoryId, pageNumber)
 
 
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20058**](InlineResponse20058.md)
+[**InlineResponse20062**](InlineResponse20062.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **trendingGetTrendingEntryDetail**
-> InlineResponse20059 trendingGetTrendingEntryDetail(identifier, trendingEntryType)
+> InlineResponse20063 trendingGetTrendingEntryDetail(identifier, trendingEntryType)
 
 
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20059**](InlineResponse20059.md)
+[**InlineResponse20063**](InlineResponse20063.md)
 
 ### Authorization
 
