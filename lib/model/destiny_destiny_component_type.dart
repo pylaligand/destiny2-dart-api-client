@@ -7,6 +7,7 @@ class DestinyDestinyComponentType {
 
   const DestinyDestinyComponentType._internal(this.value);
 
+  /// Represents the possible components that can be returned from Destiny \"Get\" calls such as GetProfile, GetCharacter, GetVendor etc...  When making one of these requests, you will pass one or more of these components as a comma separated list in the \"?components=\" querystring parameter. For instance, if you want baseline Profile data, Character Data, and character progressions, you would pass \"?components=Profiles,Characters,CharacterProgressions\" You may use either the numerical or string values.
   static const DestinyDestinyComponentType none = const DestinyDestinyComponentType._internal(0);
   /// Profiles is the most basic component, only relevant when calling GetProfile. This returns basic information about the profile, which is almost nothing: a list of characterIds, some information about the last time you logged in, and that most sobering statistic: how long you've played.
   static const DestinyDestinyComponentType profiles = const DestinyDestinyComponentType._internal(100);
@@ -16,6 +17,8 @@ class DestinyDestinyComponentType {
   static const DestinyDestinyComponentType profileInventories = const DestinyDestinyComponentType._internal(102);
   /// This will get you a summary of items on your Profile that we consider to be "currencies", such as Glimmer. I mean, if there's Glimmer in Destiny 2. I didn't say there was Glimmer.
   static const DestinyDestinyComponentType profileCurrencies = const DestinyDestinyComponentType._internal(103);
+  /// This will get you any progression-related information that exists on a Profile-wide level, across all characters.
+  static const DestinyDestinyComponentType profileProgression = const DestinyDestinyComponentType._internal(104);
   /// This will get you summary info about each of the characters in the profile.
   static const DestinyDestinyComponentType characters = const DestinyDestinyComponentType._internal(200);
   /// This will get you information about any non-equipped items on the character or character(s) in question, if you're allowed to see it. You have to either be authenticated as that user, or that user must allow anonymous viewing of their non-equipped items in Bungie.Net settings to actually get results.
@@ -56,6 +59,12 @@ class DestinyDestinyComponentType {
   static const DestinyDestinyComponentType kiosks = const DestinyDestinyComponentType._internal(500);
   /// A "shortcut" component that will give you all of the item hashes/quantities of items that the requested character can use to determine if an action (purchasing, socket insertion) has the required currency. (recall that all currencies are just items, and that some vendor purchases require items that you might not traditionally consider to be a "currency", like plugs/mods!)
   static const DestinyDestinyComponentType currencyLookups = const DestinyDestinyComponentType._internal(600);
+  /// Returns summary status information about all "Presentation Nodes". See DestinyPresentationNodeDefinition for more details, but the gist is that these are entities used by the game UI to bucket Collectibles and Records into a hierarchy of categories. You may ask for and use this data if you want to perform similar bucketing in your own UI: or you can skip it and roll your own.
+  static const DestinyDestinyComponentType presentationNodes = const DestinyDestinyComponentType._internal(700);
+  /// Returns summary status information about all "Collectibles". These are records of what items you've discovered while playing Destiny, and some other basic information. For detailed information, you will have to call a separate endpoint devoted to the purpose.
+  static const DestinyDestinyComponentType collectibles = const DestinyDestinyComponentType._internal(800);
+  /// Returns summary status information about all "Records" (also known in the game as "Triumphs". I know, it's confusing because there's also "Moments of Triumph" that will themselves be represented as "Triumphs.")
+  static const DestinyDestinyComponentType records = const DestinyDestinyComponentType._internal(900);
 }
 
 class DestinyDestinyComponentTypeTypeTransformer extends TypeTransformer<DestinyDestinyComponentType> {
@@ -73,6 +82,7 @@ class DestinyDestinyComponentTypeTypeTransformer extends TypeTransformer<Destiny
       case 101: return DestinyDestinyComponentType.vendorReceipts;
       case 102: return DestinyDestinyComponentType.profileInventories;
       case 103: return DestinyDestinyComponentType.profileCurrencies;
+      case 104: return DestinyDestinyComponentType.profileProgression;
       case 200: return DestinyDestinyComponentType.characters;
       case 201: return DestinyDestinyComponentType.characterInventories;
       case 202: return DestinyDestinyComponentType.characterProgressions;
@@ -93,6 +103,9 @@ class DestinyDestinyComponentTypeTypeTransformer extends TypeTransformer<Destiny
       case 402: return DestinyDestinyComponentType.vendorSales;
       case 500: return DestinyDestinyComponentType.kiosks;
       case 600: return DestinyDestinyComponentType.currencyLookups;
+      case 700: return DestinyDestinyComponentType.presentationNodes;
+      case 800: return DestinyDestinyComponentType.collectibles;
+      case 900: return DestinyDestinyComponentType.records;
       default: throw('Unknown enum value to decode: $data');
     }
   }

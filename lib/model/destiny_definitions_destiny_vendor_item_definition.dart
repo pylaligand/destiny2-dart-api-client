@@ -90,11 +90,23 @@ class DestinyDefinitionsDestinyVendorItemDefinition {
   @Property(name: 'sortValue')
   int sortValue = null;
   
+/* If this item can expire, this is the tooltip message to show with its expiration info. */
+  @Property(name: 'expirationTooltip')
+  String expirationTooltip = null;
+  
+/* If this is populated, the purchase of this item should redirect to purchasing these other items instead. */
+  @Property(name: 'redirectToSaleIndexes')
+  List<int> redirectToSaleIndexes = [];
+  
+
+  @Property(name: 'socketOverrides')
+  List<DestinyDefinitionsDestinyVendorItemSocketOverride> socketOverrides = [];
+  
   DestinyDefinitionsDestinyVendorItemDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyVendorItemDefinition[vendorItemIndex=$vendorItemIndex, itemHash=$itemHash, quantity=$quantity, failureIndexes=$failureIndexes, currencies=$currencies, refundPolicy=$refundPolicy, refundTimeLimit=$refundTimeLimit, creationLevels=$creationLevels, displayCategoryIndex=$displayCategoryIndex, categoryIndex=$categoryIndex, originalCategoryIndex=$originalCategoryIndex, minimumLevel=$minimumLevel, maximumLevel=$maximumLevel, action=$action, displayCategory=$displayCategory, inventoryBucketHash=$inventoryBucketHash, visibilityScope=$visibilityScope, purchasableScope=$purchasableScope, exclusivity=$exclusivity, isOffer=$isOffer, isCrm=$isCrm, sortValue=$sortValue, ]';
+    return 'DestinyDefinitionsDestinyVendorItemDefinition[vendorItemIndex=$vendorItemIndex, itemHash=$itemHash, quantity=$quantity, failureIndexes=$failureIndexes, currencies=$currencies, refundPolicy=$refundPolicy, refundTimeLimit=$refundTimeLimit, creationLevels=$creationLevels, displayCategoryIndex=$displayCategoryIndex, categoryIndex=$categoryIndex, originalCategoryIndex=$originalCategoryIndex, minimumLevel=$minimumLevel, maximumLevel=$maximumLevel, action=$action, displayCategory=$displayCategory, inventoryBucketHash=$inventoryBucketHash, visibilityScope=$visibilityScope, purchasableScope=$purchasableScope, exclusivity=$exclusivity, isOffer=$isOffer, isCrm=$isCrm, sortValue=$sortValue, expirationTooltip=$expirationTooltip, redirectToSaleIndexes=$redirectToSaleIndexes, socketOverrides=$socketOverrides, ]';
   }
 }
 

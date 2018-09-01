@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20012 {
   
   @Property(name: 'Response')
-  List<ForumForumRecruitmentDetail> response = [];
+  List<TagsModelsContractsTagResponse> response = [];
   
 
   @Property(name: 'ErrorCode')
@@ -26,11 +26,15 @@ class InlineResponse20012 {
   @Property(name: 'MessageData')
   Map<String, String> messageData = {};
   
+
+  @Property(name: 'DetailedErrorTrace')
+  String detailedErrorTrace = null;
+  
   InlineResponse20012();
 
   @override
   String toString()  {
-    return 'InlineResponse20012[response=$response, errorCode=$errorCode, throttleSeconds=$throttleSeconds, errorStatus=$errorStatus, message=$message, messageData=$messageData, ]';
+    return 'InlineResponse20012[response=$response, errorCode=$errorCode, throttleSeconds=$throttleSeconds, errorStatus=$errorStatus, message=$message, messageData=$messageData, detailedErrorTrace=$detailedErrorTrace, ]';
   }
 }
 

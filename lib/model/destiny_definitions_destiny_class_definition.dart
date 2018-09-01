@@ -14,7 +14,7 @@ class DestinyDefinitionsDestinyClassDefinition {
   @Property(name: 'genderedClassNames')
   Map<String, String> genderedClassNames = {};
   
-/* If the Class has a Mentor (all classes *should*), this will be the hash identifier for that Vendor if you care. */
+/* Mentors don't really mean anything anymore. Don't expect this to be populated. */
   @Property(name: 'mentorVendorHash')
   int mentorVendorHash = null;
   

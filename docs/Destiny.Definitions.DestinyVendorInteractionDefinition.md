@@ -8,6 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**interactionIndex** | **int** | The position of this interaction in its parent array. Note that this is NOT content agnostic, and should not be used as such. | [optional] [default to null]
 **replies** | [**List&lt;DestinyDefinitionsDestinyVendorInteractionReplyDefinition&gt;**](DestinyDefinitionsDestinyVendorInteractionReplyDefinition.md) | The potential replies that the user can make to the interaction. | [optional] [default to []]
 **vendorCategoryIndex** | **int** | If &gt;&#x3D; 0, this is the category of sale items to show along with this interaction dialog. | [optional] [default to null]
 **questlineItemHash** | **int** | If this interaction dialog is about a quest, this is the questline related to the interaction. You can use this to show the quest overview, or even the character&#39;s status with the quest if you use it to find the character&#39;s current Quest Step by checking their inventory against this questlineItemHash&#39;s DestinyInventoryItemDefinition.setData. | [optional] [default to null]

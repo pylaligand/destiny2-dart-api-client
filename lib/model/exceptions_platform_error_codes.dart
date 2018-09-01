@@ -539,6 +539,8 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes destinySocketActionNotAllowed = const ExceptionsPlatformErrorCodes._internal(1678);
   static const ExceptionsPlatformErrorCodes destinySocketAlreadyHasPlug = const ExceptionsPlatformErrorCodes._internal(1679);
   static const ExceptionsPlatformErrorCodes destinyPlugItemNotAvailable = const ExceptionsPlatformErrorCodes._internal(1680);
+  static const ExceptionsPlatformErrorCodes destinyCharacterLoggedInNotAllowed = const ExceptionsPlatformErrorCodes._internal(1681);
+  static const ExceptionsPlatformErrorCodes destinyPublicAccountNotAccessible = const ExceptionsPlatformErrorCodes._internal(1682);
   static const ExceptionsPlatformErrorCodes fbInvalidRequest = const ExceptionsPlatformErrorCodes._internal(1800);
   static const ExceptionsPlatformErrorCodes fbRedirectMismatch = const ExceptionsPlatformErrorCodes._internal(1801);
   static const ExceptionsPlatformErrorCodes fbAccessDenied = const ExceptionsPlatformErrorCodes._internal(1802);
@@ -607,6 +609,8 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes tokenRequiresCredentialXuid = const ExceptionsPlatformErrorCodes._internal(2044);
   static const ExceptionsPlatformErrorCodes tokenRequiresCredentialPsnid = const ExceptionsPlatformErrorCodes._internal(2045);
   static const ExceptionsPlatformErrorCodes offerRequired = const ExceptionsPlatformErrorCodes._internal(2046);
+  static const ExceptionsPlatformErrorCodes unknownEververseHistoryError = const ExceptionsPlatformErrorCodes._internal(2047);
+  static const ExceptionsPlatformErrorCodes missingEververseHistoryError = const ExceptionsPlatformErrorCodes._internal(2048);
   static const ExceptionsPlatformErrorCodes apiExceededMaxKeys = const ExceptionsPlatformErrorCodes._internal(2100);
   static const ExceptionsPlatformErrorCodes apiInvalidOrExpiredKey = const ExceptionsPlatformErrorCodes._internal(2101);
   static const ExceptionsPlatformErrorCodes apiKeyMissingFromRequest = const ExceptionsPlatformErrorCodes._internal(2102);
@@ -669,6 +673,10 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes clanFireteamNotReadyForInvitesNotScheduledYet = const ExceptionsPlatformErrorCodes._internal(3018);
   static const ExceptionsPlatformErrorCodes clanFireteamNotReadyForInvitesClosed = const ExceptionsPlatformErrorCodes._internal(3019);
   static const ExceptionsPlatformErrorCodes clanFireteamScheduledFireteamsRequireAdminPermissions = const ExceptionsPlatformErrorCodes._internal(3020);
+  static const ExceptionsPlatformErrorCodes clanFireteamNonPublicMustHaveClan = const ExceptionsPlatformErrorCodes._internal(3021);
+  static const ExceptionsPlatformErrorCodes clanFireteamPublicCreationRestriction = const ExceptionsPlatformErrorCodes._internal(3022);
+  static const ExceptionsPlatformErrorCodes clanFireteamAlreadyJoined = const ExceptionsPlatformErrorCodes._internal(3023);
+  static const ExceptionsPlatformErrorCodes clanFireteamScheduledFireteamsRange = const ExceptionsPlatformErrorCodes._internal(3024);
 }
 
 class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<ExceptionsPlatformErrorCodes> {
@@ -1211,6 +1219,8 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 1678: return ExceptionsPlatformErrorCodes.destinySocketActionNotAllowed;
       case 1679: return ExceptionsPlatformErrorCodes.destinySocketAlreadyHasPlug;
       case 1680: return ExceptionsPlatformErrorCodes.destinyPlugItemNotAvailable;
+      case 1681: return ExceptionsPlatformErrorCodes.destinyCharacterLoggedInNotAllowed;
+      case 1682: return ExceptionsPlatformErrorCodes.destinyPublicAccountNotAccessible;
       case 1800: return ExceptionsPlatformErrorCodes.fbInvalidRequest;
       case 1801: return ExceptionsPlatformErrorCodes.fbRedirectMismatch;
       case 1802: return ExceptionsPlatformErrorCodes.fbAccessDenied;
@@ -1279,6 +1289,8 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 2044: return ExceptionsPlatformErrorCodes.tokenRequiresCredentialXuid;
       case 2045: return ExceptionsPlatformErrorCodes.tokenRequiresCredentialPsnid;
       case 2046: return ExceptionsPlatformErrorCodes.offerRequired;
+      case 2047: return ExceptionsPlatformErrorCodes.unknownEververseHistoryError;
+      case 2048: return ExceptionsPlatformErrorCodes.missingEververseHistoryError;
       case 2100: return ExceptionsPlatformErrorCodes.apiExceededMaxKeys;
       case 2101: return ExceptionsPlatformErrorCodes.apiInvalidOrExpiredKey;
       case 2102: return ExceptionsPlatformErrorCodes.apiKeyMissingFromRequest;
@@ -1341,6 +1353,10 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 3018: return ExceptionsPlatformErrorCodes.clanFireteamNotReadyForInvitesNotScheduledYet;
       case 3019: return ExceptionsPlatformErrorCodes.clanFireteamNotReadyForInvitesClosed;
       case 3020: return ExceptionsPlatformErrorCodes.clanFireteamScheduledFireteamsRequireAdminPermissions;
+      case 3021: return ExceptionsPlatformErrorCodes.clanFireteamNonPublicMustHaveClan;
+      case 3022: return ExceptionsPlatformErrorCodes.clanFireteamPublicCreationRestriction;
+      case 3023: return ExceptionsPlatformErrorCodes.clanFireteamAlreadyJoined;
+      case 3024: return ExceptionsPlatformErrorCodes.clanFireteamScheduledFireteamsRange;
       default: throw('Unknown enum value to decode: $data');
     }
   }

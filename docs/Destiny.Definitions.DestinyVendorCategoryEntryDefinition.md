@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 **vendorItemIndexes** | **List&lt;int&gt;** | A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime. | [optional] [default to []]
 **isPreview** | **bool** | Sometimes a category isn&#39;t actually used to sell items, but rather to preview them. This implies different UI (and manual placement of the category in the UI) in the game, and special treatment. | [optional] [default to null]
 **isDisplayOnly** | **bool** | If true, this category only displays items: you can&#39;t purchase anything in them. | [optional] [default to null]
+**resetIntervalMinutesOverride** | **int** |  | [optional] [default to null]
+**resetOffsetMinutesOverride** | **int** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

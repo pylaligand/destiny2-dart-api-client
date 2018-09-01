@@ -63,6 +63,8 @@ class DestinyDestinyItemSubType {
   static const DestinyDestinyItemSubType legArmor = const DestinyDestinyItemSubType._internal(29);
   /// This Enumeration further classifies items by more specific categorizations than DestinyItemType. The \"Sub-Type\" is where we classify and categorize items one step further in specificity: \"Auto Rifle\" instead of just \"Weapon\" for example, or \"Vanguard Bounty\" instead of merely \"Bounty\".  These sub-types are provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.  NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
   static const DestinyDestinyItemSubType classArmor = const DestinyDestinyItemSubType._internal(30);
+  /// This Enumeration further classifies items by more specific categorizations than DestinyItemType. The \"Sub-Type\" is where we classify and categorize items one step further in specificity: \"Auto Rifle\" instead of just \"Weapon\" for example, or \"Vanguard Bounty\" instead of merely \"Bounty\".  These sub-types are provided for historical compatibility with Destiny 1, but an ideal alternative is to use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead. Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categories across multiple hierarchies simultaneously. For this enum, we pick a single type as a \"best guess\" fit.  NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may or may not still exist.
+  static const DestinyDestinyItemSubType bow = const DestinyDestinyItemSubType._internal(31);
 }
 
 class DestinyDestinyItemSubTypeTypeTransformer extends TypeTransformer<DestinyDestinyItemSubType> {
@@ -103,6 +105,7 @@ class DestinyDestinyItemSubTypeTypeTransformer extends TypeTransformer<DestinyDe
       case 28: return DestinyDestinyItemSubType.chestArmor;
       case 29: return DestinyDestinyItemSubType.legArmor;
       case 30: return DestinyDestinyItemSubType.classArmor;
+      case 31: return DestinyDestinyItemSubType.bow;
       default: throw('Unknown enum value to decode: $data');
     }
   }

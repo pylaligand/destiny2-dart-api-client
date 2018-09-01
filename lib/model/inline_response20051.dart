@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20051 {
   
   @Property(name: 'Response')
-  DestinyMilestonesDestinyMilestoneContent response = null;
+  DestinyHistoricalStatsDestinyHistoricalStatsAccountResult response = null;
   
 
   @Property(name: 'ErrorCode')
@@ -26,11 +26,15 @@ class InlineResponse20051 {
   @Property(name: 'MessageData')
   Map<String, String> messageData = {};
   
+
+  @Property(name: 'DetailedErrorTrace')
+  String detailedErrorTrace = null;
+  
   InlineResponse20051();
 
   @override
   String toString()  {
-    return 'InlineResponse20051[response=$response, errorCode=$errorCode, throttleSeconds=$throttleSeconds, errorStatus=$errorStatus, message=$message, messageData=$messageData, ]';
+    return 'InlineResponse20051[response=$response, errorCode=$errorCode, throttleSeconds=$throttleSeconds, errorStatus=$errorStatus, message=$message, messageData=$messageData, detailedErrorTrace=$detailedErrorTrace, ]';
   }
 }
 

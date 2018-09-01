@@ -62,11 +62,19 @@ class DestinyDefinitionsDestinyVendorCategoryEntryDefinition {
   @Property(name: 'isDisplayOnly')
   bool isDisplayOnly = null;
   
+
+  @Property(name: 'resetIntervalMinutesOverride')
+  int resetIntervalMinutesOverride = null;
+  
+
+  @Property(name: 'resetOffsetMinutesOverride')
+  int resetOffsetMinutesOverride = null;
+  
   DestinyDefinitionsDestinyVendorCategoryEntryDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyVendorCategoryEntryDefinition[categoryIndex=$categoryIndex, categoryId=$categoryId, sortValue=$sortValue, categoryHash=$categoryHash, quantityAvailable=$quantityAvailable, showUnavailableItems=$showUnavailableItems, hideIfNoCurrency=$hideIfNoCurrency, hideFromRegularPurchase=$hideFromRegularPurchase, buyStringOverride=$buyStringOverride, disabledDescription=$disabledDescription, displayTitle=$displayTitle, overlay=$overlay, vendorItemIndexes=$vendorItemIndexes, isPreview=$isPreview, isDisplayOnly=$isDisplayOnly, ]';
+    return 'DestinyDefinitionsDestinyVendorCategoryEntryDefinition[categoryIndex=$categoryIndex, categoryId=$categoryId, sortValue=$sortValue, categoryHash=$categoryHash, quantityAvailable=$quantityAvailable, showUnavailableItems=$showUnavailableItems, hideIfNoCurrency=$hideIfNoCurrency, hideFromRegularPurchase=$hideFromRegularPurchase, buyStringOverride=$buyStringOverride, disabledDescription=$disabledDescription, displayTitle=$displayTitle, overlay=$overlay, vendorItemIndexes=$vendorItemIndexes, isPreview=$isPreview, isDisplayOnly=$isDisplayOnly, resetIntervalMinutesOverride=$resetIntervalMinutesOverride, resetOffsetMinutesOverride=$resetOffsetMinutesOverride, ]';
   }
 }
 

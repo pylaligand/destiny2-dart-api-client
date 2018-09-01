@@ -52,6 +52,8 @@ String _parameterToString(dynamic value) {
     return new CommunityCommunityStatusSortTypeTransformer().encode(value).toString();
   } else if (value is ComponentsComponentPrivacySetting) {
     return new ComponentsComponentPrivacySettingTypeTransformer().encode(value).toString();
+  } else if (value is ContentModelsContentPropertyDataTypeEnum) {
+    return new ContentModelsContentPropertyDataTypeEnumTypeTransformer().encode(value).toString();
   } else if (value is DestinyActivityGraphNodeHighlightType) {
     return new DestinyActivityGraphNodeHighlightTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyAdvancedAwaResponseReason) {
@@ -86,6 +88,8 @@ String _parameterToString(dynamic value) {
     return new DestinyDestinyActivityModeCategoryTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyActivityNavPointType) {
     return new DestinyDestinyActivityNavPointTypeTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyAmmunitionType) {
+    return new DestinyDestinyAmmunitionTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyClass) {
     return new DestinyDestinyClassTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyComponentType) {
@@ -96,6 +100,8 @@ String _parameterToString(dynamic value) {
     return new DestinyDestinyGatingScopeTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyGender) {
     return new DestinyDestinyGenderTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyGraphNodeState) {
+    return new DestinyDestinyGraphNodeStateTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyItemSortType) {
     return new DestinyDestinyItemSortTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyItemSubType) {
@@ -104,12 +110,24 @@ String _parameterToString(dynamic value) {
     return new DestinyDestinyItemTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyObjectiveGrantStyle) {
     return new DestinyDestinyObjectiveGrantStyleTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyPresentationDisplayStyle) {
+    return new DestinyDestinyPresentationDisplayStyleTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyPresentationNodeType) {
+    return new DestinyDestinyPresentationNodeTypeTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyPresentationScreenStyle) {
+    return new DestinyDestinyPresentationScreenStyleTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyProgressionScope) {
     return new DestinyDestinyProgressionScopeTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyProgressionStepDisplayEffect) {
     return new DestinyDestinyProgressionStepDisplayEffectTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyRace) {
     return new DestinyDestinyRaceTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyRecordToastStyle) {
+    return new DestinyDestinyRecordToastStyleTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyRecordValueStyle) {
+    return new DestinyDestinyRecordValueStyleTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyScope) {
+    return new DestinyDestinyScopeTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinySocketCategoryStyle) {
     return new DestinyDestinySocketCategoryStyleTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinySocketVisibility) {
@@ -212,6 +230,10 @@ String _parameterToString(dynamic value) {
     return new ForumForumTopicsQuickDateEnumTypeTransformer().encode(value).toString();
   } else if (value is ForumForumTopicsSortEnum) {
     return new ForumForumTopicsSortEnumTypeTransformer().encode(value).toString();
+  } else if (value is GlobalAlertLevel) {
+    return new GlobalAlertLevelTypeTransformer().encode(value).toString();
+  } else if (value is GlobalAlertType) {
+    return new GlobalAlertTypeTypeTransformer().encode(value).toString();
   } else if (value is GroupsV2Capabilities) {
     return new GroupsV2CapabilitiesTypeTransformer().encode(value).toString();
   } else if (value is GroupsV2ChatSecuritySetting) {

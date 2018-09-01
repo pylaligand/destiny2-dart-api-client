@@ -30,6 +30,9 @@ Name | Type | Description | Notes
 **isOffer** | **bool** | If this sale can only be performed as the result of an offer check, this is true. | [optional] [default to null]
 **isCrm** | **bool** | If this sale can only be performed as the result of receiving a CRM offer, this is true. | [optional] [default to null]
 **sortValue** | **int** | *if* the category this item is in supports non-default sorting, this value should represent the sorting value to use, pre-processed and ready to go. | [optional] [default to null]
+**expirationTooltip** | **String** | If this item can expire, this is the tooltip message to show with its expiration info. | [optional] [default to null]
+**redirectToSaleIndexes** | **List&lt;int&gt;** | If this is populated, the purchase of this item should redirect to purchasing these other items instead. | [optional] [default to []]
+**socketOverrides** | [**List&lt;DestinyDefinitionsDestinyVendorItemSocketOverride&gt;**](DestinyDefinitionsDestinyVendorItemSocketOverride.md) |  | [optional] [default to []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

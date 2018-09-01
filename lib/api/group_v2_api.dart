@@ -10,7 +10,7 @@ class GroupV2Api {
   /// 
   ///
   /// An administrative method to allow the founder of a group or clan to give up their position to another admin permanently.
-  Future<InlineResponse20015> groupV2AbdicateFoundership(int founderIdNew, int groupId, int membershipType) async {
+  Future<InlineResponse20018> groupV2AbdicateFoundership(int founderIdNew, int groupId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -59,7 +59,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20015') as InlineResponse20015 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20018') as InlineResponse20018 ;
     } else {
       return null;
     }
@@ -67,7 +67,7 @@ class GroupV2Api {
   /// 
   ///
   /// Add a new optional conversation/chat channel. Requires admin permissions to the group.
-  Future<InlineResponse2008> groupV2AddOptionalConversation(int groupId) async {
+  Future<InlineResponse20011> groupV2AddOptionalConversation(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -110,7 +110,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2008') as InlineResponse2008 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20011') as InlineResponse20011 ;
     } else {
       return null;
     }
@@ -118,7 +118,7 @@ class GroupV2Api {
   /// 
   ///
   /// Approve all of the pending users for the given group.
-  Future<InlineResponse20027> groupV2ApproveAllPending(int groupId) async {
+  Future<InlineResponse20030> groupV2ApproveAllPending(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -161,7 +161,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20027') as InlineResponse20027 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20030') as InlineResponse20030 ;
     } else {
       return null;
     }
@@ -169,7 +169,7 @@ class GroupV2Api {
   /// 
   ///
   /// Approve the given membershipId to join the group/clan as long as they have applied.
-  Future<InlineResponse20015> groupV2ApprovePending(int groupId, int membershipId, int membershipType) async {
+  Future<InlineResponse20018> groupV2ApprovePending(int groupId, int membershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -218,7 +218,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20015') as InlineResponse20015 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20018') as InlineResponse20018 ;
     } else {
       return null;
     }
@@ -226,7 +226,7 @@ class GroupV2Api {
   /// 
   ///
   /// Approve all of the pending users for the given group.
-  Future<InlineResponse20027> groupV2ApprovePendingForList(int groupId) async {
+  Future<InlineResponse20030> groupV2ApprovePendingForList(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -269,7 +269,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20027') as InlineResponse20027 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20030') as InlineResponse20030 ;
     } else {
       return null;
     }
@@ -277,7 +277,7 @@ class GroupV2Api {
   /// 
   ///
   /// Bans the requested member from the requested group for the specified period of time.
-  Future<InlineResponse20016> groupV2BanMember(int groupId, int membershipId, int membershipType) async {
+  Future<InlineResponse20019> groupV2BanMember(int groupId, int membershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -326,7 +326,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -334,7 +334,7 @@ class GroupV2Api {
   /// 
   ///
   /// Create a new group.
-  Future<InlineResponse20021> groupV2CreateGroup() async {
+  Future<InlineResponse20024> groupV2CreateGroup() async {
     Object postBody = null;
 
     // verify required params are set
@@ -374,7 +374,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20021') as InlineResponse20021 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20024') as InlineResponse20024 ;
     } else {
       return null;
     }
@@ -382,7 +382,7 @@ class GroupV2Api {
   /// 
   ///
   /// Deny all of the pending users for the given group.
-  Future<InlineResponse20027> groupV2DenyAllPending(int groupId) async {
+  Future<InlineResponse20030> groupV2DenyAllPending(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -425,7 +425,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20027') as InlineResponse20027 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20030') as InlineResponse20030 ;
     } else {
       return null;
     }
@@ -433,7 +433,7 @@ class GroupV2Api {
   /// 
   ///
   /// Deny all of the pending users for the given group that match the passed-in .
-  Future<InlineResponse20027> groupV2DenyPendingForList(int groupId) async {
+  Future<InlineResponse20030> groupV2DenyPendingForList(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -476,7 +476,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20027') as InlineResponse20027 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20030') as InlineResponse20030 ;
     } else {
       return null;
     }
@@ -484,7 +484,7 @@ class GroupV2Api {
   /// 
   ///
   /// Edit an existing group&#39;s clan banner. You must have suitable permissions in the group to perform this operation. All fields are required.
-  Future<InlineResponse20016> groupV2EditClanBanner(int groupId) async {
+  Future<InlineResponse20019> groupV2EditClanBanner(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -527,7 +527,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -535,7 +535,7 @@ class GroupV2Api {
   /// 
   ///
   /// Edit group options only available to a founder. You must have suitable permissions in the group to perform this operation.
-  Future<InlineResponse20016> groupV2EditFounderOptions(int groupId) async {
+  Future<InlineResponse20019> groupV2EditFounderOptions(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -578,7 +578,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -586,7 +586,7 @@ class GroupV2Api {
   /// 
   ///
   /// Edit an existing group. You must have suitable permissions in the group to perform this operation. This latest revision will only edit the fields you pass in - pass null for properties you want to leave unaltered.
-  Future<InlineResponse20016> groupV2EditGroup(int groupId) async {
+  Future<InlineResponse20019> groupV2EditGroup(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -629,7 +629,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -637,7 +637,7 @@ class GroupV2Api {
   /// 
   ///
   /// Edit the membership type of a given member. You must have suitable permissions in the group to perform this operation.
-  Future<InlineResponse20016> groupV2EditGroupMembership(int groupId, int membershipId, int membershipType, int memberType) async {
+  Future<InlineResponse20019> groupV2EditGroupMembership(int groupId, int membershipId, int membershipType, int memberType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -689,7 +689,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -697,7 +697,7 @@ class GroupV2Api {
   /// 
   ///
   /// Edit the settings of an optional conversation/chat channel. Requires admin permissions to the group.
-  Future<InlineResponse2008> groupV2EditOptionalConversation(int conversationId, int groupId) async {
+  Future<InlineResponse20011> groupV2EditOptionalConversation(int conversationId, int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -743,7 +743,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse2008') as InlineResponse2008 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20011') as InlineResponse20011 ;
     } else {
       return null;
     }
@@ -751,7 +751,7 @@ class GroupV2Api {
   /// 
   ///
   /// Get the list of members in a given group who are of admin level or higher.
-  Future<InlineResponse20022> groupV2GetAdminsAndFounderOfGroup(int currentpage, int groupId) async {
+  Future<InlineResponse20025> groupV2GetAdminsAndFounderOfGroup(int currentpage, int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -797,7 +797,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20022') as InlineResponse20022 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20025') as InlineResponse20025 ;
     } else {
       return null;
     }
@@ -805,7 +805,7 @@ class GroupV2Api {
   /// 
   ///
   /// Returns a list of all available group avatars for the signed-in user.
-  Future<InlineResponse20013> groupV2GetAvailableAvatars() async {
+  Future<InlineResponse20016> groupV2GetAvailableAvatars() async {
     Object postBody = null;
 
     // verify required params are set
@@ -845,7 +845,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20013') as InlineResponse20013 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
     } else {
       return null;
     }
@@ -853,7 +853,7 @@ class GroupV2Api {
   /// 
   ///
   /// Returns a list of all available group themes.
-  Future<InlineResponse20014> groupV2GetAvailableThemes() async {
+  Future<InlineResponse20017> groupV2GetAvailableThemes() async {
     Object postBody = null;
 
     // verify required params are set
@@ -893,7 +893,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20014') as InlineResponse20014 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20017') as InlineResponse20017 ;
     } else {
       return null;
     }
@@ -901,7 +901,7 @@ class GroupV2Api {
   /// 
   ///
   /// Get the list of banned members in a given group. Only accessible to group Admins and above. Not applicable to all groups. Check group features.
-  Future<InlineResponse20024> groupV2GetBannedMembersOfGroup(int currentpage, int groupId) async {
+  Future<InlineResponse20027> groupV2GetBannedMembersOfGroup(int currentpage, int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -947,7 +947,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20024') as InlineResponse20024 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20027') as InlineResponse20027 ;
     } else {
       return null;
     }
@@ -955,7 +955,7 @@ class GroupV2Api {
   /// 
   ///
   /// Get information about a specific group of the given ID.
-  Future<InlineResponse20019> groupV2GetGroup(int groupId) async {
+  Future<InlineResponse20022> groupV2GetGroup(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -998,7 +998,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20022') as InlineResponse20022 ;
     } else {
       return null;
     }
@@ -1006,7 +1006,7 @@ class GroupV2Api {
   /// 
   ///
   /// Get information about a specific group with the given name and type.
-  Future<InlineResponse20019> groupV2GetGroupByName(String groupName, int groupType) async {
+  Future<InlineResponse20022> groupV2GetGroupByName(String groupName, int groupType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1052,7 +1052,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20022') as InlineResponse20022 ;
     } else {
       return null;
     }
@@ -1060,7 +1060,7 @@ class GroupV2Api {
   /// 
   ///
   /// Gets a list of available optional conversation channels and their settings.
-  Future<InlineResponse20020> groupV2GetGroupOptionalConversations(int groupId) async {
+  Future<InlineResponse20023> groupV2GetGroupOptionalConversations(int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1103,7 +1103,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20020') as InlineResponse20020 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20023') as InlineResponse20023 ;
     } else {
       return null;
     }
@@ -1111,7 +1111,7 @@ class GroupV2Api {
   /// 
   ///
   /// Get information about the groups that a given member has joined.
-  Future<InlineResponse20028> groupV2GetGroupsForMember(int filter, int groupType, int membershipId, int membershipType) async {
+  Future<InlineResponse20031> groupV2GetGroupsForMember(int filter, int groupType, int membershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1163,7 +1163,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20028') as InlineResponse20028 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20031') as InlineResponse20031 ;
     } else {
       return null;
     }
@@ -1171,7 +1171,7 @@ class GroupV2Api {
   /// 
   ///
   /// Get the list of users who have been invited into the group.
-  Future<InlineResponse20026> groupV2GetInvitedIndividuals(int currentpage, int groupId) async {
+  Future<InlineResponse20029> groupV2GetInvitedIndividuals(int currentpage, int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1217,7 +1217,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20026') as InlineResponse20026 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20029') as InlineResponse20029 ;
     } else {
       return null;
     }
@@ -1225,7 +1225,7 @@ class GroupV2Api {
   /// 
   ///
   /// Get the list of members in a given group.
-  Future<InlineResponse20022> groupV2GetMembersOfGroup(int currentpage, int groupId, { int memberType, String nameSearch }) async {
+  Future<InlineResponse20025> groupV2GetMembersOfGroup(int currentpage, int groupId, { int memberType, String nameSearch }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1278,7 +1278,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20022') as InlineResponse20022 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20025') as InlineResponse20025 ;
     } else {
       return null;
     }
@@ -1286,7 +1286,7 @@ class GroupV2Api {
   /// 
   ///
   /// Get the list of users who are awaiting a decision on their application to join a given group. Modified to include application info.
-  Future<InlineResponse20026> groupV2GetPendingMemberships(int currentpage, int groupId) async {
+  Future<InlineResponse20029> groupV2GetPendingMemberships(int currentpage, int groupId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1332,7 +1332,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20026') as InlineResponse20026 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20029') as InlineResponse20029 ;
     } else {
       return null;
     }
@@ -1340,7 +1340,7 @@ class GroupV2Api {
   /// 
   ///
   /// Get information about the groups that a given member has applied to or been invited to.
-  Future<InlineResponse20029> groupV2GetPotentialGroupsForMember(int filter, int groupType, int membershipId, int membershipType) async {
+  Future<InlineResponse20032> groupV2GetPotentialGroupsForMember(int filter, int groupType, int membershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1392,7 +1392,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20029') as InlineResponse20029 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20032') as InlineResponse20032 ;
     } else {
       return null;
     }
@@ -1400,7 +1400,7 @@ class GroupV2Api {
   /// 
   ///
   /// Gets groups recommended for you based on the groups to whom those you follow belong.
-  Future<InlineResponse20017> groupV2GetRecommendedGroups(int createDateRange, int groupType) async {
+  Future<InlineResponse20020> groupV2GetRecommendedGroups(int createDateRange, int groupType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1446,7 +1446,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20017') as InlineResponse20017 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20020') as InlineResponse20020 ;
     } else {
       return null;
     }
@@ -1454,7 +1454,7 @@ class GroupV2Api {
   /// 
   ///
   /// Gets the state of the user&#39;s clan invite preferences for a particular membership type - true if they wish to be invited to clans, false otherwise.
-  Future<InlineResponse20015> groupV2GetUserClanInviteSetting(int mType) async {
+  Future<InlineResponse20018> groupV2GetUserClanInviteSetting(int mType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1497,7 +1497,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20015') as InlineResponse20015 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20018') as InlineResponse20018 ;
     } else {
       return null;
     }
@@ -1505,7 +1505,7 @@ class GroupV2Api {
   /// 
   ///
   /// Search for Groups.
-  Future<InlineResponse20018> groupV2GroupSearch() async {
+  Future<InlineResponse20021> groupV2GroupSearch() async {
     Object postBody = null;
 
     // verify required params are set
@@ -1545,7 +1545,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20018') as InlineResponse20018 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20021') as InlineResponse20021 ;
     } else {
       return null;
     }
@@ -1553,7 +1553,7 @@ class GroupV2Api {
   /// 
   ///
   /// Invite a user to join this group.
-  Future<InlineResponse20025> groupV2IndividualGroupInvite(int groupId, int membershipId, int membershipType) async {
+  Future<InlineResponse20028> groupV2IndividualGroupInvite(int groupId, int membershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1602,7 +1602,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20025') as InlineResponse20025 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20028') as InlineResponse20028 ;
     } else {
       return null;
     }
@@ -1610,7 +1610,7 @@ class GroupV2Api {
   /// 
   ///
   /// Cancels a pending invitation to join a group.
-  Future<InlineResponse20025> groupV2IndividualGroupInviteCancel(int groupId, int membershipId, int membershipType) async {
+  Future<InlineResponse20028> groupV2IndividualGroupInviteCancel(int groupId, int membershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1659,7 +1659,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20025') as InlineResponse20025 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20028') as InlineResponse20028 ;
     } else {
       return null;
     }
@@ -1667,7 +1667,7 @@ class GroupV2Api {
   /// 
   ///
   /// Kick a member from the given group, forcing them to reapply if they wish to re-join the group. You must have suitable permissions in the group to perform this operation.
-  Future<InlineResponse20023> groupV2KickMember(int groupId, int membershipId, int membershipType) async {
+  Future<InlineResponse20026> groupV2KickMember(int groupId, int membershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1716,7 +1716,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20023') as InlineResponse20023 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20026') as InlineResponse20026 ;
     } else {
       return null;
     }
@@ -1724,7 +1724,7 @@ class GroupV2Api {
   /// 
   ///
   /// Request permission to join the given group.
-  Future<InlineResponse20025> groupV2RequestGroupMembership(int groupId, int membershipType) async {
+  Future<InlineResponse20028> groupV2RequestGroupMembership(int groupId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1770,7 +1770,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20025') as InlineResponse20025 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20028') as InlineResponse20028 ;
     } else {
       return null;
     }
@@ -1778,7 +1778,7 @@ class GroupV2Api {
   /// 
   ///
   /// Rescind your application to join the given group or leave the group if you are already a member..
-  Future<InlineResponse20023> groupV2RescindGroupMembership(int groupId, int membershipType) async {
+  Future<InlineResponse20026> groupV2RescindGroupMembership(int groupId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1824,7 +1824,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20023') as InlineResponse20023 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20026') as InlineResponse20026 ;
     } else {
       return null;
     }
@@ -1832,7 +1832,7 @@ class GroupV2Api {
   /// 
   ///
   /// Sets the state of the user&#39;s clan invite preferences - true if they wish to be invited to clans, false otherwise.
-  Future<InlineResponse20016> groupV2SetUserClanInviteSetting(bool allowInvites, int mType) async {
+  Future<InlineResponse20019> groupV2SetUserClanInviteSetting(bool allowInvites, int mType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1878,7 +1878,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }
@@ -1886,7 +1886,7 @@ class GroupV2Api {
   /// 
   ///
   /// Unbans the requested member, allowing them to re-apply for membership.
-  Future<InlineResponse20016> groupV2UnbanMember(int groupId, int membershipId, int membershipType) async {
+  Future<InlineResponse20019> groupV2UnbanMember(int groupId, int membershipId, int membershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -1935,7 +1935,7 @@ class GroupV2Api {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20016') as InlineResponse20016 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20019') as InlineResponse20019 ;
     } else {
       return null;
     }

@@ -2,7 +2,11 @@ part of destiny2_api.api;
 
 @Entity()
 class DestinyDefinitionsDestinyVendorInteractionDefinition {
-  /* The potential replies that the user can make to the interaction. */
+  /* The position of this interaction in its parent array. Note that this is NOT content agnostic, and should not be used as such. */
+  @Property(name: 'interactionIndex')
+  int interactionIndex = null;
+  
+/* The potential replies that the user can make to the interaction. */
   @Property(name: 'replies')
   List<DestinyDefinitionsDestinyVendorInteractionReplyDefinition> replies = [];
   
@@ -54,7 +58,7 @@ class DestinyDefinitionsDestinyVendorInteractionDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyVendorInteractionDefinition[replies=$replies, vendorCategoryIndex=$vendorCategoryIndex, questlineItemHash=$questlineItemHash, sackInteractionList=$sackInteractionList, uiInteractionType=$uiInteractionType, interactionType=$interactionType, rewardBlockLabel=$rewardBlockLabel, rewardVendorCategoryIndex=$rewardVendorCategoryIndex, flavorLineOne=$flavorLineOne, flavorLineTwo=$flavorLineTwo, headerDisplayProperties=$headerDisplayProperties, instructions=$instructions, ]';
+    return 'DestinyDefinitionsDestinyVendorInteractionDefinition[interactionIndex=$interactionIndex, replies=$replies, vendorCategoryIndex=$vendorCategoryIndex, questlineItemHash=$questlineItemHash, sackInteractionList=$sackInteractionList, uiInteractionType=$uiInteractionType, interactionType=$interactionType, rewardBlockLabel=$rewardBlockLabel, rewardVendorCategoryIndex=$rewardVendorCategoryIndex, flavorLineOne=$flavorLineOne, flavorLineTwo=$flavorLineTwo, headerDisplayProperties=$headerDisplayProperties, instructions=$instructions, ]';
   }
 }
 

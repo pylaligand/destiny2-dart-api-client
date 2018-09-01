@@ -23,6 +23,7 @@ class ApiClient {
       ..addTransformer(new BungieMembershipTypeTypeTransformer(), BungieMembershipType)
       ..addTransformer(new CommunityCommunityStatusSortTypeTransformer(), CommunityCommunityStatusSort)
       ..addTransformer(new ComponentsComponentPrivacySettingTypeTransformer(), ComponentsComponentPrivacySetting)
+      ..addTransformer(new ContentModelsContentPropertyDataTypeEnumTypeTransformer(), ContentModelsContentPropertyDataTypeEnum)
       ..addTransformer(new DestinyActivityGraphNodeHighlightTypeTypeTransformer(), DestinyActivityGraphNodeHighlightType)
       ..addTransformer(new DestinyAdvancedAwaResponseReasonTypeTransformer(), DestinyAdvancedAwaResponseReason)
       ..addTransformer(new DestinyAdvancedAwaTypeTypeTransformer(), DestinyAdvancedAwaType)
@@ -40,18 +41,26 @@ class ApiClient {
       ..addTransformer(new DestinyDestinyActivityDifficultyTierTypeTransformer(), DestinyDestinyActivityDifficultyTier)
       ..addTransformer(new DestinyDestinyActivityModeCategoryTypeTransformer(), DestinyDestinyActivityModeCategory)
       ..addTransformer(new DestinyDestinyActivityNavPointTypeTypeTransformer(), DestinyDestinyActivityNavPointType)
+      ..addTransformer(new DestinyDestinyAmmunitionTypeTypeTransformer(), DestinyDestinyAmmunitionType)
       ..addTransformer(new DestinyDestinyClassTypeTransformer(), DestinyDestinyClass)
       ..addTransformer(new DestinyDestinyComponentTypeTypeTransformer(), DestinyDestinyComponentType)
       ..addTransformer(new DestinyDestinyGameVersionsTypeTransformer(), DestinyDestinyGameVersions)
       ..addTransformer(new DestinyDestinyGatingScopeTypeTransformer(), DestinyDestinyGatingScope)
       ..addTransformer(new DestinyDestinyGenderTypeTransformer(), DestinyDestinyGender)
+      ..addTransformer(new DestinyDestinyGraphNodeStateTypeTransformer(), DestinyDestinyGraphNodeState)
       ..addTransformer(new DestinyDestinyItemSortTypeTypeTransformer(), DestinyDestinyItemSortType)
       ..addTransformer(new DestinyDestinyItemSubTypeTypeTransformer(), DestinyDestinyItemSubType)
       ..addTransformer(new DestinyDestinyItemTypeTypeTransformer(), DestinyDestinyItemType)
       ..addTransformer(new DestinyDestinyObjectiveGrantStyleTypeTransformer(), DestinyDestinyObjectiveGrantStyle)
+      ..addTransformer(new DestinyDestinyPresentationDisplayStyleTypeTransformer(), DestinyDestinyPresentationDisplayStyle)
+      ..addTransformer(new DestinyDestinyPresentationNodeTypeTypeTransformer(), DestinyDestinyPresentationNodeType)
+      ..addTransformer(new DestinyDestinyPresentationScreenStyleTypeTransformer(), DestinyDestinyPresentationScreenStyle)
       ..addTransformer(new DestinyDestinyProgressionScopeTypeTransformer(), DestinyDestinyProgressionScope)
       ..addTransformer(new DestinyDestinyProgressionStepDisplayEffectTypeTransformer(), DestinyDestinyProgressionStepDisplayEffect)
       ..addTransformer(new DestinyDestinyRaceTypeTransformer(), DestinyDestinyRace)
+      ..addTransformer(new DestinyDestinyRecordToastStyleTypeTransformer(), DestinyDestinyRecordToastStyle)
+      ..addTransformer(new DestinyDestinyRecordValueStyleTypeTransformer(), DestinyDestinyRecordValueStyle)
+      ..addTransformer(new DestinyDestinyScopeTypeTransformer(), DestinyDestinyScope)
       ..addTransformer(new DestinyDestinySocketCategoryStyleTypeTransformer(), DestinyDestinySocketCategoryStyle)
       ..addTransformer(new DestinyDestinySocketVisibilityTypeTransformer(), DestinyDestinySocketVisibility)
       ..addTransformer(new DestinyDestinyStatAggregationTypeTypeTransformer(), DestinyDestinyStatAggregationType)
@@ -103,6 +112,8 @@ class ApiClient {
       ..addTransformer(new ForumForumTopicsCategoryFiltersEnumTypeTransformer(), ForumForumTopicsCategoryFiltersEnum)
       ..addTransformer(new ForumForumTopicsQuickDateEnumTypeTransformer(), ForumForumTopicsQuickDateEnum)
       ..addTransformer(new ForumForumTopicsSortEnumTypeTransformer(), ForumForumTopicsSortEnum)
+      ..addTransformer(new GlobalAlertLevelTypeTransformer(), GlobalAlertLevel)
+      ..addTransformer(new GlobalAlertTypeTypeTransformer(), GlobalAlertType)
       ..addTransformer(new GroupsV2CapabilitiesTypeTransformer(), GroupsV2Capabilities)
       ..addTransformer(new GroupsV2ChatSecuritySettingTypeTransformer(), GroupsV2ChatSecuritySetting)
       ..addTransformer(new GroupsV2GroupAllianceStatusTypeTransformer(), GroupsV2GroupAllianceStatus)
@@ -190,6 +201,14 @@ class ApiClient {
           return listResult[0];
         case 'BungieMembershipTypeList':
           return dson.map(value, new BungieMembershipTypeList());
+        case 'CommonModelsCoreSetting':
+          return dson.map(value, new CommonModelsCoreSetting());
+        case 'CommonModelsCoreSettingsConfiguration':
+          return dson.map(value, new CommonModelsCoreSettingsConfiguration());
+        case 'CommonModelsCoreSystem':
+          return dson.map(value, new CommonModelsCoreSystem());
+        case 'CommonModelsDestiny2CoreSettings':
+          return dson.map(value, new CommonModelsDestiny2CoreSettings());
         case 'CommunityCommunityLiveStatus':
           return dson.map(value, new CommunityCommunityLiveStatus());
         case 'CommunityCommunityStatusSort':
@@ -216,6 +235,28 @@ class ApiClient {
           return dson.map(value, new ContentContentItemPublicContract());
         case 'ContentContentRepresentation':
           return dson.map(value, new ContentContentRepresentation());
+        case 'ContentModelsContentPreview':
+          return dson.map(value, new ContentModelsContentPreview());
+        case 'ContentModelsContentPropertyDataTypeEnum':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
+        case 'ContentModelsContentTypeDefaultValue':
+          return dson.map(value, new ContentModelsContentTypeDefaultValue());
+        case 'ContentModelsContentTypeDescription':
+          return dson.map(value, new ContentModelsContentTypeDescription());
+        case 'ContentModelsContentTypeProperty':
+          return dson.map(value, new ContentModelsContentTypeProperty());
+        case 'ContentModelsContentTypePropertySection':
+          return dson.map(value, new ContentModelsContentTypePropertySection());
+        case 'ContentModelsTagMetadataDefinition':
+          return dson.map(value, new ContentModelsTagMetadataDefinition());
+        case 'ContentModelsTagMetadataItem':
+          return dson.map(value, new ContentModelsTagMetadataItem());
+        case 'CoreIdentifierOfuint32':
+          return dson.map(value, new CoreIdentifierOfuint32());
         case 'DatesDateRange':
           return dson.map(value, new DatesDateRange());
         case 'DestinyActivitiesDestinyPublicActivityStatus':
@@ -252,6 +293,12 @@ class ApiClient {
           final listValue = [value];
           final List<dynamic> listResult = dson.map(listValue, []);
           return listResult[0];
+        case 'DestinyBaseItemComponentSetOfint32':
+          return dson.map(value, new DestinyBaseItemComponentSetOfint32());
+        case 'DestinyBaseItemComponentSetOfint64':
+          return dson.map(value, new DestinyBaseItemComponentSetOfint64());
+        case 'DestinyBaseItemComponentSetOfuint32':
+          return dson.map(value, new DestinyBaseItemComponentSetOfuint32());
         case 'DestinyBucketCategory':
           // Enclose the value in a list so that Dartson can use a transformer
           // to decode it.
@@ -282,6 +329,8 @@ class ApiClient {
           return dson.map(value, new DestinyComponentsKiosksDestinyKiosksComponent());
         case 'DestinyComponentsPlugSetsDestinyPlugSetsComponent':
           return dson.map(value, new DestinyComponentsPlugSetsDestinyPlugSetsComponent());
+        case 'DestinyComponentsProfilesDestinyProfileProgressionComponent':
+          return dson.map(value, new DestinyComponentsProfilesDestinyProfileProgressionComponent());
         case 'DestinyComponentsVendorsDestinyVendorGroup':
           return dson.map(value, new DestinyComponentsVendorsDestinyVendorGroup());
         case 'DestinyComponentsVendorsDestinyVendorGroupComponent':
@@ -292,6 +341,8 @@ class ApiClient {
           return dson.map(value, new DestinyConfigDestinyManifest());
         case 'DestinyConfigGearAssetDataBaseDefinition':
           return dson.map(value, new DestinyConfigGearAssetDataBaseDefinition());
+        case 'DestinyConstantsDestinyEnvironmentLocationMapping':
+          return dson.map(value, new DestinyConstantsDestinyEnvironmentLocationMapping());
         case 'DestinyDamageType':
           // Enclose the value in a list so that Dartson can use a transformer
           // to decode it.
@@ -302,6 +353,16 @@ class ApiClient {
           return dson.map(value, new DestinyDefinitionsActivityModifiersDestinyActivityModifierDefinition());
         case 'DestinyDefinitionsAnimationsDestinyAnimationReference':
           return dson.map(value, new DestinyDefinitionsAnimationsDestinyAnimationReference());
+        case 'DestinyDefinitionsChecklistsDestinyChecklistDefinition':
+          return dson.map(value, new DestinyDefinitionsChecklistsDestinyChecklistDefinition());
+        case 'DestinyDefinitionsChecklistsDestinyChecklistEntryDefinition':
+          return dson.map(value, new DestinyDefinitionsChecklistsDestinyChecklistEntryDefinition());
+        case 'DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock':
+          return dson.map(value, new DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock());
+        case 'DestinyDefinitionsCollectiblesDestinyCollectibleDefinition':
+          return dson.map(value, new DestinyDefinitionsCollectiblesDestinyCollectibleDefinition());
+        case 'DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock':
+          return dson.map(value, new DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock());
         case 'DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition':
           return dson.map(value, new DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition());
         case 'DestinyDefinitionsCommonDestinyPositionDefinition':
@@ -314,6 +375,12 @@ class ApiClient {
           return dson.map(value, new DestinyDefinitionsDestinyActivityGraphListEntryDefinition());
         case 'DestinyDefinitionsDestinyActivityGuidedBlockDefinition':
           return dson.map(value, new DestinyDefinitionsDestinyActivityGuidedBlockDefinition());
+        case 'DestinyDefinitionsDestinyActivityInsertionPointDefinition':
+          return dson.map(value, new DestinyDefinitionsDestinyActivityInsertionPointDefinition());
+        case 'DestinyDefinitionsDestinyActivityLoadoutRequirement':
+          return dson.map(value, new DestinyDefinitionsDestinyActivityLoadoutRequirement());
+        case 'DestinyDefinitionsDestinyActivityLoadoutRequirementSet':
+          return dson.map(value, new DestinyDefinitionsDestinyActivityLoadoutRequirementSet());
         case 'DestinyDefinitionsDestinyActivityMatchmakingBlockDefinition':
           return dson.map(value, new DestinyDefinitionsDestinyActivityMatchmakingBlockDefinition());
         case 'DestinyDefinitionsDestinyActivityModeDefinition':
@@ -404,6 +471,8 @@ class ApiClient {
           return dson.map(value, new DestinyDefinitionsDestinyItemSocketEntryDefinition());
         case 'DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition':
           return dson.map(value, new DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition());
+        case 'DestinyDefinitionsDestinyItemSocketEntryPlugItemRandomizedDefinition':
+          return dson.map(value, new DestinyDefinitionsDestinyItemSocketEntryPlugItemRandomizedDefinition());
         case 'DestinyDefinitionsDestinyItemSourceBlockDefinition':
           return dson.map(value, new DestinyDefinitionsDestinyItemSourceBlockDefinition());
         case 'DestinyDefinitionsDestinyItemStatBlockDefinition':
@@ -432,6 +501,8 @@ class ApiClient {
           return dson.map(value, new DestinyDefinitionsDestinyNodeStepDefinition());
         case 'DestinyDefinitionsDestinyObjectiveDefinition':
           return dson.map(value, new DestinyDefinitionsDestinyObjectiveDefinition());
+        case 'DestinyDefinitionsDestinyObjectiveDisplayProperties':
+          return dson.map(value, new DestinyDefinitionsDestinyObjectiveDisplayProperties());
         case 'DestinyDefinitionsDestinyObjectivePerkEntryDefinition':
           return dson.map(value, new DestinyDefinitionsDestinyObjectivePerkEntryDefinition());
         case 'DestinyDefinitionsDestinyObjectiveStatEntryDefinition':
@@ -514,6 +585,8 @@ class ApiClient {
           return dson.map(value, new DestinyDefinitionsDestinyUnlockDefinition());
         case 'DestinyDefinitionsDestinyUnlockExpressionDefinition':
           return dson.map(value, new DestinyDefinitionsDestinyUnlockExpressionDefinition());
+        case 'DestinyDefinitionsDestinyUnlockValueDefinition':
+          return dson.map(value, new DestinyDefinitionsDestinyUnlockValueDefinition());
         case 'DestinyDefinitionsDestinyVendorAcceptedItemDefinition':
           return dson.map(value, new DestinyDefinitionsDestinyVendorAcceptedItemDefinition());
         case 'DestinyDefinitionsDestinyVendorActionDefinition':
@@ -544,6 +617,8 @@ class ApiClient {
           return dson.map(value, new DestinyDefinitionsDestinyVendorItemDefinition());
         case 'DestinyDefinitionsDestinyVendorItemQuantity':
           return dson.map(value, new DestinyDefinitionsDestinyVendorItemQuantity());
+        case 'DestinyDefinitionsDestinyVendorItemSocketOverride':
+          return dson.map(value, new DestinyDefinitionsDestinyVendorItemSocketOverride());
         case 'DestinyDefinitionsDestinyVendorRequirementDisplayEntryDefinition':
           return dson.map(value, new DestinyDefinitionsDestinyVendorRequirementDisplayEntryDefinition());
         case 'DestinyDefinitionsDestinyVendorSaleItemActionBlockDefinition':
@@ -566,6 +641,8 @@ class ApiClient {
           return dson.map(value, new DestinyDefinitionsDirectorDestinyActivityGraphNodeDefinition());
         case 'DestinyDefinitionsDirectorDestinyActivityGraphNodeFeaturingStateDefinition':
           return dson.map(value, new DestinyDefinitionsDirectorDestinyActivityGraphNodeFeaturingStateDefinition());
+        case 'DestinyDefinitionsDirectorDestinyActivityGraphNodeStateEntry':
+          return dson.map(value, new DestinyDefinitionsDirectorDestinyActivityGraphNodeStateEntry());
         case 'DestinyDefinitionsDirectorDestinyLinkedGraphDefinition':
           return dson.map(value, new DestinyDefinitionsDirectorDestinyLinkedGraphDefinition());
         case 'DestinyDefinitionsDirectorDestinyLinkedGraphEntryDefinition':
@@ -580,6 +657,8 @@ class ApiClient {
           return dson.map(value, new DestinyDefinitionsItemsDestinyItemTierTypeDefinition());
         case 'DestinyDefinitionsItemsDestinyItemTierTypeInfusionBlock':
           return dson.map(value, new DestinyDefinitionsItemsDestinyItemTierTypeInfusionBlock());
+        case 'DestinyDefinitionsItemsDestinyParentItemOverride':
+          return dson.map(value, new DestinyDefinitionsItemsDestinyParentItemOverride());
         case 'DestinyDefinitionsItemsDestinyPlugRuleDefinition':
           return dson.map(value, new DestinyDefinitionsItemsDestinyPlugRuleDefinition());
         case 'DestinyDefinitionsLoreDestinyLoreDefinition':
@@ -588,6 +667,12 @@ class ApiClient {
           return dson.map(value, new DestinyDefinitionsMilestonesDestinyMilestoneActivityDefinition());
         case 'DestinyDefinitionsMilestonesDestinyMilestoneActivityVariantDefinition':
           return dson.map(value, new DestinyDefinitionsMilestonesDestinyMilestoneActivityVariantDefinition());
+        case 'DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityDefinition':
+          return dson.map(value, new DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityDefinition());
+        case 'DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityGraphNodeEntry':
+          return dson.map(value, new DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityGraphNodeEntry());
+        case 'DestinyDefinitionsMilestonesDestinyMilestoneChallengeDefinition':
+          return dson.map(value, new DestinyDefinitionsMilestonesDestinyMilestoneChallengeDefinition());
         case 'DestinyDefinitionsMilestonesDestinyMilestoneDefinition':
           return dson.map(value, new DestinyDefinitionsMilestonesDestinyMilestoneDefinition());
         case 'DestinyDefinitionsMilestonesDestinyMilestoneQuestDefinition':
@@ -610,8 +695,30 @@ class ApiClient {
           return dson.map(value, new DestinyDefinitionsMilestonesDestinyMilestoneValueDefinition());
         case 'DestinyDefinitionsMilestonesDestinyMilestoneVendorDefinition':
           return dson.map(value, new DestinyDefinitionsMilestonesDestinyMilestoneVendorDefinition());
+        case 'DestinyDefinitionsPresentationDestinyPresentationChildBlock':
+          return dson.map(value, new DestinyDefinitionsPresentationDestinyPresentationChildBlock());
+        case 'DestinyDefinitionsPresentationDestinyPresentationNodeChildEntry':
+          return dson.map(value, new DestinyDefinitionsPresentationDestinyPresentationNodeChildEntry());
+        case 'DestinyDefinitionsPresentationDestinyPresentationNodeChildrenBlock':
+          return dson.map(value, new DestinyDefinitionsPresentationDestinyPresentationNodeChildrenBlock());
+        case 'DestinyDefinitionsPresentationDestinyPresentationNodeCollectibleChildEntry':
+          return dson.map(value, new DestinyDefinitionsPresentationDestinyPresentationNodeCollectibleChildEntry());
+        case 'DestinyDefinitionsPresentationDestinyPresentationNodeDefinition':
+          return dson.map(value, new DestinyDefinitionsPresentationDestinyPresentationNodeDefinition());
+        case 'DestinyDefinitionsPresentationDestinyPresentationNodeRecordChildEntry':
+          return dson.map(value, new DestinyDefinitionsPresentationDestinyPresentationNodeRecordChildEntry());
+        case 'DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock':
+          return dson.map(value, new DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock());
         case 'DestinyDefinitionsProgressionDestinyProgressionLevelRequirementDefinition':
           return dson.map(value, new DestinyDefinitionsProgressionDestinyProgressionLevelRequirementDefinition());
+        case 'DestinyDefinitionsRecordsDestinyRecordCompletionBlock':
+          return dson.map(value, new DestinyDefinitionsRecordsDestinyRecordCompletionBlock());
+        case 'DestinyDefinitionsRecordsDestinyRecordDefinition':
+          return dson.map(value, new DestinyDefinitionsRecordsDestinyRecordDefinition());
+        case 'DestinyDefinitionsRecordsDestinyRecordTitleBlock':
+          return dson.map(value, new DestinyDefinitionsRecordsDestinyRecordTitleBlock());
+        case 'DestinyDefinitionsRecordsSchemaRecordStateBlock':
+          return dson.map(value, new DestinyDefinitionsRecordsSchemaRecordStateBlock());
         case 'DestinyDefinitionsReportingDestinyReportReasonCategoryDefinition':
           return dson.map(value, new DestinyDefinitionsReportingDestinyReportReasonCategoryDefinition());
         case 'DestinyDefinitionsReportingDestinyReportReasonDefinition':
@@ -652,6 +759,12 @@ class ApiClient {
           final listValue = [value];
           final List<dynamic> listResult = dson.map(listValue, []);
           return listResult[0];
+        case 'DestinyDestinyAmmunitionType':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
         case 'DestinyDestinyClass':
           // Enclose the value in a list so that Dartson can use a transformer
           // to decode it.
@@ -686,6 +799,12 @@ class ApiClient {
           final listValue = [value];
           final List<dynamic> listResult = dson.map(listValue, []);
           return listResult[0];
+        case 'DestinyDestinyGraphNodeState':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
         case 'DestinyDestinyItemQuantity':
           return dson.map(value, new DestinyDestinyItemQuantity());
         case 'DestinyDestinyItemSortType':
@@ -712,6 +831,24 @@ class ApiClient {
           final listValue = [value];
           final List<dynamic> listResult = dson.map(listValue, []);
           return listResult[0];
+        case 'DestinyDestinyPresentationDisplayStyle':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
+        case 'DestinyDestinyPresentationNodeType':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
+        case 'DestinyDestinyPresentationScreenStyle':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
         case 'DestinyDestinyProgression':
           return dson.map(value, new DestinyDestinyProgression());
         case 'DestinyDestinyProgressionScope':
@@ -727,6 +864,24 @@ class ApiClient {
           final List<dynamic> listResult = dson.map(listValue, []);
           return listResult[0];
         case 'DestinyDestinyRace':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
+        case 'DestinyDestinyRecordToastStyle':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
+        case 'DestinyDestinyRecordValueStyle':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
+        case 'DestinyDestinyScope':
           // Enclose the value in a list so that Dartson can use a transformer
           // to decode it.
           final listValue = [value];
@@ -980,6 +1135,8 @@ class ApiClient {
           return dson.map(value, new DestinyMilestonesDestinyMilestoneActivityPhase());
         case 'DestinyMilestonesDestinyMilestoneActivityVariant':
           return dson.map(value, new DestinyMilestonesDestinyMilestoneActivityVariant());
+        case 'DestinyMilestonesDestinyMilestoneChallengeActivity':
+          return dson.map(value, new DestinyMilestonesDestinyMilestoneChallengeActivity());
         case 'DestinyMilestonesDestinyMilestoneContent':
           return dson.map(value, new DestinyMilestonesDestinyMilestoneContent());
         case 'DestinyMilestonesDestinyMilestoneContentItemCategory':
@@ -1000,6 +1157,8 @@ class ApiClient {
           return dson.map(value, new DestinyMilestonesDestinyPublicMilestoneActivityVariant());
         case 'DestinyMilestonesDestinyPublicMilestoneChallenge':
           return dson.map(value, new DestinyMilestonesDestinyPublicMilestoneChallenge());
+        case 'DestinyMilestonesDestinyPublicMilestoneChallengeActivity':
+          return dson.map(value, new DestinyMilestonesDestinyPublicMilestoneChallengeActivity());
         case 'DestinyMilestonesDestinyPublicMilestoneQuest':
           return dson.map(value, new DestinyMilestonesDestinyPublicMilestoneQuest());
         case 'DestinyMilestonesDestinyPublicMilestoneVendor':
@@ -1054,10 +1213,14 @@ class ApiClient {
           return dson.map(value, new DestinyRequestsDestinyItemTransferRequest());
         case 'DestinyResponsesDestinyCharacterResponse':
           return dson.map(value, new DestinyResponsesDestinyCharacterResponse());
+        case 'DestinyResponsesDestinyErrorProfile':
+          return dson.map(value, new DestinyResponsesDestinyErrorProfile());
         case 'DestinyResponsesDestinyItemChangeResponse':
           return dson.map(value, new DestinyResponsesDestinyItemChangeResponse());
         case 'DestinyResponsesDestinyItemResponse':
           return dson.map(value, new DestinyResponsesDestinyItemResponse());
+        case 'DestinyResponsesDestinyLinkedProfilesResponse':
+          return dson.map(value, new DestinyResponsesDestinyLinkedProfilesResponse());
         case 'DestinyResponsesDestinyProfileResponse':
           return dson.map(value, new DestinyResponsesDestinyProfileResponse());
         case 'DestinyResponsesDestinyVendorResponse':
@@ -1164,6 +1327,8 @@ class ApiClient {
           return dson.map(value, new DictionaryComponentResponseOfint64AndDestinyKiosksComponent());
         case 'DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent':
           return dson.map(value, new DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent());
+        case 'DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent':
+          return dson.map(value, new DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent());
         case 'DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent':
           return dson.map(value, new DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent());
         case 'DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent':
@@ -1298,6 +1463,20 @@ class ApiClient {
           return dson.map(value, new ForumPostResponse());
         case 'ForumPostSearchResponse':
           return dson.map(value, new ForumPostSearchResponse());
+        case 'GlobalAlert':
+          return dson.map(value, new GlobalAlert());
+        case 'GlobalAlertLevel':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
+        case 'GlobalAlertType':
+          // Enclose the value in a list so that Dartson can use a transformer
+          // to decode it.
+          final listValue = [value];
+          final List<dynamic> listResult = dson.map(listValue, []);
+          return listResult[0];
         case 'GroupsV2Capabilities':
           // Enclose the value in a list so that Dartson can use a transformer
           // to decode it.
@@ -1584,6 +1763,18 @@ class ApiClient {
           return dson.map(value, new InlineResponse20061());
         case 'InlineResponse20062':
           return dson.map(value, new InlineResponse20062());
+        case 'InlineResponse20063':
+          return dson.map(value, new InlineResponse20063());
+        case 'InlineResponse20064':
+          return dson.map(value, new InlineResponse20064());
+        case 'InlineResponse20065':
+          return dson.map(value, new InlineResponse20065());
+        case 'InlineResponse20066':
+          return dson.map(value, new InlineResponse20066());
+        case 'InlineResponse20067':
+          return dson.map(value, new InlineResponse20067());
+        case 'InlineResponse20068':
+          return dson.map(value, new InlineResponse20068());
         case 'InlineResponse2007':
           return dson.map(value, new InlineResponse2007());
         case 'InlineResponse2008':
@@ -1612,6 +1803,8 @@ class ApiClient {
           return dson.map(value, new QueriesSearchResult());
         case 'SearchResultOfCommunityLiveStatus':
           return dson.map(value, new SearchResultOfCommunityLiveStatus());
+        case 'SearchResultOfContentItemPublicContract':
+          return dson.map(value, new SearchResultOfContentItemPublicContract());
         case 'SearchResultOfDestinyEntitySearchResultItem':
           return dson.map(value, new SearchResultOfDestinyEntitySearchResultItem());
         case 'SearchResultOfFireteamResponse':
@@ -1668,6 +1861,8 @@ class ApiClient {
           return dson.map(value, new SingleComponentResponseOfDestinyPlugSetsComponent());
         case 'SingleComponentResponseOfDestinyProfileComponent':
           return dson.map(value, new SingleComponentResponseOfDestinyProfileComponent());
+        case 'SingleComponentResponseOfDestinyProfileProgressionComponent':
+          return dson.map(value, new SingleComponentResponseOfDestinyProfileProgressionComponent());
         case 'SingleComponentResponseOfDestinyVendorCategoriesComponent':
           return dson.map(value, new SingleComponentResponseOfDestinyVendorCategoriesComponent());
         case 'SingleComponentResponseOfDestinyVendorComponent':
@@ -1676,6 +1871,8 @@ class ApiClient {
           return dson.map(value, new SingleComponentResponseOfDestinyVendorGroupComponent());
         case 'SingleComponentResponseOfDestinyVendorReceiptsComponent':
           return dson.map(value, new SingleComponentResponseOfDestinyVendorReceiptsComponent());
+        case 'StreamInfo':
+          return dson.map(value, new StreamInfo());
         case 'TagsModelsContractsTagResponse':
           return dson.map(value, new TagsModelsContractsTagResponse());
         case 'TrendingTrendingCategories':

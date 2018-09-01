@@ -38,6 +38,10 @@ class DestinyResponsesDestinyCharacterResponse {
   @Property(name: 'itemComponents')
   DestinyItemComponentSetOfint64 itemComponents = null;
   
+/* The set of components belonging to the player's UNinstanced items. Because apparently now those too can have information relevant to the character's state.  COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.] */
+  @Property(name: 'uninstancedItemComponents')
+  DestinyBaseItemComponentSetOfuint32 uninstancedItemComponents = null;
+  
 /* A \"lookup\" convenience component that can be used to quickly check if the character has access to items that can be used for purchasing.  COMPONENT TYPE: CurrencyLookups */
   @Property(name: 'currencyLookups')
   SingleComponentResponseOfDestinyCurrenciesComponent currencyLookups = null;
@@ -46,7 +50,7 @@ class DestinyResponsesDestinyCharacterResponse {
 
   @override
   String toString()  {
-    return 'DestinyResponsesDestinyCharacterResponse[inventory=$inventory, character=$character, progressions=$progressions, renderData=$renderData, activities=$activities, equipment=$equipment, kiosks=$kiosks, plugSets=$plugSets, itemComponents=$itemComponents, currencyLookups=$currencyLookups, ]';
+    return 'DestinyResponsesDestinyCharacterResponse[inventory=$inventory, character=$character, progressions=$progressions, renderData=$renderData, activities=$activities, equipment=$equipment, kiosks=$kiosks, plugSets=$plugSets, itemComponents=$itemComponents, uninstancedItemComponents=$uninstancedItemComponents, currencyLookups=$currencyLookups, ]';
   }
 }
 

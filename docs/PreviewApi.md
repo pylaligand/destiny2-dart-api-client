@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **destiny2GetClanAggregateStats**
-> InlineResponse20044 destiny2GetClanAggregateStats(groupId, modes)
+> InlineResponse20048 destiny2GetClanAggregateStats(groupId, modes)
 
 
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20044**](InlineResponse20044.md)
+[**InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetClanLeaderboards**
-> InlineResponse20043 destiny2GetClanLeaderboards(groupId, maxtop, modes, statid)
+> InlineResponse20047 destiny2GetClanLeaderboards(groupId, maxtop, modes, statid)
 
 
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetLeaderboards**
-> InlineResponse20043 destiny2GetLeaderboards(destinyMembershipId, membershipType, maxtop, modes, statid)
+> InlineResponse20047 destiny2GetLeaderboards(destinyMembershipId, membershipType, maxtop, modes, statid)
 
 
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2GetLeaderboardsForCharacter**
-> InlineResponse20043 destiny2GetLeaderboardsForCharacter(characterId, destinyMembershipId, membershipType, maxtop, modes, statid)
+> InlineResponse20047 destiny2GetLeaderboardsForCharacter(characterId, destinyMembershipId, membershipType, maxtop, modes, statid)
 
 
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -215,7 +215,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **destiny2InsertSocketPlug**
-> InlineResponse20040 destiny2InsertSocketPlug()
+> InlineResponse20044 destiny2InsertSocketPlug()
 
 
 
@@ -242,7 +242,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 

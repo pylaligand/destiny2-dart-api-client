@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **fireteamGetActivePrivateClanFireteamCount**
-> InlineResponse20016 fireteamGetActivePrivateClanFireteamCount(groupId)
+> InlineResponse20019 fireteamGetActivePrivateClanFireteamCount(groupId)
 
 
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **fireteamGetAvailableClanFireteams**
-> InlineResponse20060 fireteamGetAvailableClanFireteams(activityType, dateRange, groupId, page, platform, publicOnly, slotFilter)
+> InlineResponse20064 fireteamGetAvailableClanFireteams(activityType, dateRange, groupId, page, platform, publicOnly, slotFilter, langFilter)
 
 
 
@@ -82,9 +82,10 @@ var page = 56; // int | Zero based page
 var platform = 56; // int | The platform filter.
 var publicOnly = 56; // int | Determines public/private filtering.
 var slotFilter = 56; // int | Filters based on available slots
+var langFilter = langFilter_example; // String | An optional language filter.
 
 try { 
-    var result = api_instance.fireteamGetAvailableClanFireteams(activityType, dateRange, groupId, page, platform, publicOnly, slotFilter);
+    var result = api_instance.fireteamGetAvailableClanFireteams(activityType, dateRange, groupId, page, platform, publicOnly, slotFilter, langFilter);
     print(result);
 } catch (e) {
     print("Exception when calling FireteamApi->fireteamGetAvailableClanFireteams: $e\n");
@@ -102,10 +103,11 @@ Name | Type | Description  | Notes
  **platform** | **int**| The platform filter. | 
  **publicOnly** | **int**| Determines public/private filtering. | 
  **slotFilter** | **int**| Filters based on available slots | 
+ **langFilter** | **String**| An optional language filter. | [optional] 
 
 ### Return type
 
-[**InlineResponse20060**](InlineResponse20060.md)
+[**InlineResponse20064**](InlineResponse20064.md)
 
 ### Authorization
 
@@ -119,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **fireteamGetClanFireteam**
-> InlineResponse20062 fireteamGetClanFireteam(fireteamId, groupId)
+> InlineResponse20066 fireteamGetClanFireteam(fireteamId, groupId)
 
 
 
@@ -152,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20062**](InlineResponse20062.md)
+[**InlineResponse20066**](InlineResponse20066.md)
 
 ### Authorization
 
@@ -166,7 +168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **fireteamGetMyClanFireteams**
-> InlineResponse20061 fireteamGetMyClanFireteams(groupId, includeClosed, page, platform, groupFilter)
+> InlineResponse20065 fireteamGetMyClanFireteams(groupId, includeClosed, page, platform, groupFilter, langFilter)
 
 
 
@@ -181,12 +183,13 @@ import 'package:destiny2_api/api.dart';
 var api_instance = new FireteamApi();
 var groupId = 789; // int | The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true).
 var includeClosed = true; // bool | If true, return fireteams that have been closed.
-var page = 56; // int | Zero based page
+var page = 56; // int | Deprecated parameter, ignored.
 var platform = 56; // int | The platform filter.
 var groupFilter = true; // bool | If true, filter by clan. Otherwise, ignore the clan and show all of the user's fireteams.
+var langFilter = langFilter_example; // String | An optional language filter.
 
 try { 
-    var result = api_instance.fireteamGetMyClanFireteams(groupId, includeClosed, page, platform, groupFilter);
+    var result = api_instance.fireteamGetMyClanFireteams(groupId, includeClosed, page, platform, groupFilter, langFilter);
     print(result);
 } catch (e) {
     print("Exception when calling FireteamApi->fireteamGetMyClanFireteams: $e\n");
@@ -199,13 +202,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). | 
  **includeClosed** | **bool**| If true, return fireteams that have been closed. | 
- **page** | **int**| Zero based page | 
+ **page** | **int**| Deprecated parameter, ignored. | 
  **platform** | **int**| The platform filter. | 
  **groupFilter** | **bool**| If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. | [optional] 
+ **langFilter** | **String**| An optional language filter. | [optional] 
 
 ### Return type
 
-[**InlineResponse20061**](InlineResponse20061.md)
+[**InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 
@@ -219,7 +223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **fireteamSearchPublicAvailableClanFireteams**
-> InlineResponse20060 fireteamSearchPublicAvailableClanFireteams(activityType, dateRange, page, platform, slotFilter)
+> InlineResponse20064 fireteamSearchPublicAvailableClanFireteams(activityType, dateRange, page, platform, slotFilter, langFilter)
 
 
 
@@ -237,9 +241,10 @@ var dateRange = 56; // int | The date range to grab available fireteams.
 var page = 56; // int | Zero based page
 var platform = 56; // int | The platform filter.
 var slotFilter = 56; // int | Filters based on available slots
+var langFilter = langFilter_example; // String | An optional language filter.
 
 try { 
-    var result = api_instance.fireteamSearchPublicAvailableClanFireteams(activityType, dateRange, page, platform, slotFilter);
+    var result = api_instance.fireteamSearchPublicAvailableClanFireteams(activityType, dateRange, page, platform, slotFilter, langFilter);
     print(result);
 } catch (e) {
     print("Exception when calling FireteamApi->fireteamSearchPublicAvailableClanFireteams: $e\n");
@@ -255,10 +260,11 @@ Name | Type | Description  | Notes
  **page** | **int**| Zero based page | 
  **platform** | **int**| The platform filter. | 
  **slotFilter** | **int**| Filters based on available slots | 
+ **langFilter** | **String**| An optional language filter. | [optional] 
 
 ### Return type
 
-[**InlineResponse20060**](InlineResponse20060.md)
+[**InlineResponse20064**](InlineResponse20064.md)
 
 ### Authorization
 

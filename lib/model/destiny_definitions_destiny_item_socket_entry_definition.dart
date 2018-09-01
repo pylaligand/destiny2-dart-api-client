@@ -30,11 +30,15 @@ class DestinyDefinitionsDestinyItemSocketEntryDefinition {
   @Property(name: 'reusablePlugSetHash')
   int reusablePlugSetHash = null;
   
+/* As of Forsaken, item sockets can have randomized plugs. If this is populated, the live data will return a subset of plugs from this list that are active and able to be inserted into the socket just like a reusable plug. */
+  @Property(name: 'randomizedPlugItems')
+  List<DestinyDefinitionsDestinyItemSocketEntryPlugItemRandomizedDefinition> randomizedPlugItems = [];
+  
   DestinyDefinitionsDestinyItemSocketEntryDefinition();
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyItemSocketEntryDefinition[socketTypeHash=$socketTypeHash, singleInitialItemHash=$singleInitialItemHash, reusablePlugItems=$reusablePlugItems, preventInitializationOnVendorPurchase=$preventInitializationOnVendorPurchase, hidePerksInItemTooltip=$hidePerksInItemTooltip, plugSources=$plugSources, reusablePlugSetHash=$reusablePlugSetHash, ]';
+    return 'DestinyDefinitionsDestinyItemSocketEntryDefinition[socketTypeHash=$socketTypeHash, singleInitialItemHash=$singleInitialItemHash, reusablePlugItems=$reusablePlugItems, preventInitializationOnVendorPurchase=$preventInitializationOnVendorPurchase, hidePerksInItemTooltip=$hidePerksInItemTooltip, plugSources=$plugSources, reusablePlugSetHash=$reusablePlugSetHash, randomizedPlugItems=$randomizedPlugItems, ]';
   }
 }
 

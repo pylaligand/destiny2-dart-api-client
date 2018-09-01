@@ -109,6 +109,18 @@ class DestinyHistoricalStatsDefinitionsDestinyActivityModeType {
   static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType privateMatchesRumble = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(57);
   /// For historical reasons, this list will have both D1 and D2-relevant Activity Modes in it. Please don't take this to mean that some D1-only feature is coming back!
   static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType heroicAdventure = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(58);
+  /// For historical reasons, this list will have both D1 and D2-relevant Activity Modes in it. Please don't take this to mean that some D1-only feature is coming back!
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType showdown = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(59);
+  /// For historical reasons, this list will have both D1 and D2-relevant Activity Modes in it. Please don't take this to mean that some D1-only feature is coming back!
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType lockdown = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(60);
+  /// For historical reasons, this list will have both D1 and D2-relevant Activity Modes in it. Please don't take this to mean that some D1-only feature is coming back!
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType scorched = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(61);
+  /// For historical reasons, this list will have both D1 and D2-relevant Activity Modes in it. Please don't take this to mean that some D1-only feature is coming back!
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType scorchedTeam = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(62);
+  /// For historical reasons, this list will have both D1 and D2-relevant Activity Modes in it. Please don't take this to mean that some D1-only feature is coming back!
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType gambit = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(63);
+  /// For historical reasons, this list will have both D1 and D2-relevant Activity Modes in it. Please don't take this to mean that some D1-only feature is coming back!
+  static const DestinyHistoricalStatsDefinitionsDestinyActivityModeType allPvECompetitive = const DestinyHistoricalStatsDefinitionsDestinyActivityModeType._internal(64);
 }
 
 class DestinyHistoricalStatsDefinitionsDestinyActivityModeTypeTypeTransformer extends TypeTransformer<DestinyHistoricalStatsDefinitionsDestinyActivityModeType> {
@@ -172,6 +184,12 @@ class DestinyHistoricalStatsDefinitionsDestinyActivityModeTypeTypeTransformer ex
       case 56: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.privateMatchesMayhem;
       case 57: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.privateMatchesRumble;
       case 58: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.heroicAdventure;
+      case 59: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.showdown;
+      case 60: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.lockdown;
+      case 61: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.scorched;
+      case 62: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.scorchedTeam;
+      case 63: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.gambit;
+      case 64: return DestinyHistoricalStatsDefinitionsDestinyActivityModeType.allPvECompetitive;
       default: throw('Unknown enum value to decode: $data');
     }
   }
