@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20067 {
   
   @Property(name: 'Response')
-  CommonModelsCoreSettingsConfiguration response = null;
+  FireteamFireteamResponse response = null;
   
 
   @Property(name: 'ErrorCode')

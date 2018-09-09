@@ -18,7 +18,11 @@ class DestinyDestinyGameVersions {
   /// A flags enumeration indicating the versions of the game that a given user has purchased.
   static const DestinyDestinyGameVersions dLC2 = const DestinyDestinyGameVersions._internal(4);
   /// A flags enumeration indicating the versions of the game that a given user has purchased.
-  static const DestinyDestinyGameVersions allOfTheAbove = const DestinyDestinyGameVersions._internal(7);
+  static const DestinyDestinyGameVersions yearOne = const DestinyDestinyGameVersions._internal(7);
+  /// A flags enumeration indicating the versions of the game that a given user has purchased.
+  static const DestinyDestinyGameVersions forsaken = const DestinyDestinyGameVersions._internal(8);
+  /// A flags enumeration indicating the versions of the game that a given user has purchased.
+  static const DestinyDestinyGameVersions allOfTheAbove = const DestinyDestinyGameVersions._internal(15);
 }
 
 class DestinyDestinyGameVersionsTypeTransformer extends TypeTransformer<DestinyDestinyGameVersions> {
@@ -36,7 +40,9 @@ class DestinyDestinyGameVersionsTypeTransformer extends TypeTransformer<DestinyD
       case 2: return DestinyDestinyGameVersions.dLC1;
       case 3: return DestinyDestinyGameVersions.dropout;
       case 4: return DestinyDestinyGameVersions.dLC2;
-      case 7: return DestinyDestinyGameVersions.allOfTheAbove;
+      case 7: return DestinyDestinyGameVersions.yearOne;
+      case 8: return DestinyDestinyGameVersions.forsaken;
+      case 15: return DestinyDestinyGameVersions.allOfTheAbove;
       default: throw('Unknown enum value to decode: $data');
     }
   }

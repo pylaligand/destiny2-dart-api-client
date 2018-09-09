@@ -3,8 +3,24 @@ part of destiny2_api.api;
 @Entity()
 class CommonModelsDestiny2CoreSettings {
   
-  @Property(name: 'presentationRootNodes')
-  List<CoreIdentifierOfuint32> presentationRootNodes = [];
+  @Property(name: 'collectionRootNode')
+  int collectionRootNode = null;
+  
+
+  @Property(name: 'badgesRootNode')
+  int badgesRootNode = null;
+  
+
+  @Property(name: 'recordsRootNode')
+  int recordsRootNode = null;
+  
+
+  @Property(name: 'medalsRootNode')
+  int medalsRootNode = null;
+  
+
+  @Property(name: 'undiscoveredCollectibleImage')
+  String undiscoveredCollectibleImage = null;
   
 
   @Property(name: 'ammoTypeHeavyIcon')
@@ -22,7 +38,7 @@ class CommonModelsDestiny2CoreSettings {
 
   @override
   String toString()  {
-    return 'CommonModelsDestiny2CoreSettings[presentationRootNodes=$presentationRootNodes, ammoTypeHeavyIcon=$ammoTypeHeavyIcon, ammoTypeSpecialIcon=$ammoTypeSpecialIcon, ammoTypePrimaryIcon=$ammoTypePrimaryIcon, ]';
+    return 'CommonModelsDestiny2CoreSettings[collectionRootNode=$collectionRootNode, badgesRootNode=$badgesRootNode, recordsRootNode=$recordsRootNode, medalsRootNode=$medalsRootNode, undiscoveredCollectibleImage=$undiscoveredCollectibleImage, ammoTypeHeavyIcon=$ammoTypeHeavyIcon, ammoTypeSpecialIcon=$ammoTypeSpecialIcon, ammoTypePrimaryIcon=$ammoTypePrimaryIcon, ]';
   }
 }
 

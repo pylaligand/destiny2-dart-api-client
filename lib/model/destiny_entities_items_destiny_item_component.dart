@@ -38,11 +38,15 @@ class DestinyEntitiesItemsDestinyItemComponent {
   @Property(name: 'state')
   DestinyItemState state = null;
   
+/* If populated, this is the hash of the item whose icon (and other secondary styles, but *not* the human readable strings) should override whatever icons/styles are on the item being sold.  If you don't do this, certain items whose styles are being overridden by socketed items - such as the \"Recycle Shader\" item - would show whatever their default icon/style is, and it wouldn't be pretty or look accurate. */
+  @Property(name: 'overrideStyleItemHash')
+  int overrideStyleItemHash = null;
+  
   DestinyEntitiesItemsDestinyItemComponent();
 
   @override
   String toString()  {
-    return 'DestinyEntitiesItemsDestinyItemComponent[itemHash=$itemHash, itemInstanceId=$itemInstanceId, quantity=$quantity, bindStatus=$bindStatus, location=$location, bucketHash=$bucketHash, transferStatus=$transferStatus, lockable=$lockable, state=$state, ]';
+    return 'DestinyEntitiesItemsDestinyItemComponent[itemHash=$itemHash, itemInstanceId=$itemInstanceId, quantity=$quantity, bindStatus=$bindStatus, location=$location, bucketHash=$bucketHash, transferStatus=$transferStatus, lockable=$lockable, state=$state, overrideStyleItemHash=$overrideStyleItemHash, ]';
   }
 }
 

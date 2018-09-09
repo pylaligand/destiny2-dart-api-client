@@ -10,7 +10,7 @@ class PreviewApi {
   /// 
   ///
   /// Gets aggregated stats for a clan using the same categories as the clan leaderboards. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
-  Future<InlineResponse20048> destiny2GetClanAggregateStats(int groupId, { String modes }) async {
+  Future<InlineResponse20049> destiny2GetClanAggregateStats(int groupId, { String modes }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -56,7 +56,7 @@ class PreviewApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20048') as InlineResponse20048 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20049') as InlineResponse20049 ;
     } else {
       return null;
     }
@@ -64,7 +64,7 @@ class PreviewApi {
   /// 
   ///
   /// Gets leaderboards with the signed in user&#39;s friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
-  Future<InlineResponse20047> destiny2GetClanLeaderboards(int groupId, { int maxtop, String modes, String statid }) async {
+  Future<InlineResponse20048> destiny2GetClanLeaderboards(int groupId, { int maxtop, String modes, String statid }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -116,7 +116,7 @@ class PreviewApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20047') as InlineResponse20047 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20048') as InlineResponse20048 ;
     } else {
       return null;
     }
@@ -124,7 +124,7 @@ class PreviewApi {
   /// 
   ///
   /// Gets leaderboards with the signed in user&#39;s friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint has not yet been implemented. It is being returned for a preview of future functionality, and for public comment/suggestion/preparation.
-  Future<InlineResponse20047> destiny2GetLeaderboards(int destinyMembershipId, int membershipType, { int maxtop, String modes, String statid }) async {
+  Future<InlineResponse20048> destiny2GetLeaderboards(int destinyMembershipId, int membershipType, { int maxtop, String modes, String statid }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -179,7 +179,7 @@ class PreviewApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20047') as InlineResponse20047 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20048') as InlineResponse20048 ;
     } else {
       return null;
     }
@@ -187,7 +187,7 @@ class PreviewApi {
   /// 
   ///
   /// Gets leaderboards with the signed in user&#39;s friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
-  Future<InlineResponse20047> destiny2GetLeaderboardsForCharacter(int characterId, int destinyMembershipId, int membershipType, { int maxtop, String modes, String statid }) async {
+  Future<InlineResponse20048> destiny2GetLeaderboardsForCharacter(int characterId, int destinyMembershipId, int membershipType, { int maxtop, String modes, String statid }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -245,7 +245,7 @@ class PreviewApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20047') as InlineResponse20047 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20048') as InlineResponse20048 ;
     } else {
       return null;
     }
@@ -253,7 +253,7 @@ class PreviewApi {
   /// 
   ///
   /// Insert a plug into a socketed item. I know how it sounds, but I assure you it&#39;s much more G-rated than you might be guessing. We haven&#39;t decided yet whether this will be able to insert plugs that have side effects, but if we do it will require special scope permission for an application attempting to do so. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Request must include proof of permission for &#39;InsertPlugs&#39; from the account owner.
-  Future<InlineResponse20044> destiny2InsertSocketPlug() async {
+  Future<InlineResponse20045> destiny2InsertSocketPlug() async {
     Object postBody = null;
 
     // verify required params are set
@@ -293,7 +293,7 @@ class PreviewApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20044') as InlineResponse20044 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20045') as InlineResponse20045 ;
     } else {
       return null;
     }

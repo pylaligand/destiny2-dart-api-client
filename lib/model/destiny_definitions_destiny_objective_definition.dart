@@ -10,6 +10,10 @@ class DestinyDefinitionsDestinyObjectiveDefinition {
   @Property(name: 'completionValue')
   int completionValue = null;
   
+/* A shortcut for determining the most restrictive gating that this Objective is set to use. This includes both the dynamic determination of progress and of completion values. See the DestinyGatingScope enum's documentation for more details. */
+  @Property(name: 'scope')
+  DestinyDestinyGatingScope scope = null;
+  
 /* OPTIONAL: a hash identifier for the location at which this objective must be accomplished, if there is a location defined. Look up the DestinyLocationDefinition for this hash for that additional location info. */
   @Property(name: 'locationHash')
   int locationHash = null;
@@ -78,7 +82,7 @@ class DestinyDefinitionsDestinyObjectiveDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsDestinyObjectiveDefinition[displayProperties=$displayProperties, completionValue=$completionValue, locationHash=$locationHash, allowNegativeValue=$allowNegativeValue, allowValueChangeWhenCompleted=$allowValueChangeWhenCompleted, isCountingDownward=$isCountingDownward, valueStyle=$valueStyle, progressDescription=$progressDescription, perks=$perks, stats=$stats, minimumVisibilityThreshold=$minimumVisibilityThreshold, allowOvercompletion=$allowOvercompletion, showValueOnComplete=$showValueOnComplete, completedValueStyle=$completedValueStyle, inProgressValueStyle=$inProgressValueStyle, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsDestinyObjectiveDefinition[displayProperties=$displayProperties, completionValue=$completionValue, scope=$scope, locationHash=$locationHash, allowNegativeValue=$allowNegativeValue, allowValueChangeWhenCompleted=$allowValueChangeWhenCompleted, isCountingDownward=$isCountingDownward, valueStyle=$valueStyle, progressDescription=$progressDescription, perks=$perks, stats=$stats, minimumVisibilityThreshold=$minimumVisibilityThreshold, allowOvercompletion=$allowOvercompletion, showValueOnComplete=$showValueOnComplete, completedValueStyle=$completedValueStyle, inProgressValueStyle=$inProgressValueStyle, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

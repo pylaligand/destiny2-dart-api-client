@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20066 {
   
   @Property(name: 'Response')
-  FireteamFireteamResponse response = null;
+  SearchResultOfFireteamResponse response = null;
   
 
   @Property(name: 'ErrorCode')

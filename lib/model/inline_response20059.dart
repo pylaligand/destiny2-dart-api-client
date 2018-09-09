@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20059 {
   
   @Property(name: 'Response')
-  SearchResultOfCommunityLiveStatus response = null;
+  DestinyAdvancedAwaAuthorizationResult response = null;
   
 
   @Property(name: 'ErrorCode')

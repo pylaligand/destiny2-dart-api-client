@@ -6,6 +6,10 @@ class DestinyDefinitionsRecordsDestinyRecordDefinition {
   @Property(name: 'displayProperties')
   DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
+/* Indicates whether this Record's state is determined on a per-character or on an account-wide basis. */
+  @Property(name: 'scope')
+  DestinyDestinyScope scope = null;
+  
 
   @Property(name: 'presentationInfo')
   DestinyDefinitionsPresentationDestinyPresentationChildBlock presentationInfo = null;
@@ -54,7 +58,7 @@ class DestinyDefinitionsRecordsDestinyRecordDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsRecordsDestinyRecordDefinition[displayProperties=$displayProperties, presentationInfo=$presentationInfo, loreHash=$loreHash, objectiveHashes=$objectiveHashes, recordValueStyle=$recordValueStyle, titleInfo=$titleInfo, completionInfo=$completionInfo, stateInfo=$stateInfo, requirements=$requirements, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsRecordsDestinyRecordDefinition[displayProperties=$displayProperties, scope=$scope, presentationInfo=$presentationInfo, loreHash=$loreHash, objectiveHashes=$objectiveHashes, recordValueStyle=$recordValueStyle, titleInfo=$titleInfo, completionInfo=$completionInfo, stateInfo=$stateInfo, requirements=$requirements, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

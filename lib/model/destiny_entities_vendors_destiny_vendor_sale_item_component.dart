@@ -10,6 +10,10 @@ class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
   @Property(name: 'itemHash')
   int itemHash = null;
   
+/* If populated, this is the hash of the item whose icon (and other secondary styles, but *not* the human readable strings) should override whatever icons/styles are on the item being sold.  If you don't do this, certain items whose styles are being overridden by socketed items - such as the \"Recycle Shader\" item - would show whatever their default icon/style is, and it wouldn't be pretty or look accurate. */
+  @Property(name: 'overrideStyleItemHash')
+  int overrideStyleItemHash = null;
+  
 /* How much of the item you'll be getting. */
   @Property(name: 'quantity')
   int quantity = null;
@@ -42,7 +46,7 @@ class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
 
   @override
   String toString()  {
-    return 'DestinyEntitiesVendorsDestinyVendorSaleItemComponent[vendorItemIndex=$vendorItemIndex, itemHash=$itemHash, quantity=$quantity, saleStatus=$saleStatus, costs=$costs, requiredUnlocks=$requiredUnlocks, unlockStatuses=$unlockStatuses, failureIndexes=$failureIndexes, augments=$augments, ]';
+    return 'DestinyEntitiesVendorsDestinyVendorSaleItemComponent[vendorItemIndex=$vendorItemIndex, itemHash=$itemHash, overrideStyleItemHash=$overrideStyleItemHash, quantity=$quantity, saleStatus=$saleStatus, costs=$costs, requiredUnlocks=$requiredUnlocks, unlockStatuses=$unlockStatuses, failureIndexes=$failureIndexes, augments=$augments, ]';
   }
 }
 

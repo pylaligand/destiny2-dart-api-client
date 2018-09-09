@@ -58,7 +58,7 @@ class DefaultApi {
   /// 
   ///
   /// Get the common settings used by the Bungie.Net environment.
-  Future<InlineResponse20067> getCommonSettings() async {
+  Future<InlineResponse20068> getCommonSettings() async {
     Object postBody = null;
 
     // verify required params are set
@@ -98,7 +98,7 @@ class DefaultApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20067') as InlineResponse20067 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20068') as InlineResponse20068 ;
     } else {
       return null;
     }
@@ -106,7 +106,7 @@ class DefaultApi {
   /// 
   ///
   /// Gets any active global alert for display in the forum banners, help pages, etc. Usually used for DOC alerts.
-  Future<InlineResponse20068> getGlobalAlerts({ bool includestreaming }) async {
+  Future<InlineResponse20069> getGlobalAlerts({ bool includestreaming }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -149,7 +149,7 @@ class DefaultApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20068') as InlineResponse20068 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20069') as InlineResponse20069 ;
     } else {
       return null;
     }

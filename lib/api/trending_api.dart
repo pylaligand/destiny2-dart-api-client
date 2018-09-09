@@ -10,7 +10,7 @@ class TrendingApi {
   /// 
   ///
   /// Returns trending items for Bungie.net, collapsed into the first page of items per category. For pagination within a category, call GetTrendingCategory.
-  Future<InlineResponse20061> trendingGetTrendingCategories() async {
+  Future<InlineResponse20062> trendingGetTrendingCategories() async {
     Object postBody = null;
 
     // verify required params are set
@@ -50,7 +50,7 @@ class TrendingApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20061') as InlineResponse20061 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20062') as InlineResponse20062 ;
     } else {
       return null;
     }
@@ -58,7 +58,7 @@ class TrendingApi {
   /// 
   ///
   /// Returns paginated lists of trending items for a category.
-  Future<InlineResponse20062> trendingGetTrendingCategory(String categoryId, int pageNumber) async {
+  Future<InlineResponse20063> trendingGetTrendingCategory(String categoryId, int pageNumber) async {
     Object postBody = null;
 
     // verify required params are set
@@ -104,7 +104,7 @@ class TrendingApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20062') as InlineResponse20062 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20063') as InlineResponse20063 ;
     } else {
       return null;
     }
@@ -112,7 +112,7 @@ class TrendingApi {
   /// 
   ///
   /// Returns the detailed results for a specific trending entry. Note that trending entries are uniquely identified by a combination of *both* the TrendingEntryType *and* the identifier: the identifier alone is not guaranteed to be globally unique.
-  Future<InlineResponse20063> trendingGetTrendingEntryDetail(String identifier, int trendingEntryType) async {
+  Future<InlineResponse20064> trendingGetTrendingEntryDetail(String identifier, int trendingEntryType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -158,7 +158,7 @@ class TrendingApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20063') as InlineResponse20063 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20064') as InlineResponse20064 ;
     } else {
       return null;
     }

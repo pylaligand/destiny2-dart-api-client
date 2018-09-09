@@ -9,6 +9,7 @@ import 'package:destiny2_api/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) |  | [optional] [default to null]
+**scope** | [**DestinyDestinyScope**](DestinyDestinyScope.md) | Indicates whether this Record&#39;s state is determined on a per-character or on an account-wide basis. | [optional] [default to null]
 **presentationInfo** | [**DestinyDefinitionsPresentationDestinyPresentationChildBlock**](DestinyDefinitionsPresentationDestinyPresentationChildBlock.md) |  | [optional] [default to null]
 **loreHash** | **int** |  | [optional] [default to null]
 **objectiveHashes** | **List&lt;int&gt;** |  | [optional] [default to []]

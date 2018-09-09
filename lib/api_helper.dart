@@ -92,6 +92,8 @@ String _parameterToString(dynamic value) {
     return new DestinyDestinyAmmunitionTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyClass) {
     return new DestinyDestinyClassTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyCollectibleState) {
+    return new DestinyDestinyCollectibleStateTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyComponentType) {
     return new DestinyDestinyComponentTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyGameVersions) {
@@ -112,6 +114,8 @@ String _parameterToString(dynamic value) {
     return new DestinyDestinyObjectiveGrantStyleTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyPresentationDisplayStyle) {
     return new DestinyDestinyPresentationDisplayStyleTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyPresentationNodeState) {
+    return new DestinyDestinyPresentationNodeStateTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyPresentationNodeType) {
     return new DestinyDestinyPresentationNodeTypeTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyPresentationScreenStyle) {
@@ -122,6 +126,8 @@ String _parameterToString(dynamic value) {
     return new DestinyDestinyProgressionStepDisplayEffectTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyRace) {
     return new DestinyDestinyRaceTypeTransformer().encode(value).toString();
+  } else if (value is DestinyDestinyRecordState) {
+    return new DestinyDestinyRecordStateTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyRecordToastStyle) {
     return new DestinyDestinyRecordToastStyleTypeTransformer().encode(value).toString();
   } else if (value is DestinyDestinyRecordValueStyle) {

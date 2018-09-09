@@ -611,6 +611,8 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes offerRequired = const ExceptionsPlatformErrorCodes._internal(2046);
   static const ExceptionsPlatformErrorCodes unknownEververseHistoryError = const ExceptionsPlatformErrorCodes._internal(2047);
   static const ExceptionsPlatformErrorCodes missingEververseHistoryError = const ExceptionsPlatformErrorCodes._internal(2048);
+  static const ExceptionsPlatformErrorCodes bungieRewardEmailStateInvalid = const ExceptionsPlatformErrorCodes._internal(2049);
+  static const ExceptionsPlatformErrorCodes bungieRewardNotYetClaimable = const ExceptionsPlatformErrorCodes._internal(2050);
   static const ExceptionsPlatformErrorCodes apiExceededMaxKeys = const ExceptionsPlatformErrorCodes._internal(2100);
   static const ExceptionsPlatformErrorCodes apiInvalidOrExpiredKey = const ExceptionsPlatformErrorCodes._internal(2101);
   static const ExceptionsPlatformErrorCodes apiKeyMissingFromRequest = const ExceptionsPlatformErrorCodes._internal(2102);
@@ -677,6 +679,7 @@ class ExceptionsPlatformErrorCodes {
   static const ExceptionsPlatformErrorCodes clanFireteamPublicCreationRestriction = const ExceptionsPlatformErrorCodes._internal(3022);
   static const ExceptionsPlatformErrorCodes clanFireteamAlreadyJoined = const ExceptionsPlatformErrorCodes._internal(3023);
   static const ExceptionsPlatformErrorCodes clanFireteamScheduledFireteamsRange = const ExceptionsPlatformErrorCodes._internal(3024);
+  static const ExceptionsPlatformErrorCodes clanFireteamPublicCreationRestrictionExtended = const ExceptionsPlatformErrorCodes._internal(3025);
 }
 
 class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<ExceptionsPlatformErrorCodes> {
@@ -1291,6 +1294,8 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 2046: return ExceptionsPlatformErrorCodes.offerRequired;
       case 2047: return ExceptionsPlatformErrorCodes.unknownEververseHistoryError;
       case 2048: return ExceptionsPlatformErrorCodes.missingEververseHistoryError;
+      case 2049: return ExceptionsPlatformErrorCodes.bungieRewardEmailStateInvalid;
+      case 2050: return ExceptionsPlatformErrorCodes.bungieRewardNotYetClaimable;
       case 2100: return ExceptionsPlatformErrorCodes.apiExceededMaxKeys;
       case 2101: return ExceptionsPlatformErrorCodes.apiInvalidOrExpiredKey;
       case 2102: return ExceptionsPlatformErrorCodes.apiKeyMissingFromRequest;
@@ -1357,6 +1362,7 @@ class ExceptionsPlatformErrorCodesTypeTransformer extends TypeTransformer<Except
       case 3022: return ExceptionsPlatformErrorCodes.clanFireteamPublicCreationRestriction;
       case 3023: return ExceptionsPlatformErrorCodes.clanFireteamAlreadyJoined;
       case 3024: return ExceptionsPlatformErrorCodes.clanFireteamScheduledFireteamsRange;
+      case 3025: return ExceptionsPlatformErrorCodes.clanFireteamPublicCreationRestrictionExtended;
       default: throw('Unknown enum value to decode: $data');
     }
   }

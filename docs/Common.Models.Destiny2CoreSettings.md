@@ -8,7 +8,11 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**presentationRootNodes** | [**List&lt;CoreIdentifierOfuint32&gt;**](CoreIdentifierOfuint32.md) |  | [optional] [default to []]
+**collectionRootNode** | **int** |  | [optional] [default to null]
+**badgesRootNode** | **int** |  | [optional] [default to null]
+**recordsRootNode** | **int** |  | [optional] [default to null]
+**medalsRootNode** | **int** |  | [optional] [default to null]
+**undiscoveredCollectibleImage** | **String** |  | [optional] [default to null]
 **ammoTypeHeavyIcon** | **String** |  | [optional] [default to null]
 **ammoTypeSpecialIcon** | **String** |  | [optional] [default to null]
 **ammoTypePrimaryIcon** | **String** |  | [optional] [default to null]
