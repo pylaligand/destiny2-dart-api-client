@@ -8,7 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**Map&lt;String, DestinyMilestonesDestinyPublicMilestone&gt;**](DestinyMilestonesDestinyPublicMilestone.md) |  | [optional] [default to {}]
+**response** | [**DestinyMilestonesDestinyMilestoneContent**](DestinyMilestonesDestinyMilestoneContent.md) |  | [optional] [default to null]
 **errorCode** | [**ExceptionsPlatformErrorCodes**](ExceptionsPlatformErrorCodes.md) |  | [optional] [default to null]
 **throttleSeconds** | **int** |  | [optional] [default to null]
 **errorStatus** | **String** |  | [optional] [default to null]

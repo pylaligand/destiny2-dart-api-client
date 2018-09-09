@@ -8,7 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**Map&lt;String, Map&lt;String, DestinyHistoricalStatsDestinyLeaderboard&gt;&gt;**](Map.md) |  | [optional] [default to {}]
+**response** | [**Map&lt;String, DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition&gt;**](DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition.md) |  | [optional] [default to {}]
 **errorCode** | [**ExceptionsPlatformErrorCodes**](ExceptionsPlatformErrorCodes.md) |  | [optional] [default to null]
 **throttleSeconds** | **int** |  | [optional] [default to null]
 **errorStatus** | **String** |  | [optional] [default to null]

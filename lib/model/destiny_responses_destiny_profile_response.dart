@@ -30,6 +30,18 @@ class DestinyResponsesDestinyProfileResponse {
   @Property(name: 'profileProgression')
   SingleComponentResponseOfDestinyProfileProgressionComponent profileProgression = null;
   
+/* COMPONENT TYPE: PresentationNodes */
+  @Property(name: 'profilePresentationNodes')
+  SingleComponentResponseOfDestinyPresentationNodesComponent profilePresentationNodes = null;
+  
+/* COMPONENT TYPE: Records */
+  @Property(name: 'profileRecords')
+  SingleComponentResponseOfDestinyProfileRecordsComponent profileRecords = null;
+  
+/* COMPONENT TYPE: Collectibles */
+  @Property(name: 'profileCollectibles')
+  SingleComponentResponseOfDestinyProfileCollectiblesComponent profileCollectibles = null;
+  
 /* Basic information about each character, keyed by the CharacterId.  COMPONENT TYPE: Characters */
   @Property(name: 'characters')
   DictionaryComponentResponseOfint64AndDestinyCharacterComponent characters = null;
@@ -66,6 +78,18 @@ class DestinyResponsesDestinyProfileResponse {
   @Property(name: 'characterUninstancedItemComponents')
   Map<String, DestinyBaseItemComponentSetOfuint32> characterUninstancedItemComponents = {};
   
+/* COMPONENT TYPE: PresentationNodes */
+  @Property(name: 'characterPresentationNodes')
+  DictionaryComponentResponseOfint64AndDestinyPresentationNodesComponent characterPresentationNodes = null;
+  
+/* COMPONENT TYPE: Records */
+  @Property(name: 'characterRecords')
+  DictionaryComponentResponseOfint64AndDestinyCharacterRecordsComponent characterRecords = null;
+  
+/* COMPONENT TYPE: Collectibles */
+  @Property(name: 'characterCollectibles')
+  DictionaryComponentResponseOfint64AndDestinyCollectiblesComponent characterCollectibles = null;
+  
 /* Information about instanced items across all returned characters, keyed by the item's instance ID.  COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.] */
   @Property(name: 'itemComponents')
   DestinyItemComponentSetOfint64 itemComponents = null;
@@ -78,7 +102,7 @@ class DestinyResponsesDestinyProfileResponse {
 
   @override
   String toString()  {
-    return 'DestinyResponsesDestinyProfileResponse[vendorReceipts=$vendorReceipts, profileInventory=$profileInventory, profileCurrencies=$profileCurrencies, profile=$profile, profileKiosks=$profileKiosks, profilePlugSets=$profilePlugSets, profileProgression=$profileProgression, characters=$characters, characterInventories=$characterInventories, characterProgressions=$characterProgressions, characterRenderData=$characterRenderData, characterActivities=$characterActivities, characterEquipment=$characterEquipment, characterKiosks=$characterKiosks, characterPlugSets=$characterPlugSets, characterUninstancedItemComponents=$characterUninstancedItemComponents, itemComponents=$itemComponents, characterCurrencyLookups=$characterCurrencyLookups, ]';
+    return 'DestinyResponsesDestinyProfileResponse[vendorReceipts=$vendorReceipts, profileInventory=$profileInventory, profileCurrencies=$profileCurrencies, profile=$profile, profileKiosks=$profileKiosks, profilePlugSets=$profilePlugSets, profileProgression=$profileProgression, profilePresentationNodes=$profilePresentationNodes, profileRecords=$profileRecords, profileCollectibles=$profileCollectibles, characters=$characters, characterInventories=$characterInventories, characterProgressions=$characterProgressions, characterRenderData=$characterRenderData, characterActivities=$characterActivities, characterEquipment=$characterEquipment, characterKiosks=$characterKiosks, characterPlugSets=$characterPlugSets, characterUninstancedItemComponents=$characterUninstancedItemComponents, characterPresentationNodes=$characterPresentationNodes, characterRecords=$characterRecords, characterCollectibles=$characterCollectibles, itemComponents=$itemComponents, characterCurrencyLookups=$characterCurrencyLookups, ]';
   }
 }
 

@@ -34,6 +34,18 @@ class DestinyResponsesDestinyCharacterResponse {
   @Property(name: 'plugSets')
   SingleComponentResponseOfDestinyPlugSetsComponent plugSets = null;
   
+/* COMPONENT TYPE: PresentationNodes */
+  @Property(name: 'presentationNodes')
+  SingleComponentResponseOfDestinyPresentationNodesComponent presentationNodes = null;
+  
+/* COMPONENT TYPE: Records */
+  @Property(name: 'records')
+  SingleComponentResponseOfDestinyCharacterRecordsComponent records = null;
+  
+/* COMPONENT TYPE: Collectibles */
+  @Property(name: 'collectibles')
+  SingleComponentResponseOfDestinyCollectiblesComponent collectibles = null;
+  
 /* The set of components belonging to the player's instanced items.  COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.] */
   @Property(name: 'itemComponents')
   DestinyItemComponentSetOfint64 itemComponents = null;
@@ -50,7 +62,7 @@ class DestinyResponsesDestinyCharacterResponse {
 
   @override
   String toString()  {
-    return 'DestinyResponsesDestinyCharacterResponse[inventory=$inventory, character=$character, progressions=$progressions, renderData=$renderData, activities=$activities, equipment=$equipment, kiosks=$kiosks, plugSets=$plugSets, itemComponents=$itemComponents, uninstancedItemComponents=$uninstancedItemComponents, currencyLookups=$currencyLookups, ]';
+    return 'DestinyResponsesDestinyCharacterResponse[inventory=$inventory, character=$character, progressions=$progressions, renderData=$renderData, activities=$activities, equipment=$equipment, kiosks=$kiosks, plugSets=$plugSets, presentationNodes=$presentationNodes, records=$records, collectibles=$collectibles, itemComponents=$itemComponents, uninstancedItemComponents=$uninstancedItemComponents, currencyLookups=$currencyLookups, ]';
   }
 }
 

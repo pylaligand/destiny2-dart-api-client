@@ -18,6 +18,10 @@ class DestinyQuestsDestinyObjectiveProgress {
   @Property(name: 'progress')
   int progress = null;
   
+/* As of Forsaken, objectives' completion value is determined dynamically at runtime.  This value represents the threshold of progress you need to surpass in order for this objective to be considered \"complete\".  If you were using objective data, switch from using the DestinyObjectiveDefinition's \"completionValue\" to this value. */
+  @Property(name: 'completionValue')
+  int completionValue = null;
+  
 /* Whether or not the Objective is completed. */
   @Property(name: 'complete')
   bool complete = null;
@@ -30,7 +34,7 @@ class DestinyQuestsDestinyObjectiveProgress {
 
   @override
   String toString()  {
-    return 'DestinyQuestsDestinyObjectiveProgress[objectiveHash=$objectiveHash, destinationHash=$destinationHash, activityHash=$activityHash, progress=$progress, complete=$complete, visible=$visible, ]';
+    return 'DestinyQuestsDestinyObjectiveProgress[objectiveHash=$objectiveHash, destinationHash=$destinationHash, activityHash=$activityHash, progress=$progress, completionValue=$completionValue, complete=$complete, visible=$visible, ]';
   }
 }
 

@@ -67,7 +67,7 @@ class CommunityContentApi {
   /// 
   ///
   /// Returns info about community members who are live streaming.
-  Future<InlineResponse20059> communityContentGetCommunityLiveStatuses(int page, int partnershipType, int sort, { int modeHash, String streamLocale }) async {
+  Future<InlineResponse20060> communityContentGetCommunityLiveStatuses(int page, int partnershipType, int sort, { int modeHash, String streamLocale }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -122,7 +122,7 @@ class CommunityContentApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20059') as InlineResponse20059 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20060') as InlineResponse20060 ;
     } else {
       return null;
     }
@@ -130,7 +130,7 @@ class CommunityContentApi {
   /// 
   ///
   /// Returns info about community members who are live streaming in your clans.
-  Future<InlineResponse20059> communityContentGetCommunityLiveStatusesForClanmates(int page, int partnershipType, int sort) async {
+  Future<InlineResponse20060> communityContentGetCommunityLiveStatusesForClanmates(int page, int partnershipType, int sort) async {
     Object postBody = null;
 
     // verify required params are set
@@ -179,7 +179,7 @@ class CommunityContentApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20059') as InlineResponse20059 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20060') as InlineResponse20060 ;
     } else {
       return null;
     }
@@ -187,7 +187,7 @@ class CommunityContentApi {
   /// 
   ///
   /// Returns info about community members who are live streaming among your friends.
-  Future<InlineResponse20059> communityContentGetCommunityLiveStatusesForFriends(int page, int partnershipType, int sort) async {
+  Future<InlineResponse20060> communityContentGetCommunityLiveStatusesForFriends(int page, int partnershipType, int sort) async {
     Object postBody = null;
 
     // verify required params are set
@@ -236,7 +236,7 @@ class CommunityContentApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20059') as InlineResponse20059 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20060') as InlineResponse20060 ;
     } else {
       return null;
     }
@@ -244,7 +244,7 @@ class CommunityContentApi {
   /// 
   ///
   /// Returns info about Featured live streams.
-  Future<InlineResponse20059> communityContentGetFeaturedCommunityLiveStatuses(int page, int partnershipType, int sort, { String streamLocale }) async {
+  Future<InlineResponse20060> communityContentGetFeaturedCommunityLiveStatuses(int page, int partnershipType, int sort, { String streamLocale }) async {
     Object postBody = null;
 
     // verify required params are set
@@ -296,7 +296,7 @@ class CommunityContentApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20059') as InlineResponse20059 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20060') as InlineResponse20060 ;
     } else {
       return null;
     }
@@ -304,7 +304,7 @@ class CommunityContentApi {
   /// 
   ///
   /// Gets the Live Streaming status of a particular Account and Membership Type.
-  Future<InlineResponse20060> communityContentGetStreamingStatusForMember(int membershipId, int membershipType, int partnershipType) async {
+  Future<InlineResponse20061> communityContentGetStreamingStatusForMember(int membershipId, int membershipType, int partnershipType) async {
     Object postBody = null;
 
     // verify required params are set
@@ -353,7 +353,7 @@ class CommunityContentApi {
     if(response.statusCode >= 400) {
       throw new ApiException(response.statusCode, response.body);
     } else if(response.body != null) {
-      return apiClient.deserialize(response.body, 'InlineResponse20060') as InlineResponse20060 ;
+      return apiClient.deserialize(response.body, 'InlineResponse20061') as InlineResponse20061 ;
     } else {
       return null;
     }

@@ -9,6 +9,7 @@ import 'package:destiny2_api/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) |  | [optional] [default to null]
+**scope** | [**DestinyDestinyScope**](DestinyDestinyScope.md) | Indicates whether this Collectible&#39;s state is determined on a per-character or on an account-wide basis. | [optional] [default to null]
 **sourceString** | **String** |  | [optional] [default to null]
 **itemHash** | **int** |  | [optional] [default to null]
 **acquisitionInfo** | [**DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock**](DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock.md) |  | [optional] [default to null]

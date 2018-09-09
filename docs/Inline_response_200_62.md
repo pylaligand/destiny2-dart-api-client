@@ -8,7 +8,7 @@ import 'package:destiny2_api/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**SearchResultOfTrendingEntry**](SearchResultOfTrendingEntry.md) |  | [optional] [default to null]
+**response** | [**TrendingTrendingCategories**](TrendingTrendingCategories.md) |  | [optional] [default to null]
 **errorCode** | [**ExceptionsPlatformErrorCodes**](ExceptionsPlatformErrorCodes.md) |  | [optional] [default to null]
 **throttleSeconds** | **int** |  | [optional] [default to null]
 **errorStatus** | **String** |  | [optional] [default to null]

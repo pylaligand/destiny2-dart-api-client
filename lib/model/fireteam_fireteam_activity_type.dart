@@ -13,6 +13,7 @@ class FireteamFireteamActivityType {
   static const FireteamFireteamActivityType trials = const FireteamFireteamActivityType._internal(3);
   static const FireteamFireteamActivityType nightfall = const FireteamFireteamActivityType._internal(4);
   static const FireteamFireteamActivityType anything = const FireteamFireteamActivityType._internal(5);
+  static const FireteamFireteamActivityType gambit = const FireteamFireteamActivityType._internal(6);
 }
 
 class FireteamFireteamActivityTypeTypeTransformer extends TypeTransformer<FireteamFireteamActivityType> {
@@ -31,6 +32,7 @@ class FireteamFireteamActivityTypeTypeTransformer extends TypeTransformer<Firete
       case 3: return FireteamFireteamActivityType.trials;
       case 4: return FireteamFireteamActivityType.nightfall;
       case 5: return FireteamFireteamActivityType.anything;
+      case 6: return FireteamFireteamActivityType.gambit;
       default: throw('Unknown enum value to decode: $data');
     }
   }

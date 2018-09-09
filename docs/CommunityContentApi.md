@@ -65,7 +65,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **communityContentGetCommunityLiveStatuses**
-> InlineResponse20059 communityContentGetCommunityLiveStatuses(page, partnershipType, sort, modeHash, streamLocale)
+> InlineResponse20060 communityContentGetCommunityLiveStatuses(page, partnershipType, sort, modeHash, streamLocale)
 
 
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20059**](InlineResponse20059.md)
+[**InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **communityContentGetCommunityLiveStatusesForClanmates**
-> InlineResponse20059 communityContentGetCommunityLiveStatusesForClanmates(page, partnershipType, sort)
+> InlineResponse20060 communityContentGetCommunityLiveStatusesForClanmates(page, partnershipType, sort)
 
 
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20059**](InlineResponse20059.md)
+[**InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **communityContentGetCommunityLiveStatusesForFriends**
-> InlineResponse20059 communityContentGetCommunityLiveStatusesForFriends(page, partnershipType, sort)
+> InlineResponse20060 communityContentGetCommunityLiveStatusesForFriends(page, partnershipType, sort)
 
 
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20059**](InlineResponse20059.md)
+[**InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **communityContentGetFeaturedCommunityLiveStatuses**
-> InlineResponse20059 communityContentGetFeaturedCommunityLiveStatuses(page, partnershipType, sort, streamLocale)
+> InlineResponse20060 communityContentGetFeaturedCommunityLiveStatuses(page, partnershipType, sort, streamLocale)
 
 
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20059**](InlineResponse20059.md)
+[**InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **communityContentGetStreamingStatusForMember**
-> InlineResponse20060 communityContentGetStreamingStatusForMember(membershipId, membershipType, partnershipType)
+> InlineResponse20061 communityContentGetStreamingStatusForMember(membershipId, membershipType, partnershipType)
 
 
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20060**](InlineResponse20060.md)
+[**InlineResponse20061**](InlineResponse20061.md)
 
 ### Authorization
 

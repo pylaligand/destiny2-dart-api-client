@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20064 {
   
   @Property(name: 'Response')
-  SearchResultOfFireteamSummary response = null;
+  TrendingTrendingDetail response = null;
   
 
   @Property(name: 'ErrorCode')

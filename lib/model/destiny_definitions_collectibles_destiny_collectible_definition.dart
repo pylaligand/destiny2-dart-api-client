@@ -6,6 +6,10 @@ class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
   @Property(name: 'displayProperties')
   DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
+/* Indicates whether this Collectible's state is determined on a per-character or on an account-wide basis. */
+  @Property(name: 'scope')
+  DestinyDestinyScope scope = null;
+  
 
   @Property(name: 'sourceString')
   String sourceString = null;
@@ -42,7 +46,7 @@ class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsCollectiblesDestinyCollectibleDefinition[displayProperties=$displayProperties, sourceString=$sourceString, itemHash=$itemHash, acquisitionInfo=$acquisitionInfo, stateInfo=$stateInfo, presentationInfo=$presentationInfo, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsCollectiblesDestinyCollectibleDefinition[displayProperties=$displayProperties, scope=$scope, sourceString=$sourceString, itemHash=$itemHash, acquisitionInfo=$acquisitionInfo, stateInfo=$stateInfo, presentationInfo=$presentationInfo, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

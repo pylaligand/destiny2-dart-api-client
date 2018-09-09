@@ -6,9 +6,21 @@ class DestinyDefinitionsPresentationDestinyPresentationNodeDefinition {
   @Property(name: 'displayProperties')
   DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = null;
   
+/* The original icon for this presentation node, before we futzed with it. */
+  @Property(name: 'originalIcon')
+  String originalIcon = null;
+  
+/* Some presentation nodes are meant to be explicitly shown on the \"root\" or \"entry\" screens for the feature to which they are related. You should use this icon when showing them on such a view, if you have a similar \"entry point\" view in your UI. If you don't have a UI, then I guess it doesn't matter either way does it? */
+  @Property(name: 'rootViewIcon')
+  String rootViewIcon = null;
+  
 
   @Property(name: 'nodeType')
   DestinyDestinyPresentationNodeType nodeType = null;
+  
+/* Indicates whether this presentation node's state is determined on a per-character or on an account-wide basis. */
+  @Property(name: 'scope')
+  DestinyDestinyScope scope = null;
   
 /* If this presentation node shows a related objective (for instance, if it tracks the progress of its children), the objective being tracked is indicated here. */
   @Property(name: 'objectiveHash')
@@ -58,7 +70,7 @@ class DestinyDefinitionsPresentationDestinyPresentationNodeDefinition {
 
   @override
   String toString()  {
-    return 'DestinyDefinitionsPresentationDestinyPresentationNodeDefinition[displayProperties=$displayProperties, nodeType=$nodeType, objectiveHash=$objectiveHash, completionRecordHash=$completionRecordHash, children=$children, displayStyle=$displayStyle, screenStyle=$screenStyle, requirements=$requirements, disableChildSubscreenNavigation=$disableChildSubscreenNavigation, parentNodeHashes=$parentNodeHashes, hash=$hash, index=$index, redacted=$redacted, ]';
+    return 'DestinyDefinitionsPresentationDestinyPresentationNodeDefinition[displayProperties=$displayProperties, originalIcon=$originalIcon, rootViewIcon=$rootViewIcon, nodeType=$nodeType, scope=$scope, objectiveHash=$objectiveHash, completionRecordHash=$completionRecordHash, children=$children, displayStyle=$displayStyle, screenStyle=$screenStyle, requirements=$requirements, disableChildSubscreenNavigation=$disableChildSubscreenNavigation, parentNodeHashes=$parentNodeHashes, hash=$hash, index=$index, redacted=$redacted, ]';
   }
 }
 

@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20061 {
   
   @Property(name: 'Response')
-  TrendingTrendingCategories response = null;
+  CommunityCommunityLiveStatus response = null;
   
 
   @Property(name: 'ErrorCode')

@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20062 {
   
   @Property(name: 'Response')
-  SearchResultOfTrendingEntry response = null;
+  TrendingTrendingCategories response = null;
   
 
   @Property(name: 'ErrorCode')

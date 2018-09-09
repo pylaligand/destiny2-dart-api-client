@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20057 {
   
   @Property(name: 'Response')
-  DestinyAdvancedAwaInitializeResponse response = null;
+  Map<String, DestinyMilestonesDestinyPublicMilestone> response = {};
   
 
   @Property(name: 'ErrorCode')

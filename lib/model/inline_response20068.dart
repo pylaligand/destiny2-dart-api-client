@@ -4,7 +4,7 @@ part of destiny2_api.api;
 class InlineResponse20068 {
   
   @Property(name: 'Response')
-  List<GlobalAlert> response = [];
+  CommonModelsCoreSettingsConfiguration response = null;
   
 
   @Property(name: 'ErrorCode')
