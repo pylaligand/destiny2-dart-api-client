@@ -44,5 +44,5 @@ bitflag.
 
 ## Add more values to Destiny.DestinyGameVersions.
 
-Add `3` and `7`, to reflect that this field is not really an enum but a bitflag.
-Also add a description for them.
+Add `3`, `7`, and `15`, to reflect that this field is not really an enum but a
+bitflag. Also add a description for them.
